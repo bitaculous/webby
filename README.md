@@ -34,6 +34,16 @@ Pull data from remote LocomotiveCMS engine:
 $ wagon pull <ENV>
 ```
 
+Credits
+-------
+
+Webby uses the following assets:
+
+### Fonts
+
+* [Bebas Neue](http://www.fontsquirrel.com/fonts/bebas-neue "Bebas Neue")
+* [Colaborate](http://www.fontsquirrel.com/fonts/Colaborate "Colaborate")
+
 Code Status
 -----------
 

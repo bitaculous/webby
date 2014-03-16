@@ -1,0 +1,27 @@
+// _colaborate.css.sass
+//
+// @package bundle/contour/common/fonts
+// @media screen
+// @version 1.0
+
+@mixin colaborate
+  @include colaborate-regular
+  @include colaborate-thin
+  @include colaborate-light
+  @include colaborate-medium
+  @include colaborate-bold
+
+@mixin colaborate-regular
+  @include font-face('Colaborate Regular', '/fonts/colaborate/regular')
+
+@mixin colaborate-thin
+  @include font-face('Colaborate Thin', '/fonts/colaborate/thin')
+
+@mixin colaborate-light
+  @include font-face('Colaborate Light', '/fonts/colaborate/light')
+
+@mixin colaborate-medium
+  @include font-face('Colaborate Medium', '/fonts/colaborate/medium')
+
+@mixin colaborate-bold
+  @include font-face('Colaborate Bold', '/fonts/colaborate/bold')
