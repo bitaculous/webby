@@ -1,0 +1,8 @@
+# Ignore sublime workspace configuration
+*.sublime-workspace
+
+# Ignore bundler configuration
+.bundle
+
+# Ignore bundler stubs
+bin
