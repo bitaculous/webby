@@ -8,6 +8,12 @@ Install
     $ cd webby
     $ bundle
 
+Usage
+-----
+
+    $ cd webby
+    $ bundle exec wagon serve
+
 Code Status
 -----------
 

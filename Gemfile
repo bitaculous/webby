@@ -12,3 +12,9 @@ group :default do
     gem 'kramdown', '~> 1.3.2'
   end
 end
+
+group :development do
+  group :osx do
+    gem 'rb-fsevent', '~> 0.9.4', require: RUBY_PLATFORM.include?('darwin') && 'rb-fsevent'
+  end
+end
