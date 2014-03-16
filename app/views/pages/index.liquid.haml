@@ -1,13 +1,27 @@
+---
+title: "Home"
+seo_title: "Bitaclous"
+meta_description: "Bitaculous - It's all about the bits, baby!"
+meta_keywords: "bitaculous, it's, all, about, the, bits, baby"
+published: true
+listed: true
+position: 1
+---
+
 !!!
 %html{ lang: 'en' }
   %head
-    %meta{ charset: 'utf-8' }
-    %meta{ name: 'keywords', value: '{{ site.meta_keywords }}' }
-    %meta{ name: 'description', value: '{{ site.meta_description }}' }
+    {% include meta_tags %}
 
-    %title {{ site.name }}
+    %title {{ page.seo_title | default: page.title }}
 
-  %body
+    {% include stylesheets %}
+
+    {% include javascripts %}
+
+    {% inline_editor %}
+
+  %body{ id: '{{ page.slug }}' }
     %h1 {{ page.title }}
 
     {% block 'main' %}
