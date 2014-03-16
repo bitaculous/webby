@@ -6,3 +6,6 @@
 
 # Ignore bundler stubs
 bin
+
+# Ignore deploy configuration
+config/deploy.yml
