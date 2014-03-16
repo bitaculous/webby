@@ -9,3 +9,6 @@ bin
 
 # Ignore deploy configuration
 config/deploy.yml
+
+# Ignore log files
+log
