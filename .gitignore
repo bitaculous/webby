@@ -4,6 +4,9 @@
 # Ignore bundler configuration
 .bundle
 
+# Ignore sass cache
+.sass-cache
+
 # Ignore bundler stubs
 bin
 

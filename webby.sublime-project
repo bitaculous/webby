@@ -1,7 +1,7 @@
 {
   "folders": [
     {
-      "name": "favy",
+      "name": "webby",
       "path": "./",
       "file_exclude_patterns": [
         "*.sublime-workspace",
@@ -9,7 +9,9 @@
       ],
       "folder_exclude_patterns": [
         ".bundle",
-        "bin"
+        ".sass-cache",
+        "bin",
+        "log"
       ]
     }
   ]
