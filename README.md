@@ -7,6 +7,7 @@ Install
     $ git clone git@github.com:bitaculous/webby.git webby
     $ cd webby
     $ bundle
+    $ cp config/deploy.yml.sample config/deploy.yml
 
 Usage
 -----
