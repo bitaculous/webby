@@ -1,6 +1,8 @@
 [WEBBY](https://github.com/bitaculous/webby "webby")
 ====================================================
 
+**Sources of the official Bitaculous website.**
+
 Install
 -------
 
@@ -9,11 +11,28 @@ Install
     $ bundle
     $ cp config/deploy.yml.sample config/deploy.yml
 
-Development
------------
+Usage
+-----
 
-    $ cd webby
-    $ bundle exec wagon serve
+Serve a site from local file system:
+
+```shell
+$ wagon serve
+```
+
+Push site to remote LocomotiveCMS engine:
+
+```shell
+$ wagon push <ENV>
+$ wagon push <ENV> --data
+$ wagon push staging --resources=content_types,pages,snippets,theme_assets
+```
+
+Pull data from remote LocomotiveCMS engine:
+
+```shell
+$ wagon pull <ENV>
+```
 
 Code Status
 -----------
