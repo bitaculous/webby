@@ -4,8 +4,8 @@
 
 %meta{ 'http-equiv' => 'x-ua-compatible', content: 'IE=edge' }/
 
-%meta{ name: 'description', content: '{{ page.meta_description }}' }/
-%meta{ name: 'keywords', content: '{{ page.meta_keywords }}' }/
+%meta{ name: 'description', content: '{{ page.meta_description | default: site.meta_description }}' }/
+%meta{ name: 'keywords', content: '{{ page.meta_keywords | default: site.meta_keywords }}' }/
 %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1' }/
 
 {% csrf_meta %}
