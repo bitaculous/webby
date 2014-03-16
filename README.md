@@ -42,7 +42,7 @@ Webby uses the following assets:
 ### Fonts
 
 * [Bebas Neue](http://www.fontsquirrel.com/fonts/bebas-neue "Bebas Neue")
-* [Colaborate](http://www.fontsquirrel.com/fonts/Colaborate "Colaborate")
+* [Colaborate](http://www.fontsquirrel.com/fonts/colaborate "Colaborate")
 
 Code Status
 -----------
