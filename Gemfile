@@ -22,5 +22,9 @@ end
 group :misc do
   group :assets do
     gem 'assetify', github: 'bitaculous/assetify'
+
+    group :stylesheets do
+      gem 'bourbon', '~> 3.1.8'
+    end
   end
 end
