@@ -18,3 +18,9 @@ group :development do
     gem 'rb-fsevent', '~> 0.9.4', require: RUBY_PLATFORM.include?('darwin') && 'rb-fsevent'
   end
 end
+
+group :misc do
+  group :assets do
+    gem 'assetify', github: 'bitaculous/assetify'
+  end
+end
