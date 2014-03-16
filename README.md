@@ -9,8 +9,8 @@ Install
     $ bundle
     $ cp config/deploy.yml.sample config/deploy.yml
 
-Usage
------
+Development
+-----------
 
     $ cd webby
     $ bundle exec wagon serve
