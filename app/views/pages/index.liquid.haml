@@ -1,12 +1,17 @@
 !!!
-%html{lang: "en"}
+%html{ lang: 'en' }
   %head
-    %meta{charset: "utf-8"}
+    %meta{ charset: 'utf-8' }
+    %meta{ name: 'keywords', value: '{{ site.meta_keywords }}' }
+    %meta{ name: 'description', value: '{{ site.meta_description }}' }
+
     %title {{ site.name }}
-    %meta{name: "keywords", value: "{{ site.meta_keywords }}"}
-    %meta{name: "description", value: "{{ site.meta_description }}"}
+
   %body
     %h1 {{ page.title }}
+
     {% block 'main' %}
+
     %p Lorem ipsum....
+
     {% endblock %}
