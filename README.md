@@ -47,7 +47,7 @@ Webby uses the following assets:
 Code Status
 -----------
 
-[<img src="https://gemnasium.com/bitaculous/webby.png?travis" title="Gemnasium Status" alt="Gemnasium Status" />](https://gemnasium.com/bitaculous/webby)
+[<img src="https://gemnasium.com/bitaculous/webby.svg" title="Gemnasium Status" alt="Gemnasium Status" />](https://gemnasium.com/bitaculous/webby)
 
 License
 -------
