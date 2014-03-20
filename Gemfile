@@ -9,7 +9,7 @@ group :default do
   end
 
   group :templating do
-    gem 'kramdown', '~> 1.3.2'
+    gem 'kramdown', '~> 1.3.3'
   end
 end
 
@@ -21,7 +21,8 @@ end
 
 group :misc do
   group :assets do
-    gem 'assetify', github: 'bitaculous/assetify'
+    # gem 'assetify', github: 'bitaculous/assetify'
+    gem 'assetify', path: '../gems/assetify'
 
     group :stylesheets do
       gem 'bourbon', '~> 3.1.8'
