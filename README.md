@@ -52,4 +52,4 @@ Code Status
 License
 -------
 
-Webby is released under the MIT License.
+Webby is released under the MIT License except all graphical assets like images, logos, etc.
