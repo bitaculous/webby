@@ -51,7 +51,7 @@ GIT
 PATH
   remote: ../gems/assetify
   specs:
-    assetify (0.6.3)
+    assetify (0.7.0)
       sass (>= 3.2)
       sprockets (~> 2.12.0)
 
