@@ -28,4 +28,7 @@ group :misc do
       gem 'bourbon', '~> 3.1.8'
     end
   end
+
+  # gem 'vendorify', github: 'bitaculous/vendorify'
+  gem 'vendorify', path: '../gems/vendorify'
 end
