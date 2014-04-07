@@ -3,6 +3,7 @@
 #= require jquery
 
 #= require foundation/foundation
+#= require foundation/topbar
 
 $ ->
   do $(document).foundation # Initialize Foundation

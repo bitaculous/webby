@@ -18,9 +18,11 @@ position: 1
   {% include head %}
 
   %body{ id: '{{ page.slug }}' }
-    %h1 {{ page.title }}
+    {% include header %}
 
     {% block 'main' %}
+
+    %h1 {{ page.title }}
 
     %p Lorem ipsum....
 
