@@ -14,13 +14,13 @@ Install
 Usage
 -----
 
-Serve a site from local file system:
+Serve webby from local file system:
 
 ```shell
 $ wagon serve
 ```
 
-Push site to remote LocomotiveCMS engine:
+Push webby to remote LocomotiveCMS engine:
 
 ```shell
 $ wagon push <ENV>
