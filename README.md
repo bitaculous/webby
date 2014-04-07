@@ -39,6 +39,8 @@ Credits
 
 Webby uses the following assets:
 
+* [Foundation](http://foundation.zurb.com "Foundation - The most advanced responsive front-end framework in the world.")
+
 ### Fonts
 
 * [Bebas Neue](http://www.fontsquirrel.com/fonts/bebas-neue "Bebas Neue")
