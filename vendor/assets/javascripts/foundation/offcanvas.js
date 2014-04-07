@@ -35,12 +35,12 @@
         })
     },
 
-    click_toggle_class: function(e, class_name) {
+    click_toggle_class: function (e, class_name) {
       e.preventDefault();
       this.S(e.target).closest('.off-canvas-wrap').toggleClass(class_name);
     },
 
-    click_remove_class: function(e, class_name) {
+    click_remove_class: function (e, class_name) {
       e.preventDefault();
       this.S('.off-canvas-wrap').removeClass(class_name);
     },

@@ -2,7 +2,7 @@
 title: "Home"
 seo_title: "Bitaclous"
 meta_description: "Bitaculous - It's all about the bits, baby!"
-meta_keywords: "bitaculous, it's, all, about, the, bits, baby"
+meta_keywords: "bitaculous, it's, all, about, the, bits, baby, web, application, development, berlin"
 published: true
 listed: true
 position: 1
@@ -18,14 +18,17 @@ position: 1
   {% include head %}
 
   %body{ id: '{{ page.slug }}' }
-    {% include header %}
+    {% include cover %}
 
-    {% block 'main' %}
+    %main.dashboard{ role: 'main', style: 'background: red; height: 2000px;' }
+      {% block 'main' %}
 
-    %h1 {{ page.title }}
+      %h1 {{ page.title }}
 
-    %p Lorem ipsum....
+      %p Lorem ipsum....
 
-    {% endblock %}
+      {% endblock %}
+
+    {% include footing %}
 
     {{ 'bundle.js' | javascript_tag }}

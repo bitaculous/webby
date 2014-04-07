@@ -194,7 +194,5 @@
         }
       });
     }
-
   };
-
 }(jQuery, this, this.document));
