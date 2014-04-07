@@ -3,8 +3,8 @@
 
   %title {{ page.seo_title | default: page.title }}
 
-  {% include stylesheets %}
+  {{ 'bundle.css' | stylesheet_tag }}
 
-  {% include javascripts %}
+  {{ 'preface.js' | javascript_tag }}
 
   {% inline_editor %}
