@@ -15,3 +15,6 @@ config/deploy.yml
 
 # Ignore log files
 log
+
+# Ignore `ressources` folder
+ressources
