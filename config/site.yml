@@ -8,11 +8,11 @@ name: "Bitaclous"
 subdomain: "www"
 
 # An array of domain aliases for the site. This option is for sites on multi-site engines.
-domains: ["sneak.bitaclous.com", "bitaclous.com"]
+domains: ["sneak.bitaclous.com", "www.bitaclous.com"]
 
 # An array of locales (languages) the site is available in. The locale listed first is the site's default locale.
-# Locales are specified using ISO language codes. Possible locales include: en, de, fr, pl, pt-BR, it, nl, nb, es, ru,
-# et, ja, zh-CN.
+# Locales are specified using ISO language codes. Possible locales include: `bg`, `cs`, `de`, `en`, `fr`, `it`, `ja`,
+# `nb`, `pl`, `pt-BR`, `sk` or `zh-CN`.
 locales: ["en", "de"]
 
 # The site's timezone.
