@@ -1,7 +1,9 @@
-[WEBBY](https://github.com/bitaculous/webby "webby")
-====================================================
+[Webby](https://github.com/bitaculous/webby "Sources of the official Bitaculous website.")
+==========================================================================================
 
 **Sources of the official Bitaculous website.**
+
+[![Gemnasium Status](https://gemnasium.com/bitaculous/webby.svg)](https://gemnasium.com/bitaculous/webby)
 
 Install
 -------
@@ -39,19 +41,13 @@ Credits
 
 Webby uses the following assets:
 
-* [Foundation](http://foundation.zurb.com "Foundation - The most advanced responsive front-end framework in the world.")
-
 ### Fonts
 
 * [Bebas Neue](http://www.fontsquirrel.com/fonts/bebas-neue "Bebas Neue")
 * [Colaborate](http://www.fontsquirrel.com/fonts/colaborate "Colaborate")
 
-Code Status
------------
-
-[<img src="https://gemnasium.com/bitaculous/webby.svg" title="Gemnasium Status" alt="Gemnasium Status" />](https://gemnasium.com/bitaculous/webby)
-
 License
 -------
 
-Webby is released under the MIT License except all graphical assets like images, logos, etc.
+[Webby](https://github.com/bitaculous/webby "Sources of the official Bitaculous website.") is released under the MIT
+License (MIT), see [LICENSE](https://raw.githubusercontent.com/bitaculous/webby/master/LICENSE "License").
