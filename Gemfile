@@ -29,6 +29,9 @@ group :misc do
     end
   end
 
+  # gem 'liquids', github: 'bitaculous/liquids'
+  gem 'liquids', path: '../gems/liquids'
+
   # gem 'vendorify', github: 'bitaculous/vendorify'
   gem 'vendorify', path: '../gems/vendorify'
 end
