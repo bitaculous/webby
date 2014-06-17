@@ -4,8 +4,11 @@ source 'https://rubygems.org'
 
 group :default do
   group :locomotivecms do
-    gem 'locomotivecms_wagon',   github: 'locomotivecms/wagon'
-    gem 'locomotivecms_mounter', github: 'locomotivecms/mounter'
+    # gem 'locomotivecms_wagon', github: 'locomotivecms/wagon'
+    gem 'locomotivecms_wagon', path: '../locomotivecms/wagon'
+
+    # gem 'locomotivecms_mounter', github: 'locomotivecms/mounter'
+    gem 'locomotivecms_mounter', path: '../locomotivecms/gems/mounter'
   end
 
   group :templating do
@@ -25,7 +28,11 @@ group :misc do
     gem 'assetify', path: '../gems/assetify'
 
     group :stylesheets do
-      gem 'bourbon', '~> 3.1.8'
+      gem 'bourbon', '~> 4.0.2'
+
+      gem 'compass', github: 'compass/compass', branch: 'master'
+
+      gem 'susy', '~> 2.1.2'
     end
   end
 
