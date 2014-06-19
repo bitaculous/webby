@@ -11,13 +11,13 @@ subdomain: "www"
 domains: ["sneak.bitaclous.com", "www.bitaclous.com"]
 
 # An array of locales (languages) the site is available in. The locale listed first is the site's default locale.
-# Locales are specified using ISO language codes. Possible locales include: `bg`, `cs`, `de`, `en`, `fr`, `it`, `ja`,
-# `nb`, `pl`, `pt-BR`, `sk` or `zh-CN`.
+# Locales are specified using ISO language codes. Possible locales include `bg`, `cs`, `de`, `en`, `fr`, `it`, `ja`,
+# `nb`, `pl`, `pt-BR`, `sk`, `sr` or `zh-CN`.
 locales: ["en", "de"]
 
 # The site's timezone.
-# This converts the server's time to the site's time zone in templates. The TimeZone class from Rail's ActiveSupport is
-# used to interpret the string. Sample timezone strings: Tokyo, Beijing, Moscow, Cairo, Paris, Pacific Time (US & Canada).
+# This converts the server's time to the site's time zone in templates. The `TimeZone` class from Rail's ActiveSupport
+# is used to interpret the string. Sample timezones: `Tokyo`, `Beijing`, `Berlin`, `Pacific Time (US & Canada)` etc.
 timezone: "Berlin"
 
 # For SEO purposes, sites may wish to add a relevant string to the title tag and include meta tags. For this purpose you

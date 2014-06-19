@@ -11,7 +11,7 @@ Install
     $ git clone git@github.com:bitaculous/webby.git webby
     $ cd webby
     $ bundle
-    $ cp config/deploy.yml.sample config/deploy.yml
+    $ cp ressources/config/deploy.yml config/deploy.yml
 
 Usage
 -----
@@ -27,7 +27,7 @@ Push webby to remote LocomotiveCMS engine:
 ```shell
 $ wagon push <ENV>
 $ wagon push <ENV> --data
-$ wagon push staging --resources=content_types,pages,snippets,theme_assets
+$ wagon push <ENV> --resources=content_types,pages,snippets,theme_assets
 ```
 
 Pull data from remote LocomotiveCMS engine:

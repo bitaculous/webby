@@ -1,4 +1,4 @@
-# This is the manifest for “bundle.js”.
+# This is the manifest for `bundle.js`.
 
 #= require jquery
 
