@@ -12,7 +12,7 @@ group :default do
   end
 
   group :templating do
-    gem 'kramdown', '~> 1.3.3'
+    gem 'kramdown', '~> 1.4'
   end
 end
 
@@ -25,10 +25,9 @@ end
 group :misc do
   group :assets do
     gem 'assetify', github: 'bitaculous/assetify'
-    # gem 'assetify', path: '../gems/assetify'
 
     group :stylesheets do
-      gem 'bourbon', '~> 4.0.2'
+      gem 'bourbon', github: 'bitaculous/bourbon'
 
       gem 'compass', github: 'compass/compass', branch: 'master'
 
@@ -37,8 +36,6 @@ group :misc do
   end
 
   gem 'liquids', github: 'bitaculous/liquids'
-  # gem 'liquids', path: '../gems/liquids'
 
   gem 'vendorify', github: 'bitaculous/vendorify'
-  # gem 'vendorify', path: '../gems/vendorify'
 end
