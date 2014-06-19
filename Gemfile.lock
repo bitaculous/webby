@@ -8,7 +8,8 @@ GIT
 
 GIT
   remote: git://github.com/bitaculous/bourbon.git
-  revision: 272e0206855001e9386717d64a3902486703054f
+  revision: 6ddd20ba3cf634c6a07ab9c0a74ac8304f084643
+  branch: sass_path
   specs:
     bourbon (4.0.2)
       sass (~> 3.3)

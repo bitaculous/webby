@@ -27,7 +27,7 @@ group :misc do
     gem 'assetify', github: 'bitaculous/assetify'
 
     group :stylesheets do
-      gem 'bourbon', github: 'bitaculous/bourbon'
+      gem 'bourbon', github: 'bitaculous/bourbon', branch: 'sass_path'
 
       gem 'compass', github: 'compass/compass', branch: 'master'
 
