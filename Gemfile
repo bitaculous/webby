@@ -24,8 +24,8 @@ end
 
 group :misc do
   group :assets do
-    # gem 'assetify', github: 'bitaculous/assetify'
-    gem 'assetify', path: '../gems/assetify'
+    gem 'assetify', github: 'bitaculous/assetify'
+    # gem 'assetify', path: '../gems/assetify'
 
     group :stylesheets do
       gem 'bourbon', '~> 4.0.2'
@@ -36,9 +36,9 @@ group :misc do
     end
   end
 
-  # gem 'liquids', github: 'bitaculous/liquids'
-  gem 'liquids', path: '../gems/liquids'
+  gem 'liquids', github: 'bitaculous/liquids'
+  # gem 'liquids', path: '../gems/liquids'
 
-  # gem 'vendorify', github: 'bitaculous/vendorify'
-  gem 'vendorify', path: '../gems/vendorify'
+  gem 'vendorify', github: 'bitaculous/vendorify'
+  # gem 'vendorify', path: '../gems/vendorify'
 end
