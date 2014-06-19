@@ -23,19 +23,19 @@ group :development do
 end
 
 group :misc do
+  gem 'liquids', github: 'bitaculous/liquids'
+
+  gem 'vendorify', github: 'bitaculous/vendorify'
+
   group :assets do
     gem 'assetify', github: 'bitaculous/assetify'
 
     group :stylesheets do
-      gem 'bourbon', github: 'bitaculous/bourbon', branch: 'sass_path'
+      gem 'bourbon', '~> 4.0.2'
 
       gem 'compass', github: 'compass/compass', branch: 'master'
 
       gem 'susy', '~> 2.1.2'
     end
   end
-
-  gem 'liquids', github: 'bitaculous/liquids'
-
-  gem 'vendorify', github: 'bitaculous/vendorify'
 end
