@@ -18,6 +18,15 @@ position: 1
   {% include head %}
 
   %body{ id: '{{ page.slug }}', class: 'default canvas' }
-    %h1 {{ page.title }}
+    .theatre
+      %header.roof
+        %h1 Roof
+
+      .stage
+        %section.home
+          %h1 {{ page.title }}
+
+      %footer.basement
+        %h1 Basement
 
     {{ 'bundle.js' | javascript_tag }}

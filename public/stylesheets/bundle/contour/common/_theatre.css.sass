@@ -1,0 +1,17 @@
+// _theatre.css.sass
+//
+// @package bundle/contour/common
+// @media all
+// @version 1.0
+
+@import theatre/roof
+@import theatre/stage
+@import theatre/basement
+
+@mixin theatre
+  .theatre
+    @include roof
+
+    @include stage
+
+    @include basement
