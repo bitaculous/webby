@@ -5,11 +5,22 @@
 // @version 1.0
 
 @mixin nexa
+  @include nexa-regular
+
   @include nexa-light
+
+  @include nexa-italic
+
   @include nexa-bold
+
+@mixin nexa-regular
+  @include font-face('Nexa Regular', '/fonts/nexa/regular')
 
 @mixin nexa-light
   @include font-face('Nexa Light', '/fonts/nexa/light')
+
+@mixin nexa-italic
+  @include font-face('Nexa Italic', '/fonts/nexa/italic')
 
 @mixin nexa-bold
   @include font-face('Nexa Bold', '/fonts/nexa/bold')
