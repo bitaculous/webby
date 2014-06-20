@@ -7,6 +7,12 @@ GIT
       sprockets (~> 2.12.1)
 
 GIT
+  remote: git://github.com/bitaculous/initializify.git
+  revision: 78e18590ab2c292575d0224cbd5bfc7c261fba16
+  specs:
+    initializify (0.0.1)
+
+GIT
   remote: git://github.com/bitaculous/liquids.git
   revision: 6883818344dfbcafd44d0d723011d4c17d3d1703
   specs:
@@ -191,6 +197,7 @@ DEPENDENCIES
   bourbon (~> 4.0.2)
   breakpoint (~> 2.4.2)
   compass!
+  initializify!
   kramdown (~> 1.4)
   liquids!
   locomotivecms_mounter!

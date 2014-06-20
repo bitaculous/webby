@@ -1,7 +1,7 @@
 ---
 title: "Home"
 seo_title: "Bitaclous"
-meta_description: "Bitaculous - It's all about the bits, baby!"
+meta_description: "It's all about the bits, baby!"
 meta_keywords: "bitaculous, it's, all, about, the, bits, baby, web, application, development, berlin"
 published: true
 listed: true
@@ -9,12 +9,7 @@ position: 1
 ---
 
 !!! 5
-<!--[if IE 7]> <html class="ie7 ie no-js" itemscope itemtype="http://schema.org/WebPage" lang="{{ locale }}"> <![endif]-->
-<!--[if IE 8]> <html class="ie8 ie no-js" itemscope itemtype="http://schema.org/WebPage" lang="{{ locale }}"> <![endif]-->
-<!--[if IE 9]> <html class="ie9 ie no-js" itemscope itemtype="http://schema.org/WebPage" lang="{{ locale }}"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
 %html.no-js{ itemscope: true, itemtype: 'http://schema.org/WebPage', lang: '{{ locale }}' }
-  <!--<![endif]-->
   {% include head %}
 
   %body{ id: '{{ page.slug }}', class: 'default canvas' }
@@ -24,7 +19,10 @@ position: 1
           .contact
             %h1 Contact
 
-        %h1 Roof
+        %a.bitaculous{ href: '#', title: "{{ 'bitaculous_name' | translate }} - {{ 'bitaculous_claim' | translate }}" }
+          %span.name {{ 'bitaculous_name' | translate }}
+
+          %span.claim {{ 'bitaculous_claim' | translate }}
 
       .stage
         %section.outline

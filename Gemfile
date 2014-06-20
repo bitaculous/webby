@@ -23,10 +23,6 @@ group :development do
 end
 
 group :misc do
-  gem 'liquids', github: 'bitaculous/liquids'
-
-  gem 'vendorify', github: 'bitaculous/vendorify'
-
   group :assets do
     gem 'assetify', github: 'bitaculous/assetify'
 
@@ -44,4 +40,10 @@ group :misc do
       gem 'susy', '~> 2.1.2'
     end
   end
+
+  gem 'initializify', github: 'bitaculous/initializify'
+
+  gem 'liquids', github: 'bitaculous/liquids'
+
+  gem 'vendorify', github: 'bitaculous/vendorify'
 end

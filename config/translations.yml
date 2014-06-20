@@ -4,6 +4,10 @@
 #
 # {{ 'hello_world' | translate }}
 
-# hello_world:
-#   en: Hello world !
-#   fr: Bonjour le monde !
+bitaculous_name:
+  en: "Bitaculous"
+  de: "Bitaculous"
+
+bitaculous_claim:
+  en: "It's all about the bits, baby!"
+  de: "It's all about the bits, baby!"
