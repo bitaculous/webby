@@ -16,5 +16,8 @@ config/deploy.yml
 # Ignore log files
 log
 
+# Ignore `public/fonts/nexa` folder
+public/fonts/nexa
+
 # Ignore `ressources/layouts` folder
-ressources
+ressources/layouts
