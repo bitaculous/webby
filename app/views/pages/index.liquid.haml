@@ -19,6 +19,13 @@ position: 1
           .contact
             %h1 Contact
 
+        %nav.channels
+          %ul.items
+            {% for channel in contents.channels %}
+            %li{ class: "{{ channel.type | downcase | dasherize }} item" }
+              %a{ href: "{{ channel.url }}", title: "{{ channel.description }}", target: '_blank' } {{ channel.title }}
+            {% endfor %}
+
         %a.bitaculous{ href: '#', title: "{{ 'bitaculous_name' | translate }} - {{ 'bitaculous_claim' | translate }}" }
           %span.name {{ 'bitaculous_name' | translate }}
 

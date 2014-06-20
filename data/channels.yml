@@ -1,0 +1,20 @@
+- "Twitter":
+    type: "Twitter"
+    description:
+      en: "Bitaculous at Twitter"
+      de: "Bitaculous bei Twitter"
+    url: "https://twitter.com/bitaculous"
+
+- "Facebook":
+    type: "Facebook"
+    description:
+      en: "Bitaculous at Facebook"
+      de: "Bitaculous bei Facebook"
+    url: "https://www.facebook.com/bitaclous"
+
+- "GitHub":
+    type: "GitHub"
+    description:
+      en: "Bitaculous at GitHub"
+      de: "Bitaculous bei GitHub"
+    url: "https://github.com/bitaculous"

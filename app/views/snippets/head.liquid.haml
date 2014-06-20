@@ -1,9 +1,9 @@
 %head{ prefix: 'og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#' }
   {% include declaration %}
 
-  {% include meta_tags %}
-
   %title {{ page.seo_title | default: page.title }}
+
+  {% include meta_tags %}
 
   {{ 'bundle.css' | stylesheet_tag }}
 

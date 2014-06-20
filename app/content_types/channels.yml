@@ -1,0 +1,31 @@
+name: "Channels"
+slug: "channels"
+description: "Channels like “Twitter”, “Facebook” etc."
+label_field_name: "title"
+order_by: "manually"
+fields:
+- title:
+    label: "Title"
+    type: "string"
+    required: true
+    hint: "The title of the channel."
+- type:
+    label: "Type"
+    type: "select"
+    select_options:
+      - "Twitter"
+      - "Facebook"
+      - "GitHub"
+    required: true
+    hint: "The type of the channel."
+- description:
+    label: "Description"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The description of the channel."
+- url:
+    label: "URL"
+    type: "string"
+    required: true
+    hint: "The URL of the channel."
