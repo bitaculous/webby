@@ -197,5 +197,6 @@ DEPENDENCIES
   locomotivecms_wagon!
   modular-scale (~> 2.0.5)
   rb-fsevent (~> 0.9.4)
+  sassy-maps (~> 0.4.0)
   susy (~> 2.1.2)
   vendorify!

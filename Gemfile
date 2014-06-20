@@ -39,6 +39,8 @@ group :misc do
 
       gem 'modular-scale', '~> 2.0.5'
 
+      gem 'sassy-maps', '~> 0.4.0'
+
       gem 'susy', '~> 2.1.2'
     end
   end

@@ -25,3 +25,14 @@ $susy: (
   output: float,
   gutter-position: inside
 );
+
+// Theatre
+// =======
+
+$theatre: (
+  roof: (
+    backstage: (
+      border-bottom: 10px solid #000
+    )
+  )
+);

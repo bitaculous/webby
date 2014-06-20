@@ -1,0 +1,13 @@
+// _backstage.css.sass
+//
+// @package bundle/contour/common/theatre/roof
+// @media all
+// @version 1.0
+
+@import backstage/contact
+
+@mixin backstage
+  .backstage
+    border-bottom: map-get-deep($theatre, roof, backstage, border-bottom)
+
+    @include contact
