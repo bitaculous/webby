@@ -4,7 +4,14 @@
 // @media all
 // @version 1.0
 
+@import assetify/normalizations
+
 @mixin normalize
   html,
   body
     height: 100%
+
+  @include font-normalization
+
+  body
+    @include font-smoothing(on)
