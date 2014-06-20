@@ -43,8 +43,8 @@ Webby uses the following assets:
 
 ### Fonts
 
-* [Bebas Neue](http://www.fontsquirrel.com/fonts/bebas-neue "Bebas Neue")
-* [Colaborate](http://www.fontsquirrel.com/fonts/colaborate "Colaborate")
+* [Nexa free font](http://fontfabric.com/nexa-free-font "Nexa free font") which is released under the Fontfabric™ Free
+Font EULA.
 
 License
 -------
