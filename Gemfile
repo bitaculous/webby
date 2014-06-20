@@ -33,7 +33,11 @@ group :misc do
     group :stylesheets do
       gem 'bourbon', '~> 4.0.2'
 
+      gem 'breakpoint', '~> 2.4.2'
+
       gem 'compass', github: 'compass/compass', branch: 'master'
+
+      gem 'modular-scale', '~> 2.0.5'
 
       gem 'susy', '~> 2.1.2'
     end

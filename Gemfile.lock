@@ -98,6 +98,9 @@ GEM
     bourbon (4.0.2)
       sass (~> 3.3)
       thor
+    breakpoint (2.4.2)
+      sass (~> 3.3.0)
+      sassy-maps (< 1.0.0)
     celluloid (0.15.2)
       timers (~> 1.1.0)
     chronic (0.10.2)
@@ -142,6 +145,8 @@ GEM
       locomotivecms-liquid (~> 2.6.0)
     logger (1.2.8)
     mime-types (1.25.1)
+    modular-scale (2.0.5)
+      compass (>= 0.12.0)
     multi_json (1.8.4)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
@@ -154,6 +159,8 @@ GEM
     redcarpet (3.0.0)
     rubyzip (1.1.4)
     sass (3.3.8)
+    sassy-maps (0.4.0)
+      sass (~> 3.3)
     sprockets (2.12.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -182,11 +189,13 @@ PLATFORMS
 DEPENDENCIES
   assetify!
   bourbon (~> 4.0.2)
+  breakpoint (~> 2.4.2)
   compass!
   kramdown (~> 1.4)
   liquids!
   locomotivecms_mounter!
   locomotivecms_wagon!
+  modular-scale (~> 2.0.5)
   rb-fsevent (~> 0.9.4)
   susy (~> 2.1.2)
   vendorify!

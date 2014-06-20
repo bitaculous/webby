@@ -1,0 +1,27 @@
+// _settings.css.scss
+//
+// @package bundle
+// @media all
+// @version 1.0
+
+// Bourbon
+// =======
+
+$em-base: $default-baseline;
+
+// Modular Scale
+// =============
+
+$ms-base: 1rem;
+$ms-ratio: $major-third;
+
+// Susy
+// ====
+
+$susy: (
+  columns: 24,
+  gutter: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside
+);
