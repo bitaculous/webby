@@ -4,6 +4,19 @@
 // @media all
 // @version 1.0
 
+@import stage/outline
+@import stage/what_we_do
+@import stage/work
+@import stage/team
+
 @mixin stage
   .stage
     background: green
+
+    @include outline
+
+    @include what-we-do
+
+    @include work
+
+    @include team
