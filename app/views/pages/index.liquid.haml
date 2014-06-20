@@ -17,18 +17,7 @@ position: 1
   <!--<![endif]-->
   {% include head %}
 
-  %body{ id: '{{ page.slug }}' }
-    {% include cover %}
-
-    %main.dashboard{ role: 'main', style: 'background: red; height: 2000px;' }
-      {% block 'main' %}
-
-      %h1 {{ page.title }}
-
-      %p Lorem ipsum....
-
-      {% endblock %}
-
-    {% include footing %}
+  %body{ id: '{{ page.slug }}', class: 'default canvas' }
+    %h1 {{ page.title }}
 
     {{ 'bundle.js' | javascript_tag }}
