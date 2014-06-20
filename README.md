@@ -44,7 +44,7 @@ Webby uses the following assets:
 ### Fonts
 
 * [Nexa free font](http://fontfabric.com/nexa-free-font "Nexa free font") which is released under the Fontfabric™ Free
-Font EULA.
+Font License.
 
 License
 -------
