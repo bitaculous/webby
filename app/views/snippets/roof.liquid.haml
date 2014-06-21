@@ -29,7 +29,8 @@
 
     %span.claim {{ bitaculous.claim }}
 
-  {% include locales %}
+  .dashboard
+    {% include locales %}
 
-  .controls
-    %a.contact{ href: '#', title: "{{ 'contact' | translate }}" } {{ 'contact' | translate }}
+    .controls
+      %a.contact{ href: '#', title: "{{ 'contact' | translate }}" } {{ 'contact' | translate }}
