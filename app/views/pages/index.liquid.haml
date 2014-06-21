@@ -46,10 +46,12 @@ position: 1
                 %i{ class: "icon-{{ identifier }}" }
             {% endfor %}
 
-        %a.bitaculous{ href: '#', title: "{{ bitaculous.title }} - {{ bitaculous.claim }}" }
+        %a.bitaculous{ href: '/', title: "{{ bitaculous.title }} - {{ bitaculous.claim }}" }
           %span.title {{ bitaculous.title }}
 
           %span.claim {{ bitaculous.claim }}
+
+        {% include locales %}
 
         {% endblock %}
         -# Block `roof`

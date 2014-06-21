@@ -4,10 +4,10 @@
 #
 # {{ 'hello_world' | translate }}
 
-bitaculous_name:
-  en: "Bitaculous"
-  de: "Bitaculous"
+en:
+  en: "EN"
+  de: "EN"
 
-bitaculous_claim:
-  en: "It's all about the bits, baby!"
-  de: "It's all about the bits, baby!"
+de:
+  en: "DE"
+  de: "DE"

@@ -1,0 +1,19 @@
+{% assign current_locale = locale %}
+
+%nav.locales
+  %ul.items
+    {% for locale in locales %}
+
+    {% if locale == current_locale %}
+    %li{ class: "{{ locale }} item" } {{ locale | translate }}
+    {% else %}
+    %li{ class: "{{ locale }} item" }
+      %a{ href: "/{{ locale }}", title: "{{ locale | translate }}" } {{ locale | translate }}
+    {% endif %}
+
+    {% unless forloop.last %}
+    %li.separator.item
+      |
+    {% endunless %}
+
+    {% endfor %}
