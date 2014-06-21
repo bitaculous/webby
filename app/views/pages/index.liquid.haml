@@ -12,49 +12,13 @@ position: 1
 
 !!! 5
 %html.no-js{ itemscope: true, itemtype: 'http://schema.org/WebPage', lang: '{{ locale }}' }
-  {% include head %}
+  {% include 'head' %}
 
   %body{ id: '{{ page.slug }}', class: 'default canvas' }
     .theatre
       {% block 'theatre' %}
 
-      %header.roof
-        {% block 'roof' %}
-
-        .backstage
-          .contact
-            %h1 Contact
-
-        %nav.main
-          %ul.items
-            {% for section in contents.sections %}
-
-            {% assign identifier = section.identifier | downcase | dasherize %}
-
-            %li{ class: "{{ identifier }} item" }
-              %a{ href: '#', title: "{{ section.description }}" } {{ section.title }}
-            {% endfor %}
-
-        %nav.channels
-          %ul.items
-            {% for channel in contents.channels %}
-
-            {% assign identifier = channel.type | downcase | dasherize %}
-
-            %li{ class: "{{ identifier }} item" }
-              %a{ href: "{{ channel.url }}", title: "{{ channel.description }}", target: '_blank' }
-                %i{ class: "icon-{{ identifier }}" }
-            {% endfor %}
-
-        %a.bitaculous{ href: '/', title: "{{ bitaculous.title }} - {{ bitaculous.claim }}" }
-          %span.title {{ bitaculous.title }}
-
-          %span.claim {{ bitaculous.claim }}
-
-        {% include locales %}
-
-        {% endblock %}
-        -# Block `roof`
+      {% include 'roof' %}
 
       .stage
         {% block 'stage' %}
