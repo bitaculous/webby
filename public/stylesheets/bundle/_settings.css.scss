@@ -26,22 +26,34 @@ $susy: (
   gutter-position: inside
 );
 
-// Theatre
+// Contour
 // =======
 
-$theatre: (
-  shell: (
-    max-width: 979px
-  ),
-  roof: (
-    backstage: (
-      border-bottom: 10px solid #000
-    ),
+$contour: (
+  common: (
+    theatre: (
+      shell: (
+        max-width: 979px
+      ),
 
-    dashboard: (
-      navigations: (
-        a: (
-          font-family: 'Nexa Bold'
+      roof: (
+        backstage: (
+          border-bottom: 10px solid #000
+        ),
+
+        dashboard: (
+          navigations: (
+            a: (
+              font-family: 'Nexa Bold'
+            )
+          ),
+
+          bitaculous: (
+            title: (
+              font-family: 'Nexa Bold',
+              font-size: ms(1.5)
+            )
+          )
         )
       )
     )

@@ -20,7 +20,7 @@
 
           {% assign identifier = section.identifier | downcase | dasherize %}
 
-          %li{ class: "{{ identifier }} {% if forloop.first %}active{% endif %} item" }
+          %li{ class: "{{ identifier }} {% if forloop.first %}first active{% endif %} {% if forloop.last %}last{% endif %} item" }
             %a{ href: '#', title: "{{ section.description }}" } {{ section.title }}
           {% endfor %}
 
@@ -30,7 +30,7 @@
 
           {% assign identifier = channel.type | downcase | dasherize %}
 
-          %li{ class: "{{ identifier }} item" }
+          %li{ class: "{{ identifier }} {% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %} item" }
             %a{ href: "{{ channel.url }}", title: "{{ channel.description }}", target: '_blank' }
               %i{ class: "icon-{{ identifier }}" }
           {% endfor %}

@@ -14,15 +14,16 @@
 
     a.bitaculous
       background: transparent image-url('bundle/contour/common/theatre/roof/dashboard/bitaculous/background.png') no-repeat center left
-      display: block
+      display: inline-block
       height: 64px
+      margin: 0 0 rem(10)
 
       span
         display: block
         margin: 0 0 0 rem(64)
 
         &.title
-          font-family: 'Nexa Bold'
-          font-size: ms(1.5)
+          font-family: map-get-deep($contour, common, theatre, roof, dashboard, bitaculous, title, font-family)
+          font-size: map-get-deep($contour, common, theatre, roof, dashboard, bitaculous, title, font-size)
           padding: rem(10) 0 0
           text-transform: uppercase

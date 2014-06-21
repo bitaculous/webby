@@ -6,9 +6,16 @@
 
 @mixin main
   &.main
+    margin: 0 0 rem(10)
+    text-align: center
+
     ul.items
       li.item
+        margin: 0 rem(5) 0 0
         padding: rem(5) rem(8)
+
+        &.last
+          margin: 0
 
         &:hover,
         &.active
