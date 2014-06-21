@@ -45,6 +45,22 @@ $contour: (
           navigations: (
             a: (
               font-family: 'Nexa Bold'
+            ),
+
+            channels: (
+              items: (
+                item: (
+                  i: (
+                    font-size: ms(1)
+                  ),
+
+                  alive: (
+                    i: (
+                      color: #222
+                    )
+                  )
+                )
+              )
             )
           ),
 

@@ -10,7 +10,10 @@
 
     ul.items
       li.item
+        i
+          font-size: map-get-deep($contour, common, theatre, roof, dashboard, navigations, channels, items, item, i, font-size)
+
         &:hover,
         &.active
           i
-            color: #000
+            color: map-get-deep($contour, common, theatre, roof, dashboard, navigations, channels, items, item, alive, i, color)
