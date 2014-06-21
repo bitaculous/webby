@@ -6,9 +6,12 @@
 
 @import navigations/main
 @import navigations/channels
+@import navigations/locales
 
 @mixin navigations
   nav
+    text-align: center
+
     a
       font-family: map-get-deep($contour, common, theatre, roof, dashboard, navigations, a, font-family)
       text-transform: uppercase
@@ -16,3 +19,5 @@
     @include main
 
     @include channels
+
+    @include locales
