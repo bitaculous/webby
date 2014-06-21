@@ -16,7 +16,11 @@ position: 1
 
   %body{ id: '{{ page.slug }}', class: 'default canvas' }
     .theatre
+      {% block 'theatre' %}
+
       %header.roof
+        {% block 'roof' %}
+
         .backstage
           .contact
             %h1 Contact
@@ -37,7 +41,12 @@ position: 1
 
           %span.claim {{ bitaculous.claim }}
 
+        {% endblock %}
+        -# Block `roof`
+
       .stage
+        {% block 'stage' %}
+
         %section.outline
           %h1 “We built websites which shine inside and outside.”
 
@@ -50,7 +59,18 @@ position: 1
         %section.team
           %h1 “We built websites which shine inside and outside.”
 
+        {% endblock %}
+        -# Block `stage`
+
       %footer.basement
+        {% block 'basement' %}
+
         %h1 Basement
+
+        {% endblock %}
+        -# Block `basement`
+
+      {% endblock %}
+      -# Block `theatre`
 
     {{ 'bundle.js' | javascript_tag }}
