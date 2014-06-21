@@ -1,19 +1,19 @@
 - "Twitter":
-    identifier: "twitter"
+    type: "Twitter"
     description:
       en: "Bitaculous at Twitter"
       de: "Bitaculous bei Twitter"
     url: "https://twitter.com/bitaculous"
 
 - "Facebook":
-    identifier: "facebook"
+    type: "Facebook"
     description:
       en: "Bitaculous at Facebook"
       de: "Bitaculous bei Facebook"
     url: "https://www.facebook.com/bitaclous"
 
 - "GitHub":
-    identifier: "github"
+    type: "GitHub"
     description:
       en: "Bitaculous at GitHub"
       de: "Bitaculous bei GitHub"

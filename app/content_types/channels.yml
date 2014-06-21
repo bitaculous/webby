@@ -9,11 +9,15 @@ fields:
     type: "string"
     required: true
     hint: "The title of the channel."
-- identifier:
-    label: "Identifier"
-    type: "string"
+- type:
+    label: "Type"
+    type: "select"
+    select_options:
+      - "Twitter"
+      - "Facebook"
+      - "GitHub"
     required: true
-    hint: "The identifier of the channel."
+    hint: "The type of the channel."
 - description:
     label: "Description"
     type: "string"

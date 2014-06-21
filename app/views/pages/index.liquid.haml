@@ -29,7 +29,9 @@ position: 1
           %ul.items
             {% for section in contents.sections %}
 
-            %li{ class: "{{ section.identifier }} item" }
+            {% assign identifier = section.identifier | downcase | dasherize %}
+
+            %li{ class: "{{ identifier }} item" }
               %a{ href: '#', title: "{{ section.description }}" } {{ section.title }}
             {% endfor %}
 
@@ -37,9 +39,11 @@ position: 1
           %ul.items
             {% for channel in contents.channels %}
 
-            %li{ class: "{{ channel.identifier }} item" }
+            {% assign identifier = channel.type | downcase | dasherize %}
+
+            %li{ class: "{{ identifier }} item" }
               %a{ href: "{{ channel.url }}", title: "{{ channel.description }}", target: '_blank' }
-                %i{ class: "icon-{{ channel.identifier }}" }
+                %i{ class: "icon-{{ identifier }}" }
             {% endfor %}
 
         %a.bitaculous{ href: '#', title: "{{ bitaculous.title }} - {{ bitaculous.claim }}" }
