@@ -1,0 +1,18 @@
+// _navigations.css.sass
+//
+// @package bundle/contour/common/theatre/roof
+// @media all
+// @version 1.0
+
+@import navigations/main
+@import navigations/channels
+
+@mixin navigations
+  nav
+    a
+      font-family: map-get-deep($theatre, roof, navigations, a, font-family)
+      text-transform: uppercase
+
+    @include main
+
+    @include channels
