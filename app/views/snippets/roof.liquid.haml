@@ -1,36 +1,38 @@
 %header.roof
   .backstage
-    .contact
-      %h1 Contact
-
-  %nav.main
-    %ul.items
-      {% for section in contents.sections %}
-
-      {% assign identifier = section.identifier | downcase | dasherize %}
-
-      %li{ class: "{{ identifier }} item" }
-        %a{ href: '#', title: "{{ section.description }}" } {{ section.title }}
-      {% endfor %}
-
-  %nav.channels
-    %ul.items
-      {% for channel in contents.channels %}
-
-      {% assign identifier = channel.type | downcase | dasherize %}
-
-      %li{ class: "{{ identifier }} item" }
-        %a{ href: "{{ channel.url }}", title: "{{ channel.description }}", target: '_blank' }
-          %i{ class: "icon-{{ identifier }}" }
-      {% endfor %}
-
-  %a.bitaculous{ href: '/', title: "{{ bitaculous.title }} - {{ bitaculous.claim }}" }
-    %span.title {{ bitaculous.title }}
-
-    %span.claim {{ bitaculous.claim }}
-
-  .dashboard
-    {% include locales %}
+    .shell
+      .contact
+        %h1 Contact
 
     .controls
       %a.contact{ href: '#', title: "{{ 'contact' | translate }}" } {{ 'contact' | translate }}
+
+  .dashboard
+    .shell
+      %a.bitaculous{ href: '#', title: "{{ bitaculous.title }} - {{ bitaculous.claim }}" }
+        %span.title {{ bitaculous.title }}
+
+        %span.claim {{ bitaculous.claim }}
+
+      %nav.main
+        %ul.items
+          {% for section in contents.sections %}
+
+          {% assign identifier = section.identifier | downcase | dasherize %}
+
+          %li{ class: "{{ identifier }} {% if forloop.first %}active{% endif %} item" }
+            %a{ href: '#', title: "{{ section.description }}" } {{ section.title }}
+          {% endfor %}
+
+      %nav.channels
+        %ul.items
+          {% for channel in contents.channels %}
+
+          {% assign identifier = channel.type | downcase | dasherize %}
+
+          %li{ class: "{{ identifier }} item" }
+            %a{ href: "{{ channel.url }}", title: "{{ channel.description }}", target: '_blank' }
+              %i{ class: "icon-{{ identifier }}" }
+          {% endfor %}
+
+      {% include locales %}

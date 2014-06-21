@@ -1,0 +1,28 @@
+// _dashboard.css.sass
+//
+// @package bundle/contour/common/theatre/roof
+// @media all
+// @version 1.0
+
+@import dashboard/navigations
+
+@mixin dashboard
+  .dashboard
+    background: transparent url('/images/bundle/contour/common/theatre/roof/dashboard/background.png') repeat center center
+
+    @include navigations
+
+    a.bitaculous
+      background: transparent url('/images/bundle/contour/common/theatre/roof/dashboard/bitaculous/background.png') no-repeat center left
+      display: block
+      height: 64px
+
+      span
+        display: block
+        margin: 0 0 0 rem(64)
+
+        &.title
+          font-family: 'Nexa Bold'
+          font-size: ms(1.5)
+          padding: rem(10) 0 0
+          text-transform: uppercase
