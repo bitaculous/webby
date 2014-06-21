@@ -10,6 +10,8 @@ position: 1
 
 !!! 5
 %html.no-js{ itemscope: true, itemtype: 'http://schema.org/WebPage', lang: '{{ locale }}' }
+  {% assign bitaculous = contents.sites.first %}
+
   {% include head %}
 
   %body{ id: '{{ page.slug }}', class: 'default canvas' }
@@ -27,13 +29,13 @@ position: 1
 
             %li{ class: "{{ type }} item" }
               %a{ href: "{{ channel.url }}", title: "{{ channel.description }}", target: '_blank' }
-                %i{ class: "icon-{{ type }}"}
+                %i{ class: "icon-{{ type }}" }
             {% endfor %}
 
-        %a.bitaculous{ href: '#', title: "{{ 'bitaculous_name' | translate }} - {{ 'bitaculous_claim' | translate }}" }
-          %span.name {{ site.seo_title }}
+        %a.bitaculous{ href: '#', title: "{{ bitaculous.title }} - {{ bitaculous.claim }}" }
+          %span.title {{ bitaculous.title }}
 
-          %span.claim It's all about the bits, baby!
+          %span.claim {{ bitaculous.claim }}
 
       .stage
         %section.outline

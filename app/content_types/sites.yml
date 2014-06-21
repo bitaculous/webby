@@ -1,0 +1,16 @@
+name: "Sites"
+slug: "sites"
+description: "A website, or simply site, is a set of related web pages served from a single web domain."
+label_field_name: "title"
+order_by: "manually"
+fields:
+- title:
+    label: "Title"
+    type: "string"
+    required: true
+    hint: "The title of the site."
+- claim:
+    label: "Claim"
+    type: "string"
+    required: true
+    hint: "The claim of the site."
