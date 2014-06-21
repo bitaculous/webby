@@ -1,0 +1,23 @@
+name: "Sections"
+slug: "sections"
+description: "List of divisions of the website."
+label_field_name: "title"
+order_by: "manually"
+fields:
+- title:
+    label: "Title"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The title of the section."
+- identifier:
+    label: "Identifier"
+    type: "string"
+    required: true
+    hint: "The identifier of the section."
+- description:
+    label: "Description"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The description of the section."

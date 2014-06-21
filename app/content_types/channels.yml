@@ -1,6 +1,6 @@
 name: "Channels"
 slug: "channels"
-description: "Channels like Twitter, Facebook etc."
+description: "List of channels like Twitter, Facebook etc."
 label_field_name: "title"
 order_by: "manually"
 fields:
@@ -9,15 +9,11 @@ fields:
     type: "string"
     required: true
     hint: "The title of the channel."
-- type:
-    label: "Type"
-    type: "select"
-    select_options:
-      - "Twitter"
-      - "Facebook"
-      - "GitHub"
+- identifier:
+    label: "Identifier"
+    type: "string"
     required: true
-    hint: "The type of the channel."
+    hint: "The identifier of the channel."
 - description:
     label: "Description"
     type: "string"

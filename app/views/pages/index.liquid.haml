@@ -8,10 +8,10 @@ listed: true
 position: 1
 ---
 
+{% assign bitaculous = contents.sites.first %}
+
 !!! 5
 %html.no-js{ itemscope: true, itemtype: 'http://schema.org/WebPage', lang: '{{ locale }}' }
-  {% assign bitaculous = contents.sites.first %}
-
   {% include head %}
 
   %body{ id: '{{ page.slug }}', class: 'default canvas' }
@@ -25,15 +25,21 @@ position: 1
           .contact
             %h1 Contact
 
+        %nav.main
+          %ul.items
+            {% for section in contents.sections %}
+
+            %li{ class: "{{ section.identifier }} item" }
+              %a{ href: '#', title: "{{ section.description }}" } {{ section.title }}
+            {% endfor %}
+
         %nav.channels
           %ul.items
             {% for channel in contents.channels %}
 
-            {% assign type = channel.type | downcase | dasherize %}
-
-            %li{ class: "{{ type }} item" }
+            %li{ class: "{{ channel.identifier }} item" }
               %a{ href: "{{ channel.url }}", title: "{{ channel.description }}", target: '_blank' }
-                %i{ class: "icon-{{ type }}" }
+                %i{ class: "icon-{{ channel.identifier }}" }
             {% endfor %}
 
         %a.bitaculous{ href: '#', title: "{{ bitaculous.title }} - {{ bitaculous.claim }}" }

@@ -1,6 +1,6 @@
 name: "Sites"
 slug: "sites"
-description: "A website, or simply site, is a set of related web pages served from a single web domain."
+description: "List of websites."
 label_field_name: "title"
 order_by: "manually"
 fields:
