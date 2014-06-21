@@ -19,5 +19,8 @@ log
 # Ignore `public/fonts/nexa` folder
 public/fonts/nexa
 
+# Ignore `ressources/images` folder
+ressources/images
+
 # Ignore `ressources/layouts` folder
 ressources/layouts
