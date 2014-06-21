@@ -1,6 +1,6 @@
 name: "Channels"
 slug: "channels"
-description: "Channels like “Twitter”, “Facebook” etc."
+description: "Channels like Twitter, Facebook etc."
 label_field_name: "title"
 order_by: "manually"
 fields:

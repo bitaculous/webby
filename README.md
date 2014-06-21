@@ -44,6 +44,7 @@ Webby uses the following assets:
 ### Fonts
 
 * [Nexa font](http://fontfabric.com/nexa-font "Nexa font")
+* [Font Awesome](http://fortawesome.github.io/Font-Awesome "The iconic font and CSS toolkit")
 
 License
 -------

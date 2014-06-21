@@ -1,0 +1,57 @@
+// _fontello.css.sass
+//
+// @package bundle/fonts
+// @media all
+// @version 1.0
+
+@mixin fontello
+  @include fontello-font-face
+
+  @include fontello-styles
+
+  @include fontello-codes
+
+@mixin fontello-font-face
+  @include font-face('Fontello Regular', '/fonts/fontello/regular')
+
+@mixin fontello-styles
+  [class^="icon-"]:before,
+  [class*=" icon-"]:before
+    display: inline-block
+    font-family: 'Fontello Regular'
+    font-style: normal
+    font-weight: normal
+    margin-right: .2em
+    speak: none
+    text-align: center
+    text-decoration: inherit
+    width: 1em
+
+    // For safety - reset parent styles, that can break glyph codes
+    font-variant: normal
+    text-transform: none
+
+    // Fix buttons height, for Twitter Bootstrap
+    line-height: 1em
+
+    // Animation center compensation - margins should be symmetric, remove if not needed
+    // margin-left: .2em
+
+    // You can be more comfortable with increased icons size
+    // font-size: 120%
+
+    // Uncomment for 3D effect
+    // text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3)
+
+@mixin fontello-codes
+  .icon-twitter:before
+    content: '\e802'
+
+  .icon-facebook:before
+    content: '\e800'
+
+  .icon-github:before
+    content: '\e801'
+
+  .icon-bitbucket:before
+    content: '\e803'
