@@ -24,3 +24,24 @@
       de: "Think Big"
     type: "Quote"
     quote: "Think Big"
+
+- "Unlimited Power":
+    title:
+      en: "Unlimited Power"
+      de: "Unlimited Power"
+    type: "Quote"
+    quote: "Unlimited Power"
+
+- "Do What You Love":
+    title:
+      en: "Do What You Love"
+      de: "Do What You Love"
+    type: "Quote"
+    quote: "Do What You Love"
+
+# - "Start Small":
+#     title:
+#       en: "Start Small"
+#       de: "Start Small"
+#     type: "Quote"
+#     quote: "Start Small"
