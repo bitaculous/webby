@@ -5,11 +5,11 @@
     type: "Message"
     message:
       en: |
-        We built websites which shine <a href="https://github.com/bitaculous/webby" title="Sources of the Bitaculous website" target="_blank">inside</a>
-        and <a href="https://github.com/bitaculous/webby" title="markenfaktur website" target="_blank">outside</a>."
+        “We built websites which shine <a href="https://github.com/bitaculous/webby" title="Sources of the Bitaculous website" target="_blank">inside</a>
+        and <a href="https://github.com/bitaculous/webby" title="markenfaktur website" target="_blank">outside</a>.”
       de: |
-        Wir entwickeln Websites, die <a href="https://github.com/bitaculous/webby" title="Quellcode der Bitaculous Website" target="_blank">innen</a>
-        und <a href="https://github.com/bitaculous/webby" title="markenfaktur Website" target="_blank">außen</a> glänzen."
+        „Wir entwickeln Websites, die <a href="https://github.com/bitaculous/webby" title="Quellcode der Bitaculous Website" target="_blank">innen</a>
+        und <a href="https://github.com/bitaculous/webby" title="markenfaktur Website" target="_blank">außen</a> glänzen.“
 
 - "Sic Parvis Magna":
     title:

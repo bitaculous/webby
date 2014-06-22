@@ -35,7 +35,6 @@ $ ->
           centerMode: true
           centerPadding: '0px'
           dots: true
-          fade: true
           slide: '.slide'
           slidesToScroll: 1
           slidesToShow: 1

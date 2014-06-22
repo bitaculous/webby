@@ -18,6 +18,8 @@ fields:
     hint: "The statement of the quote."
 - author:
     label: "Author"
-    type: "string"
+    type: "text"
+    text_formatting: "html"
     required: true
+    localized: true
     hint: "The author of the quote."

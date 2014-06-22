@@ -4,8 +4,12 @@
       de: "Sic Parvis Magna"
     statement:
       en: "“Greatness from small beginnings”"
-      de: "“Greatness from small beginnings”"
-    author: "Sir Francis Drake"
+      de: "„Greatness from small beginnings“"
+    author:
+      en: |
+        <a href="http://en.wikipedia.org/wiki/Francis_Drake" title="Sir Francis Drake" target="_blank">Sir Francis Drake</a>
+      de: |
+        <a href="http://de.wikipedia.org/wiki/Francis_Drake" title="Sir Francis Drake" target="_blank">Sir Francis Drake</a>
 
 - "Think Big":
     title:
@@ -13,5 +17,9 @@
       de: "Think Big"
     statement:
       en: "“Every great dream begins with a dreamer.”"
-      de: "“Every great dream begins with a dreamer.”"
-    author: "Harriet Tubman"
+      de: "„Every great dream begins with a dreamer.“"
+    author:
+      en: |
+        <a href="http://en.wikipedia.org/wiki/Harriet_Tubman" title="Harriet Tubman" target="_blank">Harriet Tubman</a>
+      de: |
+        <a href="http://de.wikipedia.org/wiki/Harriet_Tubman" title="Harriet Tubman" target="_blank">Harriet Tubman</a>

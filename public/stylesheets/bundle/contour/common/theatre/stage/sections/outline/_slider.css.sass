@@ -6,6 +6,33 @@
 
 @mixin slider
   .slider
+    padding: rem(200) 0 0 0
+
     .slide
-      height: 500px
-      background: red
+      height: 450px
+      text-align: center
+
+      p
+        margin: 0
+
+      a
+        font-family: 'Nexa Bold'
+
+      &.message
+        p.message
+          font-size: ms(4)
+
+      &.quote
+        p.title,
+        p.statement
+          margin: 0 0 rem(10)
+
+        p.title,
+          font-family: 'Nexa Bold'
+          font-size: ms(4)
+
+        p.statement
+          font-size: ms(1.5)
+
+        p.author
+          font-size: ms(1.5)
