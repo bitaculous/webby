@@ -17,7 +17,6 @@
     @include transition($property $transition-duration ease-out)
 
     &:hover,
-    &:focus,
     &.active
       @include transition($property $transition-duration ease-in)
   @else
@@ -25,7 +24,6 @@
       @include transition($property $transition-duration ease-out)
 
     &:hover,
-    &:focus,
     &.active
       #{$element}
         @include transition($property $transition-duration ease-in)
