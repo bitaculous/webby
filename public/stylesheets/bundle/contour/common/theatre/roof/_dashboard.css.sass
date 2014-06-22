@@ -5,13 +5,12 @@
 // @version 1.0
 
 @import dashboard/navigations
+@import dashboard/control_panel
 
 @mixin dashboard
   .dashboard
     background: transparent image-url('bundle/contour/common/theatre/roof/dashboard/background.png') repeat center center
     position: relative
-
-    @include navigations
 
     a.bitaculous
       background: transparent image-url('bundle/contour/common/theatre/roof/dashboard/bitaculous/background.png') no-repeat center left
@@ -32,3 +31,7 @@
           font-size: map-get-deep($contour, common, theatre, roof, dashboard, bitaculous, title, font-size)
           padding: rem(10) 0 0
           text-transform: uppercase
+
+    @include navigations
+
+    @include control-panel

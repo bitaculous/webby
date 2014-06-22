@@ -4,9 +4,6 @@
       .contact
         %h1 Contact
 
-    .controls
-      %a.contact{ href: '#', title: "{{ 'contact' | translate }}" } {{ 'contact' | translate }}
-
   .dashboard
     .shell
       %a.bitaculous{ href: '#', title: "{{ bitaculous.title }} - {{ bitaculous.claim }}" }
@@ -35,4 +32,7 @@
               %i{ class: "icon-{{ identifier }}" }
           {% endfor %}
 
-      {% include locales %}
+      .control-panel
+        {% include locales %}
+
+        %a.contact{ href: '#', title: "{{ 'contact' | translate }}" } {{ 'contact' | translate }}
