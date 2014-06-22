@@ -42,6 +42,13 @@ $contour: (
         ),
 
         dashboard: (
+          badge: (
+            title: (
+              font-family: 'Nexa Bold',
+              font-size: ms(1.5)
+            )
+          ),
+
           navigations: (
             a: (
               font-family: 'Nexa Bold'
@@ -70,13 +77,6 @@ $contour: (
             locales: (
               font-size: ms(-1.25)
             ),
-          ),
-
-          bitaculous: (
-            title: (
-              font-family: 'Nexa Bold',
-              font-size: ms(1.5)
-            )
           )
         )
       )

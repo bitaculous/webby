@@ -4,6 +4,7 @@
 // @media all
 // @version 1.0
 
+@import dashboard/badge
 @import dashboard/navigations
 @import dashboard/control_panel
 
@@ -12,25 +13,7 @@
     background: transparent image-url('bundle/contour/common/theatre/roof/dashboard/background.png') repeat center center
     position: relative
 
-    a.bitaculous
-      background: transparent image-url('bundle/contour/common/theatre/roof/dashboard/bitaculous/background.png') no-repeat center left
-      display: inline-block
-      height: 64px
-      margin: 0 0 rem(10)
-
-      @include hidpi
-        background-image: image-url('bundle/contour/common/theatre/roof/dashboard/bitaculous/background@2x.png')
-        background-size: 64px 64px
-
-      span
-        display: block
-        margin: 0 0 0 rem(64)
-
-        &.title
-          font-family: map-get-deep($contour, common, theatre, roof, dashboard, bitaculous, title, font-family)
-          font-size: map-get-deep($contour, common, theatre, roof, dashboard, bitaculous, title, font-size)
-          padding: rem(10) 0 0
-          text-transform: uppercase
+    @include badge
 
     @include navigations
 
