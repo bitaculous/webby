@@ -1,0 +1,20 @@
+// _sections.css.sass
+//
+// @package bundle/contour/common/theatre/stage/outline
+// @media all
+// @version 1.0
+
+@import sections/outline
+@import sections/what_we_do
+@import sections/work
+@import sections/team
+
+@mixin sections
+  section
+    @include outline
+
+    @include what-we-do
+
+    @include work
+
+    @include team

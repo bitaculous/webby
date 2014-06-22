@@ -24,7 +24,14 @@ position: 1
 
         %section.outline
           .shell
-            %h1 “We built websites which shine inside and outside.”
+            .slick-slider.slider
+              {% for slide in contents.slides %}
+
+              {% assign type = slide.type | downcase | dasherize %}
+
+              %div{ class: "{{ type }} slick-slide slide" } Hello
+
+              {% endfor %}
 
         {% endblock %}
         -# Block `stage`

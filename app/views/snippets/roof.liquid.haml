@@ -25,11 +25,11 @@
         %ul.items
           {% for channel in contents.channels %}
 
-          {% assign identifier = channel.type | downcase | dasherize %}
+          {% assign type = channel.type | downcase | dasherize %}
 
-          %li{ class: "{{ identifier }} {% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %} item" }
+          %li{ class: "{{ type }} {% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %} item" }
             %a{ href: "{{ channel.url }}", title: "{{ channel.description }}", target: '_blank' }
-              %i{ class: "icon-{{ identifier }}" }
+              %i{ class: "icon-{{ type }}" }
           {% endfor %}
 
       .control-panel
