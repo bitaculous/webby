@@ -1,0 +1,31 @@
+name: "Slides"
+slug: "slides"
+description: "List of slides."
+label_field_name: "title"
+order_by: "manually"
+fields:
+- title:
+    label: "Title"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The title of the slide."
+- type:
+    label: "Type"
+    type: "select"
+    select_options:
+      - "Message"
+      - "Quote"
+    required: true
+    hint: "The type of the slide."
+- message:
+    label: "Message"
+    type: "text"
+    text_formatting: "html"
+    localized: true
+    hint: "The message of the slide."
+- quote:
+    label: Quote
+    type: belongs_to
+    class_name: quotes
+    hint: "The quote of the slide."

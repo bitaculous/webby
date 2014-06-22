@@ -1,0 +1,23 @@
+name: "Quotes"
+slug: "quotes"
+description: "List of quotes."
+label_field_name: "title"
+order_by: "manually"
+fields:
+- title:
+    label: "Title"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The title of the quote."
+- statement:
+    label: "Statement"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The statement of the quote."
+- author:
+    label: "Author"
+    type: "string"
+    required: true
+    hint: "The author of the quote."

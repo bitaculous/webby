@@ -17,7 +17,8 @@ fields:
     hint: "The identifier of the section."
 - description:
     label: "Description"
-    type: "string"
+    type: "text"
+    text_formatting: "html"
     required: true
     localized: true
     hint: "The description of the section."
