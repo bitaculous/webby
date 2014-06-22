@@ -1,5 +1,3 @@
-{% assign current_locale = locale %}
-
 %nav.locales
   %ul.items
     {% for locale in locales %}
@@ -8,7 +6,11 @@
     %li{ class: "{{ locale }} item" } {{ locale | translate }}
     {% else %}
     %li{ class: "{{ locale }} item" }
+      {% if locale == default_locale %}
+      %a{ href: '/', title: "{{ locale | translate }}" } {{ locale | translate }}
+      {% else %}
       %a{ href: "/{{ locale }}", title: "{{ locale | translate }}" } {{ locale | translate }}
+      {% endif %}
     {% endif %}
 
     {% unless forloop.last %}

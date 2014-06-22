@@ -47,6 +47,10 @@ $contour: (
               font-family: 'Nexa Bold'
             ),
 
+            main: (
+              font-size: ms(-1.25)
+            ),
+
             channels: (
               items: (
                 item: (
@@ -61,7 +65,11 @@ $contour: (
                   )
                 )
               )
-            )
+            ),
+
+            locales: (
+              font-size: ms(-1.25)
+            ),
           ),
 
           bitaculous: (
