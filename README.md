@@ -41,6 +41,21 @@ Credits
 
 Webby uses the following assets:
 
+### CSS
+
+* [normalize.css](http://necolas.github.io/normalize.css "normalize.css")
+
+### JavaScript
+
+* [jQuery](http://jquery.com "The Write Less, Do More, JavaScript Library.")
+* [Modernizr](http://modernizr.com "Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the user’s browser.")
+* [slick](http://kenwheeler.github.io/slick "The last carousel you'll ever need.")
+
+#### Polyfills
+
+* [Console](https://github.com/h5bp/html5-boilerplate/blob/master/js/plugins.js "Avoid `console` errors in browsers that lack a console.")
+* [FastClick](https://github.com/ftlabs/fastclick "Polyfill to remove click delays on browsers with touch UIs.")
+
 ### Fonts
 
 * [Nexa font](http://fontfabric.com/nexa-font "Nexa font")
