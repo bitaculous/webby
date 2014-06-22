@@ -10,10 +10,10 @@ position: 1
 {% include 'variables' %}
 
 !!! 5
-%html.no-js{ itemscope: true, itemtype: 'http://schema.org/WebPage', lang: '{{ locale }}' }
+%html.no-js{ itemscope: true, itemtype: 'http://schema.org/WebPage', lang: '{{locale}}' }
   {% include 'head' %}
 
-  %body{ id: '{{ page.slug }}', class: 'default canvas' }
+  %body{ id: '{{page.slug}}', class: 'default canvas' }
     .theatre
       {% block 'theatre' %}
 
@@ -29,7 +29,7 @@ position: 1
 
               {% assign type = slide.type | downcase | dasherize %}
 
-              %div{ class: "{{ type }} slick-slide slide" } Hello
+              .slick-slide.slide{ class: '{{type}}' } Hello
 
               {% endfor %}
 
@@ -48,4 +48,4 @@ position: 1
       {% endblock %}
       -# Block `theatre`
 
-    {{ 'bundle.js' | javascript_tag }}
+    {{'bundle.js' | javascript_tag}}

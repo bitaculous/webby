@@ -6,10 +6,10 @@
 
   .dashboard
     .shell
-      %a.badge{ href: '#', title: "{{ bitaculous.title }} - {{ bitaculous.claim }}" }
-        %span.title {{ bitaculous.title }}
+      %a.badge{ href: '#', title: '{{bitaculous.title}} - {{bitaculous.claim}}' }
+        %span.title {{bitaculous.title}}
 
-        %span.claim {{ bitaculous.claim }}
+        %span.claim {{bitaculous.claim}}
 
       %nav.main
         %ul.items
@@ -17,8 +17,8 @@
 
           {% assign identifier = section.identifier | downcase | dasherize %}
 
-          %li{ class: "{{ identifier }} {% if forloop.first %}first active{% endif %} {% if forloop.last %}last{% endif %} item" }
-            %a{ href: '#', title: "{{ section.description }}" } {{ section.title }}
+          %li{ class: '{{identifier}} {% if forloop.first %}first active{% endif %} {% if forloop.last %}last{% endif %} item' }
+            %a{ href: '#', title: '{{section.description}}' } {{section.title}}
           {% endfor %}
 
       %nav.channels
@@ -27,12 +27,12 @@
 
           {% assign type = channel.type | downcase | dasherize %}
 
-          %li{ class: "{{ type }} {% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %} item" }
-            %a{ href: "{{ channel.url }}", title: "{{ channel.description }}", target: '_blank' }
-              %i{ class: "icon-{{ type }}" }
+          %li{ class: '{{type}} {% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %} item' }
+            %a{ href: '{{channel.url}}', title: '{{channel.description}}', target: '_blank' }
+              %i{ class: 'icon-{{type}}' }
           {% endfor %}
 
       .control-panel
         {% include locales %}
 
-        %a.contact{ href: '#', title: "{{ 'contact' | translate }}" } {{ 'contact' | translate }}
+        %a.contact{ href: '#', title: '{{\'contact\' | translate}}' } {{'contact' | translate}}
