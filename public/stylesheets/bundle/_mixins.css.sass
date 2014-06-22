@@ -11,3 +11,21 @@
   @else
     -moz-osx-font-smoothing: auto
     -webkit-font-smoothing: subpixel-antialiased
+
+@mixin smooth($element: false, $property: background-image, $transition-duration: 0.5s)
+  @if $element == false
+    @include transition($property $transition-duration ease-out)
+
+    &:hover,
+    &:focus,
+    &.active
+      @include transition($property $transition-duration ease-in)
+  @else
+    #{$element}
+      @include transition($property $transition-duration ease-out)
+
+    &:hover,
+    &:focus,
+    &.active
+      #{$element}
+        @include transition($property $transition-duration ease-in)
