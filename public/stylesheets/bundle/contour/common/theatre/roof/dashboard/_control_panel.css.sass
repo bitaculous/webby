@@ -7,7 +7,18 @@
 @mixin control-panel
   .control-panel
     position: absolute
-    right: rem(10)
-    top: rem(10)
+    right: rem(5)
+    top: 0
 
-    @include container
+    nav.locales,
+    a.contact
+      display: inline-block
+
+    a.contact
+      background: transparent image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/contact/background.png') no-repeat 0 0
+      font-size: map-get-deep($contour, common, theatre, roof, dashboard, control-panel, contact, font-size)
+      text-align: center
+      text-transform: uppercase
+      height: 38px
+      width: 138px
+      line-height: rem(38)
