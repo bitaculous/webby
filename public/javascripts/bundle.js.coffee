@@ -4,6 +4,7 @@
 #= require polyfills/fastclick
 
 #= require jquery
+#= require jquery/plugins/shadify
 #= require jquery/plugins/slick
 
 $ ->
@@ -25,6 +26,10 @@ $ ->
     outline = stage.find '.outline'
 
     if do outline.present
+      canvas = outline.find '.canvas'
+
+      do canvas.shadify if do canvas.present
+
       slider = outline.find '.slider'
 
       if do slider.present
