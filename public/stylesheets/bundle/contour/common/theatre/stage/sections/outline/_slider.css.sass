@@ -9,30 +9,36 @@
     padding: rem(200) 0 0 0
 
     .slide
-      height: 450px
-      text-align: center
+      height: 400px
 
-      p
-        margin: 0
+      .content
+        text-align: center
 
-      a
-        font-family: 'Nexa Bold'
+        @include vertical-align
+
+        p
+          margin: 0
+
+        a
+          font-family: 'Nexa Bold'
 
       &.message
-        p.message
-          font-size: ms(3.5)
+        .content
+          p.message
+            font-size: ms(3.5)
 
       &.quote
-        p.title,
-        p.statement
-          margin: 0 0 rem(10)
+        .content
+          p.title,
+          p.statement
+            margin: 0 0 rem(10)
 
-        p.title,
-          font-family: 'Nexa Bold'
-          font-size: ms(3.5)
+          p.title,
+            font-family: 'Nexa Bold'
+            font-size: ms(3.5)
 
-        p.statement
-          font-size: ms(1.5)
+          p.statement
+            font-size: ms(1.5)
 
-        p.author
-          font-size: ms(1.5)
+          p.author
+            font-size: ms(1.5)

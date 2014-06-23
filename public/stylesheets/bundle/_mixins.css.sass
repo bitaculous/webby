@@ -27,3 +27,9 @@
     &.active
       #{$element}
         @include transition($property $transition-duration ease-in)
+
+@mixin vertical-align
+  position: relative
+  top: 50%
+
+  @include transform(translateY(-50%))

@@ -30,17 +30,18 @@ position: 1
               {% assign type = slide.type | downcase | dasherize %}
 
               .slick-slide.slide{ class: '{{type}}' }
-                {% if slide.message %}
-                %p.message {{slide.message}}
-                {% endif %}
+                .content
+                  {% if slide.message %}
+                  %p.message {{slide.message}}
+                  {% endif %}
 
-                {% if slide.quote %}
-                %p.title {{slide.quote.title}}
+                  {% if slide.quote %}
+                  %p.title {{slide.quote.title}}
 
-                %p.statement {{slide.quote.statement}}
+                  %p.statement {{slide.quote.statement}}
 
-                %p.author {{slide.quote.author}}
-                {% endif %}
+                  %p.author {{slide.quote.author}}
+                  {% endif %}
 
               {% endfor %}
 

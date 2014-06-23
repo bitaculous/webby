@@ -31,7 +31,7 @@ $ ->
         slider.slick {
           arrows: false
           autoplay: true
-          autoplaySpeed: 5000
+          autoplaySpeed: 7500
           centerMode: true
           centerPadding: '0px'
           dots: true
