@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/bitaculous/initializify.git
-  revision: 78e18590ab2c292575d0224cbd5bfc7c261fba16
+  revision: 1f6090c1a6d48b57322687d7e6c4a917b14d7deb
   specs:
     initializify (0.0.1)
 
@@ -21,7 +21,7 @@ GIT
 
 GIT
   remote: git://github.com/bitaculous/vendorify.git
-  revision: 933918238e286213ba673bb46b5c94368a28812b
+  revision: bc8d88bf93bd8818eeac8a8a914efade43ffe34d
   specs:
     vendorify (0.1.0)
       sass (>= 3.2)
