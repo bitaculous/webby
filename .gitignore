@@ -24,3 +24,6 @@ ressources/images
 
 # Ignore `ressources/layouts` folder
 ressources/layouts
+
+# Ignore `ressources/misc` folder
+ressources/misc
