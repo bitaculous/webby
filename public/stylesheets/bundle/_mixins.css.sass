@@ -28,8 +28,8 @@
       #{$element}
         @include transition($property $transition-duration ease-in)
 
-@mixin vertical-align
+@mixin vertical-align($top: 50%)
   position: relative
-  top: 50%
+  top: $top
 
-  @include transform(translateY(-50%))
+  @include transform(translateY(-$top))
