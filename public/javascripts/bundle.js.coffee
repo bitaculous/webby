@@ -16,6 +16,18 @@ $ ->
   stage    = theatre.find '.stage'
   basement = theatre.find '.basement'
 
+  # === Events ===
+
+  onSliderInitialized = (slick) ->
+    slider  = slick.$slider
+    outline = slider.closest '.outline'
+    shady   = outline.find '.shady'
+
+    # May I have your attention please? Will the real Shady please stand up?
+    do shady.shadify if do shady.present
+
+    return
+
   # === FastClick ===
 
   FastClick.attach document.body
@@ -26,10 +38,6 @@ $ ->
     outline = stage.find '.outline'
 
     if do outline.present
-      shady = outline.find '.shady'
-
-      do shady.shadify if do shady.present
-
       slider = outline.find '.slider'
 
       if do slider.present
@@ -44,6 +52,7 @@ $ ->
           slidesToScroll: 1
           slidesToShow: 1
           speed: 500
+          onInit: onSliderInitialized
         }
 
   return
