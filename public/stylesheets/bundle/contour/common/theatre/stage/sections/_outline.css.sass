@@ -4,13 +4,14 @@
 // @media all
 // @version 1.0
 
-@import outline/canvas
+@import outline/shady
 @import outline/slider
 
 @mixin outline
   &.outline
+    overflow: hidden
     position: relative
 
-    @include canvas
+    @include shady
 
     @include slider

@@ -11,11 +11,11 @@
     ul.items
       li.item
         i
-          font-size: map-get-deep($contour, common, theatre, roof, dashboard, navigations, channels, items, item, i, font-size)
+          font-size: ms(1)
 
         &:hover,
         &.active
           i
-            color: map-get-deep($contour, common, theatre, roof, dashboard, navigations, channels, items, item, alive, i, color)
+            color: #222
 
         @include smooth($element: i, $property: color)

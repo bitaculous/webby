@@ -6,7 +6,7 @@
 
 @mixin slider
   .slider
-    padding: rem(164) 0 0 0
+    padding: rem(164) 0 0
     z-index: 100
 
     .slide
@@ -21,12 +21,12 @@
           margin: 0
 
         a
-          font-family: map-get-deep($contour, common, theatre, stage, sections, outline, slider, slide, content, a, font-family)
+          font-family: 'Nexa Bold'
 
       &.message
         .content
           p
-            font-size: map-get-deep($contour, common, theatre, stage, sections, outline, slider, slide, message, content, p, font-size)
+            font-size: ms(3.5)
 
       &.quote
         .content
@@ -35,11 +35,9 @@
             margin: 0 0 rem(10)
 
           p.title,
-            font-family: map-get-deep($contour, common, theatre, stage, sections, outline, slider, slide, quote, content, title, font-family)
-            font-size: map-get-deep($contour, common, theatre, stage, sections, outline, slider, slide, quote, content, title, font-size)
+            font-family: 'Nexa Bold'
+            font-size: ms(3.5)
 
           p.statement
-            font-size: map-get-deep($contour, common, theatre, stage, sections, outline, slider, slide, quote, content, statement, font-size)
-
           p.author
-            font-size: map-get-deep($contour, common, theatre, stage, sections, outline, slider, slide, quote, content, author, font-size)
+            font-size: ms(1.5)

@@ -26,9 +26,9 @@ $ ->
     outline = stage.find '.outline'
 
     if do outline.present
-      canvas = outline.find '.canvas'
+      shady = outline.find '.shady'
 
-      do canvas.shadify if do canvas.present
+      do shady.shadify if do shady.present
 
       slider = outline.find '.slider'
 

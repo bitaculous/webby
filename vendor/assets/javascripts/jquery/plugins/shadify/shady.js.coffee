@@ -6,9 +6,9 @@ class @Shady
 
   # === Public ===
 
-  constructor: (canvas, options) ->
-    @canvas    = $ canvas
-    @container = @canvas[0]
+  constructor: (element, options) ->
+    @element   = $ element
+    @container = @element[0]
     @options   = $.extend @defaults, options
 
     initialize.call @
@@ -18,32 +18,38 @@ class @Shady
   # === Private ===
 
   initialize = ->
-    # Create a Renderer for the context you would like to render to. You can use either the `WebGLRenderer`,
-    # `CanvasRenderer` or `SVGRenderer`.
-    @renderer = new FSS.WebGLRenderer
+    console.log @container.offsetHeight
+    console.log @container.offsetWidth
 
-    # Add the Renderer's element to the DOM (`canvas`).
-    @container.appendChild @renderer.element
+    console.log do @element.height
 
-    # Resize Renderer to the Container dimensions.
-    @renderer.setSize @container.offsetWidth, @container.offsetHeight
+    if not @options.debug
+      # Create a Renderer for the context you would like to render to. You can use either the `WebGLRenderer`,
+      # `CanvasRenderer` or `SVGRenderer`.
+      @renderer = new FSS.WebGLRenderer
 
-    # Create a Scene.
-    @scene = new FSS.Scene
+      # Add the Renderer's element to the DOM (`canvas`).
+      @container.appendChild @renderer.element
 
-    # Create some Geometry & a Material, pass them to a Mesh constructor, and add the Mesh to the Scene.
-    geometry = new FSS.Plane 200, 100, 4, 2
-    material = new FSS.Material '#444444', '#FFFFFF'
-    mesh     = new FSS.Mesh geometry, material
+      # Resize Renderer to the Container dimensions.
+      @renderer.setSize @container.offsetWidth, @container.offsetHeight
 
-    @scene.add mesh
+      # Create a Scene.
+      @scene = new FSS.Scene
 
-    # Create and add a Light to the Scene.
-    light = new FSS.Light '#FF0000', '#0000FF'
+      # Create some Geometry & a Material, pass them to a Mesh constructor, and add the Mesh to the Scene.
+      geometry = new FSS.Plane 200, 100, 4, 2
+      material = new FSS.Material '#444444', '#FFFFFF'
+      mesh     = new FSS.Mesh geometry, material
 
-    @scene.add light
+      @scene.add mesh
 
-    # Finally, render the Scene.
-    @renderer.render @scene
+      # Create and add a Light to the Scene.
+      light = new FSS.Light '#FF0000', '#0000FF'
+
+      @scene.add light
+
+      # Finally, render the Scene.
+      @renderer.render @scene
 
     return
