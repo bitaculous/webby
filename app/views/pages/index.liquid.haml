@@ -23,6 +23,8 @@ position: 1
         {% block 'stage' %}
 
         %section.outline
+          .canvas
+
           .shell
             .slick-slider.slider
               {% for slide in contents.slides %}
@@ -32,7 +34,7 @@ position: 1
               .slick-slide.slide{ class: '{{type}}' }
                 .content
                   {% if slide.message %}
-                  %p.message {{slide.message}}
+                  %p {{slide.message}}
                   {% endif %}
 
                   {% if slide.quote %}

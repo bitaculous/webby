@@ -86,6 +86,47 @@ $contour: (
             )
           )
         )
+      ),
+
+      stage: (
+        sections: (
+          outline: (
+            slider: (
+              slide: (
+                content: (
+                  a: (
+                    font-family: 'Nexa Bold'
+                  )
+                ),
+
+                message: (
+                  content: (
+                    p: (
+                      font-size: ms(3.5)
+                    )
+                  )
+                ),
+
+                quote: (
+                  content: (
+                    title: (
+                      font-family: 'Nexa Bold',
+                      font-size: ms(3.5)
+                    ),
+
+                    statement: (
+                      font-size: ms(1.5)
+                    ),
+
+                    author: (
+                      font-size: ms(1.5)
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
       )
     )
   )

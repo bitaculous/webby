@@ -4,8 +4,11 @@
 // @media all
 // @version 1.0
 
+@import outline/canvas
 @import outline/slider
 
 @mixin outline
   &.outline
+    @include canvas
+
     @include slider
