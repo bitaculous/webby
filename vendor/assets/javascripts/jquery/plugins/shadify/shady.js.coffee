@@ -39,7 +39,7 @@ class @Shady
       maxLimit: null
       minDistance: 20
       maxDistance: 400
-      autopilot: true
+      autopilot: false
       draw: true
       bounds: do FSS.Vector3.create
       step: FSS.Vector3.create Math.randomInRange(0.2, 1.0), Math.randomInRange(0.2, 1.0), Math.randomInRange(0.2, 1.0)
