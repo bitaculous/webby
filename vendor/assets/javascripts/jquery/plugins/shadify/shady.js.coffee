@@ -1,9 +1,9 @@
 class @Shady
   # === Constants ==
 
-  @WEBGL: 'webgl'
-  @CANVAS: 'canvas'
-  @SVG:'svg'
+  @WEBGL: 'WebGL'
+  @CANVAS: 'Canvas'
+  @SVG:'SVG'
 
   # === Variables ===
 
