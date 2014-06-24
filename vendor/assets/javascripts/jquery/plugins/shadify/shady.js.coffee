@@ -17,8 +17,9 @@ class @Shady
     @geometry = new FSS.Plane @container.offsetWidth, @container.offsetHeight, 10, 5
     @material = new FSS.Material '#FFFFFF', '#FFFFFF'
     @mesh     = new FSS.Mesh @geometry, @material
-    @now      = do Date.now
-    @start    = do Date.now
+
+    @now   = do Date.now
+    @start = do Date.now
 
     initialize.call @
 
@@ -34,7 +35,6 @@ class @Shady
     @renderer.render @scene
 
     requestAnimationFrame @animate
-    # requestAnimationFrame(@animate.bind @)
 
     return
 
