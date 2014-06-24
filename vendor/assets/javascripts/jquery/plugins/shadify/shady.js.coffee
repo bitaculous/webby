@@ -14,14 +14,14 @@ class @Shady
     renderer: @WEBGL
 
     mesh:
-      width: 1.0
-      height: 1.0
-      depth: 5
-      segments: 16
+      width: 1.2
+      height: 1.2
+      depth: 4
+      segments: 8
       slices: 8
-      xRange: 1.6
-      yRange: 0.1
-      zRange: 1.0
+      xRange: 0.5
+      yRange: 0.5
+      zRange: 0
       ambient: '#555555'
       diffuse: '#FFFFFF'
       speed: 0.002
