@@ -244,10 +244,8 @@ class @Shady
       @element.addClass 'no-renderer-found'
     else
       @container = @element[0]
-
-      @now   = do Date.now
-      @start = do Date.now
-
+      @now       = do Date.now
+      @start     = do Date.now
       @center    = do FSS.Vector3.create
       @attractor = do FSS.Vector3.create
 
@@ -301,8 +299,7 @@ class @Shady
     do @renderer.clear
 
     # Create some geometry (`width`, `height`, `segments`, `slices`) & a material, pass them to mesh constructor, and
-    # add the mesh to the scene
-
+    # add the mesh to the scene.
     @geometry = new FSS.Plane(
       @rendering.mesh.width * @renderer.width
       @rendering.mesh.height * @renderer.height
@@ -358,7 +355,6 @@ class @Shady
 
     while l < @rendering.light.count
       light = new FSS.Light @rendering.light.ambient, @rendering.light.diffuse
-
       light.ambientHex = do light.ambient.format
       light.diffuseHex = do light.diffuse.format
 
@@ -372,7 +368,6 @@ class @Shady
 
       # Ring SVG Circle
       light.ring = document.createElementNS FSS.SVGNS, 'circle'
-
       light.ring.setAttributeNS null, 'stroke', light.ambientHex
       light.ring.setAttributeNS null, 'stroke-width', '0.5'
       light.ring.setAttributeNS null, 'fill', 'none'
@@ -380,7 +375,6 @@ class @Shady
 
       # Core SVG Circle
       light.core = document.createElementNS FSS.SVGNS, 'circle'
-
       light.core.setAttributeNS null, 'fill', light.diffuseHex
       light.core.setAttributeNS null, 'r', '4'
 
