@@ -268,7 +268,11 @@ class @Shady
     return
 
   findRenderer = ->
-    if Modernizr.webgl
+    ua      = detect.parse navigator.userAgent
+    browser = ua.browser
+    family  = browser.family
+
+    if Modernizr.webgl and (family is 'Chrome' or family is 'Safari')
       Shady.RENDERER.WEBGL
     else if Modernizr.canvas
       Shady.RENDERER.CANVAS
