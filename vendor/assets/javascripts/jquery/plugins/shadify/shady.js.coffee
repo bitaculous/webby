@@ -1,9 +1,11 @@
 class @Shady
   # === Constants ==
 
-  @WEBGL: 'WebGL'
-  @CANVAS: 'Canvas'
-  @SVG:'SVG'
+  @RENDERER:
+    WEBGL: 'WebGL'
+    CANVAS: 'Canvas'
+    SVG:'SVG'
+    NONE: 'NONE'
 
   # === Variables ===
 
@@ -11,7 +13,7 @@ class @Shady
     debug: false
 
   rendering:
-    renderer: @WEBGL
+    renderer: @RENDERER.WEBGL
 
     mesh:
       width: 1.2
@@ -195,11 +197,11 @@ class @Shady
       @container.removeChild @renderer.element
 
     switch index
-      when Shady.WEBGL
+      when Shady.RENDERER.WEBGL
         @renderer = @webglRenderer
-      when Shady.CANVAS
+      when Shady.RENDERER.CANVAS
         @renderer = @canvasRenderer
-      when Shady.SVG
+      when Shady.RENDERER.SVG
         @renderer = @svgRenderer
 
     @renderer.setSize @container.offsetWidth, @container.offsetHeight
@@ -236,29 +238,44 @@ class @Shady
   # === Private ===
 
   initialize = ->
-    @container = @element[0]
+    @rendering.renderer = findRenderer.call @
 
-    @now   = do Date.now
-    @start = do Date.now
+    if @rendering.renderer is Shady.RENDERER.NONE
+      @element.addClass 'no-renderer-found'
+    else
+      @container = @element[0]
 
-    @center    = do FSS.Vector3.create
-    @attractor = do FSS.Vector3.create
+      @now   = do Date.now
+      @start = do Date.now
 
-    createRenderer.call @
+      @center    = do FSS.Vector3.create
+      @attractor = do FSS.Vector3.create
 
-    createScene.call @
+      createRenderer.call @
 
-    createMesh.call @
+      createScene.call @
 
-    createLights.call @
+      createMesh.call @
 
-    addEventListeners.call @
+      createLights.call @
 
-    @resize @container.offsetWidth, @container.offsetHeight
+      addEventListeners.call @
 
-    do @animate
+      @resize @container.offsetWidth, @container.offsetHeight
+
+      do @animate
 
     return
+
+  findRenderer = ->
+    if Modernizr.webgl
+      Shady.RENDERER.WEBGL
+    else if Modernizr.canvas
+      Shady.RENDERER.CANVAS
+    else if Modernizr.svg
+      Shady.RENDERER.SVG
+    else
+      Shady.RENDERER.NONE
 
   createRenderer = ->
     @webglRenderer  = new FSS.WebGLRenderer

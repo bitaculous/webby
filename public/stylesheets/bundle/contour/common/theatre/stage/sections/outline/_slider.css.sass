@@ -19,7 +19,7 @@
         @include vertical-align
 
         p
-          margin: 0
+          margin: 0 auto
 
         a
           font-family: 'Nexa Bold'
@@ -33,11 +33,14 @@
         .content
           p.title,
           p.statement
-            margin: 0 0 rem(10)
+            margin: 0 auto rem(10)
 
           p.title,
             font-family: 'Nexa Bold'
             font-size: ms(3.5)
+
+          p.statement
+            max-width: 800px
 
           p.statement,
           p.author
