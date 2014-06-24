@@ -1,37 +1,6 @@
 class @Shady
   # === Constants ==
 
-  @MESH:
-    width: 1.2
-    height: 1.2
-    depth: 10
-    segments: 20
-    slices: 16
-    xRange: 0.8
-    yRange: 0.1
-    zRange: 1.0
-    ambient: '#555555'
-    diffuse: '#FFFFFF'
-    speed: 0.002
-
-  @LIGHT:
-    count: 2
-    xyScalar: 1
-    zOffset: 100
-    ambient: '#880066'
-    diffuse: '#FF8800'
-    speed: 0.001
-    gravity: 1200
-    dampening: 0.95
-    minLimit: 10
-    maxLimit: null
-    minDistance: 20
-    maxDistance: 400
-    autopilot: true
-    draw: true
-    bounds: do FSS.Vector3.create
-    step: FSS.Vector3.create Math.randomInRange(0.2, 1.0), Math.randomInRange(0.2, 1.0), Math.randomInRange(0.2, 1.0)
-
   @WEBGL: 'webgl'
   @CANVAS: 'canvas'
   @SVG:'svg'
@@ -43,6 +12,37 @@ class @Shady
 
   rendering:
     renderer: @WEBGL
+
+    mesh:
+      width: 1.0
+      height: 1.0
+      depth: 5
+      segments: 16
+      slices: 8
+      xRange: 1.6
+      yRange: 0.1
+      zRange: 1.0
+      ambient: '#555555'
+      diffuse: '#FFFFFF'
+      speed: 0.002
+
+    light:
+      count: 2
+      xyScalar: 1
+      zOffset: 100
+      ambient: '#880066'
+      diffuse: '#FF8800'
+      speed: 0.001
+      gravity: 1200
+      dampening: 0.95
+      minLimit: 10
+      maxLimit: null
+      minDistance: 20
+      maxDistance: 400
+      autopilot: true
+      draw: true
+      bounds: do FSS.Vector3.create
+      step: FSS.Vector3.create Math.randomInRange(0.2, 1.0), Math.randomInRange(0.2, 1.0), Math.randomInRange(0.2, 1.0)
 
   # === Public ===
 
@@ -66,36 +66,40 @@ class @Shady
     return
 
   update: ->
-    offset = Shady.MESH.depth / 2
+    offset = @rendering.mesh.depth / 2
 
     # Update bounds
-    FSS.Vector3.copy Shady.LIGHT.bounds, @center
-    FSS.Vector3.multiplyScalar Shady.LIGHT.bounds, Shady.LIGHT.xyScalar
+    FSS.Vector3.copy @rendering.light.bounds, @center
+    FSS.Vector3.multiplyScalar @rendering.light.bounds, @rendering.light.xyScalar
 
     # Update attractor
-    FSS.Vector3.setZ @attractor, Shady.LIGHT.zOffset
+    FSS.Vector3.setZ @attractor, @rendering.light.zOffset
 
     # Overwrite the attractor position
-    if Shady.LIGHT.autopilot
-      ox = Math.sin Shady.LIGHT.step[0] * @now * Shady.LIGHT.speed
-      oy = Math.cos Shady.LIGHT.step[1] * @now * Shady.LIGHT.speed
+    if @rendering.light.autopilot
+      ox = Math.sin @rendering.light.step[0] * @now * @rendering.light.speed
+      oy = Math.cos @rendering.light.step[1] * @now * @rendering.light.speed
 
       FSS.Vector3.set(
         @attractor
-        Shady.LIGHT.bounds[0] * ox
-        Shady.LIGHT.bounds[1] * oy
-        Shady.LIGHT.zOffset
+        @rendering.light.bounds[0] * ox
+        @rendering.light.bounds[1] * oy
+        @rendering.light.zOffset
       )
 
     # Animate lights
-    for light in @scene.lights
+    l = @scene.lights.length - 1
+
+    while l >= 0
+      light = @scene.lights[l]
+
       # Reset the z-position of the light
-      FSS.Vector3.setZ light.position, Shady.LIGHT.zOffset
+      FSS.Vector3.setZ light.position, @rendering.light.zOffset
 
       # Calculate the force Luke!
-      d = Math.clamp FSS.Vector3.distanceSquared(light.position, @attractor), Shady.LIGHT.minDistance, Shady.LIGHT.maxDistance
+      d = Math.clamp FSS.Vector3.distanceSquared(light.position, @attractor), @rendering.light.minDistance, @rendering.light.maxDistance
 
-      f = Shady.LIGHT.gravity * light.mass / d
+      f = @rendering.light.gravity * light.mass / d
 
       FSS.Vector3.subtractVectors light.force, @attractor, light.position
       FSS.Vector3.normalise light.force
@@ -105,27 +109,35 @@ class @Shady
       FSS.Vector3.set light.acceleration
       FSS.Vector3.add light.acceleration, light.force
       FSS.Vector3.add light.velocity, light.acceleration
-      FSS.Vector3.multiplyScalar light.velocity, Shady.LIGHT.dampening
-      FSS.Vector3.limit light.velocity, Shady.LIGHT.minLimit, Shady.LIGHT.maxLimit
+      FSS.Vector3.multiplyScalar light.velocity, @rendering.light.dampening
+      FSS.Vector3.limit light.velocity, @rendering.light.minLimit, @rendering.light.maxLimit
       FSS.Vector3.add light.position, light.velocity
 
-    # Animate vertices
-    for vertex in @geometry.vertices
-      ox = Math.sin vertex.time + vertex.step[0] * @now * Shady.MESH.speed
-      oy = Math.cos vertex.time + vertex.step[1] * @now * Shady.MESH.speed
-      oz = Math.sin vertex.time + vertex.step[2] * @now * Shady.MESH.speed
+      l--
 
-      FSS.Vector3.set (
+    # Animate Vertices
+    v = @geometry.vertices.length - 1
+
+    while v >= 0
+      vertex = @geometry.vertices[v]
+
+      ox = Math.sin(vertex.time + vertex.step[0] * @now * @rendering.mesh.speed)
+      oy = Math.cos(vertex.time + vertex.step[1] * @now * @rendering.mesh.speed)
+      oz = Math.sin(vertex.time + vertex.step[2] * @now * @rendering.mesh.speed)
+
+      FSS.Vector3.set(
         vertex.position
-        Shady.MESH.xRange * @geometry.segmentWidth * ox
-        Shady.MESH.yRange * @geometry.sliceHeight * oy
-        Shady.MESH.zRange * offset * oz - offset
+        @rendering.mesh.xRange * @geometry.segmentWidth * ox
+        @rendering.mesh.yRange * @geometry.sliceHeight * oy
+        @rendering.mesh.zRange * offset * oz - offset
       )
 
       FSS.Vector3.add vertex.position, vertex.anchor
 
+      v--
+
     # Set the geometry to dirty
-    # @geometry.dirty = true
+    @geometry.dirty = true
 
     return
 
@@ -133,8 +145,12 @@ class @Shady
     @renderer.render @scene
 
     # Draw Lights
-    if Shady.LIGHT.draw
-      for light in @scene.lights
+    if @rendering.light.draw
+      l = @scene.lights.length - 1
+
+      while l >= 0
+        light = @scene.lights[l]
+
         lx = light.position[0]
         ly = light.position[1]
 
@@ -169,6 +185,8 @@ class @Shady
             light.ring.setAttributeNS null, 'cy', ly
 
             @renderer.element.appendChild light.ring
+
+        l--
 
     return
 
@@ -214,10 +232,6 @@ class @Shady
     FSS.Vector3.subtract @attractor, @center
 
     return
-
-  onMouseClick: (event) =>
-    FSS.Vector3.set @attractor, event.x, @renderer.height - event.y
-    FSS.Vector3.subtract @attractor, @center
 
   # === Private ===
 
@@ -269,15 +283,15 @@ class @Shady
     # add the mesh to the scene
 
     @geometry = new FSS.Plane(
-      Shady.MESH.width * @renderer.width
-      Shady.MESH.height * @renderer.height
-      Shady.MESH.segments
-      Shady.MESH.slices
+      @rendering.mesh.width * @renderer.width
+      @rendering.mesh.height * @renderer.height
+      @rendering.mesh.segments
+      @rendering.mesh.slices
     )
 
     @material = new FSS.Material(
-      Shady.MESH.ambient
-      Shady.MESH.diffuse
+      @rendering.mesh.ambient
+      @rendering.mesh.diffuse
     )
 
     @mesh = new FSS.Mesh(
@@ -288,7 +302,11 @@ class @Shady
     @scene.add @mesh
 
     # Augment vertices for animation
-    for vertex in @geometry.vertices
+    v = @geometry.vertices.length - 1
+
+    while v >= 0
+      vertex = @geometry.vertices[v]
+
       vertex.anchor = FSS.Vector3.clone vertex.position
 
       vertex.step = FSS.Vector3.create(
@@ -299,16 +317,26 @@ class @Shady
 
       vertex.time = Math.randomInRange 0, Math.PIM2
 
+      v--
+
     return
 
   createLights = ->
-    for light in @scene.lights
+    l = @scene.lights.length - 1
+
+    while l >= 0
+      light = @scene.lights[l]
+
       @scene.remove light
+
+      l--
 
     do @renderer.clear
 
-    for i in [0...Shady.LIGHT.count]
-      light = new FSS.Light Shady.LIGHT.ambient, Shady.LIGHT.diffuse
+    l = 0
+
+    while l < @rendering.light.count
+      light = new FSS.Light @rendering.light.ambient, @rendering.light.diffuse
 
       light.ambientHex = do light.ambient.format
       light.diffuseHex = do light.diffuse.format
@@ -335,12 +363,13 @@ class @Shady
       light.core.setAttributeNS null, 'fill', light.diffuseHex
       light.core.setAttributeNS null, 'r', '4'
 
+      l++
+
     return
 
   addEventListeners = ->
     window.addEventListener 'resize', @onWindowResize
 
-    @container.addEventListener 'click', @onMouseClick
-    @container.addEventListener 'mousemove', @onMouseMove
+    window.addEventListener 'mousemove', @onMouseMove
 
     return
