@@ -236,6 +236,8 @@ class @Shady
         14
       else if offsetWidth > 1440
         16
+      else
+        6
 
     return
 
