@@ -13,13 +13,13 @@ class @Shady
     debug: false
 
   rendering:
-    renderer: @RENDERER.WEBGL
+    renderer: @RENDERER.NONE
 
     mesh:
       width: 1.2
       height: 1.2
       depth: 4
-      segments: 8
+      segments: 6
       slices: 8
       xRange: 0.5
       yRange: 0.5
@@ -214,9 +214,28 @@ class @Shady
   resize: (width, height) ->
     @renderer.setSize width, height
 
+    @calibrateMeshSegments width
+
     FSS.Vector3.set @center, @renderer.halfWidth, @renderer.halfHeight
 
     createMesh.call @
+
+    return
+
+  calibrateMeshSegments: (offsetWidth) ->
+    @rendering.mesh.segments =
+      if offsetWidth >= 320 and offsetWidth < 480
+        6
+      else if offsetWidth >= 480 and offsetWidth < 768
+        8
+      else if offsetWidth >= 768 and offsetWidth < 1024
+        10
+      else if offsetWidth >= 1024 and offsetWidth < 1280
+        12
+      else if offsetWidth >= 1280 and offsetWidth < 1440
+        14
+      else if offsetWidth > 1440
+        16
 
     return
 
