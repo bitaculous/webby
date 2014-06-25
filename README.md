@@ -50,17 +50,17 @@ Webby uses the following assets:
 * [Flat Surface Shader [FSS]](http://matthew.wagerfield.com/flat-surface-shader "Flat Surface Shader for rendering lit triangles to a number of contexts including WebGL, Canvas 2D and SVG")
 * [Modernizr](http://modernizr.com "Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the user’s browser.")
 
+#### Polyfills
+
+* [Console](https://github.com/h5bp/html5-boilerplate/blob/master/js/plugins.js "Avoid `console` errors in browsers that lack a console.")
+* [FastClick](https://github.com/ftlabs/fastclick "Polyfill to remove click delays on browsers with touch UIs.")
+
 #### [jQuery](http://jquery.com "The Write Less, Do More, JavaScript Library.")
 
 * [AnimateScroll](http://plugins.compzets.com/animatescroll "A Simple jQuery Plugin for Animating Scroll.")
 * [slick](http://kenwheeler.github.io/slick "The last carousel you'll ever need.")
 * [Velocity](http://velocityjs.org "Accelerated JavaScript animation.")
 * [Waypoints](http://imakewebthings.com/jquery-waypoints "Waypoints is a jQuery plugin that makes it easy to execute a function whenever you scroll to an element.")
-
-#### Polyfills
-
-* [Console](https://github.com/h5bp/html5-boilerplate/blob/master/js/plugins.js "Avoid `console` errors in browsers that lack a console.")
-* [FastClick](https://github.com/ftlabs/fastclick "Polyfill to remove click delays on browsers with touch UIs.")
 
 ### Fonts
 
