@@ -25,7 +25,7 @@ $ ->
 
     # May I have your attention please? Will the real Shady please stand up?
     shady.shadify {
-      inactive: true
+      inactive: false
     } if do shady.present
 
     return
