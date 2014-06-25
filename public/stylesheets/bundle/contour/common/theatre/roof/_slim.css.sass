@@ -6,4 +6,24 @@
 
 @mixin slim
   &.slim
-    background: green
+    .dashboard
+      .badge
+        background: none
+        display: block
+        height: auto
+        margin: 0 auto
+        padding: rem(30) 0 rem(10)
+        width: 160px
+
+        span
+          margin: 0
+
+          &.claim
+            display: none
+
+      nav
+        &.main
+          padding: 0 0 rem(20)
+
+        &.channels
+          display: none
