@@ -10,6 +10,7 @@ class @Shady
   # === Variables ===
 
   defaults:
+    inactive: false
     debug: false
 
   rendering:
@@ -261,8 +262,10 @@ class @Shady
   initialize = ->
     @rendering.renderer = findRenderer.call @
 
-    if @rendering.renderer is Shady.RENDERER.NONE
-      @element.addClass 'no-renderer-found'
+    if @options.inactive
+      @element.addClass 'inactive'
+    else if @rendering.renderer is Shady.RENDERER.NONE
+      @element.addClass 'no-renderer-found inactive'
     else
       @container = @element[0]
       @now       = do Date.now
@@ -283,6 +286,8 @@ class @Shady
       @resize @container.offsetWidth, @container.offsetHeight
 
       do @animate
+
+      @element.addClass 'active'
 
     return
 
