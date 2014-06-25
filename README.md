@@ -48,9 +48,14 @@ Webby uses the following assets:
 ### JavaScript
 
 * [Flat Surface Shader [FSS]](http://matthew.wagerfield.com/flat-surface-shader "Flat Surface Shader for rendering lit triangles to a number of contexts including WebGL, Canvas 2D and SVG")
-* [jQuery](http://jquery.com "The Write Less, Do More, JavaScript Library.")
 * [Modernizr](http://modernizr.com "Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the user’s browser.")
+
+#### [jQuery](http://jquery.com "The Write Less, Do More, JavaScript Library.")
+
+* [AnimateScroll](http://plugins.compzets.com/animatescroll "A Simple jQuery Plugin for Animating Scroll.")
 * [slick](http://kenwheeler.github.io/slick "The last carousel you'll ever need.")
+* [Velocity](http://velocityjs.org "Accelerated JavaScript animation.")
+* [Waypoints](http://imakewebthings.com/jquery-waypoints "Waypoints is a jQuery plugin that makes it easy to execute a function whenever you scroll to an element.")
 
 #### Polyfills
 

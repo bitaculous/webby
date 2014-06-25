@@ -4,17 +4,17 @@
 #= require polyfills/fastclick
 
 #= require jquery
+#= require jquery/plugins/scrollify
 #= require jquery/plugins/shadify
 #= require jquery/plugins/slick
+#= require jquery/plugins/velocity
 
 $ ->
   # === Shared variables ===
 
   html     = $ 'html'
   theatre  = $ '.theatre'
-  roof     = theatre.find '.roof'
   stage    = theatre.find '.stage'
-  basement = theatre.find '.basement'
 
   # === Events ===
 
@@ -34,27 +34,32 @@ $ ->
 
   FastClick.attach document.body
 
-  # === Stage ===
+  # === Theatre ===
 
-  if do stage.present
-    outline = stage.find '.outline'
+  if do theatre.present
+    do theatre.scrollify
 
-    if do outline.present
-      slider = outline.find '.slider'
+    stage = theatre.find '.stage'
 
-      if do slider.present
-        slider.slick {
-          arrows: false
-          autoplay: true
-          autoplaySpeed: 7500
-          centerMode: true
-          centerPadding: '0px'
-          dots: true
-          slide: '.slide'
-          slidesToScroll: 1
-          slidesToShow: 1
-          speed: 500
-          onInit: onSliderInitialized
-        }
+    if do stage.present
+      outline = stage.find '.outline'
+
+      if do outline.present
+        slider = outline.find '.slider'
+
+        if do slider.present
+          slider.slick {
+            arrows: false
+            autoplay: true
+            autoplaySpeed: 7500
+            centerMode: true
+            centerPadding: '0px'
+            dots: true
+            slide: '.slide'
+            slidesToScroll: 1
+            slidesToShow: 1
+            speed: 500
+            onInit: onSliderInitialized
+          }
 
   return
