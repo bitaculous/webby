@@ -24,9 +24,7 @@ $ ->
     shady   = outline.find '.shady'
 
     # May I have your attention please? Will the real Shady please stand up?
-    shady.shadify {
-      inactive: false
-    } if do shady.present
+    do shady.shadify if do shady.present
 
     return
 

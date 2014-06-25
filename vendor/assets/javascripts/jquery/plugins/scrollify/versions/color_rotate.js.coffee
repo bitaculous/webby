@@ -11,13 +11,15 @@ class @Shady
 
   defaults:
     inactive: false
-    colors: [
-      ['#62A923', '#19876D']
-      ['#0C74A7', '#1685B6']
-      ['#AC4E90', '#D91A2D']
-      ['#D91A2D', '#E9B713']
-    ]
-    randomColor: true
+    colorRotate:
+      enabled: true
+      timeout: 5000
+      colors: [
+        ['#62A923', '#19876D']
+        ['#0C74A7', '#1685B6']
+        ['#AC4E90', '#D91A2D']
+        ['#D91A2D', '#E9B713']
+      ]
     debug: false
 
   rendering:
@@ -53,6 +55,9 @@ class @Shady
       draw: true
       bounds: do FSS.Vector3.create
       step: FSS.Vector3.create Math.randomInRange(0.2, 1.0), Math.randomInRange(0.2, 1.0), Math.randomInRange(0.2, 1.0)
+
+  colorRotate:
+    currentColor: 0
 
   # === Public ===
 
@@ -230,20 +235,6 @@ class @Shady
 
     return
 
-  setColor: (ambient, diffuse) ->
-    while l >= 0
-      light = @scene.lights[l]
-
-      light.ambient.set ambient
-      light.ambientHex = do light.ambient.format
-
-      light.diffuse.set diffuse
-      light.diffuseHex = do light.diffuse.format
-
-      l--
-
-    return
-
   calibrateMeshSegments: (offsetWidth) ->
     @rendering.mesh.segments =
       if offsetWidth >= 320 and offsetWidth < 480
@@ -278,6 +269,36 @@ class @Shady
 
     return
 
+  onTime: (event) =>
+    colors = @options.colorRotate.colors
+
+    cc = @colorRotate.currentColor
+    cc = if cc >= (colors.length - 1) then 0 else cc + 1
+
+    color = colors[cc]
+
+    if color
+      ambient = color[0]
+      diffuse = color[1]
+
+      if ambient and diffuse
+        l = @scene.lights.length - 1
+
+        while l >= 0
+          light = @scene.lights[l]
+
+          light.ambient.set ambient
+          light.ambientHex = do light.ambient.format
+
+          light.diffuse.set diffuse
+          light.diffuseHex = do light.diffuse.format
+
+          l--
+
+    @colorRotate.currentColor = cc
+
+    return
+
   # === Private ===
 
   initialize = ->
@@ -294,15 +315,6 @@ class @Shady
       @center    = do FSS.Vector3.create
       @attractor = do FSS.Vector3.create
 
-      if @options.randomColor
-        color = getRandomColor.call @
-
-        ambient = color[0]
-        @rendering.light.ambient = ambient if ambient
-
-        diffuse = color[1]
-        @rendering.light.diffuse = diffuse if diffuse
-
       createRenderer.call @
 
       createScene.call @
@@ -316,6 +328,8 @@ class @Shady
       @resize @container.offsetWidth, @container.offsetHeight
 
       do @animate
+
+      createTimer.call @ if @options.colorRotate.enabled
 
       @element.addClass 'active'
 
@@ -334,15 +348,6 @@ class @Shady
       Shady.RENDERER.SVG
     else
       Shady.RENDERER.NONE
-
-  getRandomColor = ->
-    colors = @options.colors
-    min    = 0
-    max    = colors.length - 1
-
-    random = Math.floor(Math.random() * (max - min + 1)) + min
-
-    colors[random]
 
   createRenderer = ->
     @webglRenderer  = new FSS.WebGLRenderer
@@ -451,5 +456,10 @@ class @Shady
     window.addEventListener 'resize', @onWindowResize
 
     window.addEventListener 'mousemove', @onMouseMove
+
+    return
+
+  createTimer = ->
+    @timer = $.timer @onTime, @options.colorRotate.timeout, true
 
     return
