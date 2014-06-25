@@ -10,7 +10,7 @@
     z-index: 50
 
     .slide
-      height: 400px
+      height: 380px
 
       .content
         margin: 0 rem(10)
@@ -22,7 +22,7 @@
           margin: 0 auto
 
         a
-          font-family: 'Nexa Bold'
+          font-family: $font-family-bold
 
       &.message
         .content
@@ -36,7 +36,7 @@
             margin: 0 auto rem(10)
 
           p.title,
-            font-family: 'Nexa Bold'
+            font-family: $font-family-bold
             font-size: ms(3.5)
 
           p.statement
@@ -45,3 +45,6 @@
           p.statement,
           p.author
             font-size: ms(1.5)
+
+    .slick-dots
+      bottom: rem(10)

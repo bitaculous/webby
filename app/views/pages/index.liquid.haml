@@ -46,9 +46,25 @@ position: 1
 
             {% endfor %}
 
-        %section.what-we-do
-          .shell
-            %h1 What we do
+          .introduction
+            .shell
+              .first.part
+                {% editable_text 'introduction_first_part', hint: 'First part of `introduction`.', priority: 1 %}
+                :markdown
+                  Hey there,
+                  ==========
+
+                  we are Bitaculous, a creative technology company, located in Berlin. We build websites, software and
+                  apps for web and mobile.
+                {% endeditable_text %}
+
+              .second.part
+                {% editable_text 'introduction_second_part', hint: 'Second part of `introduction`.', priority: 2 %}
+                :markdown
+                  We support our customers in close cooperation from the initial idea through to the launch and beyond.
+                  We develop an understanding of the needs and requirements of the users. We outline. We design. We
+                  assemble bits. All with passion and love.
+                {% endeditable_text %}
 
         {% endblock %}
         -# Block `stage`
