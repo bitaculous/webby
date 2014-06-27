@@ -22,7 +22,7 @@ position: 1
       %main.stage{ role: 'main' }
         {% block 'stage' %}
 
-        %section.outline
+        %section.outline.first
           {% block 'outline' %}
 
           .shady
@@ -97,11 +97,23 @@ position: 1
           .hub
             .shell
               .header
-                %h1 {{'what_we_do' | translate}}
+                {% editable_text 'what_we_do_header', hint: 'Header (“What we do”)', priority: 3 %}
+
+                {% if locale == 'en' %}
+                :kramdown
+                  # What we do
+                {% endif %}
+
+                {% if locale == 'de' %}
+                :kramdown
+                  # Was wir machen
+                {% endif %}
+
+                {% endeditable_text %}
 
               .content
                 %section.projects.first
-                  {% editable_text 'what_we_do_projects', hint: 'Projects we do.', priority: 3 %}
+                  {% editable_text 'what_we_do_projects', hint: 'Projects we do.', priority: 4 %}
 
                   {% if locale == 'en' %}
                   :kramdown
@@ -135,7 +147,7 @@ position: 1
                   {% endeditable_text %}
 
                 %section.technologies
-                  {% editable_text 'what_we_do_technologies', hint: 'Technologies we do.', priority: 4 %}
+                  {% editable_text 'what_we_do_technologies', hint: 'Technologies we do.', priority: 5 %}
 
                   {% if locale == 'en' %}
                   :kramdown
@@ -184,7 +196,7 @@ position: 1
                   {% endeditable_text %}
 
                 %section.open-source.last
-                  {% editable_text 'what_we_do_programming', hint: 'Programming we do.', priority: 5 %}
+                  {% editable_text 'what_we_do_programming', hint: 'Programming we do.', priority: 6 %}
 
                   {% if locale == 'en' %}
                   :kramdown
@@ -208,6 +220,49 @@ position: 1
 
           {% endblock %}
           -# Block `what_we_do`
+
+        %section.work
+          {% block 'work' %}
+
+          .flap
+
+          .hub
+            .shell
+              .header
+                {% editable_text 'work_header', hint: 'Header (“Work”)', priority: 7 %}
+
+                {% if locale == 'en' %}
+                :kramdown
+                  # Work
+                {% endif %}
+
+                {% if locale == 'de' %}
+                :kramdown
+                  # Referenzen
+                {% endif %}
+
+                {% endeditable_text %}
+
+          {% endblock %}
+          -# Block `work`
+
+        %section.team.last
+          {% block 'team' %}
+
+          .flap
+
+          .hub
+            .shell
+              .header
+                {% editable_text 'team_header', hint: 'Header (“Team”)', priority: 8 %}
+
+                :kramdown
+                  # Team
+
+                {% endeditable_text %}
+
+          {% endblock %}
+          -# Block `team`
 
         {% endblock %}
         -# Block `stage`
