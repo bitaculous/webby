@@ -2,7 +2,15 @@
   .backstage
     .shell
       .contact
-        %h1 Hello again!
+        {% if locale == 'en' %}
+        :kramdown
+          # Good to see you again!
+        {% endif %}
+
+        {% if locale == 'de' %}
+        :kramdown
+          # Schön Sie wieder zu sehen!
+        {% endif %}
 
   .dashboard
     .shell
@@ -18,7 +26,7 @@
           {% assign identifier = section.identifier | downcase | dasherize %}
 
           %li{ class: '{{identifier}} {% if forloop.first %}first active{% endif %} {% if forloop.last %}last{% endif %} item' }
-            %a{ href: '#', title: '{{section.description}}' } {{section.title}}
+            %a.internal{ href: '#', title: '{{section.description}}' } {{section.title}}
           {% endfor %}
 
       %nav.channels
@@ -28,7 +36,7 @@
           {% assign type = channel.type | downcase | dasherize %}
 
           %li{ class: '{{type}} {% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %} item' }
-            %a{ href: '{{channel.url}}', title: '{{channel.description}}', target: '_blank' }
+            %a.external{ href: '{{channel.url}}', title: '{{channel.description}}', target: '_blank' }
               %i{ class: 'icon-{{type}}' }
           {% endfor %}
 
