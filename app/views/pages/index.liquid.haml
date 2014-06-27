@@ -103,17 +103,35 @@ position: 1
                   {% editable_text 'what_we_do_projects', hint: 'Projects we do.', priority: 3 %}
 
                   {% if locale == 'en' %}
-                  :markdown
+                  :kramdown
                     ## Projects
 
-                    We built...
+                    [bitaculous.com](http://bitaculous.com "bitaculous.com"){:target="_blank"}
+
+                    At Bitaculous we do a lot of things, but we are specialized in:
+
+                    * Building [responsive](http://en.wikipedia.org/wiki/Responsive_web_design "A web design approach aimed at crafting sites to provide an optimal viewing experience." {:target="_blank"})
+                      websites including a [content management system](http://en.wikipedia.org/wiki/Content_management_system "A application that allows publishing, editing and modifying content as well as maintenance from a central interface."),
+                      which shine on every device and let our clients easily add and update their content.
+                    * Developing custom applications for web and mobile, which are specifically tailored to the client's
+                      wishes.
+                    * Building online stores, which help our clients to sell their products online.
                   {% endif %}
 
                   {% if locale == 'de' %}
                   :markdown
                     ## Projekte
 
-                    We entwickeln...
+                    Bei Bitaculous machen wir viele Dinge, jedoch sind wir auf folgendes spezialisiert:
+
+                    * Entwicklung von Responsive Websites inklusive CMS
+
+
+
+
+                    * Developing custom applications for web and mobile, which are specifically tailored to the client's
+                      wishes.
+                    * Building online stores, which help our clients to sell their products online.
                   {% endif %}
 
                   {% endeditable_text %}

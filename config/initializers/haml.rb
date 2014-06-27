@@ -1,3 +1,5 @@
+require_relative 'haml/filters/kramdown'
+
 # Determines the output format.
 Haml::Options.defaults[:format] = :xhtml
 

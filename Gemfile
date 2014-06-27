@@ -10,10 +10,6 @@ group :default do
     # gem 'locomotivecms_mounter', github: 'locomotivecms/mounter'
     gem 'locomotivecms_mounter', path: '../locomotivecms/gems/mounter'
   end
-
-  group :templating do
-    gem 'kramdown', '~> 1.4'
-  end
 end
 
 group :development do
@@ -23,6 +19,16 @@ group :development do
 end
 
 group :misc do
+  gem 'initializify', github: 'bitaculous/initializify'
+
+  gem 'liquids', github: 'bitaculous/liquids'
+
+  gem 'vendorify', github: 'bitaculous/vendorify'
+
+  group :templating do
+    gem 'kramdown', '~> 1.4'
+  end
+
   group :assets do
     gem 'assetify', github: 'bitaculous/assetify'
 
@@ -40,10 +46,4 @@ group :misc do
       gem 'susy', '~> 2.1.2'
     end
   end
-
-  gem 'initializify', github: 'bitaculous/initializify'
-
-  gem 'liquids', github: 'bitaculous/liquids'
-
-  gem 'vendorify', github: 'bitaculous/vendorify'
 end
