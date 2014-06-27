@@ -53,13 +53,13 @@ position: 1
                 {% editable_text 'introduction_first_part', hint: 'First part of `introduction`.', priority: 1 %}
 
                 {% if locale == 'en' %}
-                :markdown
+                :kramdown
                   Hey there, we are Bitaculous, a creative technology company, located in Berlin. We build websites,
                   software and apps for web and mobile.
                 {% endif %}
 
                 {% if locale == 'de' %}
-                :markdown
+                :kramdown
                   Hallo Besucher, wir sind Bitaculous, ein kreatives Technologie Unternehmen aus Berlin. Wir entwickeln
                   Websites, Software und Apps für das Web und Mobile.
                 {% endif %}
@@ -70,14 +70,14 @@ position: 1
                 {% editable_text 'introduction_second_part', hint: 'Second part of `introduction`.', priority: 2 %}
 
                 {% if locale == 'en' %}
-                :markdown
+                :kramdown
                   We support our customers in close cooperation from the initial idea through to the launch and beyond.
                   We develop an understanding of the needs and requirements of the users. We outline. We design. We
                   assemble bits. - All with passion and <i class="icon-heart" title="Love"></i>.
                 {% endif %}
 
                 {% if locale == 'de' %}
-                :markdown
+                :kramdown
                   Wir unterstützen unsere Kunden in enger Zusammenarbeit von der ersten Idee bis zum Start und darüber
                   hinaus. Wir entwickeln ein Verständnis für die Bedürfnisse und Anforderungen der Benutzer. Wir skizzieren.
                   Wir entwerfen. Wir fügen Bits zusammen. - Alles mit Leidenschaft und <i class="icon-heart" title="Liebe"></i>.
@@ -106,12 +106,10 @@ position: 1
                   :kramdown
                     ## Projects
 
-                    [bitaculous.com](http://bitaculous.com "bitaculous.com"){:target="_blank"}
-
                     At Bitaculous we do a lot of things, but we are specialized in:
 
-                    * Building [responsive](http://en.wikipedia.org/wiki/Responsive_web_design "A web design approach aimed at crafting sites to provide an optimal viewing experience." {:target="_blank"})
-                      websites including a [content management system](http://en.wikipedia.org/wiki/Content_management_system "A application that allows publishing, editing and modifying content as well as maintenance from a central interface."),
+                    * Building [responsive](http://en.wikipedia.org/wiki/Responsive_web_design "A web design approach aimed at crafting sites to provide an optimal viewing experience."){:target="_blank"}
+                      websites including a [content management system](http://en.wikipedia.org/wiki/Content_management_system "A application that allows publishing, editing and modifying content as well as maintenance from a central interface."){:target="_blank"},
                       which shine on every device and let our clients easily add and update their content.
                     * Developing custom applications for web and mobile, which are specifically tailored to the client's
                       wishes.
@@ -119,19 +117,18 @@ position: 1
                   {% endif %}
 
                   {% if locale == 'de' %}
-                  :markdown
+                  :kramdown
                     ## Projekte
 
-                    Bei Bitaculous machen wir viele Dinge, jedoch sind wir auf folgendes spezialisiert:
+                    Wir bei Bitaculous entwickeln unterschiedlichste Dinge, jedoch sind wir auf folgendes spezialisiert:
 
-                    * Entwicklung von Responsive Websites inklusive CMS
-
-
-
-
-                    * Developing custom applications for web and mobile, which are specifically tailored to the client's
-                      wishes.
-                    * Building online stores, which help our clients to sell their products online.
+                    * Entwicklung von [Responsive](http://de.wikipedia.org/wiki/Responsive_Webdesign "Ein gestalterischer und technischer Ansatz zur Erstellung von Websites, so dass diese auf Eigenschaften des jeweils benutzten Endgeräts reagieren können."){:target="_blank"}
+                      Websites inklusive [Content-Management-System](http://de.wikipedia.org/wiki/Content-Management-System "Eine Software zur gemeinschaftlichen Erstellung, Bearbeitung und Organisation von Inhalten (Content)."){:target="_blank"},
+                      welche auf jedem Geräte strahlen und die es unseren Kunden erlauben, Inhalte einfach zu erstellen
+                      und bearbeiten.
+                    * Die Entwicklung kundenspezifischer Anwendungen für Web und Mobile, die genau auf die Wünsche des
+                      Kunden zugeschnitten sind.
+                    * Erstellung von Online-Shops, die unseren Kunden helfen, ihre Produkte online zu verkaufen.
                   {% endif %}
 
                   {% endeditable_text %}
@@ -140,47 +137,47 @@ position: 1
                   {% editable_text 'what_we_do_technologies', hint: 'Technologies we do.', priority: 4 %}
 
                   {% if locale == 'en' %}
-                  :markdown
+                  :kramdown
                     ## Technologies
 
                     Depending on the type of project, we use a variety of technologies, these include:
 
-                    * [Ruby](https://www.ruby-lang.org "A dynamic, open source programming language with a focus on simplicity and productivity."),
-                      [Ruby on Rails](http://rubyonrails.org "An open source web framework that's optimized for programmer happiness and sustainable productivity.")
-                    * [Haml](http://haml.info "Beautiful, DRY, well-indented, clear markup: templating haiku."),
-                      [Sass](http://sass-lang.com "Syntactically Awesome Style Sheets")
-                    * [JavaScript](http://en.wikipedia.org/wiki/JavaScript "A dynamic computer programming language.") /
-                      [CoffeeScript](http://coffeescript.org "A little language that compiles into JavaScript."),
-                      [Ember.js](http://emberjs.com "A framework for creating ambitious web applications."),
-                      [Backbone.js](http://coffeescript.org "A tool that gives you the freedom to design the full experience of your web application.")
-                    * [TYPO3](http://typo3.org "The Enterprise Open Source CMS.") /
-                      [TYPO3 Neos](http://neos.typo3.org "The next-generation open source content management system made by the TYPO3 community."),
-                      [LocomotiveCMS](http://locomotivecms.com "An open source CMS for Rails.")
-                    * [Shopware](http://www.shopware.com "A powerful and flexible eCommerce software."),
-                      [Spree](http://spreecommerce.com "A complete open source e-commerce solution for Ruby on Rails."),
-                      [Shopify](http://www.shopify.com "An e-commerce platform.")
+                    * [Ruby](https://www.ruby-lang.org "A dynamic, open source programming language with a focus on simplicity and productivity."){:target="_blank"},
+                      [Ruby on Rails](http://rubyonrails.org "An open source web framework that's optimized for programmer happiness and sustainable productivity."){:target="_blank"}
+                    * [Haml](http://haml.info "Beautiful, DRY, well-indented, clear markup: templating haiku."){:target="_blank"},
+                      [Sass](http://sass-lang.com "Syntactically Awesome Style Sheets"){:target="_blank"}
+                    * [JavaScript](http://en.wikipedia.org/wiki/JavaScript "A dynamic computer programming language."){:target="_blank"} /
+                      [CoffeeScript](http://coffeescript.org "A little language that compiles into JavaScript."){:target="_blank"},
+                      [Ember.js](http://emberjs.com "A framework for creating ambitious web applications."){:target="_blank"},
+                      [Backbone.js](http://coffeescript.org "A tool that gives you the freedom to design the full experience of your web application."){:target="_blank"}
+                    * [TYPO3](http://typo3.org "The Enterprise Open Source CMS."){:target="_blank"} /
+                      [TYPO3 Neos](http://neos.typo3.org "The next-generation open source content management system made by the TYPO3 community."){:target="_blank"},
+                      [LocomotiveCMS](http://locomotivecms.com "An open source CMS for Rails."){:target="_blank"}
+                    * [Shopware](http://www.shopware.com "A powerful and flexible eCommerce software."){:target="_blank"},
+                      [Spree](http://spreecommerce.com "A complete open source e-commerce solution for Ruby on Rails."){:target="_blank"},
+                      [Shopify](http://www.shopify.com "An e-commerce platform."){:target="_blank"}
                   {% endif %}
 
                   {% if locale == 'de' %}
-                  :markdown
+                  :kramdown
                     ## Technologien
 
                     Je nach Art des Projektes setzen wir verschiedene Technologien ein, dazu gehören:
 
-                    * [Ruby](https://www.ruby-lang.org "A dynamic, open source programming language with a focus on simplicity and productivity."),
-                      [Ruby on Rails](http://rubyonrails.org "An open source web framework that's optimized for programmer happiness and sustainable productivity.")
-                    * [Haml](http://haml.info "Beautiful, DRY, well-indented, clear markup: templating haiku."),
-                      [Sass](http://sass-lang.com "Syntactically Awesome Style Sheets")
-                    * [JavaScript](http://en.wikipedia.org/wiki/JavaScript "A dynamic computer programming language.") /
-                      [CoffeeScript](http://coffeescript.org "A little language that compiles into JavaScript."),
-                      [Ember.js](http://emberjs.com "A framework for creating ambitious web applications."),
-                      [Backbone.js](http://coffeescript.org "A tool that gives you the freedom to design the full experience of your web application.")
-                    * [TYPO3](http://typo3.org "The Enterprise Open Source CMS.") /
-                      [TYPO3 Neos](http://neos.typo3.org "The next-generation open source content management system made by the TYPO3 community."),
-                      [LocomotiveCMS](http://locomotivecms.com "An open source CMS for Rails.")
-                    * [Shopware](http://www.shopware.com "A powerful and flexible eCommerce software."),
-                      [Spree](http://spreecommerce.com "A complete open source e-commerce solution for Ruby on Rails."),
-                      [Shopify](http://www.shopify.com "An e-commerce platform.")
+                    * [Ruby](https://www.ruby-lang.org "A dynamic, open source programming language with a focus on simplicity and productivity."){:target="_blank"},
+                      [Ruby on Rails](http://rubyonrails.org "An open source web framework that's optimized for programmer happiness and sustainable productivity."){:target="_blank"}
+                    * [Haml](http://haml.info "Beautiful, DRY, well-indented, clear markup: templating haiku."){:target="_blank"},
+                      [Sass](http://sass-lang.com "Syntactically Awesome Style Sheets"){:target="_blank"}
+                    * [JavaScript](http://en.wikipedia.org/wiki/JavaScript "A dynamic computer programming language."){:target="_blank"} /
+                      [CoffeeScript](http://coffeescript.org "A little language that compiles into JavaScript."){:target="_blank"},
+                      [Ember.js](http://emberjs.com "A framework for creating ambitious web applications."){:target="_blank"},
+                      [Backbone.js](http://coffeescript.org "A tool that gives you the freedom to design the full experience of your web application."){:target="_blank"}
+                    * [TYPO3](http://typo3.org "The Enterprise Open Source CMS."){:target="_blank"} /
+                      [TYPO3 Neos](http://neos.typo3.org "The next-generation open source content management system made by the TYPO3 community."){:target="_blank"},
+                      [LocomotiveCMS](http://locomotivecms.com "An open source CMS for Rails."){:target="_blank"}
+                    * [Shopware](http://www.shopware.com "A powerful and flexible eCommerce software."){:target="_blank"},
+                      [Spree](http://spreecommerce.com "A complete open source e-commerce solution for Ruby on Rails."){:target="_blank"},
+                      [Shopify](http://www.shopify.com "An e-commerce platform."){:target="_blank"}
                   {% endif %}
 
                   {% endeditable_text %}
@@ -189,21 +186,21 @@ position: 1
                   {% editable_text 'what_we_do_programming', hint: 'Programming we do.', priority: 5 %}
 
                   {% if locale == 'en' %}
-                  :markdown
+                  :kramdown
                     ## Open Source
 
                     Bitaculous live and breathe Open Source. Wherever possible, we use open standards in our client
-                    projects, but we also like to give something [back](https://github.com/bitaculous "Bitaculous on GitHub").
+                    projects, but we also like to give something [back](https://github.com/bitaculous "Bitaculous on GitHub"){:target="_blank"}.
                     We are thankful to work with a variety of projects and communities.
                   {% endif %}
 
                   {% if locale == 'de' %}
-                  :markdown
+                  :kramdown
                     ## Open Source
 
                     Bitaculous lebt und atmet Open Source. Wenn immer möglich, verwenden wir offene Standards in unseren
-                    Kundenprojekte, aber wir [geben](https://github.com/bitaculous "Bitaculous bei GitHub") auch etwas
-                    zurück. Wir sind dankbar, mit einer Vielzahl von Projekten und Entwicklern zusammenzuarbeiten.
+                    Kundenprojekte, aber wir [geben](https://github.com/bitaculous "Bitaculous bei GitHub"){:target="_blank"}
+                    auch etwas zurück. Wir sind dankbar, mit einer Vielzahl von Projekten und Entwicklern zusammenzuarbeiten.
                   {% endif %}
 
                   {% endeditable_text %}
