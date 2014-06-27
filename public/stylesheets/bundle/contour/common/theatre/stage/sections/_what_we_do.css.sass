@@ -19,15 +19,21 @@
       background: transparent image-url('bundle/contour/common/theatre/stage/sections/what_we_do/flap/background.png') no-repeat center center
       height: 14px
 
-      background-image: image-url('bundle/contour/common/theatre/stage/sections/what_we_do/flap/background_at_2x.png')
-      background-size: 2560px 14px
+      @include hidpi
+        background-image: image-url('bundle/contour/common/theatre/stage/sections/what_we_do/flap/background_at_2x.png')
+        background-size: 2560px 14px
 
     .hub
       background: transparent image-url('bundle/contour/common/theatre/stage/sections/what_we_do/hub/background.png') repeat center center
       text-align: center
 
       .header
-        padding: rem(40) 0
+        background: transparent image-url('bundle/contour/common/theatre/stage/sections/what_we_do/hub/header/background.png') no-repeat center top
+        padding: rem(80) 0 rem(20)
+
+        @include hidpi
+          background-image: image-url('bundle/contour/common/theatre/stage/sections/what_we_do/hub/header/background_at_2x.png')
+          background-size: 75px 82px
 
         h1
           text-transform: uppercase
@@ -35,6 +41,13 @@
       .content
         section
           border-top: 2px solid #F8F084
+          padding: rem(72) 0 0
 
-          &.first
-            border-top: none
+          &.projects
+            background: transparent image-url('bundle/contour/common/theatre/stage/sections/what_we_do/hub/content/sections/projects/background.png') no-repeat center rem(20)
+
+          &.technologies
+            background: transparent image-url('bundle/contour/common/theatre/stage/sections/what_we_do/hub/content/sections/technologies/background.png') no-repeat center rem(20)
+
+          &.open-source
+            background: transparent image-url('bundle/contour/common/theatre/stage/sections/what_we_do/hub/content/sections/open_source/background.png') no-repeat center rem(20)
