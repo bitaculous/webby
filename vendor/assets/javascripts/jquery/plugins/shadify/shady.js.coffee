@@ -10,7 +10,7 @@ class @Shady
   # === Variables ===
 
   defaults:
-    inactive: false
+    inactive: true
     colors: [
       ['#62A923', '#19876D']
       ['#0C74A7', '#1685B6']

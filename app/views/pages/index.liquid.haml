@@ -23,6 +23,7 @@ position: 1
         {% block 'stage' %}
 
         %section.outline
+          {% block 'outline' %}
           .shady
 
           .slick-slider.slider
@@ -50,21 +51,139 @@ position: 1
             .shell
               .first.part
                 {% editable_text 'introduction_first_part', hint: 'First part of `introduction`.', priority: 1 %}
-                :markdown
-                  Hey there,
-                  ==========
 
-                  we are Bitaculous, a creative technology company, located in Berlin. We build websites, software and
-                  apps for web and mobile.
+                {% if locale == 'en' %}
+                :markdown
+                  Hey there, we are Bitaculous, a creative technology company, located in Berlin. We build websites,
+                  software and apps for web and mobile.
+                {% endif %}
+
+                {% if locale == 'de' %}
+                :markdown
+                  Hallo Besucher, wir sind Bitaculous, ein kreatives Technologie Unternehmen aus Berlin. Wir entwickeln
+                  Websites, Software und Apps für das Web und Mobile.
+                {% endif %}
+
                 {% endeditable_text %}
 
               .second.part
                 {% editable_text 'introduction_second_part', hint: 'Second part of `introduction`.', priority: 2 %}
+
+                {% if locale == 'en' %}
                 :markdown
                   We support our customers in close cooperation from the initial idea through to the launch and beyond.
                   We develop an understanding of the needs and requirements of the users. We outline. We design. We
-                  assemble bits. All with passion and <i class="icon-heart" title="Love"></i>.
+                  assemble bits. - All with passion and <i class="icon-heart" title="Love"></i>.
+                {% endif %}
+
+                {% if locale == 'de' %}
+                :markdown
+                  Wir unterstützen unsere Kunden in enger Zusammenarbeit von der ersten Idee bis zum Start und darüber
+                  hinaus. Wir entwickeln ein Verständnis für die Bedürfnisse und Anforderungen der Benutzer. Wir skizzieren.
+                  Wir entwerfen. Wir fügen Bits zusammen. - Alles mit Leidenschaft und <i class="icon-heart" title="Liebe"></i>.
+                {% endif %}
+
                 {% endeditable_text %}
+
+          {% endblock %}
+          -# Block `outline`
+
+        %section.what-we-do
+          {% block 'what_we_do' %}
+
+          .flap
+
+          .hub
+            .shell
+              .header
+                %h1 {{'what_we_do' | translate}}
+
+              .content
+                %section.projects.first
+                  {% editable_text 'what_we_do_projects', hint: 'Projects we do.', priority: 3 %}
+
+                  {% if locale == 'en' %}
+                  :markdown
+                    ## Projects
+
+                    We built...
+                  {% endif %}
+
+                  {% if locale == 'de' %}
+                  :markdown
+                    ## Projekte
+
+                    We entwickeln...
+                  {% endif %}
+
+                  {% endeditable_text %}
+
+                %section.technologies
+                  {% editable_text 'what_we_do_technologies', hint: 'Technologies we do.', priority: 4 %}
+
+                  {% if locale == 'en' %}
+                  :markdown
+                    ## Technologies
+
+                    Depending on the type of project, we use a variety of technologies, these include:
+
+                    * [Ruby](https://www.ruby-lang.org "A dynamic, open source programming language with a focus on simplicity and productivity."),
+                      [Ruby on Rails](http://rubyonrails.org "An open source web framework that's optimized for programmer happiness and sustainable productivity.")
+                    * [Haml](http://haml.info "Beautiful, DRY, well-indented, clear markup: templating haiku."),
+                      [Sass](http://sass-lang.com "Syntactically Awesome Style Sheets")
+                    * [JavaScript](http://en.wikipedia.org/wiki/JavaScript "A dynamic computer programming language.") /
+                      [CoffeeScript](http://coffeescript.org "A little language that compiles into JavaScript."),
+                      [Ember.js](http://emberjs.com "A framework for creating ambitious web applications."),
+                      [Backbone.js](http://coffeescript.org "A tool that gives you the freedom to design the full experience of your web application.")
+                    * [TYPO3](http://typo3.org "The Enterprise Open Source CMS.") /
+                      [TYPO3 Neos](http://neos.typo3.org "The next-generation open source content management system made by the TYPO3 community."),
+                      [LocomotiveCMS](http://locomotivecms.com "An open source CMS for Rails.")
+                    * [Shopware](http://www.shopware.com "A powerful and flexible eCommerce software."),
+                      [Spree](http://spreecommerce.com "A complete open source e-commerce solution for Ruby on Rails."),
+                      [Shopify](http://www.shopify.com "An e-commerce platform.")
+                  {% endif %}
+
+                  {% if locale == 'de' %}
+                  :markdown
+                    ## Technologien
+
+                    Je nach Art des Projektes setzen wir verschiedene Technologien ein, dazu gehören:
+
+                    * [Ruby](https://www.ruby-lang.org "A dynamic, open source programming language with a focus on simplicity and productivity."),
+                      [Ruby on Rails](http://rubyonrails.org "An open source web framework that's optimized for programmer happiness and sustainable productivity.")
+                    * [Haml](http://haml.info "Beautiful, DRY, well-indented, clear markup: templating haiku."),
+                      [Sass](http://sass-lang.com "Syntactically Awesome Style Sheets")
+                    * [JavaScript](http://en.wikipedia.org/wiki/JavaScript "A dynamic computer programming language.") /
+                      [CoffeeScript](http://coffeescript.org "A little language that compiles into JavaScript."),
+                      [Ember.js](http://emberjs.com "A framework for creating ambitious web applications."),
+                      [Backbone.js](http://coffeescript.org "A tool that gives you the freedom to design the full experience of your web application.")
+                    * [TYPO3](http://typo3.org "The Enterprise Open Source CMS.") /
+                      [TYPO3 Neos](http://neos.typo3.org "The next-generation open source content management system made by the TYPO3 community."),
+                      [LocomotiveCMS](http://locomotivecms.com "An open source CMS for Rails.")
+                    * [Shopware](http://www.shopware.com "A powerful and flexible eCommerce software."),
+                      [Spree](http://spreecommerce.com "A complete open source e-commerce solution for Ruby on Rails."),
+                      [Shopify](http://www.shopify.com "An e-commerce platform.")
+                  {% endif %}
+
+                  {% endeditable_text %}
+
+                %section.open-source.last
+                  {% editable_text 'what_we_do_programming', hint: 'Programming we do.', priority: 5 %}
+
+                  {% if locale == 'en' %}
+                  :markdown
+                    ## Open Source
+                  {% endif %}
+
+                  {% if locale == 'de' %}
+                  :markdown
+                    ## Open Source
+                  {% endif %}
+
+                  {% endeditable_text %}
+
+          {% endblock %}
+          -# Block `what_we_do`
 
         {% endblock %}
         -# Block `stage`

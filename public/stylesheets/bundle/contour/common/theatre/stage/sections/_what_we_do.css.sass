@@ -6,7 +6,35 @@
 
 @mixin what-we-do
   &.what-we-do
-    background: red
+    top: rem(-14)
 
-    h1
-      margin: 0
+    h1,
+    h2,
+    h3,
+    h4,
+    h5
+      color: #F8F084
+
+    .flap
+      background: transparent image-url('bundle/contour/common/theatre/stage/sections/what_we_do/flap/background.png') no-repeat center center
+      height: 14px
+
+      background-image: image-url('bundle/contour/common/theatre/stage/sections/what_we_do/flap/background_at_2x.png')
+      background-size: 2560px 14px
+
+    .hub
+      background: transparent image-url('bundle/contour/common/theatre/stage/sections/what_we_do/hub/background.png') repeat center center
+      text-align: center
+
+      .header
+        padding: rem(40) 0
+
+        h1
+          text-transform: uppercase
+
+      .content
+        section
+          border-top: 2px solid #F8F084
+
+          &.first
+            border-top: none
