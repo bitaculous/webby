@@ -5,3 +5,40 @@
 // @version 1.0
 
 @mixin work
+  &.work
+    top: rem(-28)
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5
+      color: #1CB5C6
+
+    ul
+      li
+        background-image: image-url('bundle/contour/common/theatre/stage/sections/work/decorations/qube.png')
+
+        @include hidpi
+          background-image: image-url('bundle/contour/common/theatre/stage/sections/work/decorations/qube_at_2x.png')
+          background-size: 10px 12px
+
+    .flap
+      background: transparent image-url('bundle/contour/common/theatre/stage/sections/work/flap/background.png') no-repeat center center
+      height: 14px
+
+      @include hidpi
+        background-image: image-url('bundle/contour/common/theatre/stage/sections/work/flap/background_at_2x.png')
+        background-size: 2560px 14px
+
+    .hub
+      background: #2C4148 image-url('bundle/contour/common/theatre/stage/sections/work/hub/background.png') repeat center center
+      padding: 0 0 rem(34)
+
+      .header
+        background: transparent image-url('bundle/contour/common/theatre/stage/sections/work/hub/header/background.png') no-repeat center rem(10)
+        padding: rem(80) 0 rem(20)
+
+        @include hidpi
+          background-image: image-url('bundle/contour/common/theatre/stage/sections/work/hub/header/background_at_2x.png')
+          background-size: 65px 72px
