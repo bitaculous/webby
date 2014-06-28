@@ -5,6 +5,8 @@ meta_description: "It's all about the bits, baby!"
 meta_keywords: "bitaculous, it's, all, about, the, bits, baby, web, mobile, application, development, berlin"
 published: true
 listed: true
+searchable: true
+handle: "index"
 position: 1
 ---
 {% include 'variables' %}
@@ -271,7 +273,9 @@ position: 1
         {% block 'basement' %}
 
         .shell
-          %h1 Basement
+          %a{ href: '{% path_to imprint %}', title: '{{\'imprint\' | translate}}' } {{'imprint' | translate}}
+
+          %span.copyright ©{{'now' | date: '%Y'}} Bitaculous
 
         {% endblock %}
         -# Block `basement`

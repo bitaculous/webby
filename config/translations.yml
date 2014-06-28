@@ -1,8 +1,4 @@
 # Your translations go here, to be used with the `translate` liquid filter.
-#
-# Example:
-#
-# {{ 'hello_world' | translate }}
 
 en:
   en: "EN"
@@ -15,3 +11,7 @@ de:
 contact:
   en: "Contact"
   de: "Kontakt"
+
+imprint:
+  en: "Imprint"
+  de: "Impressum"
