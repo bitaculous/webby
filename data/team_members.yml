@@ -5,6 +5,14 @@
         Developer
       de: |
         Entwickler
+    claim:
+      en: "I love bits, baby!"
+      de: "I love bits, baby!"
+    details:
+      en: |
+        Founder and owner of Bitaculous
+      de: |
+        Gründer und Inhaber von Bitaculous
 
 - "Martin Riekert":
     identifier: "mriekert"
@@ -13,6 +21,11 @@
         Designer
       de: |
         Designer
+    details:
+      en: |
+        <a href="http://www.markenfaktur.de" title="markenfaktur website">www.markenfaktur.de</a>
+      de: |
+        <a href="http://www.markenfaktur.de" title="markenfaktur Webauftritt">www.markenfaktur.de</a>
 
 - "René Kaufmann":
     identifier: "rkaufmann"
@@ -21,6 +34,11 @@
         Design Thinking and Innovation
       de: |
         Design Thinking und Innovation
+    details:
+      en: |
+        <a href="http://www.coalisten.com" title="Coalisten website">www.coalisten.com</a>
+      de: |
+        <a href="http://www.coalisten.com" title="Coalisten Webauftritt">www.coalisten.com</a>
 
 - "Heiko Ihrig":
     identifier: "hihrig"

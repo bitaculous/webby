@@ -291,6 +291,14 @@ position: 1
 
                   %p.profession {{member.profession}}
 
+                  {% if member.claim %}
+                  %p.claim {{member.claim}}
+                  {% endif %}
+
+                  {% if member.details %}
+                  %p.details {{member.details}}
+                  {% endif %}
+
                 {% endfor %}
 
           {% endblock %}

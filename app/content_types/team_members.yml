@@ -21,3 +21,14 @@ fields:
     required: true
     localized: true
     hint: "The profession of the team member."
+- claim:
+    label: "Claim"
+    type: "string"
+    localized: true
+    hint: "The claim of the team member."
+- details:
+    label: "Details"
+    type: "text"
+    text_formatting: "html"
+    localized: true
+    hint: "The details of the team member."
