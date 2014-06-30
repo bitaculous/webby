@@ -1,0 +1,24 @@
+name: "Telephone numbers"
+slug: "telephone_numbers"
+description: "List of telephone numbers."
+label_field_name: "title"
+order_by: "manually"
+fields:
+- title:
+    label: "Title"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The title of the telephone number."
+- number:
+    label: "Number"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The number of the telephone number."
+- business_card:
+    label: "Business card"
+    type: "belongs_to"
+    class_name: "business_cards"
+    hint: "Business card"
+    hint: "The business card which the telephone number belongs to."

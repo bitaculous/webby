@@ -1,0 +1,38 @@
+name: "Business cards"
+slug: "business_cards"
+description: "List of business cards."
+label_field_name: "title"
+order_by: "manually"
+fields:
+- title:
+    label: "Title"
+    type: "string"
+    required: true
+    hint: "The title of the business card."
+- contact_person:
+    label: "Contact person"
+    type: "string"
+    required: true
+    hint: "The contact person of the business card."
+- address:
+    label: "Address"
+    type: "string"
+    required: true
+    hint: "The address of the business card."
+- zip_code:
+    label: "Zip code"
+    type: "string"
+    required: true
+    hint: "The zip code of the business card."
+- city:
+    label: "City"
+    type: "string"
+    required: true
+    hint: "The city of the business card."
+- telephone_numbers:
+    label: "Telephone numbers"
+    type: "has_many"
+    class_name: "telephone_numbers"
+    inverse_of: "business_card"
+    ui_enabled: true
+    hint: "The telephone numbers of the business card."

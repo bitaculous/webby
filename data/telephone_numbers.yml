@@ -1,0 +1,16 @@
+- "Office":
+    title:
+      en: "Office"
+      de: "Büro"
+    number:
+      en: "+49 30 25056937"
+      de: "030-250 569 37"
+    business_card: "Bitaculous"
+- "Mobile":
+    title:
+      en: "Mobile"
+      de: "Handy"
+    number:
+      en: "+49 176 32656969"
+      de: "0176-326 569 69"
+    business_card: "Bitaculous"
