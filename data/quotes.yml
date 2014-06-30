@@ -7,9 +7,9 @@
       de: "„Greatness from small beginnings“"
     author:
       en: |
-        <a href="http://en.wikipedia.org/wiki/Francis_Drake" title="Sir Francis Drake" target="_blank">Sir Francis Drake</a>
+        <a class="external" href="http://en.wikipedia.org/wiki/Francis_Drake" title="Sir Francis Drake" target="_blank">Sir Francis Drake</a>
       de: |
-        <a href="http://de.wikipedia.org/wiki/Francis_Drake" title="Sir Francis Drake" target="_blank">Sir Francis Drake</a>
+        <a class="external" href="http://de.wikipedia.org/wiki/Francis_Drake" title="Sir Francis Drake" target="_blank">Sir Francis Drake</a>
 
 - "Think Big":
     title:
@@ -20,9 +20,9 @@
       de: "„Every great dream begins with a dreamer.“"
     author:
       en: |
-        <a href="http://en.wikipedia.org/wiki/Harriet_Tubman" title="Harriet Tubman" target="_blank">Harriet Tubman</a>
+        <a class="external" href="http://en.wikipedia.org/wiki/Harriet_Tubman" title="Harriet Tubman" target="_blank">Harriet Tubman</a>
       de: |
-        <a href="http://de.wikipedia.org/wiki/Harriet_Tubman" title="Harriet Tubman" target="_blank">Harriet Tubman</a>
+        <a class="external" href="http://de.wikipedia.org/wiki/Harriet_Tubman" title="Harriet Tubman" target="_blank">Harriet Tubman</a>
 
 - "Unlimited Power":
     title:
@@ -33,9 +33,9 @@
       de: "„In painting, you have unlimited power. You have the ability to move mountains. You can bend rivers.“"
     author:
       en: |
-        <a href="http://en.wikipedia.org/wiki/Bob_Ross" title="Bob Ross" target="_blank">Bob Ross</a>
+        <a class="external" href="http://en.wikipedia.org/wiki/Bob_Ross" title="Bob Ross" target="_blank">Bob Ross</a>
       de: |
-        <a href="http://de.wikipedia.org/wiki/Bob_Ross_(Maler)" title="Bob Ross" target="_blank">Bob Ross</a>
+        <a class="external" href="http://de.wikipedia.org/wiki/Bob_Ross_(Maler)" title="Bob Ross" target="_blank">Bob Ross</a>
 
 - "Do What You Love":
     title:
@@ -46,9 +46,9 @@
       de: "„Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do.“"
     author:
       en: |
-        <a href="http://en.wikipedia.org/wiki/Steve_Jobs" title="Steve Jobs" target="_blank">Steve Jobs</a>
+        <a class="external" href="http://en.wikipedia.org/wiki/Steve_Jobs" title="Steve Jobs" target="_blank">Steve Jobs</a>
       de: |
-        <a href="http://de.wikipedia.org/wiki/Steve_Jobs" title="Steve Jobs" target="_blank">Steve Jobs</a>
+        <a class="external" href="http://de.wikipedia.org/wiki/Steve_Jobs" title="Steve Jobs" target="_blank">Steve Jobs</a>
 
 # - "Start Small":
 #     title:
@@ -59,6 +59,6 @@
 #       de: "„Great things are done by a series of small things brought together.“"
 #     author:
 #       en: |
-#         <a href="http://en.wikipedia.org/wiki/Vincent_van_Gogh" title="Vincent van Gogh" target="_blank">Vincent van Gogh</a>
+#         <a class="external" href="http://en.wikipedia.org/wiki/Vincent_van_Gogh" title="Vincent van Gogh" target="_blank">Vincent van Gogh</a>
 #       de: |
-#         <a href="http://de.wikipedia.org/wiki/Vincent_van_Gogh" title="Vincent van Gogh" target="_blank">Vincent van Gogh</a>
+#         <a class="external" href="http://de.wikipedia.org/wiki/Vincent_van_Gogh" title="Vincent van Gogh" target="_blank">Vincent van Gogh</a>
