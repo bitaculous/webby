@@ -284,9 +284,11 @@ position: 1
               .members
                 {% for member in contents.team_members %}
 
-                {% assign identifier = section.identifier | downcase | dasherize %}
+                {% assign identifier = member.identifier | downcase | dasherize %}
 
-                .member{ class: '{{identifier}}' }
+                %div{ class: '{{identifier}} {% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %} member' }
+                  .photo{ title: '{{member.name}}' }
+
                   %p.name {{member.name}}
 
                   %p.profession {{member.profession}}

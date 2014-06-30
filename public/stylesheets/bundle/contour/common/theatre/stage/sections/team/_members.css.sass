@@ -1,0 +1,44 @@
+// _members.css.sass
+//
+// @package bundle/contour/common/theatre/stage/sections/team
+// @media all
+// @version 1.0
+
+@import members/mkempe
+@import members/mriekert
+@import members/rkaufmann
+@import members/hihrig
+
+@mixin members
+  .members
+    text-align: center
+
+    .member
+      border-top: 2px solid #FB3814
+      padding: rem(15) 0
+
+      .photo
+        height: 192px
+        margin: 0 auto rem(10)
+        width: 300px
+
+      p
+        margin: 0
+
+        &.name,
+        &.profession
+          color: #FB3814
+
+        &.name
+          font-family: 'Nexa Bold'
+
+      &.last
+        padding: rem(15) 0 0 0
+
+      @include mkempe
+
+      @include mriekert
+
+      @include rkaufmann
+
+      @include hihrig

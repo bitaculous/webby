@@ -4,6 +4,8 @@
 // @media all
 // @version 1.0
 
+@import team/members
+
 @mixin team
   &.team
     top: rem(-42)
@@ -13,7 +15,7 @@
     h3,
     h4,
     h5
-      color: #FF4828
+      color: #FB3814
 
     ul
       li
@@ -39,3 +41,5 @@
         @include hidpi
           background-image: image-url('bundle/contour/common/theatre/stage/sections/team/hub/header/background_at_2x.png')
           background-size: 65px 72px
+
+      @include members
