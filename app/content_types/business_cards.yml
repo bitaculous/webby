@@ -9,6 +9,11 @@ fields:
     type: "string"
     required: true
     hint: "The title of the business card."
+- claim:
+    label: "Claim"
+    type: "string"
+    required: true
+    hint: "The claim of the business card."
 - contact_person:
     label: "Contact person"
     type: "string"
@@ -36,3 +41,24 @@ fields:
     inverse_of: "business_card"
     ui_enabled: true
     hint: "The telephone numbers of the business card."
+- emails:
+    label: "Emails"
+    type: "has_many"
+    class_name: "emails"
+    inverse_of: "business_card"
+    ui_enabled: true
+    hint: "The emails of the business card."
+- channels:
+    label: "Channels"
+    type: "has_many"
+    class_name: "channels"
+    inverse_of: "business_card"
+    ui_enabled: true
+    hint: "The channels of the business card."
+- links:
+    label: "Links"
+    type: "has_many"
+    class_name: "telephone_numbers"
+    inverse_of: "business_card"
+    ui_enabled: true
+    hint: "The links of the business card."

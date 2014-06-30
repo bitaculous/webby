@@ -4,6 +4,7 @@
       en: "Bitaculous at Twitter"
       de: "Bitaculous bei Twitter"
     url: "https://twitter.com/bitaculous"
+    business_card: "Bitaculous"
 
 - "Facebook":
     type: "Facebook"
@@ -11,6 +12,7 @@
       en: "Bitaculous at Facebook"
       de: "Bitaculous bei Facebook"
     url: "https://www.facebook.com/bitaculous"
+    business_card: "Bitaculous"
 
 - "GitHub":
     type: "GitHub"
@@ -18,3 +20,4 @@
       en: "Bitaculous at GitHub"
       de: "Bitaculous bei GitHub"
     url: "https://github.com/bitaculous"
+    business_card: "Bitaculous"

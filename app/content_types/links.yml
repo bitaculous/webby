@@ -1,0 +1,21 @@
+name: "Links"
+slug: "links"
+description: "List of links."
+label_field_name: "title"
+order_by: "manually"
+fields:
+- title:
+    label: "Title"
+    type: "string"
+    required: true
+    hint: "The title of the link."
+- url:
+    label: "URL"
+    type: "string"
+    required: true
+    hint: "The URL of the link."
+- business_card:
+    label: "Business card"
+    type: "belongs_to"
+    class_name: "business_cards"
+    hint: "The business card which the link belongs to."

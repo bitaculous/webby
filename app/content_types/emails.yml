@@ -1,6 +1,6 @@
-name: "Telephone numbers"
-slug: "telephone_numbers"
-description: "List of telephone numbers."
+name: "Emails"
+slug: "emails"
+description: "List of emails."
 label_field_name: "title"
 order_by: "manually"
 fields:
@@ -9,15 +9,15 @@ fields:
     type: "string"
     required: true
     localized: true
-    hint: "The title of the telephone number."
-- number:
-    label: "Number"
+    hint: "The title of the email."
+- address:
+    label: "URL"
     type: "string"
     required: true
     localized: true
-    hint: "The number of the telephone number."
+    hint: "The address of the email."
 - business_card:
     label: "Business card"
     type: "belongs_to"
     class_name: "business_cards"
-    hint: "The business card which the telephone number belongs to."
+    hint: "The business card which the email belongs to."

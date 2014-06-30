@@ -31,7 +31,7 @@
 
       %nav.channels
         %ul.items
-          {% for channel in contents.channels %}
+          {% for channel in bitaculous.channels %}
 
           {% assign type = channel.type | downcase | dasherize %}
 
@@ -43,4 +43,6 @@
       .control-panel
         {% include locales %}
 
-        %a.contact{ href: 'mailto:hello@bitaculous.com', title: '{{\'contact\' | translate}}' } {{'contact' | translate}}
+        {% assign contact = bitaculous.emails.first %}
+
+        %a.contact{ href: 'mailto:{{contact.address}}', title: '{{contact.title}}' } {{contact.title}}

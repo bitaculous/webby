@@ -29,3 +29,8 @@ fields:
     type: "string"
     required: true
     hint: "The URL of the channel."
+- business_card:
+    label: "Business card"
+    type: "belongs_to"
+    class_name: "business_cards"
+    hint: "The business card which the channel belongs to."
