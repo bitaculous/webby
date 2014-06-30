@@ -19,10 +19,6 @@ group :development do
 end
 
 group :misc do
-  group :templating do
-    gem 'kramdown', '~> 1.4'
-  end
-
   group :assets do
     gem 'assetify', github: 'bitaculous/assetify'
 
@@ -31,6 +27,7 @@ group :misc do
 
       gem 'breakpoint', '~> 2.4.2'
 
+      # gem 'compass', '~> 1.0.0.alpha.20'
       gem 'compass', github: 'compass/compass', branch: 'master'
 
       gem 'modular-scale', '~> 2.0.5'
@@ -39,6 +36,10 @@ group :misc do
 
       gem 'susy', '~> 2.1.2'
     end
+  end
+
+  group :templating do
+    gem 'kramdown', '~> 1.4'
   end
 
   gem 'initializify', github: 'bitaculous/initializify'
