@@ -260,8 +260,24 @@ position: 1
               .header
                 {% editable_text 'team_header', hint: 'Header (“Team”)', priority: 8 %}
 
+                {% if locale == 'en' %}
                 :kramdown
                   # Team
+
+                  To create stunning results you need more than technical skills, so we've teamed up and work together.
+
+                  We love what we do, and constantly push ourselves to do it better.
+                {% endif %}
+
+                {% if locale == 'de' %}
+                :kramdown
+                  # Team
+
+                  Um beeindruckende Ergebnisse zu schaffen braucht man mehr als technische Fähigkeiten, deshalb
+                  kooperieren wir mit anderen um gemeinsam mehr zu erreichen.
+
+                  Wir lieben was wir tun und bemühen uns ständig es besser zu machen.
+                {% endif %}
 
                 {% endeditable_text %}
 
