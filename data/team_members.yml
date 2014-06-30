@@ -1,0 +1,33 @@
+- "Maik Kempe":
+    identifier: "mkempe"
+    profession:
+      en: |
+        Developer
+      de: |
+        Entwickler
+
+- "Martin Riekert":
+    identifier: "mriekert"
+    profession:
+      en: |
+        Designer
+      de: |
+        Designer
+
+- "René Kaufmann":
+    identifier: "rkaufmann"
+    profession:
+      en: |
+        Design Thinking and Innovation
+      de: |
+        Design Thinking und Innovation
+
+- "Heiko Ihrig":
+    identifier: "hihrig"
+    profession:
+      en: |
+        Project management<br />
+        Online marketing
+      de: |
+        Projektmanagement<br />
+        Online Marketing

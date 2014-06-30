@@ -281,6 +281,18 @@ position: 1
 
                 {% endeditable_text %}
 
+              .members
+                {% for member in contents.team_members %}
+
+                {% assign identifier = section.identifier | downcase | dasherize %}
+
+                .member{ class: '{{identifier}}' }
+                  %p.name {{member.name}}
+
+                  %p.profession {{member.profession}}
+
+                {% endfor %}
+
           {% endblock %}
           -# Block `team`
 

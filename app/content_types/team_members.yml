@@ -1,0 +1,23 @@
+name: "Team members"
+slug: "team_members"
+description: "List of team members."
+label_field_name: "name"
+order_by: "manually"
+fields:
+- name:
+    label: "Name"
+    type: "string"
+    required: true
+    hint: "The name of the team member."
+- identifier:
+    label: "Identifier"
+    type: "string"
+    required: true
+    hint: "The identifier of the team member."
+- profession:
+    label: "Profession"
+    type: "text"
+    text_formatting: "html"
+    required: true
+    localized: true
+    hint: "The profession of the team member."
