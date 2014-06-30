@@ -1,0 +1,30 @@
+%footer.basement
+  .shell
+    .contact
+      {% assign telephone = bitaculous.telephone_numbers.first %}
+
+      {% if telephone %}
+      %a.telephone{ href: 'tel:{{telephone.number}}', title: '{{telephone.hint}}' } {{telephone.formatted_number}}
+
+      %span.divider.item
+        |
+      {% endif %}
+
+      {% assign email = bitaculous.emails.first %}
+
+      {% if telephone %}
+      %a.email{ href: 'mailto:{{email.address}}', title: '{{email.hint}}' } {{email.address}}
+
+      %span.divider.item
+        |
+      {% endif %}
+
+      {% assign directions = bitaculous.links.first %}
+
+      {% if directions %}
+      %a.directions{ href: '{{directions.url}}', title: '{{directions.hint}}', target: '_blank' } {{bitaculous.address}}, {{bitaculous.zip_code}} {{bitaculous.city}}
+      {% endif %}
+
+    %a.imprint{ href: '{% path_to imprint %}', title: '{{\'imprint\' | translate}}' } {{'imprint' | translate}}
+
+    %span.copyright ©{{'now' | date: '%Y'}} {{bitaculous.title}}

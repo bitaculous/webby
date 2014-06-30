@@ -8,12 +8,20 @@ fields:
     label: "Title"
     type: "string"
     required: true
+    localized: true
     hint: "The title of the link."
 - url:
     label: "URL"
     type: "string"
     required: true
+    localized: true
     hint: "The URL of the link."
+- hint:
+    label: "Hint"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The hint of the link."
 - business_card:
     label: "Business card"
     type: "belongs_to"

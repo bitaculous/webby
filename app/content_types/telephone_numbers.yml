@@ -16,6 +16,18 @@ fields:
     required: true
     localized: true
     hint: "The number of the telephone number."
+- formatted_number:
+    label: "Formatted number"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The formatted number of the telephone number."
+- hint:
+    label: "Hint"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The hint of the telephone number."
 - business_card:
     label: "Business card"
     type: "belongs_to"

@@ -1,3 +1,23 @@
-- "bitaculous.com":
-    url: "bitaculous.com"
+- "directions":
+    title:
+      en: "Directions"
+      de: "Wegbeschreibung"
+    url:
+      en: "https://www.google.com/maps/dir//Germaniapromenade+1,+12347+Berlin,+Germany/@52.46068,13.43483,18z"
+      de: "https://www.google.com/maps/dir//Germaniapromenade+1,+12347+Berlin,+Germany/@52.46068,13.43483,18z"
+    hint:
+      en: "Find us!"
+      de: "Finden Sie uns gut!"
+    business_card: "Bitaculous"
+
+- "Web":
+    title:
+      en: "Web"
+      de: "Web"
+    url:
+      en: "bitaculous.com"
+      de: "bitaculous.com"
+    hint:
+      en: "Bitaculous website"
+      de: "Bitaculous Webauftritt"
     business_card: "Bitaculous"

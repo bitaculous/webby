@@ -58,7 +58,7 @@ fields:
 - links:
     label: "Links"
     type: "has_many"
-    class_name: "telephone_numbers"
+    class_name: "links"
     inverse_of: "business_card"
     ui_enabled: true
     hint: "The links of the business card."

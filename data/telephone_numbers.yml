@@ -3,14 +3,26 @@
       en: "Office"
       de: "Büro"
     number:
+      en: "+493025056937"
+      de: "03025056937"
+    formatted_number:
       en: "+49 30 25056937"
       de: "030-250 569 37"
+    hint:
+      en: "Call us!"
+      de: "Rufen Sie uns gerne an!"
     business_card: "Bitaculous"
 - "Mobile":
     title:
       en: "Mobile"
-      de: "Handy"
+      de: "Mobil"
     number:
+      en: "+4917632656969"
+      de: "017632656969"
+    formatted_number:
       en: "+49 176 32656969"
       de: "0176-326 569 69"
+    hint:
+      en: "Call us!"
+      de: "Rufen Sie uns gerne an!"
     business_card: "Bitaculous"

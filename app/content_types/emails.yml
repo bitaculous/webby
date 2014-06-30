@@ -16,6 +16,12 @@ fields:
     required: true
     localized: true
     hint: "The address of the email."
+- hint:
+    label: "Hint"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The hint of the email."
 - business_card:
     label: "Business card"
     type: "belongs_to"

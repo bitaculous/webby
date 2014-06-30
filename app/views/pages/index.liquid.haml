@@ -309,16 +309,7 @@ position: 1
         {% endblock %}
         -# Block `stage`
 
-      %footer.basement
-        {% block 'basement' %}
-
-        .shell
-          %a{ href: '{% path_to imprint %}', title: '{{\'imprint\' | translate}}' } {{'imprint' | translate}}
-
-          %span.copyright ©{{'now' | date: '%Y'}} Bitaculous
-
-        {% endblock %}
-        -# Block `basement`
+      {% include 'basement' %}
 
       {% endblock %}
       -# Block `theatre`
