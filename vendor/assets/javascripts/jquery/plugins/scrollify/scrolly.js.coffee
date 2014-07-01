@@ -3,7 +3,7 @@ class @Scrolly
 
   defaults:
     offsets:
-      roof: -1
+      sections: 0
     debug: false
 
   # === Public ===
@@ -11,6 +11,7 @@ class @Scrolly
   constructor: (theatre, options) ->
     @theatre = $ theatre
     @roof    = @theatre.find '.roof'
+    @stage   = @theatre.find '.stage'
     @options = $.extend @defaults, options
 
     initialize.call @
@@ -19,25 +20,55 @@ class @Scrolly
 
   # === Events ===
 
-  onRoofReached: (roof, direction) =>
-    if direction is 'down'
-      roof.addClass 'slim'
-    else
-      roof.removeClass 'slim'
+  onWindowScroll: (event) =>
+    scrollTop = do $(window).scrollTop
 
+    if scrollTop > 0
+      minimizeRoof.call @
+    else
+      expandRoof.call @
+
+    return
+
+  onSectionReached: (section, direction) =>
     return
 
   # === Private ===
 
   initialize = ->
+    setupWindow.call @
+
     setupWaypoints.call @
 
     return
 
+  setupWindow = ->
+    $(window).on 'scroll', @onWindowScroll
+
+    return
+
   setupWaypoints = ->
-    @roof.waypoint
-      handler: (direction) =>
-        @onRoofReached @roof, direction
-      offset: @options.offsets.roof
+    if do @stage.present
+      sections = @stage.find '> section'
+
+      sections.each (index, section) =>
+        section = $ section
+
+        section.waypoint
+          handler: (direction) =>
+            @onSectionReached section, direction
+          offset: @options.offsets.sections
+
+        return
+
+    return
+
+  minimizeRoof = ->
+    @roof.addClass 'slim'
+
+    return
+
+  expandRoof = ->
+    @roof.removeClass 'slim'
 
     return
