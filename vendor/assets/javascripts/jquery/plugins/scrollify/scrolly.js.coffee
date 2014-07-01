@@ -21,7 +21,9 @@ class @Scrolly
   # === Events ===
 
   onWindowScroll: (event) =>
-    scrollTop = do $(window).scrollTop
+    window = $ event.target
+
+    scrollTop = do window.scrollTop
 
     if scrollTop > 0
       minimizeRoof.call @
