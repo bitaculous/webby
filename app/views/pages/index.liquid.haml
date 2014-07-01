@@ -53,7 +53,7 @@ position: 1
           .introduction
             .shell
               .first.part
-                {% editable_text 'introduction_first_part', hint: 'First part of `introduction`.', priority: 1 %}
+                {% editable_text 'outline_introduction_first_part', hint: 'First part of introduction (“Outline“)', priority: 1 %}
 
                 {% if locale == 'en' %}
                 :kramdown
@@ -70,7 +70,7 @@ position: 1
                 {% endeditable_text %}
 
               .second.part
-                {% editable_text 'introduction_second_part', hint: 'Second part of `introduction`.', priority: 2 %}
+                {% editable_text 'outline_introduction_second_part', hint: 'Second part of introduction (“Outline“)', priority: 2 %}
 
                 {% if locale == 'en' %}
                 :kramdown
@@ -115,7 +115,7 @@ position: 1
 
               .content
                 %section.projects.first
-                  {% editable_text 'what_we_do_projects', hint: 'Projects we do.', priority: 4 %}
+                  {% editable_text 'what_we_do_projects', hint: 'Projects we do (“What we do”)', priority: 4 %}
 
                   {% if locale == 'en' %}
                   :kramdown
@@ -149,7 +149,7 @@ position: 1
                   {% endeditable_text %}
 
                 %section.technologies
-                  {% editable_text 'what_we_do_technologies', hint: 'Technologies we do.', priority: 5 %}
+                  {% editable_text 'what_we_do_technologies', hint: 'Technologies we use (“What we do”)', priority: 5 %}
 
                   {% if locale == 'en' %}
                   :kramdown
@@ -200,7 +200,7 @@ position: 1
                   {% endeditable_text %}
 
                 %section.open-source.last
-                  {% editable_text 'what_we_do_programming', hint: 'Programming we do.', priority: 6 %}
+                  {% editable_text 'what_we_do_open_source', hint: 'Open Source (“What we do”)', priority: 6 %}
 
                   {% if locale == 'en' %}
                   :kramdown
