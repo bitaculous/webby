@@ -1,4 +1,4 @@
-- "directions":
+- "Directions (Bitaculous)":
     title:
       en: "Directions"
       de: "Wegbeschreibung"
@@ -10,14 +10,26 @@
       de: "Finden Sie uns gut!"
     business_card: "Bitaculous"
 
-- "Web":
+- "Web (Bitaculous)":
     title:
-      en: "Web"
-      de: "Web"
-    url:
       en: "bitaculous.com"
       de: "bitaculous.com"
+    url:
+      en: "http://bitaculous.com"
+      de: "http://bitaculous.com"
     hint:
       en: "Bitaculous website"
       de: "Bitaculous Webauftritt"
     business_card: "Bitaculous"
+
+- "Web (markenfaktur)":
+    title:
+      en: "www.markenfaktur.de"
+      de: "www.markenfaktur.de"
+    url:
+      en: "http://www.markenfaktur.de"
+      de: "http://www.markenfaktur.de"
+    hint:
+      en: "markenfaktur website"
+      de: "markenfaktur Webauftritt"
+    business_card: "markenfaktur"

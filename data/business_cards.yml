@@ -1,6 +1,18 @@
 - "Bitaculous":
-    claim: "It's all about the bits, baby!"
+    claim:
+      en: "It's all about the bits, baby!"
+      de: "It's all about the bits, baby!"
     contact_person: "Maik Kempe"
+    tax_office_number: "16/377/01230"
     address: "Germaniapromenade 1"
     zip_code: "12347"
     city: "Berlin"
+
+- "markenfaktur":
+    claim:
+      en: "Agentur für Corporate Identity, Design und Kommunikation"
+      de: "Agency for corporate identity, design and communication"
+    contact_person: "Martin Riekert"
+    address: "Bergheimer Straße 147"
+    zip_code: "69115"
+    city: "Heidelberg"

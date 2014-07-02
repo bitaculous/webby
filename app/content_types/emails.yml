@@ -11,11 +11,18 @@ fields:
     localized: true
     hint: "The title of the email."
 - address:
-    label: "URL"
+    label: "Address"
     type: "string"
     required: true
     localized: true
     hint: "The address of the email."
+- encoded_address:
+    label: "Encoded"
+    type: "text"
+    text_formatting: "html"
+    required: true
+    localized: true
+    hint: "The encoded address of the email."
 - hint:
     label: "Hint"
     type: "string"

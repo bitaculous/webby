@@ -5,8 +5,8 @@
 
 [![Gemnasium Status](https://gemnasium.com/bitaculous/webby.svg)](https://gemnasium.com/bitaculous/webby)
 
-Install
--------
+Installation
+------------
 
     $ git clone git@github.com:bitaculous/webby.git webby
     $ cd webby

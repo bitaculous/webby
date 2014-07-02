@@ -25,3 +25,32 @@ $susy: (
   output: float,
   gutter-position: inside
 );
+
+// Defaults
+// ========
+
+$defaults: (
+  h1: (
+    margin: 0 0 rem(12)
+  ),
+
+  h2: (
+    margin: 0 0 rem(14)
+  ),
+
+  h3: (
+    margin: 0 0 rem(16)
+  ),
+
+  h4: (
+    margin: 0 0 rem(18)
+  ),
+
+  h5: (
+    margin: 0 0 rem(20)
+  ),
+
+  h6: (
+    margin: 0 0 rem(22)
+  )
+);

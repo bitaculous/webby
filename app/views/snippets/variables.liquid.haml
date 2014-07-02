@@ -1,3 +1,9 @@
 {% assign current_locale = locale %}
 
+{% with_scope title: 'Bitaculous' %}
 {% assign bitaculous = contents.business_cards.first %}
+{% endwith_scope %}
+
+{% with_scope title: 'markenfaktur' %}
+{% assign markenfaktur = contents.business_cards.first %}
+{% endwith_scope %}

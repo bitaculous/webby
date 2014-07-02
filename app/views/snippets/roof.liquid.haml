@@ -14,7 +14,7 @@
 
   .dashboard
     .shell
-      %a.badge{ href: '{{ path }}', title: '{{bitaculous.title}} - {{bitaculous.claim}}' }
+      %a.badge{ href: '{%if locale == default_locale %}/{% else %}/{{locale}}{% endif %}', title: '{{bitaculous.title}} - {{bitaculous.claim}}' }
         %span.title {{bitaculous.title}}
 
         %span.claim {{bitaculous.claim}}
@@ -45,4 +45,4 @@
 
         {% assign contact = bitaculous.emails.first %}
 
-        %a.contact{ href: 'mailto:{{contact.address}}', title: '{{contact.title}}' } {{contact.title}}
+        %a.contact{ href: 'mailto:{{contact.encoded_address}}', title: '{{contact.hint}}' } {{contact.title}}

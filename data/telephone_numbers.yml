@@ -10,8 +10,9 @@
       de: "030-250 569 37"
     hint:
       en: "Call us!"
-      de: "Rufen Sie uns gerne an!"
+      de: "Rufen Sie uns gerne an."
     business_card: "Bitaculous"
+
 - "Mobile":
     title:
       en: "Mobile"
@@ -24,5 +25,5 @@
       de: "0176-326 569 69"
     hint:
       en: "Call us!"
-      de: "Rufen Sie uns gerne an!"
+      de: "Rufen Sie uns gerne an."
     business_card: "Bitaculous"

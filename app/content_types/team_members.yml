@@ -25,10 +25,10 @@ fields:
     label: "Claim"
     type: "string"
     localized: true
-    hint: "The claim of the team member."
+    hint: "The optional claim of the team member."
 - details:
     label: "Details"
     type: "text"
     text_formatting: "html"
     localized: true
-    hint: "The details of the team member."
+    hint: "The optional details of the team member."

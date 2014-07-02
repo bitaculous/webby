@@ -1,11 +1,29 @@
-- "Contact":
+- "Contact (Bitaculous)":
     title:
       en: "Contact"
       de: "Kontakt"
     address:
       en: "hello@bitaculous.com"
       de: "hallo@bitaculous.com"
+    encoded_address:
+      en: "&#104;&#101;&#108;&#108;&#111;&#064;&#098;&#105;&#116;&#097;&#099;&#117;&#108;&#111;&#117;&#115;&#046;&#099;&#111;&#109;"
+      de: "&#104;&#097;&#108;&#108;&#111;&#064;&#098;&#105;&#116;&#097;&#099;&#117;&#108;&#111;&#117;&#115;&#046;&#099;&#111;&#109;"
     hint:
       en: "Email us!"
-      de: "Kontaktieren Sie uns gerne per E-Mail!"
+      de: "Kontaktieren Sie uns gerne per E-Mail."
     business_card: "Bitaculous"
+
+- "Contact (markenfaktur)":
+    title:
+      en: "Contact"
+      de: "Kontakt"
+    address:
+      en: "info@markenfaktur.de"
+      de: "info@markenfaktur.de"
+    encoded_address:
+      en: "&#105;&#110;&#102;&#111;&#064;&#109;&#097;&#114;&#107;&#101;&#110;&#102;&#097;&#107;&#116;&#117;&#114;&#046;&#100;&#101;"
+      de: "&#105;&#110;&#102;&#111;&#064;&#109;&#097;&#114;&#107;&#101;&#110;&#102;&#097;&#107;&#116;&#117;&#114;&#046;&#100;&#101;"
+    hint:
+      en: "Contact markenfaktur by email."
+      de: "Kontaktieren Sie markenfaktur per E-Mail."
+    business_card: "markenfaktur"

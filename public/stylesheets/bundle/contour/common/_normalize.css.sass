@@ -21,6 +21,7 @@
   h3,
   h4,
   h5,
+  h6,
   b,
   strong,
   a
@@ -30,10 +31,28 @@
   h2,
   h3,
   h4,
-  h5
+  h5,
+  h6
     font-family: $font-family-headings
     font-weight: $font-weight-headings
-    margin: 0
+
+  h1
+    margin: map-get-deep($defaults, h1, margin)
+
+  h2
+    margin: map-get-deep($defaults, h2, margin)
+
+  h3
+    margin: map-get-deep($defaults, h3, margin)
+
+  h4
+    margin: map-get-deep($defaults, h4, margin)
+
+  h5
+    margin: map-get-deep($defaults, h5, margin)
+
+  h6
+    margin: map-get-deep($defaults, h6, margin)
 
   b,
   strong

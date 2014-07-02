@@ -41,7 +41,7 @@ position: 1
                 {% endif %}
 
                 {% if slide.quote %}
-                %p.title {{slide.quote.title}}
+                %h1.title {{slide.quote.title}}
 
                 %p.statement {{slide.quote.statement}}
 
@@ -52,41 +52,29 @@ position: 1
 
           .introduction
             .shell
-              .first.part
-                {% editable_text 'outline_introduction_first_part', hint: 'First part of introduction (“Outline“)', priority: 1 %}
+              {% editable_text 'outline_introduction', hint: 'Introduction (“Outline“)', priority: 1 %}
 
-                {% if locale == 'en' %}
-                :kramdown
-                  Hey there, we are Bitaculous, a development studio, located in Berlin. We build websites, software and
-                  apps for web and mobile.
-                {% endif %}
+              {% if locale == 'en' %}
+              :kramdown
+                Hey there, we are Bitaculous, a development studio, located in Berlin. We build websites, software and
+                apps for web and mobile.
 
-                {% if locale == 'de' %}
-                :kramdown
-                  Hallo Besucher, wir sind Bitaculous, ein Entwicklungsstudio aus Berlin. Wir entwickeln Websites,
-                  Software und Apps für das Web und Mobile.
-                {% endif %}
+                We support our customers in close cooperation from the initial idea through to the launch and beyond.
+                We develop an understanding of the needs and requirements of the users. We outline. We design. We
+                assemble bits. - All with passion and <i class="icon-heart" title="Love"></i>.
+              {% endif %}
 
-                {% endeditable_text %}
+              {% if locale == 'de' %}
+              :kramdown
+                Hallo Besucher, wir sind Bitaculous, ein Entwicklungsstudio aus Berlin. Wir entwickeln Websites,
+                Software und Apps für das Web und Mobile.
 
-              .second.part
-                {% editable_text 'outline_introduction_second_part', hint: 'Second part of introduction (“Outline“)', priority: 2 %}
+                Wir unterstützen unsere Kunden in enger Zusammenarbeit von der ersten Idee bis zum Start und darüber
+                hinaus. Wir entwickeln ein Verständnis für die Bedürfnisse und Anforderungen der Benutzer. Wir
+                skizzieren. Wir entwerfen. Wir fügen Bits zusammen. - Alles mit Leidenschaft und <i class="icon-heart" title="Liebe"></i>.
+              {% endif %}
 
-                {% if locale == 'en' %}
-                :kramdown
-                  We support our customers in close cooperation from the initial idea through to the launch and beyond.
-                  We develop an understanding of the needs and requirements of the users. We outline. We design. We
-                  assemble bits. - All with passion and <i class="icon-heart" title="Love"></i>.
-                {% endif %}
-
-                {% if locale == 'de' %}
-                :kramdown
-                  Wir unterstützen unsere Kunden in enger Zusammenarbeit von der ersten Idee bis zum Start und darüber
-                  hinaus. Wir entwickeln ein Verständnis für die Bedürfnisse und Anforderungen der Benutzer. Wir
-                  skizzieren. Wir entwerfen. Wir fügen Bits zusammen. - Alles mit Leidenschaft und <i class="icon-heart" title="Liebe"></i>.
-                {% endif %}
-
-                {% endeditable_text %}
+              {% endeditable_text %}
 
           {% endblock %}
           -# Block `outline`
@@ -99,7 +87,7 @@ position: 1
           .hub
             .shell
               .header
-                {% editable_text 'what_we_do_header', hint: 'Header (“What we do”)', priority: 3 %}
+                {% editable_text 'what_we_do_header', hint: 'Header (“What we do”)', priority: 2 %}
 
                 {% if locale == 'en' %}
                 :kramdown
@@ -115,7 +103,7 @@ position: 1
 
               .content
                 %section.projects.first
-                  {% editable_text 'what_we_do_projects', hint: 'Projects we do (“What we do”)', priority: 4 %}
+                  {% editable_text 'what_we_do_projects', hint: 'Projects we do (“What we do”)', priority: 3 %}
 
                   {% if locale == 'en' %}
                   :kramdown
@@ -149,7 +137,7 @@ position: 1
                   {% endeditable_text %}
 
                 %section.technologies
-                  {% editable_text 'what_we_do_technologies', hint: 'Technologies we use (“What we do”)', priority: 5 %}
+                  {% editable_text 'what_we_do_technologies', hint: 'Technologies we use (“What we do”)', priority: 4 %}
 
                   {% if locale == 'en' %}
                   :kramdown
@@ -200,7 +188,7 @@ position: 1
                   {% endeditable_text %}
 
                 %section.open-source.last
-                  {% editable_text 'what_we_do_open_source', hint: 'Open Source (“What we do”)', priority: 6 %}
+                  {% editable_text 'what_we_do_open_source', hint: 'Open Source (“What we do”)', priority: 5 %}
 
                   {% if locale == 'en' %}
                   :kramdown
@@ -233,7 +221,7 @@ position: 1
           .hub
             .shell
               .header
-                {% editable_text 'work_header', hint: 'Header (“Work”)', priority: 7 %}
+                {% editable_text 'work_header', hint: 'Header (“Work”)', priority: 6 %}
 
                 {% if locale == 'en' %}
                 :kramdown
@@ -258,7 +246,7 @@ position: 1
           .hub
             .shell
               .header
-                {% editable_text 'team_header', hint: 'Header (“Team”)', priority: 8 %}
+                {% editable_text 'team_header', hint: 'Header (“Team”)', priority: 7 %}
 
                 {% if locale == 'en' %}
                 :kramdown

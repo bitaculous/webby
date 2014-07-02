@@ -12,8 +12,8 @@
 
       {% assign email = bitaculous.emails.first %}
 
-      {% if telephone %}
-      %a.email{ href: 'mailto:{{email.address}}', title: '{{email.hint}}' } {{email.address}}
+      {% if email %}
+      %a.email{ href: 'mailto:{{email.encoded_address}}', title: '{{email.hint}}' } {{email.encoded_address}}
 
       %span.divider.item
         |

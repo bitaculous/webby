@@ -13,12 +13,17 @@ fields:
     label: "Claim"
     type: "string"
     required: true
+    localized: true
     hint: "The claim of the business card."
 - contact_person:
     label: "Contact person"
     type: "string"
     required: true
     hint: "The contact person of the business card."
+- tax_office_number:
+    label: "Tax office number"
+    type: "string"
+    hint: "The optional tax office number of the business card."
 - address:
     label: "Address"
     type: "string"
