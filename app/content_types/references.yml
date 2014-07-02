@@ -20,3 +20,7 @@ fields:
     type: "string"
     localized: true
     hint: "The optional label of the reference."
+- responsive:
+    label: "Responsive"
+    type: "boolean"
+    hint: "Is the reference responsive?"

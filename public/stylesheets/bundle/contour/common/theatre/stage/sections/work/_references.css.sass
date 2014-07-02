@@ -1,0 +1,29 @@
+// _references.css.sass
+//
+// @package bundle/contour/common/theatre/stage/sections/work
+// @media all
+// @version 1.0
+
+@import references/heldenpause
+@import references/markenfaktur
+@import references/hpk
+@import references/intercultural_map
+
+@mixin references
+  .references
+    margin: 0 auto
+    text-align: center
+    width: 300px
+
+    .reference
+      display: block
+      height: 232px
+      width: 300px
+
+      @include heldenpause
+
+      @include markenfaktur
+
+      @include hpk
+
+      @include intercultural-map

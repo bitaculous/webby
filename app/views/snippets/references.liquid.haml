@@ -1,0 +1,24 @@
+.references.slick-slider
+  {% for reference in contents.references %}
+
+  {% assign identifier = reference.identifier | downcase | dasherize %}
+
+  .reference.slick-slide{ class: '{{identifier}}' }
+    {% if reference.responsive %}
+    .browser.view
+      .viewport
+
+    .mobile.view
+      .viewport
+    {% else %}
+    .browser.view
+      .viewport
+    {% endif %}
+
+    %span.title {{reference.title}}
+
+    {% if reference.label %}
+    %span.label {{reference.label}}
+    {% endif %}
+
+  {% endfor %}

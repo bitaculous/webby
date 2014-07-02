@@ -1,0 +1,23 @@
+.members
+  {% for member in contents.team_members %}
+
+  {% capture position %}{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}{% endcapture %}
+
+  {% assign identifier = member.identifier | downcase | dasherize %}
+
+  .member{ class: '{{identifier}} {{position}}' }
+    .photo{ title: '{{member.name}}' }
+
+    %p.name {{member.name}}
+
+    %p.profession {{member.profession}}
+
+    {% if member.claim %}
+    %p.claim {{member.claim}}
+    {% endif %}
+
+    {% if member.details %}
+    %p.details {{member.details}}
+    {% endif %}
+
+  {% endfor %}

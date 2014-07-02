@@ -27,28 +27,9 @@ position: 1
         %section.outline.first
           {% block 'outline' %}
 
-          .shady
+          {% include 'shady' %}
 
-          .slider.slick-slider
-            {% for slide in contents.slides %}
-
-            {% assign type = slide.type | downcase | dasherize %}
-
-            .slide.slick-slide{ class: '{{type}}' }
-              .content
-                {% if slide.message %}
-                %p {{slide.message}}
-                {% endif %}
-
-                {% if slide.quote %}
-                %h1.title {{slide.quote.title}}
-
-                %p.statement {{slide.quote.statement}}
-
-                %p.author {{slide.quote.author}}
-                {% endif %}
-
-            {% endfor %}
+          {% include 'slider' %}
 
           .introduction
             .shell
@@ -82,7 +63,7 @@ position: 1
         %section.what-we-do
           {% block 'what_we_do' %}
 
-          .flap
+          {% include 'flap' %}
 
           .hub
             .shell
@@ -216,7 +197,7 @@ position: 1
         %section.work
           {% block 'work' %}
 
-          .flap
+          {% include 'flap' %}
 
           .hub
             .shell
@@ -235,20 +216,7 @@ position: 1
 
                 {% endeditable_text %}
 
-              .references.slick-slider
-                {% for reference in contents.references %}
-
-                {% assign identifier = reference.identifier | downcase | dasherize %}
-
-                %a.reference.slick-slide{ class: '{{identifier}}', href: '#', title:'{{reference.title}}' }
-                  %span.title {{reference.title}}
-
-                  {% if reference.label %}
-                  %span.label {{reference.label}}
-                  {% endif %}
-
-                {{reference.title}}
-                {% endfor %}
+              {% include 'references' %}
 
           {% endblock %}
           -# Block `work`
@@ -256,7 +224,7 @@ position: 1
         %section.team.last
           {% block 'team' %}
 
-          .flap
+          {% include 'flap' %}
 
           .hub
             .shell
@@ -284,29 +252,7 @@ position: 1
 
                 {% endeditable_text %}
 
-              .members
-                {% for member in contents.team_members %}
-
-                {% capture position %}{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}{% endcapture %}
-
-                {% assign identifier = member.identifier | downcase | dasherize %}
-
-                .member{ class: '{{identifier}} {{position}}' }
-                  .photo{ title: '{{member.name}}' }
-
-                  %p.name {{member.name}}
-
-                  %p.profession {{member.profession}}
-
-                  {% if member.claim %}
-                  %p.claim {{member.claim}}
-                  {% endif %}
-
-                  {% if member.details %}
-                  %p.details {{member.details}}
-                  {% endif %}
-
-                {% endfor %}
+              {% include 'members' %}
 
           {% endblock %}
           -# Block `team`

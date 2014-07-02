@@ -6,6 +6,7 @@
     label:
       en: "Just relax. The relaxation lemonade with love from Heidelberg."
       de: "Entspannt Euch. Die Entspannungslimonade mit Liebe aus Heidelberg."
+    responsive: true
 
 - "markenfaktur":
     identifier: "markenfaktur"
@@ -15,6 +16,7 @@
     label:
       en: "Agency for corporate identity, design and communication."
       de: "Agentur für Corporate Identity, Design und Kommunikation."
+    responsive: true
 
 - "HPK":
     identifier: "hpk"
@@ -24,9 +26,11 @@
     label:
       en: "Heidelberg Clinic for Cardiology"
       de: "Heidelberger Praxisklinik für Innere Medizin, Kardiologie und Pneumologie"
+    responsive: false
 
-- "IZIG Intercultural map":
-    identifier: "izig-intercultural-map"
+- "Intercultural map":
+    identifier: "intercultural_map"
     title:
       en: "IZIG Intercultural map"
       de: "IZIG Interkultureller Stadtplan"
+    responsive: false
