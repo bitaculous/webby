@@ -23,9 +23,13 @@
         %ul.items
           {% for section in contents.sections %}
 
+          {% capture position %}{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}{% endcapture %}
+
+          {% capture active %}{% if forloop.first %}active{% endif %}{% endcapture %}
+
           {% assign identifier = section.identifier | downcase | dasherize %}
 
-          %li{ class: '{{identifier}} {% if forloop.first %}first active{% endif %} {% if forloop.last %}last{% endif %} item' }
+          %li.item{ class: '{{identifier}} {{active}} {{position}}' }
             %a.internal{ href: '#', title: '{{section.description}}' } {{section.title}}
           {% endfor %}
 
@@ -33,9 +37,11 @@
         %ul.items
           {% for channel in bitaculous.channels %}
 
+          {% capture position %}{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}{% endcapture %}
+
           {% assign type = channel.type | downcase | dasherize %}
 
-          %li{ class: '{{type}} {% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %} item' }
+          %li.item{ class: '{{type}} {{position}}' }
             %a.external{ href: '{{channel.url}}', title: '{{channel.description}}', target: '_blank' }
               %i{ class: 'icon-{{type}}' }
           {% endfor %}

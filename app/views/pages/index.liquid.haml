@@ -29,12 +29,12 @@ position: 1
 
           .shady
 
-          .slick-slider.slider
+          .slider.slick-slider
             {% for slide in contents.slides %}
 
             {% assign type = slide.type | downcase | dasherize %}
 
-            .slick-slide.slide{ class: '{{type}}' }
+            .slide.slick-slide{ class: '{{type}}' }
               .content
                 {% if slide.message %}
                 %p {{slide.message}}
@@ -235,6 +235,21 @@ position: 1
 
                 {% endeditable_text %}
 
+              .references.slick-slider
+                {% for reference in contents.references %}
+
+                {% assign identifier = reference.identifier | downcase | dasherize %}
+
+                %a.reference.slick-slide{ class: '{{identifier}}', href: '#', title:'{{reference.title}}' }
+                  %span.title {{reference.title}}
+
+                  {% if reference.label %}
+                  %span.label {{reference.label}}
+                  {% endif %}
+
+                {{reference.title}}
+                {% endfor %}
+
           {% endblock %}
           -# Block `work`
 
@@ -272,9 +287,11 @@ position: 1
               .members
                 {% for member in contents.team_members %}
 
+                {% capture position %}{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}{% endcapture %}
+
                 {% assign identifier = member.identifier | downcase | dasherize %}
 
-                %div{ class: '{{identifier}} {% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %} member' }
+                .member{ class: '{{identifier}} {{position}}' }
                   .photo{ title: '{{member.name}}' }
 
                   %p.name {{member.name}}
