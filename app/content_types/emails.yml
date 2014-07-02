@@ -10,6 +10,12 @@ fields:
     required: true
     localized: true
     hint: "The title of the email."
+- label:
+    label: "Label"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The label of the email."
 - address:
     label: "Address"
     type: "string"
@@ -23,12 +29,6 @@ fields:
     required: true
     localized: true
     hint: "The encoded address of the email."
-- hint:
-    label: "Hint"
-    type: "string"
-    required: true
-    localized: true
-    hint: "The hint of the email."
 - business_card:
     label: "Business card"
     type: "belongs_to"

@@ -1,0 +1,32 @@
+- "Heldenpause":
+    identifier: "heldenpause"
+    title:
+      en: "Heldenpause"
+      de: "Heldenpause"
+    label:
+      en: "Just relax. The relaxation lemonade with love from Heidelberg."
+      de: "Entspannt Euch. Die Entspannungslimonade mit Liebe aus Heidelberg."
+
+- "markenfaktur":
+    identifier: "markenfaktur"
+    title:
+      en: "markenfaktur"
+      de: "markenfaktur"
+    label:
+      en: "Agency for corporate identity, design and communication."
+      de: "Agentur für Corporate Identity, Design und Kommunikation."
+
+- "HPK":
+    identifier: "hpk"
+    title:
+      en: "HPK"
+      de: "HPK"
+    label:
+      en: "Heidelberg Clinic for Cardiology"
+      de: "Heidelberger Praxisklinik für Innere Medizin, Kardiologie und Pneumologie"
+
+- "IZIG Intercultural map":
+    identifier: "izig-intercultural-map"
+    title:
+      en: "IZIG Intercultural map"
+      de: "IZIG Interkultureller Stadtplan"

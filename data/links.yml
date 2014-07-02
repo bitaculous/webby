@@ -2,34 +2,34 @@
     title:
       en: "Directions"
       de: "Wegbeschreibung"
+    label:
+      en: "Find us!"
+      de: "Finden Sie uns gut!"
     url:
       en: "https://www.google.com/maps/dir//Germaniapromenade+1,+12347+Berlin,+Germany/@52.46068,13.43483,18z"
       de: "https://www.google.com/maps/dir//Germaniapromenade+1,+12347+Berlin,+Germany/@52.46068,13.43483,18z"
-    hint:
-      en: "Find us!"
-      de: "Finden Sie uns gut!"
     business_card: "Bitaculous"
 
 - "Web (Bitaculous)":
     title:
       en: "bitaculous.com"
       de: "bitaculous.com"
+    label:
+      en: "Bitaculous website"
+      de: "Bitaculous Webauftritt"
     url:
       en: "http://bitaculous.com"
       de: "http://bitaculous.com"
-    hint:
-      en: "Bitaculous website"
-      de: "Bitaculous Webauftritt"
     business_card: "Bitaculous"
 
 - "Web (markenfaktur)":
     title:
       en: "www.markenfaktur.de"
       de: "www.markenfaktur.de"
+    label:
+      en: "markenfaktur website"
+      de: "markenfaktur Webauftritt"
     url:
       en: "http://www.markenfaktur.de"
       de: "http://www.markenfaktur.de"
-    hint:
-      en: "markenfaktur website"
-      de: "markenfaktur Webauftritt"
     business_card: "markenfaktur"

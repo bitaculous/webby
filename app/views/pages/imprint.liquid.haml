@@ -39,8 +39,8 @@ position: 2
 
       ## Contact
 
-      **Telephone:** [{{telephone.formatted_number}}](tel:{{telephone.number}} "{{telephone.hint}}"){: .telephone}<br />
-      **Email:** [{{email.address}}]({{'mailto:' | append: email.encoded_address}} "{{email.hint}}"){: .email}
+      **Telephone:** [{{telephone.formatted_number}}](tel:{{telephone.number}} "{{telephone.label}}"){: .telephone}<br />
+      **Email:** [{{email.address}}]({{'mailto:' | append: email.encoded_address}} "{{email.label}}"){: .email}
 
       # Disclaimer
 
@@ -87,8 +87,8 @@ position: 2
 
       ## Kontakt
 
-      **Telefon:** [{{telephone.formatted_number}}](tel:{{telephone.number}} "{{telephone.hint}}"){: .telephone}<br />
-      **E-Mail:** [{{email.address}}]({{'mailto:' | append: email.encoded_address}} "{{email.hint}}"){: .email}
+      **Telefon:** [{{telephone.formatted_number}}](tel:{{telephone.number}} "{{telephone.label}}"){: .telephone}<br />
+      **E-Mail:** [{{email.address}}]({{'mailto:' | append: email.encoded_address}} "{{email.label}}"){: .email}
 
       # Haftungsausschluss (Disclaimer)
 
@@ -131,8 +131,8 @@ position: 2
       ## Design:
 
       {{markenfaktur.title}}, {{markenfaktur.city}}<br />
-      [{{email.address}}]({{'mailto:' | append: email.encoded_address}} "{{email.hint}}"){: .email}<br />
-      [{{web.title}}]({{web.url}} "{{web.hint}}"){: .external target="_blank"}
+      [{{email.address}}]({{'mailto:' | append: email.encoded_address}} "{{email.label}}"){: .email}<br />
+      [{{web.title}}]({{web.url}} "{{web.label}}"){: .external target="_blank"}
 
     {% endeditable_text %}
 

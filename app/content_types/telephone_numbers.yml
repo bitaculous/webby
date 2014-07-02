@@ -10,6 +10,12 @@ fields:
     required: true
     localized: true
     hint: "The title of the telephone number."
+- label:
+    label: "Label"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The label of the telephone number."
 - number:
     label: "Number"
     type: "string"
@@ -22,12 +28,6 @@ fields:
     required: true
     localized: true
     hint: "The formatted number of the telephone number."
-- hint:
-    label: "Hint"
-    type: "string"
-    required: true
-    localized: true
-    hint: "The hint of the telephone number."
 - business_card:
     label: "Business card"
     type: "belongs_to"

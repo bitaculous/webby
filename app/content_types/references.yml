@@ -1,0 +1,22 @@
+name: "References"
+slug: "references"
+description: "List of references."
+label_field_name: "title"
+order_by: "manually"
+fields:
+- identifier:
+    label: "Identifier"
+    type: "string"
+    required: true
+    hint: "The identifier of the reference."
+- title:
+    label: "Title"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The title of the reference."
+- label:
+    label: "Label"
+    type: "string"
+    localized: true
+    hint: "The optional label of the reference."

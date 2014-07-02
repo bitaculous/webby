@@ -1,35 +1,35 @@
 - "Home":
+    identifier: "home"
     title:
       en: "Home"
       de: "Home"
-    identifier: "home"
     description:
       en: "Home"
       de: "Home"
 
 - "About":
+    identifier: "about"
     title:
       en: "About"
       de: "Über uns"
-    identifier: "about"
     description:
       en: "About"
       de: "Über uns"
 
 - "Work":
+    identifier: "work"
     title:
       en: "Work"
       de: "Referenzen"
-    identifier: "work"
     description:
       en: "What we do"
       de: "Was wir machen"
 
 - "Team":
+    identifier: "team"
     title:
       en: "Team"
       de: "Team"
-    identifier: "team"
     description:
       en: "Who we are"
       de: "Wer wir sind"
