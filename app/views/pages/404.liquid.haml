@@ -1,15 +1,23 @@
 ---
-title: Page not found
-published: false
+title: "Page not found."
+seo_title: "404 | Bitaculous"
+meta_description: "It's all about the bits, baby!"
+meta_keywords: "bitaculous, it's, all, about, the, bits, baby, 404"
+published: true
 listed: false
 searchable: false
 handle: "page_not_found"
 ---
+{% extends 'index' %}
 
-{% extends index %}
+{% block 'theatre/stage' %}
+%section.content
+  {% block 'content' %}
 
-{% block 'main' %}
+  %h1 {{'page_not_found' | translate}}
 
-%p Page not found.
+  {% endblock %}
+  -# Block `content`
 
 {% endblock %}
+-# Block `theatre/stage`
