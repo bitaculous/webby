@@ -12,6 +12,10 @@ imprint:
   en: "Imprint"
   de: "Impressum"
 
+privacy:
+  en: "Privacy"
+  de: "Datenschutz"
+
 page_not_found:
   en: "Page not found."
   de: "Die Seite konnte leider nicht gefunden werden."
