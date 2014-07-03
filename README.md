@@ -3,8 +3,6 @@
 
 **Sources of the official Bitaculous website.**
 
-[![Gemnasium Status](https://gemnasium.com/bitaculous/webby.svg)](https://gemnasium.com/bitaculous/webby)
-
 Installation
 ------------
 
