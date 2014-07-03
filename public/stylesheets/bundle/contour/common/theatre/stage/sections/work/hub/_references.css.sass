@@ -1,6 +1,6 @@
 // _references.css.sass
 //
-// @package bundle/contour/common/theatre/stage/sections/work
+// @package bundle/contour/common/theatre/stage/sections/work/hub
 // @media all
 // @version 1.0
 
@@ -11,15 +11,12 @@
 
 @mixin references
   .references
-    margin: 0 auto
-    overflow: hidden
-    text-align: center
-    width: 300px
-
     .reference
       cursor: pointer
+      text-align: center
 
       .view
+        margin: 0 auto
         position: relative
 
         .viewport
@@ -35,11 +32,19 @@
             background-image: image-url('bundle/contour/common/theatre/stage/sections/work/hub/references/reference/views/browser/background_at_2x.png')
             background-size: 300px 207px
 
+          .title
+            color: #555
+            font-family: 'Nexa Regular'
+            font-size: ms(-1.5)
+            left: rem(7)
+            position: absolute
+            top: rem(8)
+
           .viewport
-            bottom: rem(4)
-            left: rem(4)
-            right: rem(4)
-            top: rem(14)
+            bottom: rem(7)
+            left: rem(7)
+            right: rem(7)
+            top: rem(27)
 
       @include heldenpause
 

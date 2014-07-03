@@ -11,6 +11,10 @@ position: 2
 ---
 {% extends 'index' %}
 
+{% with_scope title: 'markenfaktur' %}
+{% assign markenfaktur = contents.business_cards.first %}
+{% endwith_scope %}
+
 {% block 'theatre/stage' %}
 %section.content
   {% block 'content' %}

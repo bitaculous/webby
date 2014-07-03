@@ -2,7 +2,7 @@
     title:
       en: "Office"
       de: "Büro"
-    hint:
+    label:
       en: "Call us!"
       de: "Rufen Sie uns gerne an."
     business_card: "Bitaculous"
@@ -17,7 +17,7 @@
     title:
       en: "Mobile"
       de: "Mobil"
-    hint:
+    label:
       en: "Call us!"
       de: "Rufen Sie uns gerne an."
     number:

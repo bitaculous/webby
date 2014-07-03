@@ -4,14 +4,13 @@
   {% assign identifier = reference.identifier | downcase | dasherize %}
 
   .reference.slick-slide{ class: '{{identifier}}' }
-    {% if reference.responsive %}
     .browser.view
+      .title {{reference.title}}
+
       .viewport
 
+    {% if reference.responsive %}
     .mobile.view
-      .viewport
-    {% else %}
-    .browser.view
       .viewport
     {% endif %}
 
