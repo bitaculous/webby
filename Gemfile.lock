@@ -29,7 +29,7 @@ GIT
 
 GIT
   remote: git://github.com/compass/compass.git
-  revision: 08ae69fbac200f233b945d98db024403d7d1d7e3
+  revision: 1a899e53aa09a4a8d01e0bb5bc2bd26dce5461ca
   branch: master
   specs:
     compass (1.0.0.alpha.20)
@@ -95,7 +95,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     RedCloth (4.2.9)
-    activesupport (3.2.18)
+    activesupport (3.2.19)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     better_errors (1.0.1)
@@ -163,7 +163,7 @@ GEM
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     redcarpet (3.0.0)
-    rubyzip (1.1.4)
+    rubyzip (1.1.6)
     sass (3.3.9)
     sassy-maps (0.4.0)
       sass (~> 3.3)
