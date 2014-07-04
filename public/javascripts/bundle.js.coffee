@@ -19,9 +19,9 @@ $ ->
   # === Events ===
 
   onSliderInitialized = (slick) ->
-    slider  = slick.$slider
-    outline = slider.closest '.outline'
-    shady   = outline.find '.shady'
+    slider   = slick.$slider
+    abstract = slider.closest '.abstract'
+    shady    = abstract.find '.shady'
 
     # May I have your attention please? Will the real Shady please stand up?
     shady.shadify {
@@ -42,10 +42,10 @@ $ ->
     stage = theatre.find '.stage'
 
     if do stage.present
-      outline = stage.find '.outline'
+      abstract = stage.find '.abstract'
 
-      if do outline.present
-        slider = outline.find '.slider'
+      if do abstract.present
+        slider = abstract.find '.slider'
 
         if do slider.present
           slider.slick {
