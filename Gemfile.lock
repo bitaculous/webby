@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/bitaculous/assetify.git
-  revision: d1aa159795210871fad4aa6398cc0e41dd9b2a0b
+  revision: c8ab0a9578c8338fa196fa783c3b4f443a8c6a06
   specs:
-    assetify (0.8.3)
+    assetify (0.8.4)
       sass (>= 3.2)
       sprockets (~> 2.12.1)
 
@@ -186,7 +186,7 @@ GEM
     tilt (1.4.1)
     timers (1.1.0)
     tzinfo (0.3.39)
-    will_paginate (3.0.6)
+    will_paginate (3.0.7)
     zip (2.0.2)
 
 PLATFORMS
