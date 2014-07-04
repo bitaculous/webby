@@ -6,6 +6,19 @@
     salutation:
       en: "Dear customers,"
       de: "Liebe Kunden,"
+    text:
+      en: |
+        <p>
+          for companies, institutions or public organizations we offer the complete implementation of web projects. Our
+          specialists for conception, design and communication plan and design your project, afterwards we program and
+          realize it.
+        </p>
+      de: |
+        <p>
+          für Unternehmen, Institute oder öffentliche Einrichtungen bieten wir die Umsetzung von kompletten Webprojekten
+          an. Unsere Spezialisten für Konzeption, Design und Kommunikation planen und entwerfen Ihr Projekt, das wir
+          anschließend programmieren und realisieren.
+        </p>
 
 - "Agencies":
     identifier: "agencies"
@@ -15,6 +28,18 @@
     salutation:
       en: "Dear agencies,"
       de: "Liebe Agenturen,"
+    text:
+      en: |
+        <p>
+          if you are a design agency, advertising agency, or otherwise creative agency, then you do web projects - but
+          have no programmers in-house? We are your ideal partner for the technical implementation of your web projects.
+        </p>
+      de: |
+        <p>
+          wenn Sie eine Designagentur, Werbeagentur oder sonst eine kreative Agentur sind, dann haben Sie sicher
+          Webprojekte - aber keine Programmierer im Haus? Wir sind ihr idealer Partner für die technische Umsetzung
+          Ihrer Webprojekte.
+        </p>
 
 - "Startups":
     identifier: "startups"
@@ -24,3 +49,14 @@
     salutation:
       en: "Dear startups located in Berlin,"
       de: "Liebe Startups in Berlin,"
+    text:
+      en: |
+        <p>
+          We are excited about new developments, ideas and visions. You are a startup, ideally located in Berlin, and
+          you need technical support? We can assist you in realizing your project.
+        </p>
+      de: |
+        <p>
+          wir sind begeistert von neuen Entwicklungen, Ideen und Visionen. Sie sind ein Startup, idealerweise in Berlin,
+          und benötigen technische Unterstützung? Wir unterstützen Sie gerne bei der Realisierung Ihres Vorhabens.
+        </p>

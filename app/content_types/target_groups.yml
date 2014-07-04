@@ -21,3 +21,9 @@ fields:
     required: true
     localized: true
     hint: "The salutation for the target group."
+- text:
+    label: "Text"
+    type: "text"
+    text_formatting: "html"
+    localized: true
+    hint: "The text for the target group."
