@@ -1,0 +1,26 @@
+- "Customers":
+    identifier: "customers"
+    title:
+      en: "Customers"
+      de: "Kunden"
+    salutation:
+      en: "Dear customers,"
+      de: "Liebe Kunden,"
+
+- "Agencies":
+    identifier: "agencies"
+    title:
+      en: "Agencies"
+      de: "Agenturen"
+    salutation:
+      en: "Dear agencies,"
+      de: "Liebe Agenturen,"
+
+- "Startups":
+    identifier: "startups"
+    title:
+      en: "Startups"
+      de: "Startups"
+    salutation:
+      en: "Dear startups located in Berlin,"
+      de: "Liebe Startups in Berlin,"

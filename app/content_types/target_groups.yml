@@ -1,0 +1,23 @@
+name: "Target groups"
+slug: "target_groups"
+description: "List of target groups."
+label_field_name: "title"
+order_by: "manually"
+fields:
+- identifier:
+    label: "Identifier"
+    type: "string"
+    required: true
+    hint: "The identifier of the target group."
+- title:
+    label: "Title"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The title of the target group."
+- salutation:
+    label: "Salutation"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The salutation for the target group."

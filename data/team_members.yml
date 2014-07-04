@@ -1,26 +1,20 @@
 - "Maik Kempe":
     identifier: "mkempe"
     profession:
-      en: |
-        Developer
-      de: |
-        Entwickler
+      en: "Developer"
+      de: "Entwickler"
     claim:
       en: "I love bits, baby!"
       de: "I love bits, baby!"
     details:
-      en: |
-        Founder and owner of Bitaculous
-      de: |
-        Gründer und Inhaber von Bitaculous
+      en: "Founder and owner of Bitaculous"
+      de: "Gründer und Inhaber von Bitaculous"
 
 - "Martin Riekert":
     identifier: "mriekert"
     profession:
-      en: |
-        Designer
-      de: |
-        Designer
+      en: "Designer"
+      de: "Designer"
     details:
       en: |
         <a class="external" href="http://www.markenfaktur.de" title="markenfaktur website" target="_blank">www.markenfaktur.de</a>
@@ -30,10 +24,8 @@
 - "René Kaufmann":
     identifier: "rkaufmann"
     profession:
-      en: |
-        Design Thinking and Innovation
-      de: |
-        Design Thinking und Innovation
+      en: "Design Thinking and Innovation"
+      de: "Design Thinking und Innovation"
     details:
       en: |
         <a class="external" href="http://www.coalisten.com" title="Coalisten website" target="_blank">www.coalisten.com</a>
