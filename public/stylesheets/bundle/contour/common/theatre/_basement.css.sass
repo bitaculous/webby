@@ -4,6 +4,9 @@
 // @media all
 // @version 1.0
 
+@import basement/get_in_touch
+@import basement/manual
+
 @mixin basement
   .basement
     background: #000
@@ -18,14 +21,6 @@
     span.divider
       display: none
 
-    .contact
-      margin: 0 0 rem(10)
+    @include get_in_touch
 
-    nav.foot
-      margin: 0 0 rem(10)
-
-      ul.items
-        li.item
-          span,
-          a
-            display: inline
+    @include manual

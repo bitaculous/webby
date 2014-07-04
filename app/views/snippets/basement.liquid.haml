@@ -1,39 +1,7 @@
 %footer.basement
   .shell
-    .contact
-      {% assign telephone = bitaculous.telephone_numbers.first %}
+    {% include 'get_in_touch' %}
 
-      {% if telephone %}
-      %a.telephone{ href: 'tel:{{telephone.number}}', title: '{{telephone.label}}' } {{telephone.formatted_number}}
+    {% include 'manual' %}
 
-      %span.divider.item
-        |
-      {% endif %}
-
-      {% assign email = bitaculous.emails.first %}
-
-      {% if email %}
-      %a.email{ href: 'mailto:{{email.encoded_address}}', title: '{{email.label}}' } {{email.encoded_address}}
-
-      %span.divider.item
-        |
-      {% endif %}
-
-      {% assign directions = bitaculous.links.first %}
-
-      {% if directions %}
-      %a.directions{ href: '{{directions.url}}', title: '{{directions.label}}', target: '_blank' } {{bitaculous.address}}, {{bitaculous.zip_code}} {{bitaculous.city}}
-      {% endif %}
-
-    %nav.foot
-      %ul.items
-        %li.imprint.first.item
-          %a.imprint{ href: '{% path_to imprint %}', title: '{{\'imprint\' | translate}}' } {{'imprint' | translate}}
-
-        %li.divider.item
-          |
-
-        %li.privacy.first.item
-          %a.privacy{ href: '{% path_to privacy %}', title: '{{\'privacy\' | translate}}' } {{'privacy' | translate}}
-
-    %span.copyright ©{{'now' | date: '%Y'}} {{bitaculous.title}}
+    {% include 'copyright' %}

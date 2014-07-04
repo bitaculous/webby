@@ -1,0 +1,6 @@
+.control-panel
+  {% include 'locales' %}
+
+  {% assign contact = bitaculous.emails.first %}
+
+  %a.contact{ href: 'mailto:{{contact.encoded_address}}', title: '{{contact.label}}' } {{contact.title}}

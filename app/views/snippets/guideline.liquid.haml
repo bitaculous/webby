@@ -1,0 +1,13 @@
+%nav.guideline
+  %ul.items
+    {% for section in contents.sections %}
+
+    {% capture position %}{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}{% endcapture %}
+
+    {% capture active %}{% if forloop.first %}active{% endif %}{% endcapture %}
+
+    {% assign identifier = section.identifier | downcase | dasherize %}
+
+    %li.item{ class: '{{identifier}} {{active}} {{position}}' }
+      %a.internal{ href: '#', title: '{{section.description}}' } {{section.title}}
+    {% endfor %}
