@@ -219,7 +219,7 @@ class @Shady
 
     return
 
-  resize: (width, height) ->
+  resize: (width = @container.offsetWidth, height = @container.offsetHeight) ->
     @renderer.setSize width, height
 
     @calibrateMeshSegments width
@@ -313,9 +313,9 @@ class @Shady
 
       addEventListeners.call @
 
-      @resize @container.offsetWidth, @container.offsetHeight
-
       do @animate
+
+      @resize @container.offsetWidth, @container.offsetHeight
 
       @element.addClass 'active'
 
