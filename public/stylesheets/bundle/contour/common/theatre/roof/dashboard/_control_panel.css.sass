@@ -27,3 +27,20 @@
       @include hidpi
         background-image: image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/contact/background_at_2x.png')
         background-size: 92px 28px
+
+      i.icon-close
+        display: none
+
+      &.active
+        background-image: image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/contact/active/background.png')
+        width: 72px
+
+        @include hidpi
+          background-image: image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/contact/active/background_at_2x.png')
+          background-size: 72px 28px
+
+        span.label
+          display: none
+
+        i.icon-close
+          display: inline

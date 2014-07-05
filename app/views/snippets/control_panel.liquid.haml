@@ -1,6 +1,7 @@
 .control-panel
   {% include 'locales' %}
 
-  {% assign contact = bitaculous.emails.first %}
+  %a.contact.active{ href: '#', data: { title: '{{\'contact\' | translate}}', title_active: '{{\'close\' | translate}}' }, title: '{{\'contact\' | translate}}' }
+    %span.label {{'contact' | translate}}
 
-  %a.contact{ href: 'mailto:{{contact.encoded_address}}', title: '{{contact.label}}' } {{contact.title}}
+    %i{ class: 'icon-close' }

@@ -1,5 +1,10 @@
-.contact
-  .header
+%section.contact
+  .bar
+    .shell
+      %a.close{ href: '#', title: '{{\'close\' | translate}}' }
+        %i{ class: 'icon-close-squared' }
+
+  %header
     .shell
       {% if locale == 'en' %}
       :kramdown
@@ -24,3 +29,7 @@
           %p {{target_group.text}}
 
         {% endfor %}
+
+  %footer
+    .shell
+      %h1 Footer

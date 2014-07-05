@@ -6,9 +6,11 @@
 
 @mixin contact
   .contact
-    border-top: 15px solid #E2F4F8
     color: #006897
-    display: block
+    max-height: 390px
+    overflow: scroll
+    padding: rem(32) 0 0 0
+    position: relative
 
     h1
       font-family: 'Nexa Bold'
@@ -16,9 +18,32 @@
     a
       color: #006897
 
-    .header
+    .bar
+      background: #E2F4F8
+      left: 0
+      position: fixed
+      right: 0
+      top: 0
+      z-index: 150
+
+      .shell
+        height: 32px
+
+      a.close
+        position: absolute
+        right: rem(10)
+        top: rem(3)
+
+        i
+          color: #24D2DB
+
+    header
       background: #EEFCFD
+      padding: rem(10) 0
 
       h1,
       h2
         color: #24D2DB
+
+    footer
+      background: #E2F4F8
