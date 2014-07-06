@@ -24,6 +24,10 @@ privacy:
   en: "Privacy"
   de: "Datenschutz"
 
+errors_occurred:
+  en: "The following errors occurred:"
+  de: "Die folgenden Fehler sind aufgetreten:"
+
 page_not_found:
   en: "Page not found."
   de: "Die Seite konnte leider nicht gefunden werden."
