@@ -1,0 +1,22 @@
+name: "Requests"
+slug: "requests"
+description: "List of requests."
+label_field_name: "title"
+order_by: "manually"
+public_submission_enabled: true
+fields:
+- name:
+    label: "Name"
+    type: "string"
+    required: true
+    hint: "The name of the request."
+- email:
+    label: "Email"
+    type: "string"
+    required: true
+    hint: "The email of the request."
+- message:
+    label: "message"
+    type: "text"
+    required: true
+    hint: "The message of the request."

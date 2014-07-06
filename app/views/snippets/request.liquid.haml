@@ -1,0 +1,42 @@
+%form.request{ action: '{{contents.requests.public_submission_url}}', method: 'post' }
+  %p.hint Wir freuen uns auf Ihre Nachricht!
+
+  {% if requests.errors %}
+  .error-explanation
+    %p {{'errors_occurred' | translate}}
+
+    %ul.errors
+      {% for error in requests.errors %}
+
+      %li.error {{error[0] | capitalize}} - {{error[1]}}
+
+      {% endfor %}
+  {% endif %}
+
+  %fieldset.system
+    {% csrf_param %}
+
+    %input#success-callback.hidden{ name: 'success_callback', type: 'hidden', value: '/' }
+    %input#error-callback.hidden{ name: 'error_callback', type: 'hidden', value: '/' }
+
+  %fieldset.default
+    .row.two.columns
+      .name.field
+        %label{ for: 'name', title: 'Name' } Name:
+
+        %input#name.required.text.element{ name: 'content[name]', placeholder: 'Your name', value: '{{request.name}}' }
+
+      .email.field
+        %label{ for: 'email', title: 'Email' } Email:
+
+        %input#email.required.email.element{ name: 'content[email]', type: 'email', placeholder: 'Your email', value: '{{request.email}}' }
+
+    .row.one.column
+      %label{ for: 'message', title: 'Message' } Message:
+
+      %textarea#message.required.element{ name: 'content[message]', placeholder: 'Your message' } {{request.message}}
+
+    .row.one.column
+      %input.submit.element{ type: 'submit', value: 'Submit', title: 'Submit' }
+
+      %a.submit{ href: '#', title: 'Submit' } Submit
