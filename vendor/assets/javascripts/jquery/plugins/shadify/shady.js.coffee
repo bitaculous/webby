@@ -313,9 +313,9 @@ class @Shady
 
       addEventListeners.call @
 
-      do @animate
-
       @resize @container.offsetWidth, @container.offsetHeight
+
+      do @animate
 
       @element.addClass 'active'
 
