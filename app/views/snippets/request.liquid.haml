@@ -2,12 +2,12 @@
   .label
     {% if locale == 'en' %}
     :kramdown
-      We look forward to hearing from you!
+      # We look forward to hearing from you!
     {% endif %}
 
     {% if locale == 'de' %}
     :kramdown
-      Wir freuen uns auf Ihre Nachricht!
+      # Wir freuen uns auf Ihre Nachricht!
     {% endif %}
 
   .success
@@ -54,11 +54,13 @@
         %input#email.required.email.element{ name: 'content[email]', type: 'email', placeholder: '{{\'request_email_placeholder\' | translate}}', value: '{{request.email}}' }
 
     .row.one.column
-      %label{ for: 'message', title: '{{\'request_message_title\' | translate}}' } {{'request_message_label' | translate}}
+      .message.field
+        %label{ for: 'message', title: '{{\'request_message_title\' | translate}}' } {{'request_message_label' | translate}}
 
-      %textarea#message.required.element{ name: 'content[message]', rows: '10', cols: '10', placeholder: '{{\'request_message_placeholder\' | translate}}' } {{request.message}}
+        %textarea#message.required.element{ name: 'content[message]', rows: '10', cols: '10', placeholder: '{{\'request_message_placeholder\' | translate}}' } {{request.message}}
 
     .row.last.one.column
-      %input.submit.element{ type: 'submit', value: '{{\'request_submit\' | translate}}', title: '{{\'request_submit_title\' | translate}}' }
+      .submit.field
+        %input.submit.element{ type: 'submit', value: '{{\'request_submit\' | translate}}', title: '{{\'request_submit_title\' | translate}}' }
 
-      %a.submit{ href: '#', title: '{{\'request_submit_title\' | translate}}' } {{'request_submit' | translate}}
+        %a.submit{ href: '#', title: '{{\'request_submit_title\' | translate}}' } {{'request_submit' | translate}}

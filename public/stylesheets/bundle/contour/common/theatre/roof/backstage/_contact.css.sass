@@ -7,27 +7,61 @@
 @mixin contact
   .contact
     color: #006897
-    // max-height: 390px
-    overflow: scroll
     padding: rem(32) 0 0 0
-    position: relative
 
     // display: none
 
-    h1
-      font-family: 'Nexa Bold'
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+      color: #006897
+
+    ul
+      margin: 0 0 rem(10)
+
+      li
+        background: transparent image-url('bundle/contour/common/theatre/roof/backstage/contact/decorations/qube.png') no-repeat left rem(4)
+        padding: 0 0 rem(10) rem(20)
+
+        @include hidpi
+          background-image: image-url('bundle/contour/common/theatre/roof/backstage/contact/decorations/qube_at_2x.png')
+          background-size: 10px 12px
 
     a
       color: #006897
 
     form
       .label,
-      .success
-        font-family: 'Nexa Bold'
+      .success,
+      .failure
+        font-family: $font-family-bold
+
+      .row
+        .field
+          height: auto
+          margin: 0 0 rem(10)
+
+          &.submit
+            height: 32px
+
+        &.last
+          .field
+            margin: 0
 
       input,
       textarea
         color: #006897
+
+      a.submit
+        background: #24D2DB
+        color: #FFF
+        font-family: $font-family-bold
+        padding: rem(5)
+        position: absolute
+        right: 0
 
     .bar
       background: #E2F4F8
@@ -42,18 +76,25 @@
 
       a.close
         position: absolute
-        right: rem(10)
+        right: 0
         top: rem(3)
 
         i
           color: #24D2DB
 
-    header
-      background: #EEFCFD
+    header,
+    footer
       padding: rem(10) 0
 
+    header
+      background: #EEFCFD
+
       h1,
-      h2
+      h2,
+      h3,
+      h4,
+      h5,
+      h6
         color: #24D2DB
 
     footer
