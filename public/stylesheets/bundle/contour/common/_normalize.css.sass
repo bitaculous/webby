@@ -89,6 +89,17 @@
     label
       display: none
 
+    input[type='text'],
+    input[type='email'],
+    textarea
+      padding: rem(5)
+      width: 100%
+
+      @include box-sizing(border-box)
+
     input
-      &.submit
-        visibility: hidden
+      &[type='submit']
+        display: none
+
+    .success
+      display: none

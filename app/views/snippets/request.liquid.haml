@@ -21,16 +21,17 @@
       Vielen Dank für Ihre Nachricht, wir werden uns umgehend mit Ihnen in Verbindung setzen.
     {% endif %}
 
-  .error-explanation
+  .failure
     {% if request.errors %}
-    %p {{'errors_occurred' | translate}}
+    .explanation
+      %p {{'errors_occurred' | translate}}
 
-    %ul.errors
-      {% for error in request.errors %}
+      %ul.errors
+        {% for error in request.errors %}
 
-      %li.error {{error[0] | prepend: 'request_' | translate}} {{error[1]}}.
+        %li.error {{error[0] | prepend: 'request_' | translate}} {{error[1]}}.
 
-      {% endfor %}
+        {% endfor %}
     {% endif %}
 
   %fieldset.system
@@ -45,7 +46,7 @@
       .name.field
         %label{ for: 'name', title: '{{\'request_name_title\' | translate}}' } {{'request_name_label' | translate}}
 
-        %input#name.required.text.element{ name: 'content[name]', placeholder: '{{\'request_name_placeholder\' | translate}}', value: '{{request.name}}' }
+        %input#name.required.text.element{ name: 'content[name]', type: 'text', placeholder: '{{\'request_name_placeholder\' | translate}}', value: '{{request.name}}' }
 
       .email.field
         %label{ for: 'email', title: '{{\'request_email_title\' | translate}}' } {{'request_email_label' | translate}}
@@ -55,7 +56,7 @@
     .row.one.column
       %label{ for: 'message', title: '{{\'request_message_title\' | translate}}' } {{'request_message_label' | translate}}
 
-      %textarea#message.required.element{ name: 'content[message]', placeholder: '{{\'request_message_placeholder\' | translate}}' } {{request.message}}
+      %textarea#message.required.element{ name: 'content[message]', rows: '10', cols: '10', placeholder: '{{\'request_message_placeholder\' | translate}}' } {{request.message}}
 
     .row.last.one.column
       %input.submit.element{ type: 'submit', value: '{{\'request_submit\' | translate}}', title: '{{\'request_submit_title\' | translate}}' }
