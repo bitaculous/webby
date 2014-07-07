@@ -1,42 +1,63 @@
 %form.request{ action: '{{contents.requests.public_submission_url}}', method: 'post' }
-  %p.hint Wir freuen uns auf Ihre Nachricht!
+  .label
+    {% if locale == 'en' %}
+    :kramdown
+      We look forward to hearing from you!
+    {% endif %}
 
-  {% if requests.errors %}
+    {% if locale == 'de' %}
+    :kramdown
+      Wir freuen uns auf Ihre Nachricht!
+    {% endif %}
+
+  .success
+    {% if locale == 'en' %}
+    :kramdown
+      Thank you for your message, we will get back to you as soon as possible.
+    {% endif %}
+
+    {% if locale == 'de' %}
+    :kramdown
+      Vielen Dank für Ihre Nachricht, wir werden uns umgehend mit Ihnen in Verbindung setzen.
+    {% endif %}
+
   .error-explanation
+    {% if request.errors %}
     %p {{'errors_occurred' | translate}}
 
     %ul.errors
-      {% for error in requests.errors %}
+      {% for error in request.errors %}
 
-      %li.error {{error[0] | capitalize}} - {{error[1]}}
+      %li.error {{error[0] | prepend: 'request_' | translate}} {{error[1]}}.
 
       {% endfor %}
-  {% endif %}
+    {% endif %}
 
   %fieldset.system
     {% csrf_param %}
 
-    %input#success-callback.hidden{ name: 'success_callback', type: 'hidden', value: '/' }
-    %input#error-callback.hidden{ name: 'error_callback', type: 'hidden', value: '/' }
+    %input#success-callback.hidden{ name: 'success_callback', type: 'hidden', value: '{{base_path}}' }
+
+    %input#error-callback.hidden{ name: 'error_callback', type: 'hidden', value: '{{base_path}}' }
 
   %fieldset.default
-    .row.two.columns
+    .row.first.two.columns
       .name.field
-        %label{ for: 'name', title: 'Name' } Name:
+        %label{ for: 'name', title: '{{\'request_name_title\' | translate}}' } {{'request_name_label' | translate}}
 
-        %input#name.required.text.element{ name: 'content[name]', placeholder: 'Your name', value: '{{request.name}}' }
+        %input#name.required.text.element{ name: 'content[name]', placeholder: '{{\'request_name_placeholder\' | translate}}', value: '{{request.name}}' }
 
       .email.field
-        %label{ for: 'email', title: 'Email' } Email:
+        %label{ for: 'email', title: '{{\'request_email_title\' | translate}}' } {{'request_email_label' | translate}}
 
-        %input#email.required.email.element{ name: 'content[email]', type: 'email', placeholder: 'Your email', value: '{{request.email}}' }
-
-    .row.one.column
-      %label{ for: 'message', title: 'Message' } Message:
-
-      %textarea#message.required.element{ name: 'content[message]', placeholder: 'Your message' } {{request.message}}
+        %input#email.required.email.element{ name: 'content[email]', type: 'email', placeholder: '{{\'request_email_placeholder\' | translate}}', value: '{{request.email}}' }
 
     .row.one.column
-      %input.submit.element{ type: 'submit', value: 'Submit', title: 'Submit' }
+      %label{ for: 'message', title: '{{\'request_message_title\' | translate}}' } {{'request_message_label' | translate}}
 
-      %a.submit{ href: '#', title: 'Submit' } Submit
+      %textarea#message.required.element{ name: 'content[message]', placeholder: '{{\'request_message_placeholder\' | translate}}' } {{request.message}}
+
+    .row.last.one.column
+      %input.submit.element{ type: 'submit', value: '{{\'request_submit\' | translate}}', title: '{{\'request_submit_title\' | translate}}' }
+
+      %a.submit{ href: '#', title: '{{\'request_submit_title\' | translate}}' } {{'request_submit' | translate}}

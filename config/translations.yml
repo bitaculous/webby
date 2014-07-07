@@ -24,6 +24,62 @@ privacy:
   en: "Privacy"
   de: "Datenschutz"
 
+request_name:
+  en: 'Name'
+  de: 'Name'
+
+request_name_label:
+  en: 'Name:'
+  de: 'Name:'
+
+request_name_title:
+  en: 'Your name'
+  de: 'Vorname, Name'
+
+request_name_placeholder:
+  en: 'Your name'
+  de: 'Vorname, Name'
+
+request_email:
+  en: 'Email'
+  de: 'E-Mail'
+
+request_email_label:
+  en: 'Email:'
+  de: 'E-Mail:'
+
+request_email_title:
+  en: 'Your email'
+  de: 'E-Mail'
+
+request_email_placeholder:
+  en: 'Your email'
+  de: 'E-Mail'
+
+request_message:
+  en: 'Message'
+  de: 'Nachricht'
+
+request_message_label:
+  en: 'Message:'
+  de: 'Nachricht:'
+
+request_message_title:
+  en: 'Your message'
+  de: 'Ihre Nachricht'
+
+request_message_placeholder:
+  en: 'Your message'
+  de: 'Ihre Nachricht'
+
+request_submit:
+  en: 'Submit'
+  de: 'Absenden'
+
+request_submit_title:
+  en: 'Submit request'
+  de: 'Anfrage absenden'
+
 errors_occurred:
   en: "The following errors occurred:"
   de: "Die folgenden Fehler sind aufgetreten:"
