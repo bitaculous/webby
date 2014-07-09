@@ -4,6 +4,7 @@
 #= require polyfills/fastclick
 
 #= require jquery
+#= require jquery/plugins/roofify
 #= require jquery/plugins/scrollify
 #= require jquery/plugins/shadify
 #= require jquery/plugins/slick
@@ -38,6 +39,11 @@ $ ->
 
   if do theatre.present
     do theatre.scrollify
+
+    roof = theatre.find 'header.roof'
+
+    if do roof.present
+      do roof.roofify
 
     stage = theatre.find '.stage'
 
