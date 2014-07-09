@@ -4,6 +4,11 @@
 // @media all
 // @version 1.0
 
+@import contact/bar
+@import contact/header/informal
+@import contact/footer/request
+@import contact/footer/details
+
 @mixin contact
   .contact
     color: #006897
@@ -16,7 +21,10 @@
     h3,
     h4,
     h5,
-    h6
+    h6,
+    b,
+    strong,
+    a
       color: #006897
 
     ul
@@ -29,9 +37,6 @@
         @include hidpi
           background-image: image-url('bundle/contour/common/theatre/roof/backstage/contact/decorations/qube_at_2x.png')
           background-size: 10px 12px
-
-    a
-      color: #006897
 
     form
       .label,
@@ -63,24 +68,7 @@
         position: absolute
         right: 0
 
-    .bar
-      background: #E2F4F8
-      left: 0
-      position: fixed
-      right: 0
-      top: 0
-      z-index: 110
-
-      .shell
-        height: 32px
-
-      a.close
-        position: absolute
-        right: 0
-        top: rem(3)
-
-        i
-          color: #24D2DB
+    @include bar
 
     header,
     footer
@@ -97,5 +85,11 @@
       h6
         color: #24D2DB
 
+      @include informal
+
     footer
       background: #E2F4F8
+
+      @include request
+
+      @include details

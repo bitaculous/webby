@@ -1,0 +1,29 @@
+%section.details
+  {% assign telephone = bitaculous.telephone_numbers.first %}
+  {% assign email = bitaculous.emails.first %}
+  {% assign directions = bitaculous.links.first %}
+
+  :kramdown
+    **{{bitaculous.title}}**<br />
+    {{bitaculous.contact_person}}<br />
+    {{bitaculous.address}}<br />
+    {{bitaculous.zip_code}} {{bitaculous.city}}
+    [*{{directions.title}}*{: .label}]({{directions.url}} "{{directions.label}}"){: .directions .icon-direction .external target="_blank"}
+
+  {% if locale == 'en' %}
+  :kramdown
+    *Please give us a shout any time:*
+
+    **Telephone:** [{{telephone.formatted_number}}](tel:{{telephone.number}} "{{telephone.label}}"){: .telephone}<br />
+    **Email:** [{{email.address}}]({{'mailto:' | append: email.encoded_address}} "{{email.label}}"){: .email}
+  {% endif %}
+
+  {% if locale == 'de' %}
+  :kramdown
+    *Sie können uns gerne jederzeit kontaktieren:*
+
+    **Telephone:** [{{telephone.formatted_number}}](tel:{{telephone.number}} "{{telephone.label}}"){: .telephone}<br />
+    **Email:** [{{email.address}}]({{'mailto:' | append: email.encoded_address}} "{{email.label}}"){: .email}
+  {% endif %}
+
+  {% include 'channels' %}

@@ -1,35 +1,12 @@
-%section.contact
-  .bar
-    .shell
-      %a.close{ href: '#', title: '{{\'close\' | translate}}' }
-        %i{ class: 'icon-close-squared' }
+.contact
+  {% include 'bar' %}
 
   %header
     .shell
-      {% if locale == 'en' %}
-      :kramdown
-        # Good to see you again!
-      {% endif %}
-
-      {% if locale == 'de' %}
-      :kramdown
-        # Schön Sie wieder zu sehen!
-      {% endif %}
-
-      .target-groups
-        {% for target_group in contents.target_groups %}
-
-        {% capture position %}{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}{% endcapture %}
-
-        {% assign identifier = target_group.identifier | downcase | dasherize %}
-
-        .target-group{ class: '{{identifier}} {{position}}' }
-          %h2.salutation {{target_group.salutation}}
-
-          %p {{target_group.text}}
-
-        {% endfor %}
+      {% include 'informal' %}
 
   %footer
     .shell
       {% include 'request' %}
+
+      {% include 'details' %}

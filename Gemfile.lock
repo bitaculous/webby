@@ -29,7 +29,7 @@ GIT
 
 GIT
   remote: git://github.com/compass/compass.git
-  revision: 1a899e53aa09a4a8d01e0bb5bc2bd26dce5461ca
+  revision: b091fe0c23338f062463476c813042b0dd902ae6
   branch: master
   specs:
     compass (1.0.0.alpha.20)

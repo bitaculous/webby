@@ -1,4 +1,4 @@
-%form.request{ action: '{{contents.requests.public_submission_url}}', method: 'post' }
+%form.request{ action: '{{contents.requests.public_submission_url | append: \'.json\'}}', method: 'post' }
   .label
     {% if locale == 'en' %}
     :kramdown
@@ -22,17 +22,6 @@
     {% endif %}
 
   .failure
-    {% if request.errors %}
-    .explanation
-      %p {{'errors_occurred' | translate}}
-
-      %ul.errors
-        {% for error in request.errors %}
-
-        %li.error {{error[0] | prepend: 'request_' | translate}} {{error[1]}}.
-
-        {% endfor %}
-    {% endif %}
 
   %fieldset.system
     {% csrf_param %}

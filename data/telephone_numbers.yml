@@ -12,18 +12,3 @@
     formatted_number:
       en: "+49 30 25056937"
       de: "030-250 569 37"
-
-- "Mobile":
-    title:
-      en: "Mobile"
-      de: "Mobil"
-    label:
-      en: "Call us!"
-      de: "Rufen Sie uns gerne an."
-    number:
-      en: "+4917632656969"
-      de: "017632656969"
-    formatted_number:
-      en: "+49 176 32656969"
-      de: "0176-326 569 69"
-    business_card: "Bitaculous"

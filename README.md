@@ -68,5 +68,4 @@ Webby uses the following assets:
 License
 -------
 
-[Webby](https://github.com/bitaculous/webby "Sources of the official Bitaculous website.") is released under the MIT
-License (MIT), see [LICENSE](https://raw.githubusercontent.com/bitaculous/webby/master/LICENSE "License").
+Webby is released under the MIT License (MIT), see [LICENSE](https://raw.githubusercontent.com/bitaculous/webby/master/LICENSE "License").

@@ -281,43 +281,44 @@ class @Shady
   # === Private ===
 
   initialize = ->
-    @rendering.renderer = findRenderer.call @
+    if not @options.inactive
+      @rendering.renderer = findRenderer.call @
 
-    if @options.inactive
-      @element.addClass 'inactive'
-    else if @rendering.renderer is Shady.RENDERER.NONE
-      @element.addClass 'no-renderer-found inactive'
+      if @rendering.renderer is Shady.RENDERER.NONE
+        @element.addClass 'no-renderer-found inactive'
+      else
+        @container = @element[0]
+        @now       = do Date.now
+        @start     = do Date.now
+        @center    = do FSS.Vector3.create
+        @attractor = do FSS.Vector3.create
+
+        if @options.randomColor
+          color = getRandomColor.call @
+
+          ambient = color[0]
+          @rendering.light.ambient = ambient if ambient
+
+          diffuse = color[1]
+          @rendering.light.diffuse = diffuse if diffuse
+
+        createRenderer.call @
+
+        createScene.call @
+
+        createMesh.call @
+
+        createLights.call @
+
+        addEventListeners.call @
+
+        @resize @container.offsetWidth, @container.offsetHeight
+
+        do @animate
+
+        @element.addClass 'active'
     else
-      @container = @element[0]
-      @now       = do Date.now
-      @start     = do Date.now
-      @center    = do FSS.Vector3.create
-      @attractor = do FSS.Vector3.create
-
-      if @options.randomColor
-        color = getRandomColor.call @
-
-        ambient = color[0]
-        @rendering.light.ambient = ambient if ambient
-
-        diffuse = color[1]
-        @rendering.light.diffuse = diffuse if diffuse
-
-      createRenderer.call @
-
-      createScene.call @
-
-      createMesh.call @
-
-      createLights.call @
-
-      addEventListeners.call @
-
-      @resize @container.offsetWidth, @container.offsetHeight
-
-      do @animate
-
-      @element.addClass 'active'
+      @element.addClass 'inactive'
 
     return
 
