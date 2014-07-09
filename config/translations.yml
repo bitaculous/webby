@@ -12,6 +12,10 @@ close:
   en: "Close"
   de: "Schliessen"
 
+x:
+  en: "✕"
+  de: "✕"
+
 contact:
   en: "Contact"
   de: "Kontakt"

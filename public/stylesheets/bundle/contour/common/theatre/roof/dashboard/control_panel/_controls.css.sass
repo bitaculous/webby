@@ -13,7 +13,7 @@
       font-family: $font-family-navigation
       font-size: ms(-1.25)
       height: 28px
-      line-height: rem(28)
+      line-height: 28px
       text-align: center
       text-transform: uppercase
       width: 92px
@@ -22,19 +22,12 @@
         background-image: image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/contact/background_at_2x.png')
         background-size: 92px 28px
 
-      i.icon-close
-        display: none
-
       &.active
         background-image: image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/contact/active/background.png')
+        font-family: $font-family-heavy
+        font-size: ms(0)
         width: 72px
 
         @include hidpi
           background-image: image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/contact/active/background_at_2x.png')
           background-size: 72px 28px
-
-        span.label
-          display: none
-
-        i.icon-close
-          display: inline
