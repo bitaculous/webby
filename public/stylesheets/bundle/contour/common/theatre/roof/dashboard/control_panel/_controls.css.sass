@@ -1,0 +1,40 @@
+// _controls.css.sass
+//
+// @package bundle/contour/common/theatre/roof/dashboard/control_panel
+// @media all
+// @version 1.0
+
+@mixin controls
+  a.control
+    display: inline-block
+
+    &.contact
+      background: transparent image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/contact/background.png') no-repeat 0 0
+      font-family: $font-family-navigation
+      font-size: ms(-1.25)
+      height: 28px
+      line-height: rem(28)
+      text-align: center
+      text-transform: uppercase
+      width: 92px
+
+      @include hidpi
+        background-image: image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/contact/background_at_2x.png')
+        background-size: 92px 28px
+
+      i.icon-close
+        display: none
+
+      &.active
+        background-image: image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/contact/active/background.png')
+        width: 72px
+
+        @include hidpi
+          background-image: image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/contact/active/background_at_2x.png')
+          background-size: 72px 28px
+
+        span.label
+          display: none
+
+        i.icon-close
+          display: inline

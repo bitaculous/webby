@@ -4,7 +4,11 @@
 // @media all
 // @version 1.0
 
-@import stage/sections
+@import stage/sections/abstract
+@import stage/sections/what_we_do
+@import stage/sections/work
+@import stage/sections/team
+@import stage/sections/content
 
 @mixin stage
   .stage
@@ -20,4 +24,30 @@
       a
         text-decoration: underline
 
-    @include sections
+    section
+      position: relative
+      z-index: 10
+
+      .flap
+        height: 14px
+
+      .hub
+        padding: 0 0 rem(34)
+
+        .header
+          font-family: $font-family-headings
+          padding: rem(80) 0 rem(20)
+          text-align: center
+
+          h1
+            text-transform: uppercase
+
+      @include abstract
+
+      @include what-we-do
+
+      @include work
+
+      @include team
+
+      @include content

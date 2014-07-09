@@ -1,16 +1,15 @@
 // _contact.css.sass
 //
-// @package bundle/contour/common/theatre/roof/backstage
+// @package bundle/contour/common/theatre/roof/backstage/sections
 // @media all
 // @version 1.0
 
-@import contact/bar
 @import contact/header/informal
 @import contact/footer/request
 @import contact/footer/details
 
 @mixin contact
-  .contact
+  &.contact
     color: #006897
     display: none
     padding: rem(32) 0 0 0
@@ -30,11 +29,11 @@
       margin: 0 0 rem(10)
 
       li
-        background: transparent image-url('bundle/contour/common/theatre/roof/backstage/contact/decorations/qube.png') no-repeat left rem(4)
+        background: transparent image-url('bundle/contour/common/theatre/roof/backstage/sections/contact/decorations/qube.png') no-repeat left rem(4)
         padding: 0 0 rem(10) rem(20)
 
         @include hidpi
-          background-image: image-url('bundle/contour/common/theatre/roof/backstage/contact/decorations/qube_at_2x.png')
+          background-image: image-url('bundle/contour/common/theatre/roof/backstage/sections/contact/decorations/qube_at_2x.png')
           background-size: 10px 12px
 
     form
@@ -67,7 +66,16 @@
         position: absolute
         right: 0
 
-    @include bar
+    .bar
+      background: #E2F4F8
+
+      a.close
+        position: absolute
+        right: 0
+        top: rem(3)
+
+        i
+          color: #24D2DB
 
     header,
     footer

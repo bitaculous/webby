@@ -4,13 +4,23 @@
 // @media all
 // @version 1.0
 
-@import backstage/contact
+@import backstage/sections/contact
 
 @mixin backstage
   .backstage
     border-bottom: 10px solid #000
-    max-height: 100px
     overflow: scroll
     text-align: left
 
-    @include contact
+    section
+      .bar
+        left: 0
+        position: fixed
+        right: 0
+        top: 0
+        z-index: 110
+
+        .shell
+          height: 32px
+
+      @include contact
