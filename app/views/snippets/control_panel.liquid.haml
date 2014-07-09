@@ -1,7 +1,7 @@
 .control-panel
   {% include 'slang' %}
 
-  %a.contact{ href: '#', data: { title: '{{\'contact\' | translate}}', active: { title: '{{\'close\' | translate}}' } }, title: '{{\'contact\' | translate}}' }
+  %a.contact.control{ href: '#', data: { target: 'contact', title: '{{\'contact\' | translate}}', active: { title: '{{\'close\' | translate}}' } }, title: '{{\'contact\' | translate}}' }
     %span.label {{'contact' | translate}}
 
     %i.icon-close.active
