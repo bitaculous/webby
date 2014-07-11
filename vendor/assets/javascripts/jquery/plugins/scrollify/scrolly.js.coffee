@@ -32,7 +32,7 @@ class @Scrolly
 
     return
 
-  onSectionReached: (section, direction) =>
+  onSectionEnter: (section, direction) =>
     return
 
   # === Private ===
@@ -58,7 +58,7 @@ class @Scrolly
 
         section.waypoint
           handler: (direction) =>
-            @onSectionReached section, direction
+            @onSectionEnter section, direction
           offset: @options.offsets.sections
 
         return

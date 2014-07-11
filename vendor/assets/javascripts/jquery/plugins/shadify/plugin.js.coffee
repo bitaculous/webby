@@ -1,9 +1,11 @@
 (($, window, document) ->
+  'use strict'
+
   $.fn.shadify = (options) ->
     @each ->
       element = $ @
 
-      if element.data('shadify') is `undefined`
+      if typeof element.data('shadify') is 'undefined'
         plugin = new Shady @, options
 
         element.data 'shadify', plugin

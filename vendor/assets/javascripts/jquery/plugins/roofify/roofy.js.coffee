@@ -4,10 +4,11 @@ class @Roofy
   defaults:
     slideDown:
       easing: 'easeOut'
-      duration: 500
+      duration: 750
       delay: 150
     slideUp:
-      duration: 1000
+      easing: 'easeIn'
+      duration: 500
       delay: 150
     altitude:
       spacing: 10
@@ -20,9 +21,9 @@ class @Roofy
     @options = $.extend @defaults, options
 
     @body         = $ 'body'
-    @backstage    = @roof.find '.backstage'
-    @sections     = @backstage.find 'section'
-    @dashboard    = @roof.find '.dashboard'
+    @backstage    = @roof.find '> .backstage'
+    @sections     = @backstage.find '> section'
+    @dashboard    = @roof.find '> .dashboard'
     @controlPanel = @dashboard.find '.control-panel'
     @controls     = @controlPanel.find 'a.control'
 
@@ -43,6 +44,8 @@ class @Roofy
           easing: @options.slideDown.easing
           duration: @options.slideDown.duration
           delay: @options.slideDown.delay
+          before: @beforeSectionActivate
+          complete: @onSectionActivate
         }
 
     return
@@ -53,14 +56,52 @@ class @Roofy
 
       if isActive
         section.velocity 'slideUp', {
-          duration: @options.slideUp.duration
-          delay: @options.slideUp.delay
+          easing: @options.slideDown.easing
+          duration: @options.slideDown.duration
+          delay: @options.slideDown.delay
+          before: @beforeSectionDeactivate
+          complete: @onSectionDeactivate
         }
 
     return
 
-  findSectionByName: (name) ->
-    @backstage.find "section.#{name}"
+  activateControl: (control) ->
+    if control
+      isActive = control.hasClass 'active'
+
+      if not isActive
+        label = control.data 'active-label'
+        title = control.data 'active-title'
+
+        control.html label
+
+        control.attr 'title', title
+
+        control.addClass 'active'
+
+    return
+
+  deactivateControl: (control) ->
+    if control
+      isActive = control.hasClass 'active'
+
+      if isActive
+        label = control.data 'label'
+        title = control.data 'title'
+
+        control.html label
+
+        control.attr 'title', title
+
+        control.removeClass 'active'
+
+    return
+
+  findSectionById: (id) ->
+    @backstage.find "section[data-id='#{id}']"
+
+  findControlById: (id) ->
+    @controlPanel.find "a.control[data-id='#{id}']"
 
   # === Events ===
 
@@ -69,28 +110,51 @@ class @Roofy
 
     return
 
+  beforeSectionActivate: (section) =>
+    section = $ section
+
+    return
+
+  onSectionActivate: (section) =>
+    section = $ section
+    id      = section.data 'id'
+
+    control = @findControlById id
+
+    @activateControl control
+
+    section.addClass 'active'
+
+    return
+
+  beforeSectionDeactivate: (section) =>
+    section = $ section
+
+    return
+
+  onSectionDeactivate: (section) =>
+    section = $ section
+    id      = section.data 'id'
+
+    control = @findControlById id
+
+    @deactivateControl control
+
+    section.removeClass 'active'
+
+    return
+
   onControlClick: (event) =>
     control  = $ event.currentTarget
+    id       = control.data 'id'
     isActive = control.hasClass 'active'
 
+    section = @findSectionById id
+
     if isActive
-      label = control.data 'label'
-      title = control.data 'title'
-
-      control.removeClass 'active'
+      @deactivateSection section
     else
-      target = control.data 'target'
-      label  = control.data 'active-label'
-      title  = control.data 'active-title'
-
-      section = @findSectionByName target
-
       @activateSection section
-
-      control.addClass 'active'
-
-    control.html label
-    control.attr 'title', title
 
     false
 

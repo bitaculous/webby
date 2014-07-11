@@ -1,9 +1,11 @@
 (($, window, document) ->
+  'use strict'
+
   $.fn.roofify = (options) ->
     @each ->
       element = $ @
 
-      if element.data('roofify') is `undefined`
+      if typeof element.data('roofify') is 'undefined'
         plugin = new Roofy @, options
 
         element.data 'roofify', plugin

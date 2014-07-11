@@ -1,9 +1,11 @@
 (($, window, document) ->
+  'use strict'
+
   $.fn.scrollify = (options) ->
     @each ->
       element = $ @
 
-      if element.data('scrollify') is `undefined`
+      if typeof element.data('scrollify') is 'undefined'
         plugin = new Scrolly @, options
 
         element.data 'scrollify', plugin
