@@ -12,6 +12,8 @@ class @Formy
 
     @submit = @form.find 'a.submit'
 
+    @locale = window.locale || 'en'
+
     initialize.call @
 
     return
@@ -28,7 +30,23 @@ class @Formy
   # === Private ===
 
   initialize = ->
+    setupForm.call @
+
     setupSubmit.call @
+
+    return
+
+  setupForm = ->
+    @form.validate
+      lang: @locale
+      errorClass: 'error'
+      errorElement: 'label'
+      errorPlacement: (error, element) ->
+        parent = do element.parent
+
+        error.appendTo parent
+
+        return
 
     return
 
