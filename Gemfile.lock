@@ -29,7 +29,7 @@ GIT
 
 GIT
   remote: git://github.com/compass/compass.git
-  revision: b091fe0c23338f062463476c813042b0dd902ae6
+  revision: 690477a1348bb92c978e7ea226087510ab495e91
   branch: master
   specs:
     compass (1.0.0.alpha.20)
@@ -115,7 +115,7 @@ GEM
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.7.0)
+    coffee-script-source (1.7.1)
     colorize (0.5.8)
     commonjs (0.2.7)
     daemons (1.1.9)
@@ -137,7 +137,7 @@ GEM
     httparty (0.13.1)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
-    i18n (0.6.9)
+    i18n (0.6.11)
     json (1.8.1)
     kramdown (1.4.0)
     less (2.2.2)
@@ -185,7 +185,7 @@ GEM
     thor (0.19.1)
     tilt (1.4.1)
     timers (1.1.0)
-    tzinfo (0.3.39)
+    tzinfo (0.3.40)
     will_paginate (3.0.7)
     zip (2.0.2)
 
