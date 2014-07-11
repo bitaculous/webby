@@ -11,7 +11,7 @@ group :default do
     gem 'locomotivecms_mounter', path: '../locomotivecms/gems/mounter'
   end
 
-  gem 'i18n', '0.6.9'
+  # gem 'i18n', '0.6.9'
 end
 
 group :development do
