@@ -1,5 +1,5 @@
-[Webby](https://github.com/bitaculous/webby "Sources of the official Bitaculous website.")
-==========================================================================================
+[Webby]
+=======
 
 **Sources of the official Bitaculous website.**
 
@@ -41,31 +41,44 @@ Webby uses the following assets:
 
 ### CSS
 
-* [normalize.css](http://necolas.github.io/normalize.css "normalize.css")
+* [normalize.css]
 
 ### JavaScript
 
-* [Flat Surface Shader [FSS]](http://matthew.wagerfield.com/flat-surface-shader "Flat Surface Shader for rendering lit triangles to a number of contexts including WebGL, Canvas 2D and SVG")
-* [Modernizr](http://modernizr.com "Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the user’s browser.")
+* [Flat Surface Shader [FSS]]
+* [Modernizr]
 
 #### Polyfills
 
-* [Console](https://github.com/h5bp/html5-boilerplate/blob/master/js/plugins.js "Avoid `console` errors in browsers that lack a console.")
-* [FastClick](https://github.com/ftlabs/fastclick "Polyfill to remove click delays on browsers with touch UIs.")
+* [Console]
+* [FastClick]
 
-#### [jQuery](http://jquery.com "The Write Less, Do More, JavaScript Library.")
+#### [jQuery]
 
-* [AnimateScroll](http://plugins.compzets.com/animatescroll "A Simple jQuery Plugin for Animating Scroll.")
-* [slick](http://kenwheeler.github.io/slick "The last carousel you'll ever need.")
-* [Velocity](http://velocityjs.org "Accelerated JavaScript animation.")
-* [Waypoints](http://imakewebthings.com/jquery-waypoints "Waypoints is a jQuery plugin that makes it easy to execute a function whenever you scroll to an element.")
+* [slick]
+* [Velocity]
+* [Waypoints]
 
 ### Fonts
 
-* [Nexa font](http://fontfabric.com/nexa-font "Nexa font")
-* [Font Awesome](http://fortawesome.github.io/Font-Awesome "The iconic font and CSS toolkit")
+* [Nexa font]
+* [Font Awesome]
 
 License
 -------
 
-Webby is released under the MIT License (MIT), see [LICENSE](https://raw.githubusercontent.com/bitaculous/webby/master/LICENSE "License").
+Webby is released under the MIT License (MIT), see [LICENSE].
+
+[Console]: https://github.com/h5bp/html5-boilerplate/blob/master/js/plugins.js "Avoid `console` errors in browsers that lack a console."
+[FastClick]: https://github.com/ftlabs/fastclick "Polyfill to remove click delays on browsers with touch UIs."
+[Flat Surface Shader [FSS]]: http://matthew.wagerfield.com/flat-surface-shader "Flat Surface Shader for rendering lit triangles to a number of contexts including WebGL, Canvas 2D and SVG"
+[Font Awesome]: http://fortawesome.github.io/Font-Awesome "The iconic font and CSS toolkit"
+[jQuery]: http://jquery.com "The Write Less, Do More, JavaScript Library."
+[LICENSE]: https://raw.githubusercontent.com/bitaculous/webby/master/LICENSE "License"
+[Modernizr]: http://modernizr.com "Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the user’s browser."
+[Nexa font]: http://fontfabric.com/nexa-font "Nexa font"
+[normalize.css]: http://necolas.github.io/normalize.css "normalize.css"
+[slick]: http://kenwheeler.github.io/slick "The last carousel you'll ever need."
+[Velocity]: http://velocityjs.org "Accelerated JavaScript animation."
+[Waypoints]: http://imakewebthings.com/jquery-waypoints "Waypoints is a jQuery plugin that makes it easy to execute a function whenever you scroll to an element."
+[Webby]: https://github.com/bitaculous/webby "Sources of the official Bitaculous website."
