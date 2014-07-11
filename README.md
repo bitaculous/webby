@@ -56,6 +56,7 @@ Webby uses the following assets:
 #### [jQuery]
 
 * [slick]
+* [Validation Plugin]
 * [Velocity]
 * [Waypoints]
 
@@ -79,6 +80,7 @@ Webby is released under the MIT License (MIT), see [LICENSE].
 [Nexa font]: http://fontfabric.com/nexa-font "Nexa font"
 [normalize.css]: http://necolas.github.io/normalize.css "normalize.css"
 [slick]: http://kenwheeler.github.io/slick "The last carousel you'll ever need."
+[Validation Plugin]: http://jqueryvalidation.org "Form validation made easy"
 [Velocity]: http://velocityjs.org "Accelerated JavaScript animation."
 [Waypoints]: http://imakewebthings.com/jquery-waypoints "Waypoints is a jQuery plugin that makes it easy to execute a function whenever you scroll to an element."
 [Webby]: https://github.com/bitaculous/webby "Sources of the official Bitaculous website."
