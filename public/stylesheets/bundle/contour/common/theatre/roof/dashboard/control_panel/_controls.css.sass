@@ -13,12 +13,13 @@
     text-transform: uppercase
 
     &.locked
-      color: #333
-      cursor: default
+      color: #555
 
     &.active
       font-family: $font-family-heavy
       font-size: ms(0)
+
+    @include lockify($transition: false)
 
     &.contact
       background: transparent image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/contact/background.png') no-repeat 0 0

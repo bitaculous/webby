@@ -12,7 +12,13 @@
     -moz-osx-font-smoothing: auto
     -webkit-font-smoothing: subpixel-antialiased
 
-@mixin smooth($element: false, $property: background-image, $transition-duration: 0.5s)
+@mixin vertical-align($top: 50%)
+  position: relative
+  top: $top
+
+  @include transform(translateY(-$top))
+
+@mixin smoothy($element: false, $property: background-image, $transition-duration: 0.5s)
   @if $element == false
     @include transition($property $transition-duration ease-out)
 
@@ -28,8 +34,12 @@
       #{$element}
         @include transition($property $transition-duration ease-in)
 
-@mixin vertical-align($top: 50%)
-  position: relative
-  top: $top
+@mixin lockify($transition: true, $property: background, $transition-duration: 0.5s)
+  @if transition == true
+    @include transition($property $transition-duration ease-out)
 
-  @include transform(translateY(-$top))
+  &.locked
+    cursor: default
+
+    @if transition == true
+      @include transition($property $transition-duration ease-in)

@@ -1,4 +1,12 @@
 class @Section
+  # === Constants ==
+
+  @STATES: [
+    'active'
+    'inactive'
+    'locked'
+  ]
+
   # === Variables ===
 
   state: 'inactive'
@@ -25,17 +33,13 @@ class @Section
 
     return
 
-  isActive: ->
-    @state == 'active'
+  update: ->
+    states = do @states
+    states = states.join ' '
 
-  isInactive: ->
-    @state == 'inactive'
+    @element.removeClass states
 
-  isLocked: ->
-    @state == 'locked'
-
-  controls: ->
-    [@pointer, @close]
+    @element.addClass @state
 
   toogle: ->
     switch @state
@@ -54,7 +58,7 @@ class @Section
         easing: @options.slideDown.easing
         duration: @options.slideDown.duration
         delay: @options.slideDown.delay
-        before: @beforeActivate
+        begin: @beforeActivate
         complete: @onActivate
       }
 
@@ -68,11 +72,19 @@ class @Section
         easing: @options.slideDown.easing
         duration: @options.slideDown.duration
         delay: @options.slideDown.delay
-        before: @beforeDeactivate
+        begin: @beforeDeactivate
         complete: @onDeactivate
       }
 
     return
+
+  lockControls: ->
+    controls = do @controls
+
+    $.each controls, (index, control) =>
+      @lockControl control
+
+      return
 
   lockControl: (control) ->
     if control
@@ -83,6 +95,14 @@ class @Section
 
     return
 
+  unlockControls: ->
+    controls = do @controls
+
+    $.each controls, (index, control) =>
+      @unlockControl control
+
+      return
+
   unlockControl: (control) ->
     if control
       locked = control.hasClass 'locked'
@@ -92,25 +112,56 @@ class @Section
 
     return
 
+  states: ->
+    Section.STATES
+
+  isActive: ->
+    @state == 'active'
+
+  isInactive: ->
+    @state == 'inactive'
+
+  isLocked: ->
+    @state == 'locked'
+
+  controls: ->
+    [@pointer, @close]
+
   # === Events ===
 
   beforeActivate: (section) =>
+    do @lockControls
+
     @state = 'locked'
+
+    do @update
 
     return
 
   onActivate: (section) =>
+    do @unlockControls
+
     @state = 'active'
+
+    do @update
 
     return
 
   beforeDeactivate: (section) =>
+    do @lockControls
+
     @state = 'locked'
+
+    do @update
 
     return
 
   onDeactivate: (section) =>
+    do @unlockControls
+
     @state = 'inactive'
+
+    do @update
 
     return
 
@@ -124,6 +175,8 @@ class @Section
   # === Private ===
 
   initialize = ->
+    do @update
+
     setupPointer.call @
 
     setupClose.call @
