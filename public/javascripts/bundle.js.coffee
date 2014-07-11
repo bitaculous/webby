@@ -4,6 +4,7 @@
 #= require polyfills/fastclick
 
 #= require jquery
+#= require jquery/plugins/formify
 #= require jquery/plugins/roofify
 #= require jquery/plugins/scrollify
 #= require jquery/plugins/shadify
@@ -15,14 +16,14 @@ $ ->
 
   html     = $ 'html'
   theatre  = $ '.theatre'
-  stage    = theatre.find '.stage'
+  stage    = theatre.find '> .stage'
 
   # === Events ===
 
   onSliderInitialized = (slick) ->
     slider   = slick.$slider
     abstract = slider.closest '.abstract'
-    shady    = abstract.find '.shady'
+    shady    = abstract.find '> .shady'
 
     # May I have your attention please? Will the real Shady please stand up?
     shady.shadify {
@@ -40,18 +41,28 @@ $ ->
   if do theatre.present
     do theatre.scrollify
 
-    roof = theatre.find 'header.roof'
+    roof = theatre.find '> .roof'
 
     if do roof.present
       do roof.roofify
 
-    stage = theatre.find '.stage'
+      backstage = roof.find '> .backstage'
+
+      if do backstage.present
+        contact = backstage.find '> .contact'
+
+        if do contact.present
+          form = contact.find 'form'
+
+          do form.formify if do form.present
+
+    stage = theatre.find '> .stage'
 
     if do stage.present
-      abstract = stage.find '.abstract'
+      abstract = stage.find '> .abstract'
 
       if do abstract.present
-        slider = abstract.find '.slider'
+        slider = abstract.find '> .slider'
 
         if do slider.present
           slider.slick {
@@ -68,7 +79,7 @@ $ ->
             onInit: onSliderInitialized
           }
 
-      work = stage.find '.work'
+      work = stage.find '> .work'
 
       if do work.present
         references = work.find '.references'

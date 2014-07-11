@@ -25,7 +25,7 @@ class @Section
 
     controlPanel = @dashboard.find '.control-panel'
 
-    @pointer = controlPanel.find "a.control[data-id='#{@id}']"
+    @pointer = controlPanel.find "> a.control[data-id='#{@id}']"
 
     @close = @element.find 'a.close'
 

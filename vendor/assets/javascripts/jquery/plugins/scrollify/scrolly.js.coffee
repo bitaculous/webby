@@ -10,8 +10,8 @@ class @Scrolly
 
   constructor: (theatre, options) ->
     @theatre = $ theatre
-    @roof    = @theatre.find '.roof'
-    @stage   = @theatre.find '.stage'
+    @roof    = @theatre.find '> .roof'
+    @stage   = @theatre.find '> .stage'
     @options = $.extend @defaults, options
 
     initialize.call @

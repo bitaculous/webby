@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/bitaculous/assetify.git
-  revision: c8ab0a9578c8338fa196fa783c3b4f443a8c6a06
+  revision: e2aa200639148f49e42ec642995691464ca2fed6
   specs:
-    assetify (0.8.4)
+    assetify (0.9.0)
       sass (>= 3.2)
       sprockets (~> 2.12.1)
 
@@ -29,7 +29,7 @@ GIT
 
 GIT
   remote: git://github.com/compass/compass.git
-  revision: 690477a1348bb92c978e7ea226087510ab495e91
+  revision: b999b49eae178da056cfcd94a8d726775a2088b7
   branch: master
   specs:
     compass (1.0.0.alpha.20)
