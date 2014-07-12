@@ -15,7 +15,7 @@ class @Formy
     @error   = @form.find '.error'
     @submit  = @form.find 'a.submit'
 
-    @hoganTemplates = window.HoganTemplates
+    @errorMessagesTemplate = window.HoganTemplates['jquery/plugins/formify/templates/error/messages']
 
     initialize.call @
 
@@ -27,15 +27,18 @@ class @Formy
     return
 
   showErrors: (errors) ->
-    explanation = @error.find '> .explanation'
+    messages = @error.find '> .messages'
+
+    console.log errors
+
+    do messages.empty
 
     data =
       message: 'Hello World'
 
-    template = @hoganTemplates['jquery/plugins/formify/templates/error/explanation']
-    rendered = $ template.render(data)
+    output = @errorMessagesTemplate.render data
 
-    rendered.insertAfter explanation
+    messages.append output
 
     do @error.show
 
