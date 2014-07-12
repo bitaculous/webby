@@ -2,7 +2,6 @@
 
 #= require ./form
 #= require ./validate
-#= require ./validate/localization/messages/de.min
 
 #= require ./formify/formy
 #= require ./formify/plugin

@@ -1,4 +1,5 @@
-:coffee
-  @locale = '{{locale}}'
+{% assign i18n = 'i18n' | append: '/' | append: locale | append: '.js' %}
 
 {{'bundle.js' | javascript_tag}}
+
+{{i18n | javascript_tag}}

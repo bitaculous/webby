@@ -10,8 +10,6 @@ class @Formy
     @form    = $ form
     @options = $.extend @defaults, options
 
-    @locale = window.locale || 'en'
-
     @success = @form.find '.success'
     @failure = @form.find '.failure'
     @error   = @form.find '.error'
@@ -96,7 +94,6 @@ class @Formy
 
   setupForm = ->
     @form.validate
-      lang: @locale
       errorClass: 'error'
       errorElement: 'label'
       errorPlacement: (error, element) ->

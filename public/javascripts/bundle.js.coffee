@@ -11,6 +11,8 @@
 #= require jquery/plugins/slick
 #= require jquery/plugins/velocity
 
+#= require_self
+
 $ ->
   # === Shared variables ===
 
