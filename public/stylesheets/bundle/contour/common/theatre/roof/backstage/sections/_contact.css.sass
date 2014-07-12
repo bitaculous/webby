@@ -4,14 +4,14 @@
 // @media all
 // @version 1.0
 
-@import contact/header/informal
-@import contact/footer/request
-@import contact/footer/details
+@import contact/bar
+@import contact/greetings
+@import contact/reach_us
 
 @mixin contact
   &.contact
     color: #006897
-    // display: none
+    display: none
     padding: rem(32) 0 0 0
 
     h1,
@@ -36,79 +36,8 @@
           background-image: image-url('bundle/contour/common/theatre/roof/backstage/sections/contact/decorations/qube_at_2x.png')
           background-size: 10px 12px
 
-    form
-      > .label,
-      > .success,
-      > .failure,
-      > .error
-        font-family: $font-family-bold
+    @include bar
 
-      .row
-        .field
-          height: auto
-          margin: 0 0 rem(10)
+    @include greetings
 
-          &.submit
-            height: 32px
-
-        &.last
-          .field
-            margin: 0
-
-      input,
-      textarea
-        color: #006897
-
-      input[type='text'],
-      input[type='email'],
-      textarea
-        &.error
-          border-color: #006897
-
-      a.submit
-        background: #24D2DB
-        color: #FFF
-        font-family: $font-family-bold
-        padding: rem(5)
-        position: absolute
-        right: 0
-
-        @include lockify
-
-      &.locked
-        a.submit
-          background: #999
-
-    .bar
-      background: #E2F4F8
-
-      a.close
-        background: #24D2DB
-        color: #FFF
-
-        &.locked
-          background: #999
-
-    header,
-    footer
-      padding: rem(10) 0
-
-    header
-      background: #EEFCFD
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6
-        color: #24D2DB
-
-      @include informal
-
-    footer
-      background: #E2F4F8
-
-      @include request
-
-      @include details
+    @include reach-us

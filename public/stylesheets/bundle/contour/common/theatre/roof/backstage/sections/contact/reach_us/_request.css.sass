@@ -1,0 +1,41 @@
+// _request.css.sass
+//
+// @package bundle/contour/common/theatre/roof/backstage/sections/contact/reach_us
+// @media all
+// @version 1.0
+
+@mixin request
+  form.request
+    > .label,
+    > .success,
+    > .failure,
+    > .error
+      font-family: $font-family-bold
+
+    .field
+      &.submit
+        height: 32px
+
+    input,
+    textarea
+      color: #006897
+
+    input[type='text'],
+    input[type='email'],
+    textarea
+      &.error
+        border-color: #006897
+
+    a.submit
+      background: #24D2DB
+      color: #FFF
+      font-family: $font-family-bold
+      padding: rem(5)
+      position: absolute
+      right: 0
+
+      @include lockify
+
+    &.locked
+      a.submit
+        background: #999

@@ -56,9 +56,9 @@ $ ->
         contact = backstage.find '> .contact'
 
         if do contact.present
-          form = contact.find 'form'
+          request = contact.find 'form.request'
 
-          do form.formify if do form.present
+          do request.formify if do request.present
 
     stage = theatre.find '> .stage'
 
