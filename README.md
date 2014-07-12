@@ -3,6 +3,8 @@
 
 **Sources of the official Bitaculous website.**
 
+[![Gemnasium Status][Gemnasium Badge]][Gemnasium]
+
 Installation
 ------------
 
@@ -76,6 +78,8 @@ Webby is released under the MIT License (MIT), see [LICENSE].
 [Flat Surface Shader (FSS)]: http://matthew.wagerfield.com/flat-surface-shader "Flat Surface Shader for rendering lit triangles to a number of contexts including WebGL, Canvas 2D and SVG."
 [Font Awesome]: http://fortawesome.github.io/Font-Awesome "The iconic font and CSS toolkit"
 [Form Plugin]: http://malsup.com/jquery/form "jQuery Form Plugin"
+[Gemnasium Badge]: http://img.shields.io/gemnasium/bitaculous/webby.svg?style=flat "Gemnasium Badge"
+[Gemnasium]: https://gemnasium.com/bitaculous/webby "Webby at Gemnasium"
 [jQuery]: http://jquery.com "The Write Less, Do More, JavaScript Library."
 [LICENSE]: https://raw.githubusercontent.com/bitaculous/webby/master/LICENSE "License"
 [Modernizr]: http://modernizr.com "Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the user’s browser."
