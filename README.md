@@ -71,17 +71,18 @@ Webby uses the following assets:
 License
 -------
 
-Webby is released under the MIT License (MIT), see [LICENSE].
+Webby is released under the [MIT License (MIT)], see [LICENSE].
 
 [Console]: https://github.com/h5bp/html5-boilerplate/blob/master/js/plugins.js "Avoid `console` errors in browsers that lack a console."
 [FastClick]: https://github.com/ftlabs/fastclick "Polyfill to remove click delays on browsers with touch UIs."
 [Flat Surface Shader (FSS)]: http://matthew.wagerfield.com/flat-surface-shader "Flat Surface Shader for rendering lit triangles to a number of contexts including WebGL, Canvas 2D and SVG."
 [Font Awesome]: http://fortawesome.github.io/Font-Awesome "The iconic font and CSS toolkit"
 [Form Plugin]: http://malsup.com/jquery/form "jQuery Form Plugin"
-[Gemnasium]: https://gemnasium.com/bitaculous/webby "Webby at Gemnasium"
 [Gemnasium Status]: http://img.shields.io/gemnasium/bitaculous/webby.svg?style=flat "Gemnasium Status"
+[Gemnasium]: https://gemnasium.com/bitaculous/webby "Webby at Gemnasium"
 [jQuery]: http://jquery.com "The Write Less, Do More, JavaScript Library."
 [LICENSE]: https://raw.githubusercontent.com/bitaculous/webby/master/LICENSE "License"
+[MIT License (MIT)]: http://opensource.org/licenses/MIT "The MIT License (MIT)"
 [Modernizr]: http://modernizr.com "Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the user’s browser."
 [Nexa font]: http://fontfabric.com/nexa-font "Nexa font"
 [normalize.css]: http://necolas.github.io/normalize.css "normalize.css"
