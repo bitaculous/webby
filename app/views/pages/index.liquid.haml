@@ -33,8 +33,6 @@ position: 1
 
           .introduction
             .shell
-              {% editable_text 'outline_introduction', hint: 'Introduction (“Outline“)', priority: 1 %}
-
               {% if locale == 'en' %}
               :kramdown
                 Hey there, we are Bitaculous, a development studio, located in Berlin. We build websites, software and
@@ -55,8 +53,6 @@ position: 1
                 skizzieren. Wir entwerfen. Wir fügen Bits zusammen. - Alles mit Leidenschaft und <i class="icon-love" title="Liebe"></i>.
               {% endif %}
 
-              {% endeditable_text %}
-
           {% endblock %}
           -# Block `abstract`
 
@@ -68,8 +64,6 @@ position: 1
           .hub
             .shell
               .header
-                {% editable_text 'what_we_do_header', hint: 'Header (“What we do”)', priority: 2 %}
-
                 {% if locale == 'en' %}
                 :kramdown
                   # What we do
@@ -80,12 +74,8 @@ position: 1
                   # Was wir machen
                 {% endif %}
 
-                {% endeditable_text %}
-
               .content
                 %section.projects.first
-                  {% editable_text 'what_we_do_projects', hint: 'Projects we do (“What we do”)', priority: 3 %}
-
                   {% if locale == 'en' %}
                   :kramdown
                     ## Projects
@@ -115,11 +105,7 @@ position: 1
                     * Erstellung von Online-Shops, die unseren Kunden helfen, ihre Produkte online zu verkaufen.
                   {% endif %}
 
-                  {% endeditable_text %}
-
                 %section.technologies
-                  {% editable_text 'what_we_do_technologies', hint: 'Technologies we use (“What we do”)', priority: 4 %}
-
                   {% if locale == 'en' %}
                   :kramdown
                     ## Technologies
@@ -166,11 +152,7 @@ position: 1
                       [Shopify](http://www.shopify.com "Ecommerce Software, Online Store Builder, Website Store Hosting Solution"){: .external target="_blank"}
                   {% endif %}
 
-                  {% endeditable_text %}
-
                 %section.open-source.last
-                  {% editable_text 'what_we_do_open_source', hint: 'Open Source (“What we do”)', priority: 5 %}
-
                   {% if locale == 'en' %}
                   :kramdown
                     ## Open Source
@@ -189,8 +171,6 @@ position: 1
                     Wir sind dankbar, mit einer Vielzahl von Projekten und Entwicklern zusammenzuarbeiten.
                   {% endif %}
 
-                  {% endeditable_text %}
-
           {% endblock %}
           -# Block `what_we_do`
 
@@ -202,8 +182,6 @@ position: 1
           .hub
             .shell
               .header
-                {% editable_text 'work_header', hint: 'Header (“Work”)', priority: 6 %}
-
                 {% if locale == 'en' %}
                 :kramdown
                   # Work
@@ -213,8 +191,6 @@ position: 1
                 :kramdown
                   # Referenzen
                 {% endif %}
-
-                {% endeditable_text %}
 
             {% include 'references' %}
 
@@ -229,8 +205,6 @@ position: 1
           .hub
             .shell
               .header
-                {% editable_text 'team_header', hint: 'Header (“Team”)', priority: 7 %}
-
                 {% if locale == 'en' %}
                 :kramdown
                   # Team
@@ -249,8 +223,6 @@ position: 1
 
                   Wir lieben was wir tun und bemühen uns ständig es besser zu machen.
                 {% endif %}
-
-                {% endeditable_text %}
 
               {% include 'members' %}
 

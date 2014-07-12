@@ -15,8 +15,6 @@ position: 2
 %section.content
   {% block 'content' %}
   .shell
-    {% editable_text 'content', hint: '“Content”', priority: 1 %}
-
     {% assign telephone = bitaculous.telephone_numbers.first %}
     {% assign email = bitaculous.emails.first %}
 
@@ -137,8 +135,6 @@ position: 2
       {{markenfaktur.title}}, {{markenfaktur.city}}<br />
       [{{email.address}}]({{'mailto:' | append: email.encoded_address}} "{{email.label}}"){: .email}<br />
       [{{web.title}}]({{web.url}} "{{web.label}}"){: .external target="_blank"}
-
-    {% endeditable_text %}
 
   {% endblock %}
   -# Block `content`

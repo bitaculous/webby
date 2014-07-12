@@ -15,8 +15,6 @@ position: 3
 %section.content
   {% block 'content' %}
   .shell
-    {% editable_text 'content', hint: '“Content”', priority: 1 %}
-
     {% if locale == 'en' %}
     :kramdown
       # Privacy
@@ -99,8 +97,6 @@ position: 3
       und installieren:
       [http://tools.google.com/dlpage/gaoptout?hl=de](http://tools.google.com/dlpage/gaoptout?hl=de "Browser-Add-on zur Deaktivierung von Google Analytics"){: .external target="_blank"}.
     {% endif %}
-
-    {% endeditable_text %}
 
   {% endblock %}
   -# Block `content`
