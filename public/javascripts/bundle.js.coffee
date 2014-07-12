@@ -56,7 +56,7 @@ $ ->
         contact = backstage.find '> .contact'
 
         if do contact.present
-          request = contact.find 'form.request'
+          request = contact.find '.request'
 
           do request.formify if do request.present
 
