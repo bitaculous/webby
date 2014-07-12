@@ -21,6 +21,11 @@ class @Formy
 
     return
 
+  showSuccess: ->
+    do @success.show
+
+    return
+
   showErrors: (errors) ->
     explanation = @error.find '> .explanation'
 
@@ -59,7 +64,10 @@ class @Formy
   onSuccess: (response, status, xhr, form) =>
     errors = response.errors
 
-    @showErrors errors if errors
+    if errors
+      @showErrors errors
+    else
+      do @showSuccess
 
     do @unlock
 

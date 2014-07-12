@@ -77,13 +77,10 @@
         display: inline
 
   form
-    .success,
-    .failure,
-    .error
+    > .success,
+    > .failure,
+    > .error
       display: none
-
-    .field
-      position: relative
 
     fieldset,
     input,
@@ -104,7 +101,7 @@
     input[type='text'],
     input[type='email'],
     textarea
-      border: 1px solid #FFF
+      border: 2px solid #FFF
       padding: rem(5)
       width: 100%
 
