@@ -36,6 +36,10 @@ group :misc do
 
       gem 'susy', '~> 2.1.2'
     end
+
+    group :javascripts do
+      gem 'hogan_assets', '~> 1.6.0'
+    end
   end
 
   group :templating do

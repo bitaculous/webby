@@ -3,6 +3,8 @@
 #= require polyfills/console
 #= require polyfills/fastclick
 
+#= require hogan
+
 #= require jquery
 #= require jquery/plugins/formify
 #= require jquery/plugins/roofify

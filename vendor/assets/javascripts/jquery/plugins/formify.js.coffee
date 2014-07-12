@@ -3,5 +3,6 @@
 #= require ./form
 #= require ./validate
 
+#= require ./formify/templates/error/explanation
 #= require ./formify/formy
 #= require ./formify/plugin
