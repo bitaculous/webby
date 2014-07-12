@@ -10,15 +10,65 @@ class @Formy
     @form    = $ form
     @options = $.extend @defaults, options
 
-    @submit = @form.find 'a.submit'
-
     @locale = window.locale || 'en'
+
+    @success = @form.find '.success'
+    @failure = @form.find '.failure'
+    @error   = @form.find '.error'
+    @submit  = @form.find 'a.submit'
 
     initialize.call @
 
     return
 
+  showErrors: (errors) ->
+    explanation = @error.find '> .explanation'
+
+    do @error.show
+
+    return
+
+  lock: ->
+    @form.addClass 'locked'
+
+    return
+
+  unlock: ->
+    @form.removeClass 'locked'
+
+    return
+
+  cleanup: ->
+    do @success.hide
+
+    do @failure.hide
+
+    do @error.hide
+
+    return
+
   # === Events ===
+
+  beforeSubmit: (data, form, options) =>
+    do @cleanup
+
+    do @lock
+
+    true
+
+  onSuccess: (response, status, xhr, form) =>
+    errors = response.errors
+
+    @showErrors errors if errors
+
+    do @unlock
+
+    return
+
+  onError: (xhr, status, error) =>
+    do @failure.show
+
+    return
 
   onSubmitClick: (event) =>
     submit = $ event.currentTarget
@@ -47,6 +97,17 @@ class @Formy
         error.appendTo parent
 
         return
+
+    publicSubmissionUrl = @form.data 'public-submission-url'
+
+    if publicSubmissionUrl
+      @form.ajaxForm
+        url: publicSubmissionUrl
+        iframe: true
+        dataType: 'json'
+        beforeSubmit: @beforeSubmit
+        success: @onSuccess
+        error: @onError
 
     return
 

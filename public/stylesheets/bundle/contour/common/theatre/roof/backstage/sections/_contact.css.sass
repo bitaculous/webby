@@ -58,6 +58,12 @@
       textarea
         color: #006897
 
+      input[type='text'],
+      input[type='email'],
+      textarea
+        &.error
+          border-color: #006897
+
       a.submit
         background: #24D2DB
         color: #FFF
@@ -65,6 +71,12 @@
         padding: rem(5)
         position: absolute
         right: 0
+
+        @include lockify
+
+      &.locked
+        a.submit
+          background: #999
 
     .bar
       background: #E2F4F8
