@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/bitaculous/assetify.git
-  revision: 06ebc9e2c2d60e90eeb264484a0c89c880c4146b
+  revision: 8add292f537c30c1ed398418e187f88398e41688
   specs:
     assetify (0.9.0)
       sass (>= 3.2)
