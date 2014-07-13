@@ -28,7 +28,7 @@ Push webby to remote LocomotiveCMS engine:
 $ wagon push <ENV>
 $ wagon push <ENV> --data
 $ wagon push <ENV> --data --translations
-$ wagon push <ENV> --resources=content_types,pages,snippets,theme_assets
+$ wagon push <ENV> --resources=<content_entries>, <content_types>, <pages>, <snippets>, <theme_assets>, <translations>
 ```
 
 Pull data from remote LocomotiveCMS engine:
@@ -59,6 +59,7 @@ Webby uses the following assets:
 #### [jQuery]
 
 * [Form Plugin]
+* [i18n]
 * [Slick]
 * [Validation Plugin]
 * [Velocity]
@@ -81,6 +82,7 @@ Webby is released under the [MIT License (MIT)], see [LICENSE].
 [Form Plugin]: http://malsup.com/jquery/form "jQuery Form Plugin"
 [Gemnasium Status]: http://img.shields.io/gemnasium/bitaculous/webby.svg?style=flat "Gemnasium Status"
 [Gemnasium]: https://gemnasium.com/bitaculous/webby "Webby at Gemnasium"
+[i18n]: https://github.com/recurser/jquery-i18n "A jQuery plugin for doing client-side translations in javascript."
 [jQuery]: http://jquery.com "The Write Less, Do More, JavaScript Library."
 [LICENSE]: https://raw.githubusercontent.com/bitaculous/webby/master/LICENSE "License"
 [MIT License (MIT)]: http://opensource.org/licenses/MIT "The MIT License (MIT)"

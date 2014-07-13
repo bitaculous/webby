@@ -7,6 +7,7 @@
 
 #= require jquery
 #= require jquery/plugins/formify
+#= require jquery/plugins/i18n
 #= require jquery/plugins/roofify
 #= require jquery/plugins/scrollify
 #= require jquery/plugins/shadify
