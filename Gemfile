@@ -27,14 +27,14 @@ group :misc do
 
       gem 'breakpoint', '~> 2.4.2'
 
-      # gem 'compass', '~> 1.0.0.alpha.20'
+      # gem 'compass', '~> 1.0.0.alpha.21'
       gem 'compass', github: 'compass/compass', branch: 'master'
 
       gem 'modular-scale', '~> 2.0.5'
 
       gem 'sassy-maps', '~> 0.4.0'
 
-      gem 'susy', '~> 2.1.2'
+      gem 'susy', '~> 2.1.3'
     end
 
     group :javascripts do

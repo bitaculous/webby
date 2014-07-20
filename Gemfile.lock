@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/bitaculous/assetify.git
-  revision: 8add292f537c30c1ed398418e187f88398e41688
+  revision: 99b91417058196f2b0554e6e781e53a377461fae
   specs:
     assetify (0.9.0)
       sass (>= 3.2)
@@ -29,17 +29,17 @@ GIT
 
 GIT
   remote: git://github.com/compass/compass.git
-  revision: b999b49eae178da056cfcd94a8d726775a2088b7
+  revision: ea2404785bb97d3f2c11d449fd06b61b0c8fb666
   branch: master
   specs:
-    compass (1.0.0.alpha.20)
+    compass (1.0.0.alpha.21)
       chunky_png (~> 1.2)
-      compass-core (~> 1.0.0.alpha.20)
+      compass-core (~> 1.0.0.alpha.21)
       compass-import-once (~> 1.0.4)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       sass (>= 3.3.0, < 3.5)
-    compass-core (1.0.0.alpha.20)
+    compass-core (1.0.0.alpha.21)
       multi_json (~> 1.0)
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.4)
@@ -180,8 +180,8 @@ GEM
       sprockets (~> 2.0)
       tilt (~> 1.1)
     stringex (2.0.11)
-    susy (2.1.2)
-      sass (~> 3.3.0)
+    susy (2.1.3)
+      sass (>= 3.3.0, < 3.5)
     thin (1.6.2)
       daemons (>= 1.0.9)
       eventmachine (>= 1.0.0)
@@ -210,5 +210,5 @@ DEPENDENCIES
   modular-scale (~> 2.0.5)
   rb-fsevent (~> 0.9.4)
   sassy-maps (~> 0.4.0)
-  susy (~> 2.1.2)
+  susy (~> 2.1.3)
   vendorify!
