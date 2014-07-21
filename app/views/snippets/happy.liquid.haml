@@ -1,0 +1,8 @@
+%p
+  {% if locale == 'en' %}
+  Happy {{now | date: '%A'}}!
+  {% endif %}
+
+  {% if locale == 'de' %}
+  Bis bald und noch einen schönen {{now | date: '%A' | downcase | translate}}.
+  {% endif %}

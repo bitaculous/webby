@@ -1,20 +1,6 @@
 # Your translations go here, to be used with the `translate` liquid filter.
 
-en:
-  en: "EN"
-  de: "EN"
-
-de:
-  en: "DE"
-  de: "DE"
-
-close:
-  en: "Close"
-  de: "Schliessen"
-
-x:
-  en: "✕"
-  de: "✕"
+# === Pages ===
 
 contact:
   en: "Contact"
@@ -27,6 +13,8 @@ imprint:
 privacy:
   en: "Privacy"
   de: "Datenschutz"
+
+# === Request ===
 
 request_name:
   en: 'Name'
@@ -84,6 +72,8 @@ request_submit_title:
   en: 'Submit request'
   de: 'Anfrage absenden'
 
+# === Errors ===
+
 errors_occurred:
   en: "The following errors occurred:"
   de: "Die folgenden Fehler sind aufgetreten:"
@@ -91,3 +81,49 @@ errors_occurred:
 page_not_found:
   en: "Page not found."
   de: "Die Seite konnte leider nicht gefunden werden."
+
+# === Misc ===
+
+en:
+  en: "EN"
+  de: "EN"
+
+de:
+  en: "DE"
+  de: "DE"
+
+close:
+  en: "Close"
+  de: "Schliessen"
+
+x:
+  en: "✕"
+  de: "✕"
+
+monday:
+  en: 'Monday'
+  de: 'Montag'
+
+tuesday:
+  en: 'Tuesday'
+  de: 'Dienstag'
+
+wednesday:
+  en: 'Wednesday'
+  de: 'Mittwoch'
+
+thursday:
+  en: 'Thursday'
+  de: 'Donnerstag'
+
+friday:
+  en: 'Friday'
+  de: 'Freitag'
+
+saturday:
+  en: 'Saturday'
+  de: 'Sonnabend'
+
+sunday:
+  en: 'Sunday'
+  de: 'Sonntag'
