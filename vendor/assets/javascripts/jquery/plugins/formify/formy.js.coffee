@@ -128,14 +128,13 @@ class @Formy
     return
 
   onFormSubmit: (event) =>
-    url  = @form.data 'public-submission-url'
-    data = do @form.serialize
+    url = @form.data 'public-submission-url'
 
     if url
       request = $.ajax
         url: url
         type: 'POST'
-        data: data
+        data: do @form.serialize
         dataType: 'json'
         beforeSend: @beforeRequestSend
 
