@@ -1,10 +1,10 @@
 GIT
   remote: git://github.com/bitaculous/assetify.git
-  revision: 99b91417058196f2b0554e6e781e53a377461fae
+  revision: 50347e4df3b8570b3ed48398a219f9c074514c17
   specs:
     assetify (0.9.0)
       sass (>= 3.2)
-      sprockets (~> 2.12.1)
+      sprockets (~> 2.12)
 
 GIT
   remote: git://github.com/bitaculous/initializify.git

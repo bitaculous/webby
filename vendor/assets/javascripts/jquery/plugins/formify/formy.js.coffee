@@ -10,10 +10,11 @@ class @Formy
     @form    = $ form
     @options = $.extend @defaults, options
 
-    @success = @form.find '.success'
-    @failure = @form.find '.failure'
-    @error   = @form.find '.error'
-    @submit  = @form.find 'a.submit'
+    @success       = @form.find '> .success'
+    @failure       = @form.find '> .failure'
+    @error         = @form.find '> .error'
+    @errorMessages = @error.find '> .messages'
+    @submit        = @form.find 'a.submit'
 
     @errorMessagesTemplate = window.HoganTemplates['jquery/plugins/formify/templates/error/messages']
 
@@ -27,22 +28,32 @@ class @Formy
     return
 
   showErrors: (errors) ->
-    messages = @error.find '> .messages'
+    if errors
+      messages = @translateErrors errors
 
-    console.log errors
+      output = @errorMessagesTemplate.render messages
 
-    do messages.empty
+      @errorMessages.append output
 
-    data =
-      message: 'Hello World'
-
-    output = @errorMessagesTemplate.render data
-
-    messages.append output
-
-    do @error.show
+      do @error.show
 
     return
+
+  translateErrors: (errors) ->
+    result   = {}
+    messages = []
+
+    $.each errors, (key, message) ->
+      messages.push {
+        key: $.i18n._ key
+        message: $.i18n._ message
+      }
+
+      return
+
+    result.messages = messages
+
+    result
 
   lock: ->
     @form.addClass 'locked'
@@ -58,6 +69,8 @@ class @Formy
     do @success.hide
 
     do @failure.hide
+
+    do @errorMessages.empty
 
     do @error.hide
 

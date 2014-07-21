@@ -6,8 +6,13 @@
 
 @locale = 'de'
 
-dictionary =
-  'some text': 'some text (de)'
-  'some more text': 'some more text (de)'
+$ ->
+  dictionary =
+    'can\'t not be blank': 'darf nicht leer sein.'
+    'email': 'E-Mail'
+    'message': 'Nachricht'
+    'name': 'Name'
 
-$.i18n.load dictionary
+  $.i18n.load dictionary
+
+  return

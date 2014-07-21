@@ -4,8 +4,13 @@
 
 @locale = 'en'
 
-dictionary =
-  'some text': 'some text (de)'
-  'some more text': 'some more text (de)'
+$ ->
+  dictionary =
+    'can\'t not be blank': 'can\'t not be blank.'
+    'email': 'Email'
+    'message': 'Message'
+    'name': 'Name'
 
-$.i18n.load dictionary
+  $.i18n.load dictionary
+
+  return
