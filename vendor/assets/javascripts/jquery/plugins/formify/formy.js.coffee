@@ -163,6 +163,7 @@ class @Formy
 
   setupForm = ->
     @form.validate
+      submitHandler: @onFormSubmit
       errorClass: 'error'
       errorElement: 'label'
       errorPlacement: (error, element) ->
@@ -171,8 +172,6 @@ class @Formy
         error.appendTo parent
 
         return
-
-    @form.on 'submit', @onFormSubmit
 
     return
 
