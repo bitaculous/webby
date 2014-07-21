@@ -14,6 +14,7 @@ class @Formy
     @failure       = @form.find '> .failure'
     @error         = @form.find '> .error'
     @errorMessages = @error.find '> .messages'
+    @elements      = @form.find '.element'
     @submit        = @form.find 'a.submit'
 
     @errorMessagesTemplate = window.HoganTemplates['jquery/plugins/formify/templates/error/messages']
@@ -56,12 +57,29 @@ class @Formy
     result
 
   lock: ->
+    do @disabledElements
+
     @form.addClass 'locked'
 
     return
 
   unlock: ->
+    do @enabledElements
+
     @form.removeClass 'locked'
+
+    return
+
+  isLocked: ->
+    @form.hasClass 'locked'
+
+  enabledElements: ->
+    @elements.prop 'disabled', false
+
+    return
+
+  disabledElements: ->
+    @elements.prop 'disabled', true
 
     return
 
@@ -78,34 +96,59 @@ class @Formy
 
   # === Events ===
 
-  beforeSubmit: (data, form, options) =>
+  beforeRequestSend: (xhr, settings) =>
     do @cleanup
 
     do @lock
 
-    true
+    return
 
-  onSuccess: (response, status, xhr, form) =>
-    errors = response.errors
+  onRequestDone: (data, status, xhr) =>
+    do @showSuccess if status == 'success'
 
-    if errors
-      @showErrors errors
-    else
-      do @showSuccess
+    return
+
+  onRequestFail: (xhr, status, error) =>
+    status = xhr.status
+
+    switch status
+      when 422
+        response = xhr.responseJSON
+        errors   = response.errors
+
+        @showErrors errors
+      else
+        do @failure.show
 
     do @unlock
 
     return
 
-  onError: (xhr, status, error) =>
-    do @failure.show
-
+  onRequestComplete: (xhr, status) =>
     return
+
+  onFormSubmit: (event) =>
+    url  = @form.data 'public-submission-url'
+    data = do @form.serialize
+
+    if url
+      request = $.ajax
+        url: url
+        type: 'POST'
+        data: data
+        dataType: 'json'
+        beforeSend: @beforeRequestSend
+
+      request.done @onRequestDone
+      request.fail @onRequestFail
+      request.always @onRequestComplete
+
+    false
 
   onSubmitClick: (event) =>
     submit = $ event.currentTarget
 
-    do @form.submit
+    do @form.submit if not do @isLocked
 
     false
 
@@ -129,16 +172,7 @@ class @Formy
 
         return
 
-    publicSubmissionUrl = @form.data 'public-submission-url'
-
-    if publicSubmissionUrl
-      @form.ajaxForm
-        url: publicSubmissionUrl
-        iframe: true
-        dataType: 'json'
-        beforeSubmit: @beforeSubmit
-        success: @onSuccess
-        error: @onError
+    @form.on 'submit', @onFormSubmit
 
     return
 
