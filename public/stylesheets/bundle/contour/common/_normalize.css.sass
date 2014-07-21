@@ -113,10 +113,12 @@
     input[type='text'],
     input[type='email'],
     textarea
+      border-radius: 0
       border: 2px solid #FFF
       padding: rem(5)
       width: 100%
 
+      @include appearance(none)
       @include box-sizing(border-box)
 
     input
