@@ -9,8 +9,8 @@ class @Formy
       easing: 'easeInBack'
     showSuccess:
       effect: 'fadeIn'
-      delay: 250
-      duration: 750
+      delay: 300
+      duration: 150
       easing: 'easeInQuad'
     debug: false
 
