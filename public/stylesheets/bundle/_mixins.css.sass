@@ -43,3 +43,8 @@
 
     @if transition == true
       @include transition($property $transition-duration ease-in)
+
+@mixin hyphenate
+  word-wrap: break-word
+
+  @include hyphens(auto)
