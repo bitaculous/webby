@@ -7,11 +7,13 @@ class @Roofy
 
   defaults:
     section:
-      slideDown:
-        easing: 'easeOut'
+      activate:
+        effect: 'slideDown'
         duration: 750
         delay: 150
-      slideUp:
+        easing: 'easeOut'
+      deactivate:
+        effect: 'slideUp'
         easing: 'easeIn'
         duration: 500
         delay: 150
@@ -69,8 +71,7 @@ class @Roofy
   setupBackstage = ->
     height = do @body.height
 
-    @backstage.css {
+    @backstage.css
       'max-height': height - @altitude
-    }
 
     return

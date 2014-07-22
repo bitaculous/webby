@@ -2,6 +2,16 @@ class @Formy
   # === Variables ===
 
   defaults:
+    hideFieldsets:
+      effect: 'slideUp'
+      delay: 150
+      duration: 300
+      easing: 'easeInBack'
+    showSuccess:
+      effect: 'fadeIn'
+      delay: 250
+      duration: 750
+      easing: 'easeInQuad'
     debug: false
 
   # === Public ===
@@ -14,6 +24,7 @@ class @Formy
     @failure       = @form.find '> .failure'
     @error         = @form.find '> .error'
     @errorMessages = @error.find '> .messages'
+    @fieldsets     = @form.find '> fieldset'
     @elements      = @form.find '.element'
     @submit        = @form.find 'a.submit'
 
@@ -23,8 +34,20 @@ class @Formy
 
     return
 
-  showSuccess: ->
-    do @success.show
+  hideFieldsets: =>
+    @fieldsets.velocity @options.hideFieldsets.effect,
+      delay: @options.hideFieldsets.delay
+      duration: @options.hideFieldsets.duration
+      easing: @options.hideFieldsets.easing
+      complete: @showSuccess
+
+    return
+
+  showSuccess: =>
+    @success.velocity @options.showSuccess.effect,
+      delay: @options.showSuccess.delay
+      duration: @options.showSuccess.duration
+      easing: @options.showSuccess.easing
 
     return
 
@@ -96,6 +119,11 @@ class @Formy
 
   # === Events ===
 
+  onSuccess: =>
+    do @hideFieldsets
+
+    return
+
   beforeRequestSend: (xhr, settings) =>
     do @cleanup
 
@@ -104,7 +132,7 @@ class @Formy
     return
 
   onRequestDone: (data, status, xhr) =>
-    do @showSuccess if status == 'success'
+    do @onSuccess if status == 'success'
 
     return
 
@@ -124,9 +152,6 @@ class @Formy
 
     return
 
-  onRequestComplete: (xhr, status) =>
-    return
-
   onFormSubmit: (event) =>
     url = @form.data 'public-submission-url'
 
@@ -140,7 +165,6 @@ class @Formy
 
       request.done @onRequestDone
       request.fail @onRequestFail
-      request.always @onRequestComplete
 
     false
 

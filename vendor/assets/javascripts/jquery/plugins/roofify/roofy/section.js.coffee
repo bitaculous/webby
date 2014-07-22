@@ -16,18 +16,18 @@ class @Section
 
   # === Public ===
 
-  constructor: (element, dashboard, options) ->
-    @element   = $ element
+  constructor: (section, dashboard, options) ->
+    @section   = $ section
     @dashboard = $ dashboard
     @options   = $.extend @defaults, options
 
-    @id = @element.data 'id'
+    @id = @section.data 'id'
 
     controlPanel = @dashboard.find '.control-panel'
 
     @pointer = controlPanel.find "> a.control[data-id='#{@id}']"
 
-    @close = @element.find 'a.close'
+    @close = @section.find 'a.close'
 
     initialize.call @
 
@@ -37,9 +37,9 @@ class @Section
     states = do @states
     states = states.join ' '
 
-    @element.removeClass states
+    @section.removeClass states
 
-    @element.addClass @state
+    @section.addClass @state
 
   toogle: ->
     switch @state
@@ -54,13 +54,12 @@ class @Section
     inactive = do @isInactive
 
     if inactive
-      @element.velocity 'slideDown', {
-        easing: @options.slideDown.easing
-        duration: @options.slideDown.duration
-        delay: @options.slideDown.delay
+      @section.velocity @options.activate.effect,
+        easing: @options.activate.easing
+        duration: @options.activate.duration
+        delay: @options.activate.delay
         begin: @beforeActivate
         complete: @onActivate
-      }
 
     return
 
@@ -68,13 +67,12 @@ class @Section
     active = do @isActive
 
     if active
-      @element.velocity 'slideUp', {
-        easing: @options.slideDown.easing
-        duration: @options.slideDown.duration
-        delay: @options.slideDown.delay
+      @section.velocity @options.deactivate.effect,
+        easing: @options.deactivate.easing
+        duration: @options.deactivate.duration
+        delay: @options.deactivate.delay
         begin: @beforeDeactivate
         complete: @onDeactivate
-      }
 
     return
 
