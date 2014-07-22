@@ -34,7 +34,7 @@ class @Formy
 
     return
 
-  hideFieldsets: =>
+  hideFieldsets: ->
     @fieldsets.velocity @options.hideFieldsets.effect,
       delay: @options.hideFieldsets.delay
       duration: @options.hideFieldsets.duration
