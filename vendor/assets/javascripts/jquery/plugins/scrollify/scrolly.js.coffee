@@ -32,6 +32,13 @@ class @Scrolly
 
   # === Events ===
 
+  onWindowLoad: (event) =>
+    setTimeout =>
+      do @updateRoof
+    , 1
+
+    return
+
   onWindowScroll: (event) =>
     do @updateRoof
 
@@ -52,6 +59,8 @@ class @Scrolly
     return
 
   setupWindow = ->
+    @window.on 'load', @onWindowLoad
+
     @window.on 'scroll', @onWindowScroll
 
     return
