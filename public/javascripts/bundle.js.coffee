@@ -12,6 +12,7 @@
 #= require jquery/plugins/scrollify
 #= require jquery/plugins/shadify
 #= require jquery/plugins/slick
+#= require jquery/plugins/slidify
 #= require jquery/plugins/velocity
 
 #= require_self
@@ -22,20 +23,6 @@ $ ->
   html     = $ 'html'
   theatre  = $ '.theatre'
   stage    = theatre.find '> .stage'
-
-  # === Events ===
-
-  onSliderInitialized = (slick) ->
-    slider   = slick.$slider
-    abstract = slider.closest '.abstract'
-    shady    = abstract.find '> .shady'
-
-    # May I have your attention please? Will the real Shady please stand up?
-    shady.shadify {
-      inactive: true
-    } if do shady.present
-
-    return
 
   # === FastClick ===
 
@@ -69,20 +56,7 @@ $ ->
       if do abstract.present
         slider = abstract.find '> .slider'
 
-        if do slider.present
-          slider.slick {
-            arrows: false
-            autoplay: true
-            autoplaySpeed: 7500
-            centerMode: true
-            centerPadding: '0px'
-            dots: true
-            slide: '.slide'
-            slidesToScroll: 1
-            slidesToShow: 1
-            speed: 500
-            onInit: onSliderInitialized
-          }
+        do slider.slidify if do slider.present
 
       work = stage.find '> .work'
 
