@@ -6,19 +6,20 @@
   {% capture responsive %}{% if reference.responsive %}responsive{% endif %}{% endcapture %}
 
   .reference.slick-slide{ class: '{{identifier}} {{responsive}}', data: { url: '{{reference.url}}' } }
-    .browser.view
-      .viewport
+    .views
+      .browser.view
+        .viewport
 
-      .overlay
+        .overlay
 
-      .title {{reference.title}}
+        .title {{reference.title}}
 
-    {% if reference.responsive %}
-    .mobile.view
-      .viewport
+      {% if reference.responsive %}
+      .mobile.view
+        .viewport
 
-      .overlay
-    {% endif %}
+        .overlay
+      {% endif %}
 
     %h2.title {{reference.title}}
 

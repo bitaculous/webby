@@ -8,18 +8,23 @@
 @import views/mobile
 
 @mixin views
-  .view
-    .viewport,
-    .overlay,
-    .title
-      position: absolute
+  .views
+    margin: 0 auto rem(40)
+    position: relative
+    width: 300px
 
-    .overlay
-      bottom: 0
-      left: 0
-      right: 0
-      top: 0
+    .view
+      .viewport,
+      .overlay,
+      .title
+        position: absolute
 
-    @include browser
+      .overlay
+        bottom: 0
+        left: 0
+        right: 0
+        top: 0
 
-    @include mobile
+      @include browser
+
+      @include mobile
