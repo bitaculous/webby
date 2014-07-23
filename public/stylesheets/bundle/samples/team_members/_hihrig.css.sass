@@ -1,0 +1,14 @@
+// _hihrig.css.sass
+//
+// @package bundle/samples/team_members
+// @media all
+// @version 1.0
+
+@mixin hihrig
+  .hihrig
+    .photo
+      background: transparent image-url('bundle/samples/contour/team_members/hihrig/photo.jpg') no-repeat center center
+
+      @include hidpi
+        background-image: image-url('bundle/samples/contour/team_members/hihrig/photo_at_2x.jpg')
+        background-size: 300px 192px

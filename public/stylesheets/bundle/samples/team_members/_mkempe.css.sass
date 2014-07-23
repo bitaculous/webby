@@ -1,0 +1,14 @@
+// _mkempe.css.sass
+//
+// @package bundle/samples/team_members
+// @media all
+// @version 1.0
+
+@mixin mkempe
+  .mkempe
+    .photo
+      background: transparent image-url('bundle/samples/contour/team_members/mkempe/photo.jpg') no-repeat center center
+
+      @include hidpi
+        background-image: image-url('bundle/samples/contour/team_members/mkempe/photo_at_2x.jpg')
+        background-size: 300px 192px
