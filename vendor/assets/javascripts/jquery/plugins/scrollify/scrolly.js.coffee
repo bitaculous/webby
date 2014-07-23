@@ -10,25 +10,30 @@ class @Scrolly
 
   constructor: (theatre, options) ->
     @theatre = $ theatre
-    @roof    = @theatre.find '> .roof'
-    @stage   = @theatre.find '> .stage'
     @options = $.extend @defaults, options
 
+    @window = $ window
+    @roof   = @theatre.find '> .roof'
+    @stage  = @theatre.find '> .stage'
+
     initialize.call @
+
+    return
+
+  updateRoof: ->
+    scrollTop = do @window.scrollTop
+
+    if scrollTop > 0
+      minimizeRoof.call @
+    else
+      expandRoof.call @
 
     return
 
   # === Events ===
 
   onWindowScroll: (event) =>
-    window = $ event.target
-
-    scrollTop = do window.scrollTop
-
-    if scrollTop > 0
-      minimizeRoof.call @
-    else
-      expandRoof.call @
+    do @updateRoof
 
     return
 
@@ -41,6 +46,8 @@ class @Scrolly
     setupWindow.call @
 
     setupWaypoints.call @
+
+    do @updateRoof
 
     return
 
