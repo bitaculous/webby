@@ -4,29 +4,10 @@
 // @media all
 // @version 1.0
 
+@import members/member
+
 @mixin members
   .members
     text-align: center
 
-    .member
-      border-top: 2px solid #FB3814
-      padding: rem(15) 0
-
-      .photo
-        box-shadow: rem(2) rem(2) rem(4) #000
-        height: 192px
-        margin: 0 auto rem(10)
-        width: 300px
-
-      p
-        margin: 0
-
-        &.name,
-        &.profession
-          color: #FB3814
-
-        &.name
-          font-family: $font-family-bold
-
-      &.last
-        padding: rem(15) 0 0 0
+    @include member

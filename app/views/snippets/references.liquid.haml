@@ -3,7 +3,9 @@
 
   {% assign identifier = reference.identifier | downcase | dasherize %}
 
-  .reference.slick-slide{ class: '{{identifier}}', data: { url: '{{reference.url}}' } }
+  {% capture responsive %}{% if reference.responsive %}responsive{% endif %}{% endcapture %}
+
+  .reference.slick-slide{ class: '{{identifier}} {{responsive}}', data: { url: '{{reference.url}}' } }
     .browser.view
       .viewport
 

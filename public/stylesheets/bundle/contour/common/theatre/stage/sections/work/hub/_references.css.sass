@@ -4,76 +4,11 @@
 // @media all
 // @version 1.0
 
+@import references/reference
+
 @mixin references
   .references
-    .reference
-      cursor: pointer
-      text-align: center
-
-      .view
-        .viewport,
-        .overlay,
-        .title
-          position: absolute
-
-        .overlay
-          bottom: 0
-          left: 0
-          right: 0
-          top: 0
-
-        &.browser
-          height: 242px
-          margin: 0 auto rem(40)
-          position: relative
-          width: 300px
-
-          .viewport
-            bottom: rem(38)
-            left: rem(2)
-            right: rem(2)
-            top: rem(14)
-
-          .overlay
-            background: transparent image-url('bundle/contour/common/theatre/stage/sections/work/hub/references/reference/views/browser/overlay/background.png') no-repeat 0 0
-
-            @include hidpi
-              background-image: image-url('bundle/contour/common/theatre/stage/sections/work/hub/references/reference/views/browser/overlay/background_at_2x.png')
-              background-size: 300px 242px
-
-          .title
-            color: #000
-            font-family: $font-family-thin
-            font-size: ms(-2)
-            left: rem(3)
-            top: rem(2)
-
-        &.mobile
-          height: 244px
-          position: absolute
-          right: rem(10)
-          top: rem(40)
-          width: 100px
-
-          .viewport
-            background: red
-            bottom: rem(38)
-            left: rem(2)
-            right: rem(2)
-            top: rem(14)
-
-          .overlay
-            background: transparent image-url('bundle/contour/common/theatre/stage/sections/work/hub/references/reference/views/mobile/overlay/background.png') no-repeat 0 0
-
-            @include hidpi
-              background-image: image-url('bundle/contour/common/theatre/stage/sections/work/hub/references/reference/views/mobile/overlay/background_at_2x.png')
-              background-size: 100px 244px
-
-      h2.title
-        border-top: 2px solid #95D9E2
-        margin: 0 auto rem(10)
-        max-width: 300px
-        padding: rem(10) 0 0 0
+    @include reference
 
     .slick-prev,
     .slick-next

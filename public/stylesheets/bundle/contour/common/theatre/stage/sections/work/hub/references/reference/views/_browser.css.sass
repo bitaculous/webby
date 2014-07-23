@@ -1,0 +1,32 @@
+// _browser.css.sass
+//
+// @package bundle/contour/common/theatre/stage/sections/work/hub/references/reference/views
+// @media all
+// @version 1.0
+
+@mixin browser
+  &.browser
+    height: 242px
+    margin: 0 auto rem(40)
+    position: relative
+    width: 300px
+
+    .viewport
+      bottom: rem(38)
+      left: rem(2)
+      right: rem(2)
+      top: rem(14)
+
+    .overlay
+      background: transparent image-url('bundle/contour/common/theatre/stage/sections/work/hub/references/reference/views/browser/overlay/background.png') no-repeat 0 0
+
+      @include hidpi
+        background-image: image-url('bundle/contour/common/theatre/stage/sections/work/hub/references/reference/views/browser/overlay/background_at_2x.png')
+        background-size: 300px 242px
+
+    .title
+      color: #000
+      font-family: $font-family-thin
+      font-size: ms(-2)
+      left: rem(3)
+      top: rem(2)

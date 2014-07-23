@@ -1,0 +1,25 @@
+// _views.css.sass
+//
+// @package bundle/contour/common/theatre/stage/sections/work/hub/references/reference
+// @media all
+// @version 1.0
+
+@import views/browser
+@import views/mobile
+
+@mixin views
+  .view
+    .viewport,
+    .overlay,
+    .title
+      position: absolute
+
+    .overlay
+      bottom: 0
+      left: 0
+      right: 0
+      top: 0
+
+    @include browser
+
+    @include mobile
