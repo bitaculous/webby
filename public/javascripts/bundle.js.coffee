@@ -54,9 +54,12 @@ $ ->
       abstract = stage.find '> .abstract'
 
       if do abstract.present
+        shady  = abstract.find '> .shady'
         slider = abstract.find '> .slider'
 
-        do slider.slidify if do slider.present
+        slider.slidify {
+          shady: shady
+        } if do slider.present
 
       work = stage.find '> .work'
 
