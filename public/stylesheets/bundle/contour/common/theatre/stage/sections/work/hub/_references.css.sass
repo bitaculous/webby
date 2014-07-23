@@ -11,9 +11,6 @@
       text-align: center
 
       .view
-        margin: 0 auto
-        position: relative
-
         .viewport,
         .overlay,
         .title
@@ -27,6 +24,8 @@
 
         &.browser
           height: 242px
+          margin: 0 auto rem(40)
+          position: relative
           width: 300px
 
           .viewport
@@ -48,6 +47,33 @@
             font-size: ms(-2)
             left: rem(3)
             top: rem(2)
+
+        &.mobile
+          height: 244px
+          position: absolute
+          right: rem(10)
+          top: rem(40)
+          width: 100px
+
+          .viewport
+            background: red
+            bottom: rem(38)
+            left: rem(2)
+            right: rem(2)
+            top: rem(14)
+
+          .overlay
+            background: transparent image-url('bundle/contour/common/theatre/stage/sections/work/hub/references/reference/views/mobile/overlay/background.png') no-repeat 0 0
+
+            @include hidpi
+              background-image: image-url('bundle/contour/common/theatre/stage/sections/work/hub/references/reference/views/mobile/overlay/background_at_2x.png')
+              background-size: 100px 244px
+
+      h2.title
+        border-top: 2px solid #95D9E2
+        margin: 0 auto rem(10)
+        max-width: 300px
+        padding: rem(10) 0 0 0
 
     .slick-prev,
     .slick-next

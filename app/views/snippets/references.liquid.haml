@@ -14,9 +14,11 @@
     {% if reference.responsive %}
     .mobile.view
       .viewport
+
+      .overlay
     {% endif %}
 
-    %span.title {{reference.title}}
+    %h2.title {{reference.title}}
 
     {% if reference.label %}
     %span.label {{reference.label}}
