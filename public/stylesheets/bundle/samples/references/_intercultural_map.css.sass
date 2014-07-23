@@ -5,3 +5,12 @@
 // @version 1.0
 
 @mixin intercultural-map
+  .intercultural-map
+    .view
+      &.browser
+        .viewport
+          background: transparent image-url('bundle/samples/contour/references/intercultural_map/views/browser/viewport.jpg') no-repeat 0 0
+
+          @include hidpi
+            background-image: image-url('bundle/samples/contour/references/intercultural_map/views/browser/viewport_at_2x.jpg')
+            background-size: 300px 197px
