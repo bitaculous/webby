@@ -3,7 +3,7 @@
 
   {% assign identifier = reference.identifier | downcase | dasherize %}
 
-  .reference.slick-slide{ class: '{{identifier}}' }
+  .reference.slick-slide{ class: '{{identifier}}', data: { url: '{{reference.url}}' } }
     .browser.view
       .viewport
 

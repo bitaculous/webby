@@ -20,6 +20,12 @@ fields:
     type: "string"
     localized: true
     hint: "The optional label of the reference."
+- url:
+    label: "URL"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The URL of the reference."
 - responsive:
     label: "Responsive"
     type: "boolean"
