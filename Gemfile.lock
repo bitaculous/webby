@@ -27,24 +27,6 @@ GIT
       sass (>= 3.2)
       sprockets (~> 2.12.1)
 
-GIT
-  remote: git://github.com/compass/compass.git
-  revision: 3d89e83016ae0d3f7b2574e6691295cd7795a575
-  branch: master
-  specs:
-    compass (1.0.0.alpha.21)
-      chunky_png (~> 1.2)
-      compass-core (~> 1.0.0.alpha.21)
-      compass-import-once (~> 1.0.4)
-      rb-fsevent (>= 0.9.3)
-      rb-inotify (>= 0.9)
-      sass (>= 3.3.0, < 3.5)
-    compass-core (1.0.0.alpha.21)
-      multi_json (~> 1.0)
-      sass (>= 3.3.0, < 3.5)
-    compass-import-once (1.0.4)
-      sass (>= 3.2, < 3.5)
-
 PATH
   remote: ../locomotivecms/gems/mounter
   specs:
@@ -118,6 +100,18 @@ GEM
     coffee-script-source (1.7.1)
     colorize (0.5.8)
     commonjs (0.2.7)
+    compass (1.0.0.alpha.21)
+      chunky_png (~> 1.2)
+      compass-core (~> 1.0.0.alpha.21)
+      compass-import-once (~> 1.0.4)
+      rb-fsevent (>= 0.9.3)
+      rb-inotify (>= 0.9)
+      sass (>= 3.3.0, < 3.5)
+    compass-core (1.0.0.alpha.21)
+      multi_json (~> 1.0)
+      sass (>= 3.3.0, < 3.5)
+    compass-import-once (1.0.4)
+      sass (>= 3.2, < 3.5)
     daemons (1.1.9)
     dragonfly (0.9.15)
       multi_json (~> 1.0)
@@ -200,7 +194,7 @@ DEPENDENCIES
   assetify!
   bourbon (~> 4.0.2)
   breakpoint (~> 2.4.2)
-  compass!
+  compass (~> 1.0.0.alpha.21)
   hogan_assets (~> 1.6.0)
   initializify!
   kramdown (~> 1.4)

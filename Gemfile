@@ -27,8 +27,8 @@ group :misc do
 
       gem 'breakpoint', '~> 2.4.2'
 
-      # gem 'compass', '~> 1.0.0.alpha.21'
-      gem 'compass', github: 'compass/compass', branch: 'master'
+      gem 'compass', '~> 1.0.0.alpha.21'
+      # gem 'compass', github: 'compass/compass', branch: 'master'
 
       gem 'modular-scale', '~> 2.0.5'
 
