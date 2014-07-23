@@ -19,31 +19,40 @@
         margin: 0 auto
         position: relative
 
-        .viewport
+        .viewport,
+        .overlay,
+        .title
           position: absolute
-          background: red
+
+        .overlay
+          bottom: 0
+          left: 0
+          right: 0
+          top: 0
 
         &.browser
-          background: transparent image-url('bundle/contour/common/theatre/stage/sections/work/hub/references/reference/views/browser/background.png') no-repeat center left
-          height: 207px
+          height: 242px
           width: 300px
 
-          @include hidpi
-            background-image: image-url('bundle/contour/common/theatre/stage/sections/work/hub/references/reference/views/browser/background_at_2x.png')
-            background-size: 300px 207px
+          .viewport
+            bottom: rem(38)
+            left: rem(2)
+            right: rem(2)
+            top: rem(14)
+
+          .overlay
+            background: transparent image-url('bundle/contour/common/theatre/stage/sections/work/hub/references/reference/views/browser/overlay/background.png') no-repeat 0 0
+
+            @include hidpi
+              background-image: image-url('bundle/contour/common/theatre/stage/sections/work/hub/references/reference/views/browser/overlay/background_at_2x.png')
+              background-size: 300px 242px
 
           .title
             color: #222
-            font-size: ms(-1.5)
-            left: rem(7)
-            position: absolute
-            top: rem(8)
-
-          .viewport
-            bottom: rem(7)
-            left: rem(7)
-            right: rem(7)
-            top: rem(27)
+            font-family: $font-family-thin
+            font-size: ms(-2)
+            left: rem(3)
+            top: rem(1)
 
       @include heldenpause
 
@@ -52,3 +61,7 @@
       @include hpk
 
       @include intercultural-map
+
+    .slick-prev,
+    .slick-next
+      display: none !important

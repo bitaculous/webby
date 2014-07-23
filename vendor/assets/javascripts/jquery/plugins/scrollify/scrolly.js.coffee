@@ -52,7 +52,7 @@ class @Scrolly
     return
 
   setupWindow = ->
-    $(window).on 'scroll', @onWindowScroll
+    @window.on 'scroll', @onWindowScroll
 
     return
 
