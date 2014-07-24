@@ -2,6 +2,8 @@ class @Referencesies
   # === Variables ===
 
   defaults:
+    autoplaySpeed: 7500
+    speed: 500
     debug: false
 
   # === Public ===
@@ -17,6 +19,20 @@ class @Referencesies
   # === Private ===
 
   initialize = ->
-    alert 'Hello, from Referencesies'
+    setup.call @
+
+    return
+
+  setup = ->
+    @references.slick
+      autoplay: false
+      autoplaySpeed: @options.autoplaySpeed
+      centerMode: true
+      centerPadding: '0px'
+      dots: false
+      slide: '.reference'
+      slidesToScroll: 1
+      slidesToShow: 1
+      speed: @options.speed
 
     return
