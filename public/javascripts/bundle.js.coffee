@@ -8,6 +8,7 @@
 #= require jquery
 #= require jquery/plugins/formify
 #= require jquery/plugins/i18n
+#= require jquery/plugins/referencesify
 #= require jquery/plugins/roofify
 #= require jquery/plugins/scrollify
 #= require jquery/plugins/shadify
@@ -66,17 +67,6 @@ $ ->
       if do work.present
         references = work.find '.references'
 
-        if do references.present
-          references.slick {
-            autoplay: false
-            autoplaySpeed: 7500
-            centerMode: true
-            centerPadding: '0px'
-            dots: false
-            slide: '.reference'
-            slidesToScroll: 1
-            slidesToShow: 1
-            speed: 500
-          }
+        do references.referencesify if do references.present
 
   return
