@@ -2,6 +2,8 @@ class @Scrolly
   # === Variables ===
 
   defaults:
+    breakPoints:
+      minimizeRoof: 40
     offsets:
       sections: 0
     debug: false
@@ -23,7 +25,7 @@ class @Scrolly
   updateRoof: ->
     scrollTop = do @window.scrollTop
 
-    if scrollTop > 0
+    if scrollTop > @options.breakPoints.minimizeRoof
       minimizeRoof.call @
     else
       expandRoof.call @
