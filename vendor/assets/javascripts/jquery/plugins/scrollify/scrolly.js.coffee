@@ -16,6 +16,8 @@ class @Scrolly
 
     @window = $ window
     @roof   = @theatre.find '> .roof'
+    @badge  = @roof.find '.badge'
+    @icon   = @badge.find '> .icon'
     @stage  = @theatre.find '> .stage'
 
     initialize.call @
@@ -36,6 +38,8 @@ class @Scrolly
 
   onWindowLoad: (event) =>
     setTimeout =>
+      console.log 'Foo'
+
       do @updateRoof
     , 1
 
@@ -55,8 +59,6 @@ class @Scrolly
     setupWindow.call @
 
     setupWaypoints.call @
-
-    do @updateRoof
 
     return
 

@@ -6,22 +6,38 @@
 
 @mixin badge
   .badge
-    background: transparent image-url('bundle/contour/common/theatre/roof/dashboard/badge/background.png') no-repeat center left
     display: inline-block
     height: 64px
     margin: rem(30) auto rem(20)
-
-    @include hidpi
-      background-image: image-url('bundle/contour/common/theatre/roof/dashboard/badge/background_at_2x.png')
-      background-size: 64px 64px
+    position: relative
+    width: 285px
 
     span
       display: block
-      margin: 0 0 0 rem(74)
-      text-align: left
+
+      &.icon
+        background: transparent image-url('bundle/contour/common/theatre/roof/dashboard/badge/icon/background.png') no-repeat center center
+        height: 64px
+        width: 64px
+
+        @include hide-text
+
+        @include hidpi
+          background-image: image-url('bundle/contour/common/theatre/roof/dashboard/badge/icon/background_at_2x.png')
+          background-size: 64px 64px
+
+      &.title,
+      &.claim
+        left: rem(74)
+        position: absolute
+        text-align: left
 
       &.title
         font-family: $font-family-headings
         font-size: ms(1.75)
         padding: rem(6) 0 0
         text-transform: uppercase
+        top: 0
+
+      &.claim
+        top: rem(40)

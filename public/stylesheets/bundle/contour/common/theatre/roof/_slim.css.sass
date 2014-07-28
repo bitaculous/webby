@@ -8,18 +8,21 @@
   &.slim
     .dashboard
       .badge
-        background: none
         display: block
         height: auto
-        margin: 0 auto
-        padding: rem(26) 0 rem(10)
+        margin: rem(30) auto rem(10)
         width: 160px
 
         span
-          margin: 0
-
+          &.icon,
           &.claim
             display: none
+
+          &.title
+            left: auto
+            position: relative
+            text-align: center
+            top: auto
 
       nav
         &.outline
