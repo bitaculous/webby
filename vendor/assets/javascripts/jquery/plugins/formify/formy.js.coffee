@@ -2,16 +2,18 @@ class @Formy
   # === Variables ===
 
   defaults:
-    hideFieldsets:
-      effect: 'slideUp'
-      delay: 150
-      duration: 300
-      easing: 'easeInBack'
-    showSuccess:
-      effect: 'fadeIn'
-      delay: 300
-      duration: 150
-      easing: 'easeInQuad'
+    fieldsets:
+      hide:
+        effect: 'slideUp'
+        easing: 'easeInBack'
+        delay: 150
+        duration: 300
+    success:
+      show:
+        effect: 'fadeIn'
+        easing: 'easeInQuad'
+        delay: 300
+        duration: 150
     debug: false
 
   # === Public ===
@@ -35,19 +37,19 @@ class @Formy
     return
 
   hideFieldsets: ->
-    @fieldsets.velocity @options.hideFieldsets.effect,
-      delay: @options.hideFieldsets.delay
-      duration: @options.hideFieldsets.duration
-      easing: @options.hideFieldsets.easing
+    @fieldsets.velocity @options.fieldsets.hide.effect,
+      easing: @options.fieldsets.hide.easing
+      delay: @options.fieldsets.hide.delay
+      duration: @options.fieldsets.hide.duration
       complete: @showSuccess
 
     return
 
   showSuccess: =>
-    @success.velocity @options.showSuccess.effect,
-      delay: @options.showSuccess.delay
-      duration: @options.showSuccess.duration
-      easing: @options.showSuccess.easing
+    @success.velocity @options.success.show.effect,
+      easing: @options.success.show.easing
+      delay: @options.success.show.delay
+      duration: @options.success.show.duration
 
     return
 

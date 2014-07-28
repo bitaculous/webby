@@ -2,8 +2,8 @@ class @Slidy
   # === Variables ===
 
   defaults:
-    autoplaySpeed: 7500
     speed: 500
+    autoplaySpeed: 7500
     shadify:
       inactive: true
     debug: false

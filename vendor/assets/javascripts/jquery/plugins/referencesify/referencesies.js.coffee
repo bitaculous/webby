@@ -2,8 +2,17 @@ class @Referencesies
   # === Variables ===
 
   defaults:
-    autoplaySpeed: 7500
     speed: 500
+    autoplaySpeed: 7500
+    reference:
+      activate:
+        mobileView:
+          effect: 'fadeIn'
+          duration: 500
+      deactivate:
+        mobileView:
+          effect: 'fadeOut'
+          duration: 750
     debug: false
 
   # === Public ===
@@ -16,7 +25,7 @@ class @Referencesies
 
     return
 
-  activateReference: (reference) ->
+  activateReference: (reference, slick) ->
     reference = $ reference
 
     responsive = reference.hasClass 'responsive'
@@ -24,13 +33,13 @@ class @Referencesies
     if responsive
       mobileView = reference.find '.mobile.view'
 
-      mobileView.velocity 'fadeIn', {
-        duration: 750
+      mobileView.velocity @options.reference.activate.mobileView.effect, {
+        duration: @options.reference.activate.mobileView.duration
       } if do mobileView.present
 
     return
 
-  deactivateReference: (reference) ->
+  deactivateReference: (reference, slick) ->
     reference = $ reference
 
     responsive = reference.hasClass 'responsive'
@@ -38,8 +47,8 @@ class @Referencesies
     if responsive
       mobileView = reference.find '.mobile.view'
 
-      mobileView.velocity 'fadeOut', {
-        duration: 150
+      mobileView.velocity @options.reference.deactivate.mobileView.effect, {
+        duration: @options.reference.deactivate.mobileView.duration
       } if do mobileView.present
 
     return
@@ -50,7 +59,9 @@ class @Referencesies
     references       = slick.$slides
     currentReference = $ references[0]
 
-    @activateReference currentReference
+    @activateReference currentReference, slick
+
+    @index = 0
 
     return
 
@@ -58,7 +69,7 @@ class @Referencesies
     references       = slick.$slides
     currentReference = $ references[index]
 
-    @deactivateReference currentReference
+    @deactivateReference currentReference, slick
 
     return
 
@@ -66,7 +77,9 @@ class @Referencesies
     references       = slick.$slides
     currentReference = $ references[index]
 
-    @activateReference currentReference
+    @activateReference currentReference, slick if index isnt @index
+
+    @index = index
 
     return
 

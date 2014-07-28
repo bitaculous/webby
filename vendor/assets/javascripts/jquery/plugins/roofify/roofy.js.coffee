@@ -9,14 +9,14 @@ class @Roofy
     section:
       activate:
         effect: 'slideDown'
-        duration: 750
-        delay: 150
         easing: 'easeOut'
+        delay: 150
+        duration: 750
       deactivate:
         effect: 'slideUp'
         easing: 'easeIn'
-        duration: 500
         delay: 150
+        duration: 500
     altitude:
       spacing: 10
     debug: false

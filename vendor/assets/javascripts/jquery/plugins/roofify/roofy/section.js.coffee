@@ -56,8 +56,8 @@ class @Section
     if inactive
       @section.velocity @options.activate.effect,
         easing: @options.activate.easing
-        duration: @options.activate.duration
         delay: @options.activate.delay
+        duration: @options.activate.duration
         begin: @beforeActivate
         complete: @onActivate
 
@@ -69,8 +69,8 @@ class @Section
     if active
       @section.velocity @options.deactivate.effect,
         easing: @options.deactivate.easing
-        duration: @options.deactivate.duration
         delay: @options.deactivate.delay
+        duration: @options.deactivate.duration
         begin: @beforeDeactivate
         complete: @onDeactivate
 
