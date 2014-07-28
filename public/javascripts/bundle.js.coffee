@@ -22,6 +22,7 @@ $ ->
   # === Shared variables ===
 
   html     = $ 'html'
+  top      = $ '.top'
   theatre  = $ '.theatre'
   stage    = theatre.find '> .stage'
 
@@ -32,7 +33,8 @@ $ ->
   # === Theatre ===
 
   if do theatre.present
-    do theatre.scrollify
+    theatre.scrollify
+      top: top
 
     roof = theatre.find '> .roof'
 

@@ -5,14 +5,10 @@ class @Formy
     fieldsets:
       hide:
         effect: 'slideUp'
-        easing: 'easeInBack'
-        delay: 150
-        duration: 300
+        duration: 150
     success:
       show:
         effect: 'fadeIn'
-        easing: 'easeInQuad'
-        delay: 300
         duration: 150
     debug: false
 
@@ -38,8 +34,6 @@ class @Formy
 
   hideFieldsets: ->
     @fieldsets.velocity @options.fieldsets.hide.effect,
-      easing: @options.fieldsets.hide.easing
-      delay: @options.fieldsets.hide.delay
       duration: @options.fieldsets.hide.duration
       complete: @showSuccess
 
@@ -47,8 +41,6 @@ class @Formy
 
   showSuccess: =>
     @success.velocity @options.success.show.effect,
-      easing: @options.success.show.easing
-      delay: @options.success.show.delay
       duration: @options.success.show.duration
 
     return

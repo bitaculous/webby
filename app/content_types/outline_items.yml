@@ -1,0 +1,33 @@
+name: "Outline items"
+slug: "outline_items"
+description: "List of outline items."
+label_field_name: "title"
+order_by: "manually"
+fields:
+- identifier:
+    label: "Identifier"
+    type: "string"
+    required: true
+    hint: "The identifier of the outline item."
+- title:
+    label: "Title"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The title of the outline item."
+- description:
+    label: "Description"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The description of the outline item."
+- target:
+    label: "Target"
+    type: "string"
+    required: true
+    hint: "The target of the outline item."
+- offset:
+    label: "Offset"
+    type: "string"
+    required: true
+    hint: "The scroll offset in px of the outline item."

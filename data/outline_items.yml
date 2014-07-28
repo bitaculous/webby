@@ -6,6 +6,8 @@
     description:
       en: "Home"
       de: "Home"
+    target: "section.abstract"
+    offset: "0"
 
 - "About":
     identifier: "about"
@@ -15,6 +17,8 @@
     description:
       en: "About"
       de: "Über uns"
+    target: "section.what-we-do"
+    offset: "-85"
 
 - "Work":
     identifier: "work"
@@ -24,6 +28,8 @@
     description:
       en: "What we do"
       de: "Was wir machen"
+    target: "section.work"
+    offset: "-85"
 
 - "Team":
     identifier: "team"
@@ -33,3 +39,5 @@
     description:
       en: "Who we are"
       de: "Wer wir sind"
+    target: "section.team"
+    offset: "-85"
