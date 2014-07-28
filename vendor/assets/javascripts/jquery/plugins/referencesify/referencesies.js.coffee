@@ -3,16 +3,28 @@ class @Referencesies
 
   defaults:
     speed: 500
-    autoplaySpeed: 7500
+    autoplay:
+      enabled: false
+      speed: 7500
     reference:
       activate:
-        mobileView:
-          effect: 'fadeIn'
-          duration: 500
+        views:
+          mobile:
+            effect: 'fadeIn'
+            duration: 500
+        title:
+          label:
+            effect: 'fadeIn'
+            duration: 750
       deactivate:
-        mobileView:
-          effect: 'fadeOut'
-          duration: 0
+        views:
+          mobile:
+            effect: 'fadeOut'
+            duration: 0
+        title:
+          label:
+            effect: 'fadeOut'
+            duration: 0
     debug: false
 
   # === Public ===
@@ -28,18 +40,13 @@ class @Referencesies
   activateReference: (reference, slick) ->
     reference = $ reference
 
-    responsive = reference.hasClass 'responsive'
+    @activateViewsOfReference reference
 
-    if responsive
-      mobileView = reference.find '.mobile.view'
-
-      mobileView.velocity @options.reference.activate.mobileView.effect, {
-        duration: @options.reference.activate.mobileView.duration
-      } if do mobileView.present
+    @activateTitleOfReference reference
 
     return
 
-  deactivateReference: (reference, slick) ->
+  activateViewsOfReference: (reference) ->
     reference = $ reference
 
     responsive = reference.hasClass 'responsive'
@@ -47,9 +54,56 @@ class @Referencesies
     if responsive
       mobileView = reference.find '.mobile.view'
 
-      mobileView.velocity @options.reference.deactivate.mobileView.effect, {
-        duration: @options.reference.deactivate.mobileView.duration
+      mobileView.velocity @options.reference.activate.views.mobile.effect, {
+        duration: @options.reference.activate.views.mobile.duration
       } if do mobileView.present
+
+    return
+
+  activateTitleOfReference: (reference) ->
+    reference = $ reference
+
+    title = reference.find '> .title'
+    label = title.find '> .label'
+
+    label.velocity @options.reference.activate.title.label.effect, {
+      duration: @options.reference.activate.title.label.duration
+    }
+
+    return
+
+  deactivateReference: (reference, slick) ->
+    reference = $ reference
+
+    @deactivateViewsOfReference reference
+
+    @deactivateTitleOfReference reference
+
+    return
+
+  deactivateViewsOfReference: (reference) ->
+    reference = $ reference
+
+    responsive = reference.hasClass 'responsive'
+
+    if responsive
+      mobileView = reference.find '.mobile.view'
+
+      mobileView.velocity @options.reference.deactivate.views.mobile.effect, {
+        duration: @options.reference.deactivate.views.mobile.duration
+      } if do mobileView.present
+
+    return
+
+  deactivateTitleOfReference: (reference) ->
+    reference = $ reference
+
+    title = reference.find '> .title'
+    label = title.find '> .label'
+
+    label.velocity @options.reference.deactivate.title.label.effect, {
+      duration: @options.reference.deactivate.title.label.duration
+    }
 
     return
 
@@ -103,8 +157,8 @@ class @Referencesies
 
   setup = ->
     @references.slick
-      autoplay: false
-      autoplaySpeed: @options.autoplaySpeed
+      autoplay: @options.autoplay.enabled
+      autoplaySpeed: @options.autoplay.speed
       centerMode: false
       dots: false
       slide: '.reference'

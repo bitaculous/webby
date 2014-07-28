@@ -21,10 +21,7 @@
         .overlay
       {% endif %}
 
-    %h2.title {{reference.title}}
-
-    {% if reference.label %}
-    %p.label {{reference.label}}
-    {% endif %}
+    %h2.title
+      %span.label {{reference.title}}
 
   {% endfor %}

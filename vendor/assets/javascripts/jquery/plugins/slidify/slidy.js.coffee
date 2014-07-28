@@ -3,7 +3,9 @@ class @Slidy
 
   defaults:
     speed: 500
-    autoplaySpeed: 7500
+    autoplay:
+      enabled: true
+      speed: 7500
     shadify:
       inactive: true
     debug: false
@@ -38,8 +40,8 @@ class @Slidy
   setup = ->
     @slider.slick
       arrows: false
-      autoplay: true
-      autoplaySpeed: @options.autoplaySpeed
+      autoplay: @options.autoplay.enabled
+      autoplaySpeed: @options.autoplay.speed
       centerMode: true
       centerPadding: '0px'
       dots: true
