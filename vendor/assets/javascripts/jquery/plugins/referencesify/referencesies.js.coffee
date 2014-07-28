@@ -117,6 +117,6 @@ class @Referencesies
 
     references = @references.find '.reference'
 
-    @references.on 'click', @onReferenceClick
+    references.on 'click', @onReferenceClick
 
     return
