@@ -51,9 +51,7 @@ class @Section
     return
 
   activate: ->
-    inactive = do @isInactive
-
-    if inactive
+    if do @inactive
       @section.velocity @options.activate.effect,
         easing: @options.activate.easing
         delay: @options.activate.delay
@@ -64,9 +62,7 @@ class @Section
     return
 
   deactivate: ->
-    active = do @isActive
-
-    if active
+    if do @active
       @section.velocity @options.deactivate.effect,
         easing: @options.deactivate.easing
         delay: @options.deactivate.delay
@@ -110,16 +106,33 @@ class @Section
 
     return
 
+  updatePointer: ->
+    if do @active
+      label = @pointer.data 'active-label'
+      title = @pointer.data 'active-title'
+
+      @pointer.addClass 'active'
+    else
+      label = @pointer.data 'label'
+      title = @pointer.data 'title'
+
+      @pointer.removeClass 'active'
+
+    @pointer.html label
+    @pointer.attr 'title', title
+
+    return
+
   states: ->
     Section.STATES
 
-  isActive: ->
+  active: ->
     @state == 'active'
 
-  isInactive: ->
+  inactive: ->
     @state == 'inactive'
 
-  isLocked: ->
+  locked: ->
     @state == 'locked'
 
   controls: ->
@@ -143,6 +156,8 @@ class @Section
 
     do @update
 
+    do @updatePointer
+
     return
 
   beforeDeactivate: (section) =>
@@ -160,6 +175,8 @@ class @Section
     @state = 'inactive'
 
     do @update
+
+    do @updatePointer
 
     return
 
