@@ -83,6 +83,17 @@ class @Referencesies
 
     return
 
+  onReferenceClick: (event) =>
+    reference = $ event.target
+
+    reference = reference.closest '.reference' if not reference.hasClass 'reference'
+
+    url = reference.data 'url'
+
+    window.open url, '_blank' if url
+
+    false
+
   # === Private ===
 
   initialize = ->
@@ -103,5 +114,9 @@ class @Referencesies
       onInit: @onInitialize
       onBeforeChange: @onBeforeChange
       onAfterChange: @onAfterChange
+
+    references = @references.find '.reference'
+
+    @references.on 'click', @onReferenceClick
 
     return
