@@ -12,7 +12,7 @@ class @Referencesies
       deactivate:
         mobileView:
           effect: 'fadeOut'
-          duration: 750
+          duration: 0
     debug: false
 
   # === Public ===
