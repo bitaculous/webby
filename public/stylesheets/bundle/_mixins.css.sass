@@ -44,6 +44,12 @@
     @if transition == true
       @include transition($property $transition-duration ease-in)
 
+@mixin text-decoration($color: #FFF)
+  border-bottom: 1px solid $color
+
+@mixin no-text-decoration
+  border-bottom: none
+
 @mixin hyphenate
   word-wrap: break-word
 
