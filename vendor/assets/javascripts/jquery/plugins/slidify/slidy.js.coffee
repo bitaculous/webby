@@ -8,6 +8,7 @@ class @Slidy
       speed: 7500
     shadify:
       inactive: true
+      randomColor: false
     debug: false
 
   # === Public ===

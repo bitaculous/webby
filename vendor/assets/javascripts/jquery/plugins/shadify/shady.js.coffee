@@ -40,8 +40,8 @@ class @Shady
       count: 2
       xyScalar: 1
       zOffset: 100
-      ambient: '#62A923'
-      diffuse: '#19876D'
+      ambient: '#AC4E90'
+      diffuse: '#D91A2D'
       speed: 0.001
       gravity: 1200
       dampening: 0.95
