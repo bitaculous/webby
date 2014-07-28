@@ -16,50 +16,57 @@ class @Referencesies
 
     return
 
+  activateReference: (reference) ->
+    reference = $ reference
+
+    responsive = reference.hasClass 'responsive'
+
+    if responsive
+      mobileView = reference.find '.mobile.view'
+
+      mobileView.velocity 'fadeIn', {
+        duration: 750
+      } if do mobileView.present
+
+    return
+
+  deactivateReference: (reference) ->
+    reference = $ reference
+
+    responsive = reference.hasClass 'responsive'
+
+    if responsive
+      mobileView = reference.find '.mobile.view'
+
+      mobileView.velocity 'fadeOut', {
+        duration: 150
+      } if do mobileView.present
+
+    return
+
   # === Events ===
 
-  onInitialize: (slick, foo) =>
+  onInitialize: (slick) =>
     references       = slick.$slides
     currentReference = $ references[0]
 
-    isResponsive = currentReference.hasClass 'responsive'
-
-    if isResponsive
-      mobileView = currentReference.find '.mobile.view'
-
-      mobileView.velocity 'fadeIn', {
-        duration: 1000
-      } if do mobileView.present
+    @activateReference currentReference
 
     return
 
-  onBeforeChange: (slick, index, next) ->
+  onBeforeChange: (slick, index, next) =>
     references       = slick.$slides
     currentReference = $ references[index]
 
-    isResponsive = currentReference.hasClass 'responsive'
-
-    if isResponsive
-      mobileView = currentReference.find '.mobile.view'
-
-      mobileView.velocity 'fadeOut', {
-        duration: 500
-      } if do mobileView.present
+    @deactivateReference currentReference
 
     return
 
-  onAfterChange: (slick, index) ->
+  onAfterChange: (slick, index) =>
     references       = slick.$slides
     currentReference = $ references[index]
 
-    isResponsive = currentReference.hasClass 'responsive'
-
-    if isResponsive
-      mobileView = currentReference.find '.mobile.view'
-
-      mobileView.velocity 'fadeIn', {
-        duration: 1000
-      } if do mobileView.present
+    @activateReference currentReference
 
     return
 
