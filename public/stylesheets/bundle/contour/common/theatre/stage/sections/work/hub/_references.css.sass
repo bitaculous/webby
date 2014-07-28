@@ -12,4 +12,29 @@
 
     .slick-prev,
     .slick-next
-      display: none !important
+      border: none
+      bottom: rem(34)
+      height: 41px
+      position: absolute
+      width: 41px
+
+      @include hide-text
+
+      &:focus
+        outline: 0
+
+    .slick-prev
+      background: transparent image-url('bundle/contour/common/theatre/stage/sections/work/hub/references/prev/background.png') no-repeat 0 0
+      left: 0
+
+      @include hidpi
+        background-image: image-url('bundle/contour/common/theatre/stage/sections/work/hub/references/prev/background_at_2x.png')
+        background-size: 41px 41px
+
+    .slick-next
+      background: transparent image-url('bundle/contour/common/theatre/stage/sections/work/hub/references/next/background.png') no-repeat 0 0
+      right: 0
+
+      @include hidpi
+        background-image: image-url('bundle/contour/common/theatre/stage/sections/work/hub/references/next/background_at_2x.png')
+        background-size: 41px 41px
