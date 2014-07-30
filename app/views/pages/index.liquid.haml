@@ -16,6 +16,8 @@ position: 1
   {% include 'head' %}
 
   %body{ id: '{{page.slug}}', class: 'default canvas' }
+    {% include 'top' %}
+
     .theatre
       {% block 'theatre' %}
 

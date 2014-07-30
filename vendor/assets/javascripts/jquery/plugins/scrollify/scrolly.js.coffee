@@ -9,6 +9,7 @@ class @Scrolly
 
   defaults:
     offsets:
+      top: -1
       sections: -1
     scrolling:
       duration: 1500
@@ -26,6 +27,8 @@ class @Scrolly
 
     @window = $ window
     @body   = $ 'body'
+
+    @top = @body.find '> .top'
 
     @stage    = @theatre.find '> .stage'
     @sections = @stage.find '> section'
@@ -100,6 +103,11 @@ class @Scrolly
 
     return
 
+  onTopEnter: (top, direction) =>
+    do @roof.badge.animate if direction is 'up'
+
+    return
+
   onSectionEnter: (section, direction) =>
     section = $ section
 
@@ -140,6 +148,11 @@ class @Scrolly
     return
 
   setupWaypoints = ->
+    @top.waypoint
+      handler: (direction) =>
+        @onTopEnter @top, direction
+      offset: @top.data 'offset' || @options.offsets.top
+
     @sections.each (index, section) =>
       section = $ section
       offset  = section.data 'offset'
