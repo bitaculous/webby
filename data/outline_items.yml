@@ -6,6 +6,7 @@
     description:
       en: "Home"
       de: "Home"
+    href: "#/home"
     target: "section.abstract"
     offset: "0"
 
@@ -17,6 +18,7 @@
     description:
       en: "About"
       de: "Über uns"
+    href: "#/about"
     target: "section.what-we-do"
     offset: "-85"
 
@@ -28,6 +30,7 @@
     description:
       en: "What we do"
       de: "Was wir machen"
+    href: "#/work"
     target: "section.work"
     offset: "-85"
 
@@ -39,5 +42,6 @@
     description:
       en: "Who we are"
       de: "Wer wir sind"
+    href: "#/team"
     target: "section.team"
     offset: "-85"

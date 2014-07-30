@@ -9,7 +9,7 @@
       {% if locale == default_locale %}
       %a{ href: '/', title: '{{locale | translate}}' } {{locale | translate}}
       {% else %}
-      %a{ href: '/{{locale}}', title: '{{locale | translate}}' } {{locale | translate}}
+      %a{ href: '/{{locale}}/', title: '{{locale | translate}}' } {{locale | translate}}
       {% endif %}
     {% endif %}
 

@@ -21,6 +21,11 @@ fields:
     required: true
     localized: true
     hint: "The description of the outline item."
+- href:
+    label: "Hypertext reference"
+    type: "string"
+    required: true
+    hint: "The hypertext reference of the outline item."
 - target:
     label: "Target"
     type: "string"

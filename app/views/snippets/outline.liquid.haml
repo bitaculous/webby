@@ -4,10 +4,12 @@
 
     {% assign identifier = item.identifier | downcase | dasherize %}
 
+    {% assign href = locale_path | append: item.href %}
+
     {% capture active %}{% if forloop.first %}active{% endif %}{% endcapture %}
 
     {% capture position %}{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}{% endcapture %}
 
     %li.item{ class: '{{identifier}} {{active}} {{position}}' }
-      %a{ href: '#', data: { target: '{{item.target}}', offset: '{{item.offset}}' }, title: '{{item.description}}' } {{item.title}}
+      %a{ href: '{{href}}', data: { target: '{{item.target}}', offset: '{{item.offset}}' }, title: '{{item.description}}' } {{item.title}}
     {% endfor %}

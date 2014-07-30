@@ -1,9 +1,9 @@
 %form.request{ action: '#', data: { public_submission_url: '{{contents.requests.public_submission_url | append: \'.json\'}}' }, method: 'post' }
   {% csrf_param %}
 
-  %input#success-callback.hidden{ name: 'success_callback', type: 'hidden', value: '{{base_path}}' }
+  %input#success-callback.hidden{ name: 'success_callback', type: 'hidden', value: '{{locale_path}}' }
 
-  %input#error-callback.hidden{ name: 'error_callback', type: 'hidden', value: '{{base_path}}' }
+  %input#error-callback.hidden{ name: 'error_callback', type: 'hidden', value: '{{locale_path}}' }
 
   .heading
     {% if locale == 'en' %}

@@ -1,6 +1,6 @@
 {% assign current_locale = locale %}
 
-{% capture base_path %}{%if locale == default_locale %}/{% else %}/{{locale}}{% endif %}{% endcapture %}
+{% capture locale_path %}{%if locale == default_locale %}/{% else %}/{{locale}}/{% endif %}{% endcapture %}
 
 {% with_scope title: 'Bitaculous' %}
 {% assign bitaculous = contents.business_cards.first %}

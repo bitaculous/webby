@@ -21,6 +21,7 @@ class @Scrolly
     @top = $ @options.top
 
     @window    = $ window
+    @body      = $ 'body'
     @roof      = @theatre.find '> .roof'
     @dashboard = @roof.find '> .dashboard'
     @badge     = @dashboard.find '.badge'
@@ -43,20 +44,19 @@ class @Scrolly
 
     return
 
-  scrollFromOutlineLink: (link) ->
+  scrollFromLink: (link) ->
     link = $ link
 
     if link.attr 'data-target'
       target = link.data 'target'
       offset = link.data 'offset'
 
-      if @scrollTo target, offset
-        return false
+      return @scrollTo target, offset
 
     true
 
   scrollTo: (target, offset = 0) ->
-    if @home
+    if @index
       target = $ target
 
       if do target.present
@@ -64,10 +64,20 @@ class @Scrolly
           offset: offset
           duration: @options.scrolling.duration
           easing: @options.scrolling.easing
+          complete: @onScrollComplete
 
-        return true
+        return false
 
-    false
+    true
+
+  updateLocationHash: (section) ->
+    section    = $ section
+    alias      = section.data 'alias'
+    identifier = section.data 'identifier'
+
+    window.location.hash = "/#{alias || identifier}"
+
+    return
 
   animateIcon: ->
     # @icon
@@ -84,10 +94,8 @@ class @Scrolly
 
     return
 
-  home: ->
-    pathname = window.location.pathname
-
-    if pathname is '/'
+  index: ->
+    if @body.attr 'id' is 'index'
       true
     else
       false
@@ -117,9 +125,14 @@ class @Scrolly
   onOutlineLinkClick: (event) =>
     link = $ event.target
 
-    @scrollFromOutlineLink link
+    @scrollFromLink link
 
-    false
+  onScrollComplete: (section) =>
+    section = $ section
+
+    @updateLocationHash section
+
+    return
 
   # === Private ===
 
