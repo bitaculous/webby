@@ -21,10 +21,7 @@
 $ ->
   # === Shared variables ===
 
-  html     = $ 'html'
-  top      = $ '.top'
-  theatre  = $ '.theatre'
-  stage    = theatre.find '> .stage'
+  theatre = $ '.theatre'
 
   # === FastClick ===
 
@@ -33,8 +30,7 @@ $ ->
   # === Theatre ===
 
   if do theatre.present
-    theatre.scrollify
-      top: top
+    do theatre.scrollify
 
     roof = theatre.find '> .roof'
 

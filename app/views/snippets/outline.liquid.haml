@@ -11,5 +11,5 @@
     {% capture position %}{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}{% endcapture %}
 
     %li.item{ class: '{{identifier}} {{active}} {{position}}' }
-      %a{ href: '{{href}}', data: { target: '{{item.target}}', offset: '{{item.offset}}' }, title: '{{item.description}}' } {{item.title}}
+      %a{ href: '{{href}}', data: { href: '{{item.href}}', target: '{{item.target}}', offset: '{{item.offset}}' }, title: '{{item.description}}' } {{item.title}}
     {% endfor %}

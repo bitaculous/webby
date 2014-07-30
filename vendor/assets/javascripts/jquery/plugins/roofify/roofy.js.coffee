@@ -1,5 +1,7 @@
 #= require ./roofy/section
 
+#= require_self
+
 class @Roofy
   # === Variables ===
 

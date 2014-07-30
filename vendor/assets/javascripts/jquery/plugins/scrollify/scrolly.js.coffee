@@ -1,15 +1,25 @@
+#= require ./scrolly/roof
+
+#= require_self
+
 class @Scrolly
   # === Variables ===
 
+  roof: null
+
   defaults:
-    breakPoints:
-      minimizeRoof: 40
+    roof:
+      breakPoints:
+        minimize: 40
     offsets:
       top: -1
       sections: 0
     scrolling:
       duration: 1500
       easing: 'easeInOutBack'
+      exclude: [
+        '#/home'
+      ]
     debug: false
 
   # === Public ===
@@ -18,42 +28,20 @@ class @Scrolly
     @theatre = $ theatre
     @options = $.extend @defaults, options
 
-    @top = $ @options.top
+    @window = $ window
+    @body   = $ 'body'
+    @top    = $ '.top'
 
-    @window    = $ window
-    @body      = $ 'body'
     @roof      = @theatre.find '> .roof'
     @dashboard = @roof.find '> .dashboard'
-    @badge     = @dashboard.find '.badge'
-    @icon      = @badge.find '> .icon'
     @outline   = @dashboard.find '.outline'
-    @stage     = @theatre.find '> .stage'
-    @sections  = @stage.find '> section'
+
+    @stage    = @theatre.find '> .stage'
+    @sections = @stage.find '> section'
 
     initialize.call @
 
     return
-
-  updateRoof: ->
-    scrollTop = do @window.scrollTop
-
-    if scrollTop > @options.breakPoints.minimizeRoof
-      minimizeRoof.call @
-    else
-      expandRoof.call @
-
-    return
-
-  scrollFromLink: (link) ->
-    link = $ link
-
-    if link.attr 'data-target'
-      target = link.data 'target'
-      offset = link.data 'offset'
-
-      return @scrollTo target, offset
-
-    true
 
   scrollTo: (target, offset = 0) ->
     if @index
@@ -70,6 +58,29 @@ class @Scrolly
 
     true
 
+  scrollFromOutlineLink: (link) ->
+    link = $ link
+
+    if link.attr 'data-target'
+      target = link.data 'target'
+      offset = link.data 'offset'
+
+      return @scrollTo target, offset
+
+    true
+
+  scrollToLocationHash: ->
+    if window.location.hash
+      hash     = window.location.hash
+      excluded = $.inArray(hash, @options.scrolling.exclude) > -1
+
+      if not excluded
+        link = @findOutlineLink hash
+
+        @scrollFromOutlineLink link if link
+
+    return
+
   updateLocationHash: (section) ->
     section    = $ section
     alias      = section.data 'alias'
@@ -79,20 +90,11 @@ class @Scrolly
 
     return
 
-  animateIcon: ->
-    # @icon
-    # .velocity
-    #   rotateZ: '-360deg'
-    # ,
-    #   duration: 1000
-    #   easing: 'easeInOutBack'
-    # .velocity
-    #   rotateZ: '360deg'
-    # ,
-    #   duration: 1000
-    #   easing: 'easeInOutBack'
+  findOutlineItem: (identifier) ->
+    @outline.find "li.#{identifier}"
 
-    return
+  findOutlineLink: (hash) ->
+    @outline.find "a[data-href='#{hash}']"
 
   index: ->
     if @body.attr 'id' is 'index'
@@ -104,18 +106,20 @@ class @Scrolly
 
   onWindowLoad: (event) =>
     setTimeout =>
-      do @updateRoof
+      do @scrollToLocationHash
+
+      do @roof.update
     , 1
 
     return
 
   onWindowScroll: (event) =>
-    do @updateRoof
+    do @roof.update
 
     return
 
   onTopEnter: (top, direction) =>
-    do @animateIcon if direction is 'up'
+    do @roof.badge.animate if direction is 'up'
 
     return
 
@@ -125,7 +129,7 @@ class @Scrolly
   onOutlineLinkClick: (event) =>
     link = $ event.target
 
-    @scrollFromLink link
+    @scrollFromOutlineLink link
 
   onScrollComplete: (section) =>
     section = $ section
@@ -139,6 +143,8 @@ class @Scrolly
   initialize = ->
     setupWindow.call @
 
+    setupRoof.call @
+
     setupOutline.call @
 
     setupWaypoints.call @
@@ -149,6 +155,13 @@ class @Scrolly
     @window.on 'load', @onWindowLoad
 
     @window.on 'scroll', @onWindowScroll
+
+    return
+
+  setupRoof = ->
+    roof = @theatre.find '> .roof'
+
+    @roof = new Roof roof, @options.roof
 
     return
 
@@ -175,15 +188,5 @@ class @Scrolly
         offset: offset || @options.offsets.sections
 
       return
-
-    return
-
-  minimizeRoof = ->
-    @roof.addClass 'slim'
-
-    return
-
-  expandRoof = ->
-    @roof.removeClass 'slim'
 
     return
