@@ -46,7 +46,6 @@ class @Scrolly
           offset: offset
           duration: @options.scrolling.duration
           easing: @options.scrolling.easing
-          complete: @onScrollComplete
 
         return false
 
@@ -69,6 +68,8 @@ class @Scrolly
     alias   = section.data 'alias'
 
     @roof.outline.activateItemById alias || id
+
+    @updateLocationHash section
 
     return
 
@@ -112,13 +113,6 @@ class @Scrolly
     section = $ section
 
     @activateSection section
-
-    return
-
-  onScrollComplete: (section) =>
-    section = $ section
-
-    @updateLocationHash section
 
     return
 

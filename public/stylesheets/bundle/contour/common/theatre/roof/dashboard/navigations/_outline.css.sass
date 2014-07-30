@@ -7,19 +7,22 @@
 @mixin outline
   &.outline
     font-size: ms(-1.25)
-    padding: 0 0 rem(10)
+    padding: 0 0 rem(15)
 
     ul.items
       li.item
-        background-image: image-url('bundle/contour/common/theatre/roof/dashboard/navigations/outline/items/item/normal.png')
         margin: 0 rem(2) 0 0
-        padding: rem(5) rem(8)
 
-        &.last
-          margin: 0
+        a
+          background: transparent image-url('bundle/contour/common/theatre/roof/dashboard/navigations/outline/items/item/a/background.png') repeat center center
+          padding: rem(5) rem(8)
+
+          @include smoothy
 
         &:hover,
         &.active
-          background-image: image-url('bundle/contour/common/theatre/roof/dashboard/navigations/outline/items/item/active.png')
+          a
+            background-image: image-url('bundle/contour/common/theatre/roof/dashboard/navigations/outline/items/item/active/a/background.png')
 
-        @include smoothy
+        &.last
+          margin: 0
