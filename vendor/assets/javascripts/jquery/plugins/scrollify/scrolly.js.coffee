@@ -32,10 +32,6 @@ class @Scrolly
     @body   = $ 'body'
     @top    = $ '.top'
 
-    @roof      = @theatre.find '> .roof'
-    @dashboard = @roof.find '> .dashboard'
-    @outline   = @dashboard.find '.outline'
-
     @stage    = @theatre.find '> .stage'
     @sections = @stage.find '> section'
 
@@ -58,26 +54,19 @@ class @Scrolly
 
     true
 
-  scrollFromOutlineLink: (link) ->
-    link = $ link
-
-    if link.attr 'data-target'
-      target = link.data 'target'
-      offset = link.data 'offset'
-
-      return @scrollTo target, offset
-
-    true
-
-  scrollToLocationHash: ->
-    if window.location.hash
-      hash     = window.location.hash
+  scrollByHash: (hash) ->
+    if hash
       excluded = $.inArray(hash, @options.scrolling.exclude) > -1
 
       if not excluded
-        link = @findOutlineLink hash
+        data = @roof.outline.getScrollDataByHash hash
 
-        @scrollFromOutlineLink link if link
+        @scrollTo data.target, data.offset
+
+    return
+
+  scrollToLocationHash: ->
+    @scrollByHash window.location.hash
 
     return
 
@@ -89,12 +78,6 @@ class @Scrolly
     window.location.hash = "/#{alias || identifier}"
 
     return
-
-  findOutlineItem: (identifier) ->
-    @outline.find "li.#{identifier}"
-
-  findOutlineLink: (hash) ->
-    @outline.find "a[data-href='#{hash}']"
 
   index: ->
     if @body.attr 'id' is 'index'
@@ -126,11 +109,6 @@ class @Scrolly
   onSectionEnter: (section, direction) =>
     return
 
-  onOutlineLinkClick: (event) =>
-    link = $ event.target
-
-    @scrollFromOutlineLink link
-
   onScrollComplete: (section) =>
     section = $ section
 
@@ -144,8 +122,6 @@ class @Scrolly
     setupWindow.call @
 
     setupRoof.call @
-
-    setupOutline.call @
 
     setupWaypoints.call @
 
@@ -161,14 +137,7 @@ class @Scrolly
   setupRoof = ->
     roof = @theatre.find '> .roof'
 
-    @roof = new Roof roof, @options.roof
-
-    return
-
-  setupOutline = ->
-    links = @outline.find 'a'
-
-    links.on 'click', @onOutlineLinkClick
+    @roof = new Roof roof, @, @options.roof
 
     return
 

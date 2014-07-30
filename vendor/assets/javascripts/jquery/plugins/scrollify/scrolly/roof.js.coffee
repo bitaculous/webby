@@ -1,4 +1,5 @@
 #= require ./roof/badge
+#= require ./roof/outline
 
 #= require_self
 
@@ -7,6 +8,8 @@ class @Roof
 
   badge: null
 
+  outline: null
+
   defaults:
     breakPoints:
       minimize: 40
@@ -14,8 +17,9 @@ class @Roof
 
   # === Public ===
 
-  constructor: (roof, options) ->
+  constructor: (roof, scrolly, options) ->
     @roof    = $ roof
+    @scrolly = scrolly
     @options = $.extend @defaults, options
 
     @window = $ window
@@ -49,11 +53,20 @@ class @Roof
   initialize = ->
     setupBadge.call @
 
+    setupOutline.call @
+
     return
 
   setupBadge = ->
     badge = @roof.find '.badge'
 
-    @badge = new Badge badge
+    @badge = new Badge badge, @scrolly
+
+    return
+
+  setupOutline = ->
+    outline = @roof.find 'nav.outline'
+
+    @outline = new Outline outline, @scrolly
 
     return

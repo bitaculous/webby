@@ -6,8 +6,9 @@ class @Badge
 
   # === Public ===
 
-  constructor: (badge, options) ->
+  constructor: (badge, scrolly, options) ->
     @badge   = $ badge
+    @scrolly = scrolly
     @options = $.extend @defaults, options
 
     @icon = @badge.find '> .icon'
