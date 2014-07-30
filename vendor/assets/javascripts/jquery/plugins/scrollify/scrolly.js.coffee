@@ -65,11 +65,6 @@ class @Scrolly
 
     return
 
-  scrollToLocationHash: ->
-    @scrollByHash window.location.hash
-
-    return
-
   updateLocationHash: (section) ->
     section    = $ section
     alias      = section.data 'alias'
@@ -89,7 +84,7 @@ class @Scrolly
 
   onWindowLoad: (event) =>
     setTimeout =>
-      do @scrollToLocationHash
+      @scrollByHash window.location.hash
 
       do @roof.update
     , 1
