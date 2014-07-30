@@ -29,7 +29,8 @@ class @Roofy
     @roof    = $ roof
     @options = $.extend @defaults, options
 
-    @body         = $ 'body'
+    @body = $ 'body'
+
     @backstage    = @roof.find '> .backstage'
     @dashboard    = @roof.find '> .dashboard'
     @controlPanel = @dashboard.find '.control-panel'
@@ -37,7 +38,7 @@ class @Roofy
     sections = @backstage.find '> section'
 
     sections.each (index, section) =>
-      @sections += new Section section, @dashboard, @options.section
+      @sections += new Section section, @, @options.section
 
       return
 

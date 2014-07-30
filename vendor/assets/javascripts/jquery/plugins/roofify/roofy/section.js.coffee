@@ -16,18 +16,15 @@ class @Section
 
   # === Public ===
 
-  constructor: (section, dashboard, options) ->
-    @section   = $ section
-    @dashboard = $ dashboard
-    @options   = $.extend @defaults, options
+  constructor: (section, roofy, options) ->
+    @section = $ section
+    @roofy   = roofy
+    @options = $.extend @defaults, options
 
-    @id = @section.data 'id'
-
-    controlPanel = @dashboard.find '.control-panel'
-
-    @pointer = controlPanel.find "> a.control[data-id='#{@id}']"
-
-    @close = @section.find 'a.close'
+    @id        = @section.data 'id'
+    @backstage = @roofy.backstage
+    @pointer   = @roofy.controlPanel.find "> a.control[data-id='#{@id}']"
+    @close     = @section.find 'a.close'
 
     initialize.call @
 
@@ -69,6 +66,18 @@ class @Section
         duration: @options.deactivate.duration
         begin: @beforeDeactivate
         complete: @onDeactivate
+
+    return
+
+  enableBackstage: ->
+    @backstage.css
+      'overflow': 'scroll'
+
+    return
+
+  disableBackstage: ->
+    @backstage.css
+      'overflow': 'hidden'
 
     return
 
@@ -141,42 +150,46 @@ class @Section
   # === Events ===
 
   beforeActivate: (section) =>
-    do @lockControls
-
     @state = 'locked'
+
+    do @lockControls
 
     do @update
 
     return
 
   onActivate: (section) =>
-    do @unlockControls
-
     @state = 'active'
+
+    do @enableBackstage
+
+    do @updatePointer
 
     do @update
 
-    do @updatePointer
+    do @unlockControls
 
     return
 
   beforeDeactivate: (section) =>
-    do @lockControls
-
     @state = 'locked'
+
+    do @lockControls
 
     do @update
 
     return
 
   onDeactivate: (section) =>
-    do @unlockControls
-
     @state = 'inactive'
+
+    do @disableBackstage
+
+    do @updatePointer
 
     do @update
 
-    do @updatePointer
+    do @unlockControls
 
     return
 

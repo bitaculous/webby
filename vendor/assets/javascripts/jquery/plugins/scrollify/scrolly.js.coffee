@@ -68,10 +68,10 @@ class @Scrolly
     id      = section.data 'id'
     alias   = section.data 'alias'
 
-    if alias || id
-      @roof.outline.activateItemById alias || id
+    if alias or id
+      @roof.outline.activateItemById alias or id
 
-      @updateLocationHash alias || id
+      @updateLocationHash alias or id
 
     return
 
@@ -146,7 +146,7 @@ class @Scrolly
     @top.waypoint
       handler: (direction) =>
         @onTopEnter @top, direction
-      offset: @top.data 'offset' || @options.offsets.top
+      offset: @top.data 'offset' or @options.offsets.top
 
     @sections.each (index, section) =>
       section = $ section
@@ -155,7 +155,7 @@ class @Scrolly
       section.waypoint
         handler: (direction) =>
           @onSectionEnter section, direction
-        offset: offset || @options.offsets.sections
+        offset: offset or @options.offsets.sections
 
       return
 
