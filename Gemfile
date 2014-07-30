@@ -25,7 +25,7 @@ group :misc do
     group :stylesheets do
       gem 'bourbon', '~> 4.0.2'
 
-      gem 'breakpoint', '~> 2.4.2'
+      gem 'breakpoint', '~> 2.4.6'
 
       gem 'compass', '~> 1.0.0.alpha.21'
       # gem 'compass', github: 'compass/compass', branch: 'master'
