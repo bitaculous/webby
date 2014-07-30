@@ -46,6 +46,7 @@ class @Scrolly
           offset: offset
           duration: @options.scrolling.duration
           easing: @options.scrolling.easing
+          complete: @onScrollComplete
 
         return false
 
@@ -67,18 +68,15 @@ class @Scrolly
     id      = section.data 'id'
     alias   = section.data 'alias'
 
-    @roof.outline.activateItemById alias || id
+    if alias || id
+      @roof.outline.activateItemById alias || id
 
-    @updateLocationHash section
+      @updateLocationHash alias || id
 
     return
 
-  updateLocationHash: (section) ->
-    section = $ section
-    id      = section.data 'id'
-    alias   = section.data 'alias'
-
-    window.location.hash = "/#{alias || id}"
+  updateLocationHash: (id) ->
+    window.location.hash = "/#{id}" if id
 
     return
 
@@ -110,8 +108,11 @@ class @Scrolly
     return
 
   onSectionEnter: (section, direction) =>
-    section = $ section
+    @activateSection section
 
+    return
+
+  onScrollComplete: (section) =>
     @activateSection section
 
     return
