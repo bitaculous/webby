@@ -60,13 +60,13 @@ class @Roof
   setupBadge = ->
     badge = @roof.find '.badge'
 
-    @badge = new Badge badge, @scrolly
+    @badge = new Badge badge, @scrolly, @options.badge
 
     return
 
   setupOutline = ->
     outline = @roof.find 'nav.outline'
 
-    @outline = new Outline outline, @scrolly
+    @outline = new Outline outline, @scrolly, @options.outline
 
     return

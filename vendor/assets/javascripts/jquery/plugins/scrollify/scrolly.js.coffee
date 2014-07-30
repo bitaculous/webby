@@ -8,12 +8,8 @@ class @Scrolly
   roof: null
 
   defaults:
-    roof:
-      breakPoints:
-        minimize: 40
     offsets:
-      top: -1
-      sections: 0
+      sections: -1
     scrolling:
       duration: 1500
       easing: 'easeInOutBack'
@@ -30,7 +26,6 @@ class @Scrolly
 
     @window = $ window
     @body   = $ 'body'
-    @top    = $ '.top'
 
     @stage    = @theatre.find '> .stage'
     @sections = @stage.find '> section'
@@ -65,12 +60,21 @@ class @Scrolly
 
     return
 
-  updateLocationHash: (section) ->
-    section    = $ section
-    alias      = section.data 'alias'
-    identifier = section.data 'identifier'
+  activateSection: (section) ->
+    section = $ section
+    id      = section.data 'id'
+    alias   = section.data 'alias'
 
-    window.location.hash = "/#{alias || identifier}"
+    @roof.outline.activateItemById alias || id
+
+    return
+
+  updateLocationHash: (section) ->
+    section = $ section
+    id      = section.data 'id'
+    alias   = section.data 'alias'
+
+    window.location.hash = "/#{alias || id}"
 
     return
 
@@ -96,12 +100,11 @@ class @Scrolly
 
     return
 
-  onTopEnter: (top, direction) =>
-    do @roof.badge.animate if direction is 'up'
-
-    return
-
   onSectionEnter: (section, direction) =>
+    section = $ section
+
+    @activateSection section
+
     return
 
   onScrollComplete: (section) =>
@@ -137,11 +140,6 @@ class @Scrolly
     return
 
   setupWaypoints = ->
-    @top.waypoint
-      handler: (direction) =>
-        @onTopEnter @top, direction
-      offset: @options.offsets.top
-
     @sections.each (index, section) =>
       section = $ section
       offset  = section.data 'offset'

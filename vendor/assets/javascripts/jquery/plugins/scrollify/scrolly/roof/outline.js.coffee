@@ -11,9 +11,20 @@ class @Outline
     @scrolly = scrolly
     @options = $.extend @defaults, options
 
+    @items = @outline.find 'li.item'
     @links = @outline.find 'a'
 
     initialize.call @
+
+    return
+
+  activateItemById: (id) ->
+    item = @findItemById id
+
+    if item
+      resetItems.call @
+
+      item.addClass 'active'
 
     return
 
@@ -59,5 +70,12 @@ class @Outline
 
   setupLinks = ->
     @links.on 'click', @onLinkClick
+
+    return
+
+  resetItems = ->
+    activeItems = @outline.find 'li.active'
+
+    activeItems.removeClass 'active'
 
     return

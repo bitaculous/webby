@@ -16,8 +16,6 @@ position: 1
   {% include 'head' %}
 
   %body{ id: '{{page.slug}}', class: 'default canvas' }
-    {% include 'top' %}
-
     .theatre
       {% block 'theatre' %}
 
@@ -26,7 +24,7 @@ position: 1
       %main.stage{ role: 'main' }
         {% block 'stage' %}
 
-        %section.abstract.first{ data: { identifier: 'abstract', alias: 'home', offset: '0' } }
+        %section.abstract.first{ data: { id: 'abstract', alias: 'home', offset: '-1' } }
           {% block 'abstract' %}
 
           {% include 'shady' %}
@@ -58,7 +56,7 @@ position: 1
           {% endblock %}
           -# Block `abstract`
 
-        %section.what-we-do{ data: { identifier: 'what_we_do', alias: 'about', offset: '0' } }
+        %section.what-we-do{ data: { id: 'what_we_do', alias: 'about', offset: '112' } }
           {% block 'what_we_do' %}
 
           {% include 'flap' %}
@@ -176,7 +174,7 @@ position: 1
           {% endblock %}
           -# Block `what_we_do`
 
-        %section.work{ data: { identifier: 'work', offset: '0' } }
+        %section.work{ data: { id: 'work', offset: '112' } }
           {% block 'work' %}
 
           {% include 'flap' %}
@@ -199,7 +197,7 @@ position: 1
           {% endblock %}
           -# Block `work`
 
-        %section.team.last{ data: { identifier: 'team', offset: '0' } }
+        %section.team.last{ data: { id: 'team', offset: '112' } }
           {% block 'team' %}
 
           {% include 'flap' %}
