@@ -21,9 +21,10 @@ class @Section
     @roofy   = roofy
     @options = $.extend @defaults, options
 
-    @id        = @section.data 'id'
+    id = @section.data 'id'
+
     @backstage = @roofy.backstage
-    @pointer   = @roofy.controlPanel.find "> a.control[data-id='#{@id}']"
+    @pointer   = @roofy.controlPanel.find "> a.control[data-id='#{id}']"
     @close     = @section.find 'a.close'
 
     initialize.call @
