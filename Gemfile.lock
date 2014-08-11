@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/bitaculous/assetify.git
-  revision: 5817af9f7d8023a3ae445008923f59a50983a715
+  revision: ad0acdb88323ac228b8c51ecb3346858131c44a0
   specs:
-    assetify (0.9.0)
-      sass (>= 3.2)
+    assetify (0.11.1)
+      bourbon (~> 4.0.2)
       sprockets (~> 2.12.1)
 
 GIT
@@ -100,17 +100,17 @@ GEM
     coffee-script-source (1.7.1)
     colorize (0.5.8)
     commonjs (0.2.7)
-    compass (1.0.0.alpha.21)
+    compass (1.0.0.rc.1)
       chunky_png (~> 1.2)
-      compass-core (~> 1.0.0.alpha.21)
-      compass-import-once (~> 1.0.4)
+      compass-core (~> 1.0.0.rc.1)
+      compass-import-once (~> 1.0.5)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
-      sass (>= 3.3.0, < 3.5)
-    compass-core (1.0.0.alpha.21)
+      sass (>= 3.3.13, < 3.5)
+    compass-core (1.0.0.rc.1)
       multi_json (~> 1.0)
       sass (>= 3.3.0, < 3.5)
-    compass-import-once (1.0.4)
+    compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
     daemons (1.1.9)
     dragonfly (0.9.15)
@@ -137,7 +137,7 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (0.6.11)
     json (1.8.1)
-    kramdown (1.4.0)
+    kramdown (1.4.1)
     less (2.2.2)
       commonjs (~> 0.2.6)
     listen (2.4.1)
@@ -162,7 +162,7 @@ GEM
       ffi (>= 0.5.0)
     redcarpet (3.0.0)
     rubyzip (1.1.6)
-    sass (3.3.12)
+    sass (3.3.14)
     sassy-maps (0.4.0)
       sass (~> 3.3)
     sprockets (2.12.1)
@@ -183,7 +183,7 @@ GEM
     thor (0.19.1)
     tilt (1.4.1)
     timers (1.1.0)
-    tzinfo (0.3.40)
+    tzinfo (0.3.41)
     will_paginate (3.0.7)
     zip (2.0.2)
 
@@ -194,10 +194,10 @@ DEPENDENCIES
   assetify!
   bourbon (~> 4.0.2)
   breakpoint (~> 2.4.6)
-  compass (~> 1.0.0.alpha.21)
+  compass (~> 1.0.0.rc.1)
   hogan_assets (~> 1.6.0)
   initializify!
-  kramdown (~> 1.4)
+  kramdown (~> 1.4.1)
   liquids!
   locomotivecms_mounter!
   locomotivecms_wagon!

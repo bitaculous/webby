@@ -16,13 +16,13 @@ Installation
 Usage
 -----
 
-Serve webby from local file system:
+Serve Webby from local file system:
 
 ```shell
 $ wagon serve
 ```
 
-Push webby to remote LocomotiveCMS engine:
+Push Webby to remote LocomotiveCMS engine:
 
 ```shell
 $ wagon push <ENV>

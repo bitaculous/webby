@@ -4,20 +4,6 @@
 // @media all
 // @version 1.0
 
-@mixin font-smoothing($value: on)
-  @if $value == on
-    -moz-osx-font-smoothing: grayscale
-    -webkit-font-smoothing: antialiased
-  @else
-    -moz-osx-font-smoothing: auto
-    -webkit-font-smoothing: subpixel-antialiased
-
-@mixin vertical-align($top: 50%)
-  position: relative
-  top: $top
-
-  @include transform(translateY(-$top))
-
 @mixin smoothy($element: false, $property: background-image, $transition-duration: 0.5s)
   @if $element == false
     @include transition($property $transition-duration ease-out)
@@ -49,8 +35,3 @@
 
 @mixin no-text-decoration
   border-bottom: none
-
-@mixin hyphenate
-  word-wrap: break-word
-
-  @include hyphens(auto)

@@ -27,7 +27,7 @@ group :misc do
 
       gem 'breakpoint', '~> 2.4.6'
 
-      gem 'compass', '~> 1.0.0.alpha.21'
+      gem 'compass', '~> 1.0.0.rc.1'
       # gem 'compass', github: 'compass/compass', branch: 'master'
 
       gem 'modular-scale', '~> 2.0.5'
@@ -43,7 +43,7 @@ group :misc do
   end
 
   group :templating do
-    gem 'kramdown', '~> 1.4'
+    gem 'kramdown', '~> 1.4.1'
   end
 
   gem 'initializify', github: 'bitaculous/initializify'
