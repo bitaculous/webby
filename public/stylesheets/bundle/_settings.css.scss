@@ -22,3 +22,61 @@ $susy: (
   output: float,
   gutter-position: inside
 );
+
+// Contour
+// =======
+
+$contour: (
+  min-width: 320px,
+
+  common: (
+    elements: (
+      h1: (
+        margin: 0 0 rem(12)
+      ),
+
+      h2: (
+        margin: 0 0 rem(14)
+      ),
+
+      h3: (
+        margin: 0 0 rem(16)
+      ),
+
+      h4: (
+        margin: 0 0 rem(18)
+      ),
+
+      h5: (
+        margin: 0 0 rem(20)
+      ),
+
+      h6: (
+        margin: 0 0 rem(22)
+      ),
+
+      i: (
+        font-size: ms(1.5)
+      )
+    )
+  )
+);
+
+// Media
+// =====
+
+$media: (
+  screen: (
+    small: (
+      min-width: 480px
+    ),
+
+    medium: (
+      min-width: 1024px
+    ),
+
+    large: (
+      min-width: 1680px
+    )
+  )
+);
