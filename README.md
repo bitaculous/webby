@@ -83,13 +83,21 @@ Webby uses the following assets:
 
 ### Fonts
 
-* [Nexa font]
 * [Font Awesome]
+* [Nexa]
 
 License
 -------
 
 Webby is released under the [MIT License (MIT)], see [LICENSE].
+
+### Font Awesome
+
+This font is released under the [SIL Open Font License (OFL)].
+
+### Nexa
+
+This font is free for personal use only and copyright protected under [The Fontspring Webfont End User License Agreement].
 
 [Assetify]: http://bitaculous.github.io/assetify "“All your assets are belong to us”"
 [Breakpoint]: https://github.com/Team-Sass/breakpoint, "Really simple media queries in Sass"
@@ -112,11 +120,13 @@ Webby is released under the [MIT License (MIT)], see [LICENSE].
 [MIT License (MIT)]: http://opensource.org/licenses/MIT "The MIT License (MIT)"
 [Modernizr]: http://modernizr.com "Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the user’s browser."
 [Modular Scale]: https://github.com/Team-Sass/modular-scale "Modular scale calculator built into your Sass"
-[Nexa font]: http://fontfabric.com/nexa-font "Nexa font"
+[Nexa]: http://www.fontspring.com/fonts/fontfabric/nexa "Nexa"
 [normalize.css]: http://necolas.github.io/normalize.css "normalize.css"
 [Sassy Maps]: https://github.com/Team-Sass/Sassy-Maps "Map helper functions for Sass 3.3 and up"
+[SIL Open Font License (OFL)]: http://scripts.sil.org/OFL "SIL Open Font License (OFL)"
 [Slick]: http://kenwheeler.github.io/slick "The last carousel you'll ever need."
 [Susy]: http://susy.oddbird.net "Susy is a toolkit for building layouts of all types with a simple, natural syntax."
+[The Fontspring Webfont End User License Agreement]: http://www.fontspring.com/lic/lv4e5lv2k2 "The Fontspring Webfont End User License Agreement"
 [Validation Plugin]: http://jqueryvalidation.org "Form validation made easy."
 [Velocity]: http://velocityjs.org "Accelerated JavaScript animation."
 [Vendorify]: http://bitaculous.github.io/vendorify, "Put your vendor assets where they belong."
