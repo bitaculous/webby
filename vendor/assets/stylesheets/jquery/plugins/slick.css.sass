@@ -90,6 +90,9 @@ $slick-loading-image-url: image-url('vendor/jquery/plugins/slick/loading.gif') !
     height: 100%
     min-height: 1px
 
+    [dir='rtl'] &
+      float: right
+
     img
       display: block
 
@@ -155,14 +158,28 @@ $slick-loading-image-url: image-url('vendor/jquery/plugins/slick/loading.gif') !
   .slick-prev
     left: -25px
 
+    [dir='rtl'] &
+      left: auto
+      right: -25px
+
     &:before
       content: $slick-prev-character
+
+      [dir='rtl'] &
+        content: $slick-next-character
 
   .slick-next
     right: -25px
 
+    [dir='rtl'] &
+      left: -25px
+      right: auto
+
     &:before
       content: $slick-next-character
+
+      [dir='rtl'] &
+        content: $slick-prev-character
 
 @mixin slick-dots
   .slick-dots
