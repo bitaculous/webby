@@ -7,7 +7,7 @@
 @mixin controls
   a.control
     display: inline-block
-    font-family: $font-family-navigation
+    font-family: map-get-deep($defaults, font-families, navigation)
     font-size: ms(-1.25)
     text-align: center
     text-transform: uppercase
@@ -16,7 +16,7 @@
       color: #555
 
     &.active
-      font-family: $font-family-heavy
+      font-family: map-get-deep($defaults, font-families, heavy)
       font-size: ms(0)
 
     @include lockify($transition: false)

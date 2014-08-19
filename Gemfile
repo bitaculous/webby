@@ -23,12 +23,10 @@ group :misc do
     gem 'assetify', github: 'bitaculous/assetify'
 
     group :stylesheets do
-      gem 'bourbon', '~> 4.0.2'
-
       gem 'breakpoint', '~> 2.5.0'
 
-      gem 'compass', '~> 1.0.0.rc.1'
-      # gem 'compass', github: 'compass/compass', branch: 'master'
+      gem 'compass', '~> 1.0.0'
+      # gem 'compass', github: 'compass/compass', branch: 'stable'
 
       gem 'modular-scale', '~> 2.0.5'
 

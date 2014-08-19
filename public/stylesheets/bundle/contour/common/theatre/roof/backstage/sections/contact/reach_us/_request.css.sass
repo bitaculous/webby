@@ -10,7 +10,7 @@
     > .success,
     > .failure,
     > .error
-      font-family: $font-family-bold
+      font-family: map-get-deep($defaults, font-families, bold)
 
     .field
       &.submit
@@ -33,7 +33,7 @@
     a.submit
       background: #24D2DB
       color: #FFF
-      font-family: $font-family-bold
+      font-family: map-get-deep($defaults, font-families, bold)
       padding: rem(5)
       position: absolute
       right: 0
