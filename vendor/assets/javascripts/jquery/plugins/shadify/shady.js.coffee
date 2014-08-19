@@ -12,6 +12,8 @@ class @Shady
   defaults:
     inactive: false
     colors: [
+      ['#00477A', '#00707A']
+      ['#A22644', '#D24044']
       ['#62A923', '#19876D']
       ['#0C74A7', '#1685B6']
       ['#AC4E90', '#D91A2D']
@@ -40,8 +42,8 @@ class @Shady
       count: 2
       xyScalar: 1
       zOffset: 100
-      ambient: '#AC4E90'
-      diffuse: '#D91A2D'
+      ambient: '#00477A'
+      diffuse: '#00707A'
       speed: 0.001
       gravity: 1200
       dampening: 0.95
@@ -293,14 +295,17 @@ class @Shady
         @center    = do FSS.Vector3.create
         @attractor = do FSS.Vector3.create
 
-        if @options.randomColor
-          color = getRandomColor.call @
+        color = @options.colors[0]
 
-          ambient = color[0]
-          @rendering.light.ambient = ambient if ambient
+        color = getRandomColor.call @ if @options.randomColor
 
-          diffuse = color[1]
-          @rendering.light.diffuse = diffuse if diffuse
+        ambient = color[0]
+
+        @rendering.light.ambient = ambient if ambient
+
+        diffuse = color[1]
+
+        @rendering.light.diffuse = diffuse if diffuse
 
         createRenderer.call @
 
