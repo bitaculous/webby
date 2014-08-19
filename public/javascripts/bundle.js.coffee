@@ -57,7 +57,10 @@ $ ->
         slider = abstract.find '> .slider'
 
         slider.slidify {
-          shady: shady
+          shady: shady,
+          shadify:
+            inactive: true
+            randomColor: true
         } if do slider.present
 
       work = stage.find '> .work'

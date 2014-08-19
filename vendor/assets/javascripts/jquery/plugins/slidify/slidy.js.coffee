@@ -6,8 +6,6 @@ class @Slidy
     autoplay:
       enabled: true
       speed: 7500
-    shadify:
-      inactive: false
     debug: false
 
   # === Public ===
