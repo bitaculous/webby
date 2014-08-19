@@ -50,19 +50,20 @@ Webby uses the following assets:
 
 * [Flat Surface Shader (FSS)]
 * [Modernizr]
+* [jQuery]
 
-#### Polyfills
-
-* [Console]
-* [FastClick]
-
-#### [jQuery]
+#### jQuery Plugins
 
 * [i18n]
 * [Slick]
 * [Validation Plugin]
 * [Velocity]
 * [Waypoints]
+
+#### Polyfills
+
+* [Console]
+* [FastClick]
 
 ### Fonts
 
