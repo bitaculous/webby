@@ -1,6 +1,6 @@
 # This is the manifest for `scrollify.js`.
 
-#= require ./waypoints
+#= require jquery/plugins/waypoints
 
 #= require ./scrollify/scrolly
 #= require ./scrollify/plugin
