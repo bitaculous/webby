@@ -56,19 +56,19 @@ Credits
 * [Susy]
 * [Vendorify]
 
-Webby uses the following assets:
+### Webby uses the following assets:
 
-### CSS
+#### CSS
 
 * [normalize.css]
 
-### JavaScript
+#### JavaScript
 
 * [Flat Surface Shader (FSS)]
 * [Modernizr]
 * [jQuery]
 
-#### jQuery Plugins
+##### jQuery Plugins
 
 * [i18n]
 * [Slick]
@@ -76,12 +76,12 @@ Webby uses the following assets:
 * [Velocity]
 * [Waypoints]
 
-#### Polyfills
+##### Polyfills
 
 * [Console]
 * [FastClick]
 
-### Fonts
+#### Fonts
 
 * [Font Awesome]
 * [Nexa]
