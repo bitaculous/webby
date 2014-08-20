@@ -1,0 +1,22 @@
+// _stage.css.sass
+//
+// @package bundle/media/screen/medium/common/theatre
+
+@import stage/sections/abstract
+@import stage/sections/what_we_do
+@import stage/sections/work
+@import stage/sections/team
+@import stage/sections/content
+
+@mixin stage
+  .stage
+    section
+      @include abstract
+
+      @include what-we-do
+
+      @include work
+
+      @include team
+
+      @include content
