@@ -1,27 +1,6 @@
 .references.slick-slider
   {% for reference in contents.references %}
 
-  {% assign identifier = reference.identifier | downcase | dasherize %}
-
-  {% capture responsive %}{% if reference.responsive %}responsive{% endif %}{% endcapture %}
-
-  .reference.slick-slide{ class: '{{identifier}} {{responsive}}', data: { url: '{{reference.url}}' } }
-    .views
-      .browser.view
-        .viewport
-
-        .overlay
-
-        .title {{reference.title}}
-
-      {% if reference.responsive %}
-      .mobile.view
-        .viewport
-
-        .overlay
-      {% endif %}
-
-    %h2.title
-      %span.label {{reference.title}}
+  {% include 'reference' with reference %}
 
   {% endfor %}

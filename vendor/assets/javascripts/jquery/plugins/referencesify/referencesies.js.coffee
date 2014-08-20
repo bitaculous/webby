@@ -1,3 +1,7 @@
+#= require ./referencesies/reference
+
+#= require_self
+
 class @Referencesies
   # === Variables ===
 
@@ -6,25 +10,6 @@ class @Referencesies
     autoplay:
       enabled: false
       speed: 7500
-    reference:
-      activate:
-        views:
-          mobile:
-            effect: 'fadeIn'
-            duration: 500
-        title:
-          label:
-            effect: 'fadeIn'
-            duration: 750
-      deactivate:
-        views:
-          mobile:
-            effect: 'fadeOut'
-            duration: 0
-        title:
-          label:
-            effect: 'fadeOut'
-            duration: 0
     debug: false
 
   # === Public ===
@@ -37,83 +22,15 @@ class @Referencesies
 
     return
 
-  activateReference: (reference, slick) ->
-    reference = $ reference
-
-    @activateViewsOfReference reference
-
-    @activateTitleOfReference reference
-
-    return
-
-  activateViewsOfReference: (reference) ->
-    reference = $ reference
-
-    responsive = reference.hasClass 'responsive'
-
-    if responsive
-      mobileView = reference.find '.mobile.view'
-
-      mobileView.velocity @options.reference.activate.views.mobile.effect, {
-        duration: @options.reference.activate.views.mobile.duration
-      } if do mobileView.present
-
-    return
-
-  activateTitleOfReference: (reference) ->
-    reference = $ reference
-
-    title = reference.find '> .title'
-    label = title.find '> .label'
-
-    label.velocity @options.reference.activate.title.label.effect, {
-      duration: @options.reference.activate.title.label.duration
-    }
-
-    return
-
-  deactivateReference: (reference, slick) ->
-    reference = $ reference
-
-    @deactivateViewsOfReference reference
-
-    @deactivateTitleOfReference reference
-
-    return
-
-  deactivateViewsOfReference: (reference) ->
-    reference = $ reference
-
-    responsive = reference.hasClass 'responsive'
-
-    if responsive
-      mobileView = reference.find '.mobile.view'
-
-      mobileView.velocity @options.reference.deactivate.views.mobile.effect, {
-        duration: @options.reference.deactivate.views.mobile.duration
-      } if do mobileView.present
-
-    return
-
-  deactivateTitleOfReference: (reference) ->
-    reference = $ reference
-
-    title = reference.find '> .title'
-    label = title.find '> .label'
-
-    label.velocity @options.reference.deactivate.title.label.effect, {
-      duration: @options.reference.deactivate.title.label.duration
-    }
-
-    return
-
   # === Events ===
 
   onInitialize: (slick) =>
     references       = slick.$slides
     currentReference = $ references[0]
 
-    @activateReference currentReference, slick
+    instance = currentReference.data 'reference'
+
+    do instance.activate if instance?
 
     @index = 0
 
@@ -123,34 +40,37 @@ class @Referencesies
     references       = slick.$slides
     currentReference = $ references[index]
 
-    @deactivateReference currentReference, slick
+    instance = currentReference.data 'reference'
+
+    do instance.deactivate if instance?
 
     return
 
   onAfterChange: (slick, index) =>
-    references       = slick.$slides
-    currentReference = $ references[index]
+    if index isnt @index
+      references       = slick.$slides
+      currentReference = $ references[index]
 
-    @activateReference currentReference, slick if index isnt @index
+      instance = currentReference.data 'reference'
+
+      do instance.activate if instance?
 
     @index = index
 
     return
 
-  onReferenceClick: (event) =>
-    reference = $ event.target
-
-    reference = reference.closest '.reference' if not reference.hasClass 'reference'
-
-    url = reference.data 'url'
-
-    window.open url, '_blank' if url
-
-    false
-
   # === Private ===
 
   initialize = ->
+    references = @references.find '.reference'
+
+    references.each (index, reference) =>
+      reference = $ reference
+
+      reference.data 'reference', new Reference(reference, @options.reference)
+
+      return
+
     setup.call @
 
     return
@@ -168,9 +88,5 @@ class @Referencesies
       onInit: @onInitialize
       onBeforeChange: @onBeforeChange
       onAfterChange: @onAfterChange
-
-    references = @references.find '.reference'
-
-    references.on 'click', @onReferenceClick
 
     return
