@@ -3,7 +3,13 @@
 // @package bundle/media/screen/medium/common/theatre/stage/sections/work/hub/references
 
 @import reference/views
+@import reference/caption
+@import reference/responsive
 
 @mixin reference
   .reference
     @include views
+
+    @include caption
+
+    @include responsive
