@@ -25,7 +25,7 @@ group :misc do
     group :stylesheets do
       gem 'breakpoint', '~> 2.5.0'
 
-      gem 'compass', '~> 1.0.0'
+      gem 'compass', '~> 1.0.1'
       # gem 'compass', github: 'compass/compass', branch: 'stable'
 
       gem 'modular-scale', '~> 2.0.5'
