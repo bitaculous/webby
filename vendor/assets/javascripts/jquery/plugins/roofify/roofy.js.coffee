@@ -8,17 +8,6 @@ class @Roofy
   sections: []
 
   defaults:
-    section:
-      activate:
-        effect: 'slideDown'
-        easing: 'easeOut'
-        delay: 150
-        duration: 750
-      deactivate:
-        effect: 'slideUp'
-        easing: 'easeIn'
-        delay: 150
-        duration: 500
     altitude:
       spacing: 10
     debug: false

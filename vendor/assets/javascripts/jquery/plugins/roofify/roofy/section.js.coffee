@@ -12,6 +12,16 @@ class @Section
   state: 'inactive'
 
   defaults:
+    activate:
+      effect: 'slideDown'
+      easing: 'easeOut'
+      delay: 150
+      duration: 750
+    deactivate:
+      effect: 'slideUp'
+      easing: 'easeIn'
+      delay: 150
+      duration: 500
     debug: false
 
   # === Public ===
