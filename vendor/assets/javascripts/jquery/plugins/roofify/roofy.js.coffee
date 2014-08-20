@@ -42,10 +42,6 @@ class @Roofy
 
       return
 
-    controlPanelHeight = do @controlPanel.height
-
-    @altitude = controlPanelHeight + @options.altitude.spacing
-
     initialize.call @
 
     return
@@ -74,7 +70,11 @@ class @Roofy
   setupBackstage = ->
     height = do @body.height
 
+    controlPanelHeight = do @controlPanel.height
+
+    altitude = controlPanelHeight + @options.altitude.spacing
+
     @backstage.css
-      'max-height': height - @altitude
+      'max-height': height - altitude
 
     return
