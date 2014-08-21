@@ -45,8 +45,7 @@ class @Referencesies
   # === Events ===
 
   onInitialize: (slick) =>
-    references       = slick.$slides
-    currentReference = $ references[0]
+    currentReference = getReference.call @, slick, 0
 
     activateReference.call @, currentReference
 
@@ -57,8 +56,7 @@ class @Referencesies
   onBeforeChange: (slick, index, next) =>
     deactivateBrowse.call @
 
-    references       = slick.$slides
-    currentReference = $ references[index]
+    currentReference = getReference.call @, slick, index
 
     deactivateReference.call @, currentReference
 
@@ -66,8 +64,7 @@ class @Referencesies
 
   onAfterChange: (slick, index) =>
     if index isnt @index
-      references       = slick.$slides
-      currentReference = $ references[index]
+      currentReference = getReference.call @, slick, index
 
       activateReference.call @, currentReference
 
@@ -147,3 +144,8 @@ class @Referencesies
     }
 
     return
+
+  getReference = (slick, index) ->
+    references = slick.$slides
+
+    $ references[index]
