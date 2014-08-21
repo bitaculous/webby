@@ -8,8 +8,8 @@
 @mixin vault
   .vault
     margin: 0 auto
-    width: 300px
     text-align: center
+    width: map-get-deep($contour, common, theatre, stage, sections, work, hub, references, vault, width)
 
     @include views
 

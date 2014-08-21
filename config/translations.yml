@@ -92,6 +92,14 @@ de:
   en: "DE"
   de: "DE"
 
+previous:
+  en: "Previous"
+  de: "Zurück"
+
+next:
+  en: "Next"
+  de: "Weiter"
+
 close:
   en: "Close"
   de: "Schliessen"
@@ -101,29 +109,29 @@ x:
   de: "✕"
 
 monday:
-  en: 'Monday'
-  de: 'Montag'
+  en: "Monday"
+  de: "Montag"
 
 tuesday:
-  en: 'Tuesday'
-  de: 'Dienstag'
+  en: "Tuesday"
+  de: "Dienstag"
 
 wednesday:
-  en: 'Wednesday'
-  de: 'Mittwoch'
+  en: "Wednesday"
+  de: "Mittwoch"
 
 thursday:
-  en: 'Thursday'
-  de: 'Donnerstag'
+  en: "Thursday"
+  de: "Donnerstag"
 
 friday:
-  en: 'Friday'
-  de: 'Freitag'
+  en: "Friday"
+  de: "Freitag"
 
 saturday:
-  en: 'Saturday'
-  de: 'Sonnabend'
+  en: "Saturday"
+  de: "Sonnabend"
 
 sunday:
-  en: 'Sunday'
-  de: 'Sonntag'
+  en: "Sunday"
+  de: "Sonntag"

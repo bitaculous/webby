@@ -58,6 +58,22 @@ $contour: (
       i: (
         font-size: ms(1.5)
       )
+    ),
+
+    theatre: (
+      stage: (
+        sections: (
+          work: (
+            hub: (
+              references: (
+                vault: (
+                  width: 300px
+                )
+              )
+            )
+          )
+        )
+      )
     )
   )
 );

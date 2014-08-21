@@ -82,6 +82,8 @@ class @Referencesies
       centerMode: true
       centerPadding: '0px'
       dots: false
+      nextArrow: '.browse a.next'
+      prevArrow: '.browse a.previous'
       slide: '.reference'
       slidesToScroll: 1
       slidesToShow: 1

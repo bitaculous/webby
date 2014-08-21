@@ -3,11 +3,10 @@
 // @package bundle/media/screen/small/common/theatre/stage/sections/work/hub
 
 @import references/reference
+@import references/browse
 
 @mixin references
   .references
     @include reference
 
-    .slick-prev,
-    .slick-next
-      top: rem(98)
+    @include browse
