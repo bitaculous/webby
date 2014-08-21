@@ -14,7 +14,9 @@
 #= require jquery/plugins/shadify
 #= require jquery/plugins/slick
 #= require jquery/plugins/slidify
-#= require jquery/plugins/velocity
+
+#= require velocity
+#= require velocity/ui
 
 #= require_self
 

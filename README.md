@@ -65,15 +65,15 @@ Credits
 #### JavaScript
 
 * [Flat Surface Shader (FSS)]
-* [Modernizr]
 * [jQuery]
+* [Modernizr]
+* [Velocity]
 
 ##### jQuery Plugins
 
 * [i18n]
 * [Slick]
 * [Validation Plugin]
-* [Velocity]
 * [Waypoints]
 
 ##### Polyfills

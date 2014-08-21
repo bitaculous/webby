@@ -3,20 +3,21 @@
 {% capture responsive %}{% if reference.responsive %}responsive{% endif %}{% endcapture %}
 
 .reference.slick-slide{ class: '{{identifier}} {{responsive}}', data: { url: '{{reference.url}}' } }
-  .views.touch-zone
-    .browser.view
-      .viewport
+  .vault
+    .views.touch-zone
+      .browser.view
+        .viewport
 
-      .overlay
+        .overlay
 
-      .title {{reference.title}}
+        .title {{reference.title}}
 
-    {% if reference.responsive %}
-    .mobile.view
-      .viewport
+      {% if reference.responsive %}
+      .mobile.view
+        .viewport
 
-      .overlay
-    {% endif %}
+        .overlay
+      {% endif %}
 
-  %h2.caption
-    %span.label {{reference.title}}
+    %h2.caption
+      %span.label {{reference.title}}
