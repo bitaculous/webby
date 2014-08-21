@@ -56,6 +56,18 @@ class @Referencesies
   onBeforeChange: (slick, index, next) =>
     deactivateBrowse.call @
 
+    previousReference = getPreviousReference.call @, slick, index
+
+    previousReference.css {
+      'transform': 'translateX(0)'
+    }
+
+    nextReference = getNextReference.call @, slick, index
+
+    nextReference.css {
+      'transform': 'translateX(0)'
+    }
+
     currentReference = getReference.call @, slick, index
 
     deactivateReference.call @, currentReference
@@ -67,6 +79,18 @@ class @Referencesies
       currentReference = getReference.call @, slick, index
 
       activateReference.call @, currentReference
+
+      previousReference = getPreviousReference.call @, slick, index
+
+      previousReference.velocity {
+        translateX: '600px'
+      }
+
+      nextReference = getNextReference.call @, slick, index
+
+      nextReference.velocity {
+        translateX: '-600px'
+      }
 
       activateBrowse.call @
 
@@ -147,5 +171,31 @@ class @Referencesies
 
   getReference = (slick, index) ->
     references = slick.$slides
+
+    $ references[index]
+
+  getPreviousReference = (slick, index) ->
+    references = slick.$slides
+    slideCount = slick.slideCount
+
+    i = slideCount - 1
+
+    if index == 0
+      index = i
+    else
+      index = index - 1
+
+    $ references[index]
+
+  getNextReference = (slick, index) ->
+    references = slick.$slides
+    slideCount = slick.slideCount
+
+    i = slideCount - 1
+
+    if index >= i
+      index = 0
+    else
+      index = index + 1
 
     $ references[index]
