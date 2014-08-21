@@ -10,16 +10,16 @@ class @Reference
       caption:
         label:
           effect: 'fadeIn'
-          duration: 750
+          duration: 500
     deactivate:
       views:
         mobile:
           effect: 'fadeOut'
-          duration: 0
+          duration: 250
       caption:
         label:
           effect: 'fadeOut'
-          duration: 0
+          duration: 250
     debug: false
 
   # === Public ===

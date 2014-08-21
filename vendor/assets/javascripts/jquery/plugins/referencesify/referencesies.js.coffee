@@ -10,6 +10,22 @@ class @Referencesies
     autoplay:
       enabled: false
       speed: 7500
+    activate:
+      browse:
+        previous:
+          effect: 'transition.slideRightIn'
+          duration: 500
+        next:
+          effect: 'transition.slideLeftIn'
+          duration: 500
+    deactivate:
+      browse:
+        previous:
+          effect: 'transition.fadeOut'
+          duration: 250
+        next:
+          effect: 'transition.fadeOut'
+          duration: 250
     debug: false
 
   # === Public ===
@@ -17,6 +33,10 @@ class @Referencesies
   constructor: (references, options) ->
     @references = $ references
     @options    = $.extend @defaults, options
+
+    @browse   = @references.find '> .browse'
+    @previous = @browse.find '> .previous'
+    @next     = @browse.find '> .next'
 
     initialize.call @
 
@@ -28,21 +48,19 @@ class @Referencesies
     references       = slick.$slides
     currentReference = $ references[0]
 
-    instance = currentReference.data 'reference'
-
-    do instance.activate if instance?
+    activateReference.call @, currentReference
 
     @index = 0
 
     return
 
   onBeforeChange: (slick, index, next) =>
+    deactivateBrowse.call @
+
     references       = slick.$slides
     currentReference = $ references[index]
 
-    instance = currentReference.data 'reference'
-
-    do instance.deactivate if instance?
+    deactivateReference.call @, currentReference
 
     return
 
@@ -51,9 +69,9 @@ class @Referencesies
       references       = slick.$slides
       currentReference = $ references[index]
 
-      instance = currentReference.data 'reference'
+      activateReference.call @, currentReference
 
-      do instance.activate if instance?
+      activateBrowse.call @
 
     @index = index
 
@@ -91,5 +109,41 @@ class @Referencesies
       onInit: @onInitialize
       onBeforeChange: @onBeforeChange
       onAfterChange: @onAfterChange
+
+    return
+
+  activateReference = (reference) ->
+    instance = reference.data 'reference'
+
+    do instance.activate if instance?
+
+    return
+
+  deactivateReference = (reference) ->
+    instance = reference.data 'reference'
+
+    do instance.deactivate if instance?
+
+    return
+
+  activateBrowse = ->
+    @previous.velocity @options.activate.browse.previous.effect, {
+      duration: @options.activate.browse.previous.duration
+    }
+
+    @next.velocity @options.activate.browse.next.effect, {
+      duration: @options.activate.browse.next.duration
+    }
+
+    return
+
+  deactivateBrowse = ->
+    @previous.velocity @options.deactivate.browse.previous.effect, {
+      duration: @options.deactivate.browse.previous.duration
+    }
+
+    @next.velocity @options.deactivate.browse.next.effect, {
+      duration: @options.deactivate.browse.next.duration
+    }
 
     return
