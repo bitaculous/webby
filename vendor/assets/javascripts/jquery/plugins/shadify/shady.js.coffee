@@ -275,7 +275,7 @@ class @Shady
     return
 
   onMouseMove: (event) =>
-    FSS.Vector3.set @attractor, event.x, @renderer.height - event.y
+    FSS.Vector3.set @attractor, event.pageX, @renderer.height - event.pageY
     FSS.Vector3.subtract @attractor, @center
 
     return
@@ -454,8 +454,10 @@ class @Shady
     return
 
   addEventListeners = ->
-    window.addEventListener 'resize', @onWindowResize
+    _window = $ window
 
-    window.addEventListener 'mousemove', @onMouseMove
+    _window.on 'resize', @onWindowResize
+
+    _window.on 'mousemove', @onMouseMove
 
     return

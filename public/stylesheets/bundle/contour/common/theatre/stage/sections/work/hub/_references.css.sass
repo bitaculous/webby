@@ -7,8 +7,7 @@
 
 @mixin references
   .references
-    transform: translate3d(-400px, 0, 0)
-    min-width: 1500px
+    min-width: map-get-deep($contour, common, theatre, stage, sections, work, hub, references, min-width)
 
     @include reference
 

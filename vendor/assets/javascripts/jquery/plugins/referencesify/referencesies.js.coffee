@@ -34,6 +34,8 @@ class @Referencesies
     @references = $ references
     @options    = $.extend @defaults, options
 
+    @body = $ 'body'
+
     @browse   = @references.find '> .browse'
     @previous = @browse.find '> .previous'
     @next     = @browse.find '> .next'
@@ -45,11 +47,15 @@ class @Referencesies
   # === Events ===
 
   onInitialize: (slick) =>
+    @index = 0
+
     currentReference = getReference.call @, slick, 0
 
     activateReference.call @, currentReference
 
-    @index = 0
+    tranform.call @
+
+    $(window).on 'resize', @onWindowResize
 
     return
 
@@ -71,6 +77,18 @@ class @Referencesies
       activateBrowse.call @
 
     @index = index
+
+    return
+
+  onWindowResize: (event) =>
+    clearTimeout @timeout
+
+    @timeout = setTimeout @onWindowResizeDone, 500
+
+    return
+
+  onWindowResizeDone: =>
+    tranform.call @
 
     return
 
@@ -149,3 +167,8 @@ class @Referencesies
     references = slick.$slides
 
     $ references[index]
+
+  tranform = ->
+    console.log 'tranform'
+
+    return
