@@ -8,16 +8,18 @@ class @Reference
           effect: 'fadeIn'
           duration: 500
       caption:
-        effect: 'fadeIn'
-        duration: 750
+        label:
+          effect: 'fadeIn'
+          duration: 750
     deactivate:
       views:
         mobile:
           effect: 'fadeOut'
           duration: 0
       caption:
-        effect: 'fadeOut'
-        duration: 0
+        label:
+          effect: 'fadeOut'
+          duration: 0
     debug: false
 
   # === Public ===
@@ -32,6 +34,7 @@ class @Reference
     @views      = @vault.find '> .views'
     @mobileView = @views.find '.mobile.view'
     @caption    = @vault.find '> .caption'
+    @label      = @caption.find '> .label'
 
     initialize.call @
 
@@ -85,8 +88,8 @@ class @Reference
     return
 
   activateCaption = ->
-    @caption.velocity @options.activate.caption.effect, {
-      duration: @options.activate.caption.duration
+    @label.velocity @options.activate.caption.label.effect, {
+      duration: @options.activate.caption.label.duration
     }
 
     return
@@ -100,8 +103,8 @@ class @Reference
     return
 
   deactivateCaption = ->
-    @caption.velocity @options.deactivate.caption.effect, {
-      duration: @options.deactivate.caption.duration
+    @label.velocity @options.deactivate.caption.label.effect, {
+      duration: @options.deactivate.caption.label.duration
     }
 
     return

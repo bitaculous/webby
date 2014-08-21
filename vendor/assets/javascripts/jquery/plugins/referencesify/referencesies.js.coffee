@@ -82,16 +82,9 @@ class @Referencesies
       centerMode: true
       centerPadding: '0px'
       dots: false
-      responsive: [
-        {
-          breakpoint: 1152
-          settings:
-            slidesToShow: 1
-        }
-      ]
       slide: '.reference'
       slidesToScroll: 1
-      slidesToShow: 3
+      slidesToShow: 1
       speed: @options.speed
       onInit: @onInitialize
       onBeforeChange: @onBeforeChange
