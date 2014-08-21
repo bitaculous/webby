@@ -32,96 +32,20 @@ class @Formy
 
     return
 
-  hideFieldsets: ->
-    @fieldsets.velocity @options.fieldsets.hide.effect,
-      duration: @options.fieldsets.hide.duration
-      complete: @showSuccess
-
-    return
-
-  showSuccess: =>
-    @success.velocity @options.success.show.effect,
-      duration: @options.success.show.duration
-
-    return
-
-  showErrors: (errors) ->
-    if errors
-      messages = @translateErrors errors
-
-      output = @errorMessagesTemplate.render messages
-
-      @errorMessages.append output
-
-      do @error.show
-
-    return
-
-  translateErrors: (errors) ->
-    result   = {}
-    messages = []
-
-    $.each errors, (key, message) ->
-      messages.push {
-        key: $.i18n._ key
-        message: $.i18n._ message
-      }
-
-      return
-
-    result.messages = messages
-
-    result
-
-  lock: ->
-    do @disabledElements
-
-    @form.addClass 'locked'
-
-    return
-
-  unlock: ->
-    do @enabledElements
-
-    @form.removeClass 'locked'
-
-    return
-
   isLocked: ->
     @form.hasClass 'locked'
-
-  enabledElements: ->
-    @elements.prop 'disabled', false
-
-    return
-
-  disabledElements: ->
-    @elements.prop 'disabled', true
-
-    return
-
-  cleanup: ->
-    do @success.hide
-
-    do @failure.hide
-
-    do @errorMessages.empty
-
-    do @error.hide
-
-    return
 
   # === Events ===
 
   onSuccess: =>
-    do @hideFieldsets
+    hideFieldsets.call @
 
     return
 
   beforeRequestSend: (xhr, settings) =>
-    do @cleanup
+    cleanup.call @
 
-    do @lock
+    lock.call @
 
     return
 
@@ -138,11 +62,11 @@ class @Formy
         response = xhr.responseJSON
         errors   = response.errors
 
-        @showErrors errors
+        showErrors.call @, errors
       else
-        do @failure.show
+        showFailure.call @
 
-    do @unlock
+    unlock.call @
 
     return
 
@@ -194,5 +118,86 @@ class @Formy
 
   setupSubmit = ->
     @submit.on 'click', @onSubmitClick
+
+    return
+
+  hideFieldsets = ->
+    @fieldsets.velocity @options.fieldsets.hide.effect,
+      duration: @options.fieldsets.hide.duration
+      complete: showSuccess.call @
+
+    return
+
+  showSuccess = ->
+    @success.velocity @options.success.show.effect,
+      duration: @options.success.show.duration
+
+    return
+
+  showErrors = (errors) ->
+    if errors
+      messages = translateErrors.call @, errors
+
+      output = @errorMessagesTemplate.render messages
+
+      @errorMessages.append output
+
+      do @error.show
+
+    return
+
+  translateErrors = (errors) ->
+    result   = {}
+    messages = []
+
+    $.each errors, (key, message) ->
+      messages.push {
+        key: $.i18n._ key
+        message: $.i18n._ message
+      }
+
+      return
+
+    result.messages = messages
+
+    result
+
+  showFailure = ->
+    do @failure.show
+
+    return
+
+  lock = ->
+    disabledElements.call @
+
+    @form.addClass 'locked'
+
+    return
+
+  unlock = ->
+    enabledElements.call @
+
+    @form.removeClass 'locked'
+
+    return
+
+  enabledElements = ->
+    @elements.prop 'disabled', false
+
+    return
+
+  disabledElements = ->
+    @elements.prop 'disabled', true
+
+    return
+
+  cleanup = ->
+    do @success.hide
+
+    do @failure.hide
+
+    do @errorMessages.empty
+
+    do @error.hide
 
     return
