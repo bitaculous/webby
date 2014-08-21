@@ -79,11 +79,19 @@ class @Referencesies
     @references.slick
       autoplay: @options.autoplay.enabled
       autoplaySpeed: @options.autoplay.speed
-      centerMode: false
+      centerMode: true
+      centerPadding: '0px'
       dots: false
+      responsive: [
+        {
+          breakpoint: 1152
+          settings:
+            slidesToShow: 1
+        }
+      ]
       slide: '.reference'
       slidesToScroll: 1
-      slidesToShow: 1
+      slidesToShow: 3
       speed: @options.speed
       onInit: @onInitialize
       onBeforeChange: @onBeforeChange
