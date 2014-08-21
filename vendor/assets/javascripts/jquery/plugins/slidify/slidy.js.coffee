@@ -43,7 +43,7 @@ class @Slidy
       centerMode: true
       centerPadding: '0px'
       dots: true
-      slide: '.slide'
+      slide: '.slick-slide'
       slidesToScroll: 1
       slidesToShow: 1
       speed: @options.speed

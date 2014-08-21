@@ -1,20 +1,6 @@
 .slider.slick-slider
   {% for slide in contents.slides %}
 
-  {% assign type = slide.type | downcase | dasherize %}
-
-  .slide.slick-slide{ class: '{{type}}' }
-    .content
-      {% if slide.message %}
-      %p {{slide.message}}
-      {% endif %}
-
-      {% if slide.quote %}
-      %h1.title {{slide.quote.title}}
-
-      %p.statement {{slide.quote.statement}}
-
-      %p.author {{slide.quote.author}}
-      {% endif %}
+  {% include 'slide' with slide %}
 
   {% endfor %}
