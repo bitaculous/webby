@@ -67,9 +67,9 @@ GIT
 
 GIT
   remote: git://github.com/bitaculous/assetify.git
-  revision: 68d8c3d63ab2d5782e1b5e54085a7bf1e4f1f704
+  revision: 74ae37ee6aa370e8ae1943c639d6e37a26192c10
   specs:
-    assetify (0.13.0)
+    assetify (0.14.0)
       bourbon (~> 4.0.2)
       sprockets (~> 2.12.1)
 
@@ -162,7 +162,7 @@ GEM
       ffi (>= 0.5.0)
     redcarpet (3.0.0)
     rubyzip (1.1.6)
-    sass (3.4.0)
+    sass (3.4.1)
     sassy-maps (0.4.0)
       sass (~> 3.3)
     sprockets (2.12.1)
