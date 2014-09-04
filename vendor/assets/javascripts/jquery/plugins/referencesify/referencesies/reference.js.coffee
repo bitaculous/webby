@@ -8,18 +8,16 @@ class @Reference
           effect: 'fadeIn'
           duration: 500
       caption:
-        label:
-          effect: 'fadeIn'
-          duration: 500
+        effect: 'fadeIn'
+        duration: 500
     deactivate:
       views:
         mobile:
           effect: 'fadeOut'
           duration: 250
       caption:
-        label:
-          effect: 'fadeOut'
-          duration: 250
+        effect: 'fadeOut'
+        duration: 250
     debug: false
 
   # === Public ===
@@ -87,8 +85,8 @@ class @Reference
     return
 
   activateCaption = ->
-    @label.velocity @options.activate.caption.label.effect,
-      duration: @options.activate.caption.label.duration
+    @caption.velocity @options.activate.caption.effect,
+      duration: @options.activate.caption.duration
 
     return
 
@@ -100,7 +98,7 @@ class @Reference
     return
 
   deactivateCaption = ->
-    @label.velocity @options.deactivate.caption.label.effect,
-      duration: @options.deactivate.caption.label.duration
+    @caption.velocity @options.deactivate.caption.effect,
+      duration: @options.deactivate.caption.duration
 
     return

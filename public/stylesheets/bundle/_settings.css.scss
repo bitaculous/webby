@@ -94,7 +94,23 @@ $media: (
     ),
 
     large: (
-      min-width: 1024px
+      min-width: 1024px,
+
+      common: (
+        theatre: (
+          stage: (
+            sections: (
+              work: (
+                hub: (
+                  references: (
+                    min-width: 1680px
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
     ),
 
     x-large: (
