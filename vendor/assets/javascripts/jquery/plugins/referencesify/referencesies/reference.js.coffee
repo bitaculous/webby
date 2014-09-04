@@ -29,11 +29,11 @@ class @Reference
     @options   = $.extend @defaults, options
 
     @responsive = @reference.hasClass 'responsive'
-    @vault      = @reference.find '> .vault'
-    @touchZone  = @vault.find '.touch-zone'
-    @views      = @vault.find '> .views'
+    @interior   = @reference.find '> .interior'
+    @touchZone  = @interior.find '.touch-zone'
+    @views      = @interior.find '> .views'
     @mobileView = @views.find '.mobile.view'
-    @caption    = @vault.find '> .caption'
+    @caption    = @interior.find '> .caption'
     @label      = @caption.find '> .label'
 
     initialize.call @
