@@ -47,6 +47,8 @@ class @Referencesies
   # === Events ===
 
   onInitialize: (slick) =>
+    @slick = slick
+
     @index = 0
 
     currentReference = getReference.call @, slick, 0
@@ -142,24 +144,20 @@ class @Referencesies
     return
 
   activateBrowse = ->
-    @previous.velocity @options.activate.browse.previous.effect, {
+    @previous.velocity @options.activate.browse.previous.effect,
       duration: @options.activate.browse.previous.duration
-    }
 
-    @next.velocity @options.activate.browse.next.effect, {
+    @next.velocity @options.activate.browse.next.effect,
       duration: @options.activate.browse.next.duration
-    }
 
     return
 
   deactivateBrowse = ->
-    @previous.velocity @options.deactivate.browse.previous.effect, {
+    @previous.velocity @options.deactivate.browse.previous.effect,
       duration: @options.deactivate.browse.previous.duration
-    }
 
-    @next.velocity @options.deactivate.browse.next.effect, {
+    @next.velocity @options.deactivate.browse.next.effect,
       duration: @options.deactivate.browse.next.duration
-    }
 
     return
 
@@ -169,6 +167,10 @@ class @Referencesies
     $ references[index]
 
   tranform = ->
-    console.log 'tranform'
+    bodyWidth = do @body.width
+
+    console.log "Body width: #{bodyWidth}"
+
+    console.log @references
 
     return

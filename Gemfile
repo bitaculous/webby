@@ -5,10 +5,10 @@ source 'https://rubygems.org'
 group :default do
   group :locomotivecms do
     # gem 'locomotivecms_wagon', github: 'locomotivecms/wagon'
-    gem 'locomotivecms_wagon', path: '../locomotivecms/wagon'
+    gem 'locomotivecms_wagon', path: '../../../sandbox/locomotivecms/wagon'
 
     # gem 'locomotivecms_mounter', github: 'locomotivecms/mounter'
-    gem 'locomotivecms_mounter', path: '../locomotivecms/gems/mounter'
+    gem 'locomotivecms_mounter', path: '../../../sandbox/locomotivecms/gems/mounter'
   end
 end
 

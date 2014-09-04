@@ -81,30 +81,26 @@ class @Reference
 
   activateViews = ->
     if @responsive
-      @mobileView.velocity @options.activate.views.mobile.effect, {
+      @mobileView.velocity @options.activate.views.mobile.effect,
         duration: @options.activate.views.mobile.duration
-      }
 
     return
 
   activateCaption = ->
-    @label.velocity @options.activate.caption.label.effect, {
+    @label.velocity @options.activate.caption.label.effect,
       duration: @options.activate.caption.label.duration
-    }
 
     return
 
   deactivateViews = ->
     if @responsive
-      @mobileView.velocity @options.deactivate.views.mobile.effect, {
+      @mobileView.velocity @options.deactivate.views.mobile.effect,
         duration: @options.deactivate.views.mobile.duration
-      }
 
     return
 
   deactivateCaption = ->
-    @label.velocity @options.deactivate.caption.label.effect, {
+    @label.velocity @options.deactivate.caption.label.effect,
       duration: @options.deactivate.caption.label.duration
-    }
 
     return

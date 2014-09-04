@@ -1,5 +1,34 @@
+GIT
+  remote: git://github.com/bitaculous/assetify.git
+  revision: 2e8efa5687d744722b00893c9cfd55b2279c1efa
+  specs:
+    assetify (0.15.0)
+      bourbon (~> 4.0.2)
+      sprockets (~> 2.12.1)
+
+GIT
+  remote: git://github.com/bitaculous/initializify.git
+  revision: cfab701cdedcf2109fbbda5a17dddb59f14e2213
+  specs:
+    initializify (0.0.2)
+
+GIT
+  remote: git://github.com/bitaculous/liquids.git
+  revision: 09ac7fb2dc0a7ff26242e038b00318cc9a94a8fc
+  specs:
+    liquids (0.0.1)
+      locomotivecms-solid (~> 0.2.2.1)
+
+GIT
+  remote: git://github.com/bitaculous/vendorify.git
+  revision: 5a5ca8e274cd7d807aaa4bed30ffb4cb41fc929d
+  specs:
+    vendorify (0.1.1)
+      sass (>= 3.2)
+      sprockets (~> 2.12.1)
+
 PATH
-  remote: ../locomotivecms/gems/mounter
+  remote: ../../../sandbox/locomotivecms/gems/mounter
   specs:
     locomotivecms_mounter (1.4.1)
       RedCloth (~> 4.2.3)
@@ -25,7 +54,7 @@ PATH
       zip (~> 2.0.2)
 
 PATH
-  remote: ../locomotivecms/wagon
+  remote: ../../../sandbox/locomotivecms/wagon
   specs:
     locomotivecms_wagon (1.4.0)
       RedCloth (~> 4.2.8)
@@ -43,35 +72,6 @@ PATH
       thin (~> 1.6.1)
       thor
       will_paginate (~> 3.0.3)
-
-GIT
-  remote: git://github.com/bitaculous/vendorify.git
-  revision: 5a5ca8e274cd7d807aaa4bed30ffb4cb41fc929d
-  specs:
-    vendorify (0.1.1)
-      sass (>= 3.2)
-      sprockets (~> 2.12.1)
-
-GIT
-  remote: git://github.com/bitaculous/liquids.git
-  revision: 09ac7fb2dc0a7ff26242e038b00318cc9a94a8fc
-  specs:
-    liquids (0.0.1)
-      locomotivecms-solid (~> 0.2.2.1)
-
-GIT
-  remote: git://github.com/bitaculous/initializify.git
-  revision: cfab701cdedcf2109fbbda5a17dddb59f14e2213
-  specs:
-    initializify (0.0.2)
-
-GIT
-  remote: git://github.com/bitaculous/assetify.git
-  revision: 74ae37ee6aa370e8ae1943c639d6e37a26192c10
-  specs:
-    assetify (0.14.0)
-      bourbon (~> 4.0.2)
-      sprockets (~> 2.12.1)
 
 GEM
   remote: https://rubygems.org/
@@ -97,7 +97,7 @@ GEM
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.7.1)
+    coffee-script-source (1.8.0)
     colorize (0.5.8)
     commonjs (0.2.7)
     compass (1.0.1)
@@ -162,7 +162,7 @@ GEM
       ffi (>= 0.5.0)
     redcarpet (3.0.0)
     rubyzip (1.1.6)
-    sass (3.4.1)
+    sass (3.4.2)
     sassy-maps (0.4.0)
       sass (~> 3.3)
     sprockets (2.12.1)
