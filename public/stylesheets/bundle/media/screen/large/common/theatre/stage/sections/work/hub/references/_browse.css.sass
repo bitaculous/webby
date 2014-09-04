@@ -3,3 +3,14 @@
 // @package bundle/media/screen/large/common/theatre/stage/sections/work/hub/references
 
 @mixin browse
+  .browse
+    width: map-get-deep($media, screen, large, common, theatre, stage, sections, work, hub, references, reference, interior, width)
+
+    a
+      bottom: rem(312)
+
+      &.previous
+        left: rem(-122)
+
+      &.next
+        right: rem(-122)

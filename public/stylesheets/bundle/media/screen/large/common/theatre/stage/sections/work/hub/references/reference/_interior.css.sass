@@ -7,6 +7,8 @@
 
 @mixin interior
   .interior
+    width: map-get-deep($media, screen, large, common, theatre, stage, sections, work, hub, references, reference, interior, width)
+
     @include views
 
     @include caption

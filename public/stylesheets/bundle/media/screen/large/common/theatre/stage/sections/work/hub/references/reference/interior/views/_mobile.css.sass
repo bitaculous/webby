@@ -3,3 +3,24 @@
 // @package bundle/media/screen/large/common/theatre/stage/sections/work/hub/references/reference/interior/views
 
 @mixin mobile
+  &.mobile
+    height: 390px
+    opacity: 0
+    position: absolute
+    right: rem(-78)
+    top: rem(40)
+    width: 160px
+
+    .viewport
+      bottom: rem(60)
+      left: rem(6)
+      right: rem(6)
+      top: rem(30)
+      background: red
+
+    .overlay
+      background: transparent image-url('bundle/media/screen/large/common/theatre/stage/sections/work/hub/references/reference/interior/views/mobile/overlay/background.png') no-repeat 0 0
+
+      @include hidpi
+        background-image: image-url('bundle/media/screen/large/common/theatre/stage/sections/work/hub/references/reference/interior/views/mobile/overlay/background_at_2x.png')
+        background-size: 160px 390px

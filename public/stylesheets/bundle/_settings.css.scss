@@ -32,26 +32,32 @@ $contour: (
   common: (
     elements: (
       h1: (
+        font-size: ms(3),
         margin: 0 0 rem(12)
       ),
 
       h2: (
+        font-size: ms(2),
         margin: 0 0 rem(14)
       ),
 
       h3: (
+        font-size: ms(1),
         margin: 0 0 rem(16)
       ),
 
       h4: (
+        font-size: ms(0),
         margin: 0 0 rem(18)
       ),
 
       h5: (
+        font-size: ms(-1),
         margin: 0 0 rem(20)
       ),
 
       h6: (
+        font-size: ms(-2),
         margin: 0 0 rem(22)
       ),
 
@@ -68,8 +74,10 @@ $contour: (
               references: (
                 min-width: 1280px,
 
-                interior: (
-                  width: 300px
+                reference: (
+                  interior: (
+                    width: 300px
+                  )
                 )
               )
             )
@@ -103,7 +111,13 @@ $media: (
               work: (
                 hub: (
                   references: (
-                    min-width: 1680px
+                    min-width: 2048px,
+
+                    reference: (
+                      interior: (
+                        width: 480px
+                      )
+                    )
                   )
                 )
               )
