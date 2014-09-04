@@ -95,6 +95,14 @@ $media: (
 
     large: (
       min-width: 1024px
+    ),
+
+    x-large: (
+      min-width: 1280px
+    ),
+
+    xx-large: (
+      min-width: 1680px
     )
   )
 );
