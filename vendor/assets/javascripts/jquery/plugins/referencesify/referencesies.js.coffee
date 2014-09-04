@@ -167,10 +167,13 @@ class @Referencesies
     $ references[index]
 
   tranform = ->
-    bodyWidth = do @body.width
+    bodyWidth       = do @body.width
+    referencesWidth = do @references.width
 
-    console.log "Body width: #{bodyWidth}"
+    difference  = bodyWidth - referencesWidth
+    translateX  = difference / 2
 
-    console.log @references
+    @references.velocity
+      translateX: translateX
 
     return
