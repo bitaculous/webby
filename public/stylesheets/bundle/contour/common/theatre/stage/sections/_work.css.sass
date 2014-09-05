@@ -6,8 +6,10 @@
 
 @mixin work
   &.work
-    background: #2C4148 image-url('bundle/contour/common/theatre/stage/sections/work/background.png') repeat center rem(344)
+    background-position: center rem(342)
     top: rem(-48)
+
+    @include linear-gradient(to bottom, #2D4148 0%, #213337 100%, $fallback: #213337)
 
     h1,
     h2,
