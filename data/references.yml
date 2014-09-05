@@ -46,3 +46,13 @@
       en: "http://izig-stadtplan.de/?locale=en"
       de: "http://www.hpk-kardiologie.de"
     responsive: false
+
+- "Jagoda Marinic":
+    identifier: "jm"
+    title:
+      en: "Jagoda Marinic"
+      de: "Jagoda Marinic"
+    url:
+      en: "http://www.jagodamarinic.de"
+      de: "http://www.jagodamarinic.de"
+    responsive: false
