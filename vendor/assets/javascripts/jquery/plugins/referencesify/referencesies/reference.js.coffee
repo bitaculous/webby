@@ -5,6 +5,7 @@ class @Reference
     activate:
       views:
         mobile:
+          breakpoint: 480
           effect: 'fadeIn'
           duration: 500
       caption:
@@ -13,6 +14,7 @@ class @Reference
     deactivate:
       views:
         mobile:
+          breakpoint: 480
           effect: 'fadeOut'
           duration: 250
       caption:
@@ -25,6 +27,8 @@ class @Reference
   constructor: (reference, options) ->
     @reference = $ reference
     @options   = $.extend @defaults, options
+
+    @body = $ 'body'
 
     @responsive = @reference.hasClass 'responsive'
     @interior   = @reference.find '> .interior'
@@ -79,8 +83,12 @@ class @Reference
 
   activateViews = ->
     if @responsive
-      @mobileView.velocity @options.activate.views.mobile.effect,
-        duration: @options.activate.views.mobile.duration
+      bodyWidth = do @body.width
+      visible   = @mobileView.css('opacity') > 0
+
+      if bodyWidth < @options.activate.views.mobile.breakpoint or not visible
+        @mobileView.velocity @options.activate.views.mobile.effect,
+          duration: @options.activate.views.mobile.duration
 
     return
 
@@ -92,8 +100,12 @@ class @Reference
 
   deactivateViews = ->
     if @responsive
-      @mobileView.velocity @options.deactivate.views.mobile.effect,
-        duration: @options.deactivate.views.mobile.duration
+      bodyWidth = do @body.width
+      visible   = @mobileView.css('opacity') > 0
+
+      if bodyWidth < @options.deactivate.views.mobile.breakpoint and visible
+        @mobileView.velocity @options.deactivate.views.mobile.effect,
+          duration: @options.deactivate.views.mobile.duration
 
     return
 
