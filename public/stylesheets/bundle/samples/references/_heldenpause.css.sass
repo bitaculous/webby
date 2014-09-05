@@ -7,16 +7,35 @@
     .view
       &.browser
         .viewport
-          background: transparent image-url('bundle/samples/contour/references/heldenpause/views/browser/viewport.jpg') repeat 0 0
+          background: transparent image-url('bundle/samples/contour/references/heldenpause/views/browser/viewport.jpg') no-repeat center center
 
           @include hidpi
             background-image: image-url('bundle/samples/contour/references/heldenpause/views/browser/viewport_at_2x.jpg')
-            background-size: 296px 190px
+            background-size: 294px 190px
 
       &.mobile
         .viewport
-          background: transparent image-url('bundle/samples/contour/references/heldenpause/views/mobile/viewport.jpg') repeat 0 0
+          background: transparent image-url('bundle/samples/contour/references/heldenpause/views/mobile/viewport.jpg') no-repeat center center
 
           @include hidpi
             background-image: image-url('bundle/samples/contour/references/heldenpause/views/mobile/viewport_at_2x.jpg')
             background-size: 88px 154px
+
+  @media (min-width: map-get-deep($media, screen, large, min-width))
+    .heldenpause
+      .view
+        &.browser
+          .viewport
+            background-image: image-url('bundle/samples/media/screen/large/references/heldenpause/views/browser/viewport.jpg')
+
+            @include hidpi
+              background-image: image-url('bundle/samples/media/screen/large/references/heldenpause/views/browser/viewport_at_2x.jpg')
+              background-size: 470px 302px
+
+        &.mobile
+          .viewport
+            background: transparent image-url('bundle/samples/media/screen/large/references/heldenpause/views/mobile/viewport.jpg') no-repeat center center
+
+            @include hidpi
+              background-image: image-url('bundle/samples/media/screen/large/references/heldenpause/views/mobile/viewport_at_2x.jpg')
+              background-size: 126px 222px
