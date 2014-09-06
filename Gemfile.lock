@@ -1,10 +1,10 @@
 GIT
   remote: git://github.com/bitaculous/assetify.git
-  revision: 09912207e66d6c1cec42ff2da76f46096aee5bed
+  revision: bee3345e11984127b53d96079fbf7d78367edf76
   specs:
-    assetify (1.0.0)
+    assetify (1.1.0)
       bourbon (~> 4.0.2)
-      sprockets (~> 2.12.1)
+      sprockets (~> 2.12.2)
 
 GIT
   remote: git://github.com/bitaculous/initializify.git
@@ -166,7 +166,7 @@ GEM
     sass (3.4.3)
     sassy-maps (0.4.0)
       sass (~> 3.3)
-    sprockets (2.12.1)
+    sprockets (2.12.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)

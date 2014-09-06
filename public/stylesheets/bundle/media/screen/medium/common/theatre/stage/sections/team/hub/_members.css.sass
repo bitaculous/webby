@@ -6,4 +6,8 @@
 
 @mixin members
   .members
+    &.salvattore
+      &[data-columns]::before
+        content: '2 .column'
+
     @include member

@@ -2,5 +2,6 @@
 
 #= require polyfills/console
 
-#= require modernizr
 #= require detect
+#= require modernizr
+#= require salvattore

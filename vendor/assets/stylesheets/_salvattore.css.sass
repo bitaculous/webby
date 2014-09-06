@@ -1,0 +1,21 @@
+// _salvattore.css.sass
+//
+// @package salvattore
+// @media screen
+// @version 1.0
+
+@mixin salvattore
+  .salvattore
+    &[data-columns]::before
+      @include salvattore-data-columns-before
+
+@mixin salvattore-data-columns-before
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  visibility: hidden
+  width: 1px
