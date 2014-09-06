@@ -94,7 +94,23 @@ $contour: (
 $media: (
   screen: (
     small: (
-      min-width: 480px
+      min-width: 480px,
+
+      common: (
+        theatre: (
+          stage: (
+            sections: (
+              work: (
+                hub: (
+                  references: (
+                    min-width: 1360px
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
     ),
 
     medium: (
@@ -111,7 +127,7 @@ $media: (
               work: (
                 hub: (
                   references: (
-                    min-width: 2048px,
+                    min-width: 2160px,
 
                     reference: (
                       interior: (
