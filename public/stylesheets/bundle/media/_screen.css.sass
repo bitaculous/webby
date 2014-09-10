@@ -10,6 +10,10 @@
   @import screen/small/common
   @include common
 
+@media (min-width: map-get-deep($media, screen, medium, min-width))
+  @import screen/medium/common
+  @include common
+
 @media (min-width: map-get-deep($media, screen, large, min-width))
   @import screen/large/common
   @include common
