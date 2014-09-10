@@ -1,0 +1,16 @@
+// _interior.css.sass
+//
+// @package bundle/contour/index/theatre/stage/sections/work/hub/references/reference
+
+@import interior/views
+@import interior/caption
+
+@mixin interior
+  .interior
+    margin: 0 auto
+    text-align: center
+    width: map-get-deep($contour, index, theatre, stage, sections, work, hub, references, reference, interior, width)
+
+    @include views
+
+    @include caption

@@ -1,0 +1,45 @@
+// _team.css.sass
+//
+// @package bundle/contour/index/theatre/stage/sections
+
+@import team/hub/members
+
+@mixin team
+  &.team
+    margin: 0 0 rem(-62) 0
+    top: rem(-62)
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+      color: #FB3814
+
+    ul
+      li
+        background-image: image-url('bundle/contour/index/theatre/stage/sections/team/decorations/qube.png')
+
+        @include hidpi
+          background-image: image-url('bundle/contour/index/theatre/stage/sections/team/decorations/qube_at_2x.png')
+          background-size: 10px 12px
+
+    .flap
+      background: transparent image-url('bundle/contour/index/theatre/stage/sections/team/flap/background.png') no-repeat center center
+
+      @include hidpi
+        background-image: image-url('bundle/contour/index/theatre/stage/sections/team/flap/background_at_2x.png')
+        background-size: 2560px 14px
+
+    .hub
+      background: #2D0F19 image-url('bundle/contour/index/theatre/stage/sections/team/hub/background.png') repeat center center
+
+      .heading
+        background: transparent image-url('bundle/contour/index/theatre/stage/sections/team/hub/heading/background.png') no-repeat center rem(14)
+
+        @include hidpi
+          background-image: image-url('bundle/contour/index/theatre/stage/sections/team/hub/heading/background_at_2x.png')
+          background-size: 64px 64px
+
+      @include members

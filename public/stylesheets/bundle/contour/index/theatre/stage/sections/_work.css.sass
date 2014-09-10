@@ -1,0 +1,45 @@
+// _work.css.sass
+//
+// @package bundle/contour/index/theatre/stage/sections
+
+@import work/hub/references
+
+@mixin work
+  &.work
+    background-position: center rem(342)
+    top: rem(-48)
+
+    @include linear-gradient(to bottom, #2D4148 0%, #213337 100%, $fallback: #213337)
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+      color: #1CB5C6
+
+    ul
+      li
+        background-image: image-url('bundle/contour/index/theatre/stage/sections/work/decorations/qube.png')
+
+        @include hidpi
+          background-image: image-url('bundle/contour/index/theatre/stage/sections/work/decorations/qube_at_2x.png')
+          background-size: 10px 12px
+
+    .flap
+      background: transparent image-url('bundle/contour/index/theatre/stage/sections/work/flap/background.png') no-repeat center center
+
+      @include hidpi
+        background-image: image-url('bundle/contour/index/theatre/stage/sections/work/flap/background_at_2x.png')
+        background-size: 2560px 14px
+
+    .hub
+      .heading
+        background: transparent image-url('bundle/contour/index/theatre/stage/sections/work/hub/heading/background.png') no-repeat center rem(12)
+
+        @include hidpi
+          background-image: image-url('bundle/contour/index/theatre/stage/sections/work/hub/heading/background_at_2x.png')
+          background-size: 64px 64px
+
+      @include references
