@@ -6,17 +6,29 @@
   @import screen/x-small/common
   @include common
 
+  @import screen/x-small/index
+  @include index
+
 @media (min-width: map-get-deep($media, screen, small, min-width))
   @import screen/small/common
   @include common
+
+  @import screen/small/index
+  @include index
 
 @media (min-width: map-get-deep($media, screen, medium, min-width))
   @import screen/medium/common
   @include common
 
+  @import screen/medium/index
+  @include index
+
 @media (min-width: map-get-deep($media, screen, large, min-width))
   @import screen/large/common
   @include common
+
+  @import screen/large/index
+  @include index
 
 @media (min-width: map-get-deep($media, screen, x-large, min-width))
   @import screen/x-large/common

@@ -1,0 +1,14 @@
+// _references.css.sass
+//
+// @package bundle/media/screen/large/index/theatre/stage/sections/work/hub
+
+@import references/reference
+@import references/browse
+
+@mixin references
+  .references
+    min-width: map-get-deep($media, screen, large, index, theatre, stage, sections, work, hub, references, min-width)
+
+    @include reference
+
+    @include browse

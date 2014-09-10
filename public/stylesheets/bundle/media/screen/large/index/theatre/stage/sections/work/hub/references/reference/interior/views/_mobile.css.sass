@@ -1,0 +1,23 @@
+// _mobile.css.sass
+//
+// @package bundle/media/screen/large/index/theatre/stage/sections/work/hub/references/reference/interior/views
+
+@mixin mobile
+  &.mobile
+    height: 347px
+    right: -78px
+    top: 60px
+    width: 144px
+
+    .viewport
+      bottom: 83px
+      left: 10px
+      right: 8px
+      top: 42px
+
+    .overlay
+      background: transparent image-url('bundle/media/screen/large/index/theatre/stage/sections/work/hub/references/reference/interior/views/mobile/overlay/background.png') no-repeat 0 0
+
+      @include hidpi
+        background-image: image-url('bundle/media/screen/large/index/theatre/stage/sections/work/hub/references/reference/interior/views/mobile/overlay/background_at_2x.png')
+        background-size: 144px 347px
