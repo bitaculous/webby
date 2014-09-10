@@ -2,12 +2,12 @@
 //
 // @package bundle/media
 
-@media (min-width: map-get-deep($media, screen, small, min-width))
-  @import screen/small/common
+@media (min-width: map-get-deep($media, screen, x-small, min-width))
+  @import screen/x-small/common
   @include common
 
-@media (min-width: map-get-deep($media, screen, medium, min-width))
-  @import screen/medium/common
+@media (min-width: map-get-deep($media, screen, small, min-width))
+  @import screen/small/common
   @include common
 
 @media (min-width: map-get-deep($media, screen, large, min-width))
