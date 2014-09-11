@@ -9,12 +9,18 @@
   @import screen/x-small/index
   @include index
 
+  @import screen/x-small/fail
+  @include fail
+
 @media (min-width: map-get-deep($media, screen, small, min-width))
   @import screen/small/common
   @include common
 
   @import screen/small/index
   @include index
+
+  @import screen/small/fail
+  @include fail
 
 @media (min-width: map-get-deep($media, screen, medium, min-width))
   @import screen/medium/common
@@ -23,12 +29,18 @@
   @import screen/medium/index
   @include index
 
+  @import screen/medium/fail
+  @include fail
+
 @media (min-width: map-get-deep($media, screen, large, min-width))
   @import screen/large/common
   @include common
 
   @import screen/large/index
   @include index
+
+  @import screen/large/fail
+  @include fail
 
 @media (min-width: map-get-deep($media, screen, x-large, min-width))
   @import screen/x-large/common
@@ -37,9 +49,15 @@
   @import screen/x-large/index
   @include index
 
+  @import screen/x-large/fail
+  @include fail
+
 @media (min-width: map-get-deep($media, screen, xx-large, min-width))
   @import screen/xx-large/common
   @include common
 
   @import screen/xx-large/index
   @include index
+
+  @import screen/xx-large/fail
+  @include fail
