@@ -7,3 +7,159 @@ published: true
 listed: true
 searchable: true
 ---
+{% include 'variables' %}
+
+!!! 5
+%html.no-js{ itemscope: true, itemtype: 'http://schema.org/WebPage', lang: '{{locale}}' }
+  {% include 'head' %}
+
+  %body{ id: '{{page.slug}}', class: 'default canvas' }
+    {% include 'top' %}
+
+    .theatre
+      {% block 'theatre' %}
+
+      {% include 'roof' %}
+
+      %main.stage{ role: 'main' }
+        {% block 'stage' %}
+
+        %section.abstract.first{ data: { id: 'abstract', alias: 'home', offset: '-1' } }
+          {% block 'abstract' %}
+
+          {% include 'shady' %}
+
+          {% include 'slider' %}
+
+          .introduction
+            .shell
+              :kramdown
+                Hallo Besucher, wir sind Bitaculous, ein Entwicklungsstudio aus Berlin. Wir entwickeln Websites,
+                Software und Apps für das Web und Mobile.
+
+                Wir unterstützen unsere Kunden in enger Zusammenarbeit von der ersten Idee bis zum Start und darüber
+                hinaus. Wir entwickeln ein Verständnis für die Bedürfnisse und Anforderungen der Benutzer. Wir
+                skizzieren. Wir entwerfen. Wir fügen Bits zusammen. - Alles mit Leidenschaft und <i class="icon-love" title="Liebe"></i>.
+
+          {% endblock %}
+          -# Block `abstract`
+
+        %section.what-we-do{ data: { id: 'what_we_do', alias: 'about', offset: '112' } }
+          {% block 'what_we_do' %}
+
+          {% include 'flap' %}
+
+          .hub
+            .shell
+              .heading
+                :kramdown
+                  # Was wir machen
+
+              .content
+                %section.projects.first
+                  :kramdown
+                    ## Projekte
+
+                    Wir bei Bitaculous entwickeln unterschiedlichste Dinge, jedoch sind wir auf folgendes spezialisiert:
+
+                    * Entwicklung von [Responsive]{: .external target="_blank"} Websites inklusive [Content-Management-System]{: .external target="_blank"},
+                      welche auf jedem Gerät strahlen und die es unseren Kunden ermöglicht, Inhalte einfach zu erstellen
+                      und zu bearbeiten.
+                    * Die Entwicklung kundenspezifischer Anwendungen für Web und Mobile, die genau auf die Wünsche des
+                      Kunden zugeschnitten sind.
+                    * Erstellung von Online-Shops, die unseren Kunden helfen, ihre Produkte online zu verkaufen.
+
+                    [Content-Management-System]: http://de.wikipedia.org/wiki/Content-Management-System "Eine Software zur gemeinschaftlichen Erstellung, Bearbeitung und Organisation von Inhalten (Content)."
+                    [Responsive]: http://de.wikipedia.org/wiki/Responsive_Webdesign "Ein gestalterischer und technischer Ansatz zur Erstellung von Websites, so dass diese auf Eigenschaften des jeweils benutzten Endgeräts reagieren können."
+
+                %section.technologies
+                  :kramdown
+                    ## Technologien
+
+                    Je nach Art des Projektes setzen wir verschiedene Technologien ein, dazu gehören:
+
+                    * [Ruby]{: .external target="_blank"}, [Ruby on Rails]{: .external target="_blank"}
+                    * [Haml]{: .external target="_blank"}, [Sass]{: .external target="_blank"}, [Less]{: .external target="_blank"}
+                    * [JavaScript]{: .external target="_blank"} / [CoffeeScript]{: .external target="_blank"}, [Ember.js]{: .external target="_blank"},
+                      [AngularJS]{: .external target="_blank"}, [Backbone.js]{: .external target="_blank"}
+                    * [LocomotiveCMS]{: .external target="_blank"}, [TYPO3]{: .external target="_blank"} / [TYPO3 Neos]{: .external target="_blank"},
+                      [Middleman]{: .external target="_blank"}
+                    * [Shopware]{: .external target="_blank"}, [Spree]{: .external target="_blank"}, [Shopify]{: .external target="_blank"}
+
+                    [AngularJS]: https://angularjs.org "Superheroic JavaScript MVW Framework"
+                    [Backbone.js]: http://coffeescript.org "A tool that gives you the freedom to design the full experience of your web application."
+                    [CoffeeScript]: http://coffeescript.org "A little language that compiles into JavaScript."
+                    [Ember.js]: http://emberjs.com "A framework for creating ambitious web applications."
+                    [Haml]: http://haml.info "Beautiful, DRY, well-indented, clear markup: templating haiku."
+                    [JavaScript]: http://en.wikipedia.org/wiki/JavaScript "A dynamic computer programming language."
+                    [Less]: http://lesscss.org "Leaner CSS"
+                    [LocomotiveCMS]: http://locomotivecms.com "An open source CMS for Rails"
+                    [Middleman]: http://middlemanapp.com "Hand-crafted frontend development"
+                    [Ruby on Rails]: http://rubyonrails.org "An open source web framework that's optimized for programmer happiness and sustainable productivity."
+                    [Ruby]: https://www.ruby-lang.org "A dynamic, open source programming language with a focus on simplicity and productivity."
+                    [Sass]: http://sass-lang.com "Syntactically Awesome Style Sheets"
+                    [Shopify]: http://www.shopify.com "Ecommerce Software, Online Store Builder, Website Store Hosting Solution"
+                    [Shopware]: http://www.shopware.com "A powerful and flexible eCommerce software."
+                    [Spree]: http://spreecommerce.com "A complete open source e-commerce solution for Ruby on Rails."
+                    [TYPO3 Neos]: http://neos.typo3.org "The next-generation open source content management system made by the TYPO3 community."
+                    [TYPO3]: http://typo3.org "The Enterprise Open Source CMS"
+
+                %section.open-source.last
+                  :kramdown
+                    ## Open Source
+
+                    Bitaculous lebt und atmet Open Source. Wenn immer möglich, verwenden wir offene Standards in unseren
+                    Kundenprojekten. Aber wir geben auch etwas [zurück]{: .external target="_blank"}. Wir sind dankbar,
+                    mit einer Vielzahl von Projekten und Entwicklern zusammenzuarbeiten.
+
+                    [zurück]: https://github.com/bitaculous "Bitaculous bei GitHub"
+
+          {% endblock %}
+          -# Block `what_we_do`
+
+        %section.work{ data: { id: 'work', offset: '112' } }
+          {% block 'work' %}
+
+          {% include 'flap' %}
+
+          .hub
+            .shell
+              .heading
+                :kramdown
+                  # Referenzen
+
+            {% include 'references' %}
+
+          {% endblock %}
+          -# Block `work`
+
+        %section.team.last{ data: { id: 'team', offset: '112' } }
+          {% block 'team' %}
+
+          {% include 'flap' %}
+
+          .hub
+            .shell
+              .heading
+                :kramdown
+                  # Team
+
+                  Um beeindruckende Ergebnisse zu schaffen braucht man mehr als technische Fähigkeiten, deshalb
+                  kooperieren wir mit anderen um gemeinsam mehr zu erreichen.
+
+                  Wir lieben was wir tun und bemühen uns ständig es besser zu machen.
+
+              {% include 'members' %}
+
+          {% endblock %}
+          -# Block `team`
+
+        {% endblock %}
+        -# Block `stage`
+
+      {% include 'basement' %}
+
+      {% endblock %}
+      -# Block `theatre`
+
+    {% include 'javascripts' %}

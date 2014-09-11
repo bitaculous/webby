@@ -35,7 +35,6 @@ position: 1
 
           .introduction
             .shell
-              {% if locale == 'en' %}
               :kramdown
                 Hey there, we are Bitaculous, a development studio, located in Berlin. We build websites, software and
                 apps for web and mobile.
@@ -43,17 +42,6 @@ position: 1
                 We support our customers in close cooperation from the initial idea through to the launch and beyond.
                 We develop an understanding of the needs and requirements of the users. We outline. We design. We
                 assemble bits. - All with passion and <i class="icon-love" title="Love"></i>.
-              {% endif %}
-
-              {% if locale == 'de' %}
-              :kramdown
-                Hallo Besucher, wir sind Bitaculous, ein Entwicklungsstudio aus Berlin. Wir entwickeln Websites,
-                Software und Apps für das Web und Mobile.
-
-                Wir unterstützen unsere Kunden in enger Zusammenarbeit von der ersten Idee bis zum Start und darüber
-                hinaus. Wir entwickeln ein Verständnis für die Bedürfnisse und Anforderungen der Benutzer. Wir
-                skizzieren. Wir entwerfen. Wir fügen Bits zusammen. - Alles mit Leidenschaft und <i class="icon-love" title="Liebe"></i>.
-              {% endif %}
 
           {% endblock %}
           -# Block `abstract`
@@ -78,100 +66,61 @@ position: 1
 
               .content
                 %section.projects.first
-                  {% if locale == 'en' %}
                   :kramdown
                     ## Projects
 
                     At Bitaculous we do a lot of things, but we are specialized in:
 
-                    * Building [responsive](http://en.wikipedia.org/wiki/Responsive_web_design "A web design approach aimed at crafting sites to provide an optimal viewing experience."){: .external target="_blank"}
-                      websites including a [content management system](http://en.wikipedia.org/wiki/Content_management_system "A application that allows publishing, editing and modifying content as well as maintenance from a central interface."){: .external target="_blank"},
+                    * Building [responsive]{: .external target="_blank"} websites including a [content management system]{: .external target="_blank"},
                       which shine on every device and let our clients easily add and update their content.
                     * Developing custom applications for web and mobile, which are specifically tailored to the client's
                       wishes.
                     * Building online stores, which help our clients to sell their products online.
-                  {% endif %}
 
-                  {% if locale == 'de' %}
-                  :kramdown
-                    ## Projekte
-
-                    Wir bei Bitaculous entwickeln unterschiedlichste Dinge, jedoch sind wir auf folgendes spezialisiert:
-
-                    * Entwicklung von [Responsive](http://de.wikipedia.org/wiki/Responsive_Webdesign "Ein gestalterischer und technischer Ansatz zur Erstellung von Websites, so dass diese auf Eigenschaften des jeweils benutzten Endgeräts reagieren können."){: .external target="_blank"}
-                      Websites inklusive [Content-Management-System](http://de.wikipedia.org/wiki/Content-Management-System "Eine Software zur gemeinschaftlichen Erstellung, Bearbeitung und Organisation von Inhalten (Content)."){: .external target="_blank"},
-                      welche auf jedem Gerät strahlen und die es unseren Kunden ermöglicht, Inhalte einfach zu erstellen
-                      und zu bearbeiten.
-                    * Die Entwicklung kundenspezifischer Anwendungen für Web und Mobile, die genau auf die Wünsche des
-                      Kunden zugeschnitten sind.
-                    * Erstellung von Online-Shops, die unseren Kunden helfen, ihre Produkte online zu verkaufen.
-                  {% endif %}
+                    [content management system]: http://en.wikipedia.org/wiki/Content_management_system "A application that allows publishing, editing and modifying content as well as maintenance from a central interface."
+                    [responsive]: http://en.wikipedia.org/wiki/Responsive_web_design "A web design approach aimed at crafting sites to provide an optimal viewing experience."
 
                 %section.technologies
-                  {% if locale == 'en' %}
                   :kramdown
                     ## Technologies
 
                     Depending on the type of project, we use a variety of technologies, these include:
 
-                    * [Ruby](https://www.ruby-lang.org "A dynamic, open source programming language with a focus on simplicity and productivity."){: .external target="_blank"},
-                      [Ruby on Rails](http://rubyonrails.org "An open source web framework that's optimized for programmer happiness and sustainable productivity."){: .external target="_blank"}
-                    * [Haml](http://haml.info "Beautiful, DRY, well-indented, clear markup: templating haiku."){: .external target="_blank"},
-                      [Sass](http://sass-lang.com "Syntactically Awesome Style Sheets"){: .external target="_blank"}
-                    * [JavaScript](http://en.wikipedia.org/wiki/JavaScript "A dynamic computer programming language."){: .external target="_blank"} /
-                      [CoffeeScript](http://coffeescript.org "A little language that compiles into JavaScript."){: .external target="_blank"},
-                      [Ember.js](http://emberjs.com "A framework for creating ambitious web applications."){: .external target="_blank"},
-                      [Backbone.js](http://coffeescript.org "A tool that gives you the freedom to design the full experience of your web application."){: .external target="_blank"}
-                    * [LocomotiveCMS](http://locomotivecms.com "An open source CMS for Rails"){: .external target="_blank"},
-                      [TYPO3](http://typo3.org "The Enterprise Open Source CMS"){: .external target="_blank"} /
-                      [TYPO3 Neos](http://neos.typo3.org "The next-generation open source content management system made by the TYPO3 community."){: .external target="_blank"},
-                      [Middleman](http://middlemanapp.com "Hand-crafted frontend development"){: .external target="_blank"}
-                    * [Shopware](http://www.shopware.com "A powerful and flexible eCommerce software."){: .external target="_blank"},
-                      [Spree](http://spreecommerce.com "A complete open source e-commerce solution for Ruby on Rails."){: .external target="_blank"},
-                      [Shopify](http://www.shopify.com "Ecommerce Software, Online Store Builder, Website Store Hosting Solution"){: .external target="_blank"}
-                  {% endif %}
+                    * [Ruby]{: .external target="_blank"}, [Ruby on Rails]{: .external target="_blank"}
+                    * [Haml]{: .external target="_blank"}, [Sass]{: .external target="_blank"}, [Less]{: .external target="_blank"}
+                    * [JavaScript]{: .external target="_blank"} / [CoffeeScript]{: .external target="_blank"}, [Ember.js]{: .external target="_blank"},
+                      [AngularJS]{: .external target="_blank"}, [Backbone.js]{: .external target="_blank"}
+                    * [LocomotiveCMS]{: .external target="_blank"}, [TYPO3]{: .external target="_blank"} / [TYPO3 Neos]{: .external target="_blank"},
+                      [Middleman]{: .external target="_blank"}
+                    * [Shopware]{: .external target="_blank"}, [Spree]{: .external target="_blank"}, [Shopify]{: .external target="_blank"}
 
-                  {% if locale == 'de' %}
-                  :kramdown
-                    ## Technologien
-
-                    Je nach Art des Projektes setzen wir verschiedene Technologien ein, dazu gehören:
-
-                    * [Ruby](https://www.ruby-lang.org "A dynamic, open source programming language with a focus on simplicity and productivity."){: .external target="_blank"},
-                      [Ruby on Rails](http://rubyonrails.org "An open source web framework that's optimized for programmer happiness and sustainable productivity."){: .external target="_blank"}
-                    * [Haml](http://haml.info "Beautiful, DRY, well-indented, clear markup: templating haiku."){: .external target="_blank"},
-                      [Sass](http://sass-lang.com "Syntactically Awesome Style Sheets"){: .external target="_blank"}
-                    * [JavaScript](http://en.wikipedia.org/wiki/JavaScript "A dynamic computer programming language."){: .external target="_blank"} /
-                      [CoffeeScript](http://coffeescript.org "A little language that compiles into JavaScript."){: .external target="_blank"},
-                      [Ember.js](http://emberjs.com "A framework for creating ambitious web applications."){: .external target="_blank"},
-                      [Backbone.js](http://coffeescript.org "A tool that gives you the freedom to design the full experience of your web application."){: .external target="_blank"}
-                    * [LocomotiveCMS](http://locomotivecms.com "An open source CMS for Rails"){: .external target="_blank"},
-                      [TYPO3](http://typo3.org "The Enterprise Open Source CMS"){: .external target="_blank"} /
-                      [TYPO3 Neos](http://neos.typo3.org "The next-generation open source content management system made by the TYPO3 community."){: .external target="_blank"},
-                      [Middleman](http://middlemanapp.com "Hand-crafted frontend development"){: .external target="_blank"}
-                    * [Shopware](http://www.shopware.com "A powerful and flexible eCommerce software."){: .external target="_blank"},
-                      [Spree](http://spreecommerce.com "A complete open source e-commerce solution for Ruby on Rails."){: .external target="_blank"},
-                      [Shopify](http://www.shopify.com "Ecommerce Software, Online Store Builder, Website Store Hosting Solution"){: .external target="_blank"}
-                  {% endif %}
+                    [AngularJS]: https://angularjs.org "Superheroic JavaScript MVW Framework"
+                    [Backbone.js]: http://coffeescript.org "A tool that gives you the freedom to design the full experience of your web application."
+                    [CoffeeScript]: http://coffeescript.org "A little language that compiles into JavaScript."
+                    [Ember.js]: http://emberjs.com "A framework for creating ambitious web applications."
+                    [Haml]: http://haml.info "Beautiful, DRY, well-indented, clear markup: templating haiku."
+                    [JavaScript]: http://en.wikipedia.org/wiki/JavaScript "A dynamic computer programming language."
+                    [Less]: http://lesscss.org "Leaner CSS"
+                    [LocomotiveCMS]: http://locomotivecms.com "An open source CMS for Rails"
+                    [Middleman]: http://middlemanapp.com "Hand-crafted frontend development"
+                    [Ruby on Rails]: http://rubyonrails.org "An open source web framework that's optimized for programmer happiness and sustainable productivity."
+                    [Ruby]: https://www.ruby-lang.org "A dynamic, open source programming language with a focus on simplicity and productivity."
+                    [Sass]: http://sass-lang.com "Syntactically Awesome Style Sheets"
+                    [Shopify]: http://www.shopify.com "Ecommerce Software, Online Store Builder, Website Store Hosting Solution"
+                    [Shopware]: http://www.shopware.com "A powerful and flexible eCommerce software."
+                    [Spree]: http://spreecommerce.com "A complete open source e-commerce solution for Ruby on Rails."
+                    [TYPO3 Neos]: http://neos.typo3.org "The next-generation open source content management system made by the TYPO3 community."
+                    [TYPO3]: http://typo3.org "The Enterprise Open Source CMS"
 
                 %section.open-source.last
-                  {% if locale == 'en' %}
                   :kramdown
                     ## Open Source
 
                     Bitaculous live and breathe Open Source. Wherever possible, we use open standards in our client
-                    projects. But we also like to give something [back](https://github.com/bitaculous "Bitaculous on GitHub"){: .external target="_blank"}.
-                    We are thankful to work with a variety of projects and communities.
-                  {% endif %}
+                    projects. But we also like to give something [back]{: .external target="_blank"}. We are thankful to
+                    work with a variety of projects and communities.
 
-                  {% if locale == 'de' %}
-                  :kramdown
-                    ## Open Source
-
-                    Bitaculous lebt und atmet Open Source. Wenn immer möglich, verwenden wir offene Standards in unseren
-                    Kundenprojekten. Aber wir geben auch etwas [zurück](https://github.com/bitaculous "Bitaculous bei GitHub"){: .external target="_blank"}.
-                    Wir sind dankbar, mit einer Vielzahl von Projekten und Entwicklern zusammenzuarbeiten.
-                  {% endif %}
+                    [back]: https://github.com/bitaculous "Bitaculous on GitHub"
 
           {% endblock %}
           -# Block `what_we_do`
@@ -184,15 +133,8 @@ position: 1
           .hub
             .shell
               .heading
-                {% if locale == 'en' %}
                 :kramdown
                   # Work
-                {% endif %}
-
-                {% if locale == 'de' %}
-                :kramdown
-                  # Referenzen
-                {% endif %}
 
             {% include 'references' %}
 
@@ -207,24 +149,12 @@ position: 1
           .hub
             .shell
               .heading
-                {% if locale == 'en' %}
                 :kramdown
                   # Team
 
                   To create stunning results you need more than technical skills, so we've teamed up and work together.
 
                   We love what we do, and constantly push ourselves to do it better.
-                {% endif %}
-
-                {% if locale == 'de' %}
-                :kramdown
-                  # Team
-
-                  Um beeindruckende Ergebnisse zu schaffen braucht man mehr als technische Fähigkeiten, deshalb
-                  kooperieren wir mit anderen um gemeinsam mehr zu erreichen.
-
-                  Wir lieben was wir tun und bemühen uns ständig es besser zu machen.
-                {% endif %}
 
               {% include 'members' %}
 
