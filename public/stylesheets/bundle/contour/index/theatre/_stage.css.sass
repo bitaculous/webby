@@ -9,7 +9,29 @@
 
 @mixin stage
   .stage
+    margin: 0 0 rem(-62) 0
+    overflow: hidden
+
     section
+      .flap
+        height: 14px
+
+      .hub
+        overflow: hidden
+        padding: 0 0 rem(34)
+
+        .heading
+          font-family: map-get-deep($defaults, font-families, headings)
+          padding: rem(80) 0 rem(20)
+          text-align: center
+
+          h1
+            text-transform: uppercase
+
+      &.last
+        .hub
+          padding: 0 0 rem(20)
+
       @include abstract
 
       @include what-we-do

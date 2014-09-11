@@ -2,11 +2,14 @@
 //
 // @package bundle/media/screen/large/common/theatre
 
-@import basement/get_in_touch
-@import basement/manual
+@import basement/partials/get_in_touch
+@import basement/partials/manual
+@import basement/partials/copyright
 
 @mixin basement
   .basement
-    @include get_in_touch
+    @include get-in-touch
 
     @include manual
+
+    @include copyright

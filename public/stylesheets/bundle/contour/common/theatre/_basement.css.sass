@@ -2,8 +2,9 @@
 //
 // @package bundle/contour/common/theatre
 
-@import basement/get_in_touch
-@import basement/manual
+@import basement/partials/get_in_touch
+@import basement/partials/manual
+@import basement/partials/copyright
 
 @mixin basement
   .basement
@@ -17,9 +18,8 @@
     a
       display: block
 
-    span.divider
-      display: none
-
-    @include get_in_touch
+    @include get-in-touch
 
     @include manual
+
+    @include copyright
