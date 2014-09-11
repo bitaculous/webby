@@ -15,7 +15,7 @@ position: 1
 %html.no-js{ itemscope: true, itemtype: 'http://schema.org/WebPage', lang: '{{locale}}' }
   {% include 'head' %}
 
-  %body{ id: '{{page.slug}}', class: 'default canvas' }
+  %body{ id: '{{slug}}', class: 'default canvas' }
     {% include 'top' %}
 
     .theatre
@@ -52,19 +52,13 @@ position: 1
           {% include 'flap' %}
 
           .hub
-            .shell
-              .heading
-                {% if locale == 'en' %}
+            .heading
+              .shell
                 :kramdown
                   # What we do
-                {% endif %}
 
-                {% if locale == 'de' %}
-                :kramdown
-                  # Was wir machen
-                {% endif %}
-
-              .content
+            .content
+              .shell
                 %section.projects.first
                   :kramdown
                     ## Projects
@@ -131,8 +125,8 @@ position: 1
           {% include 'flap' %}
 
           .hub
-            .shell
-              .heading
+            .heading
+              .shell
                 :kramdown
                   # Work
 
@@ -147,8 +141,8 @@ position: 1
           {% include 'flap' %}
 
           .hub
-            .shell
-              .heading
+            .heading
+              .shell
                 :kramdown
                   # Team
 
@@ -156,7 +150,7 @@ position: 1
 
                   We love what we do, and constantly push ourselves to do it better.
 
-              {% include 'members' %}
+            {% include 'members' %}
 
           {% endblock %}
           -# Block `team`

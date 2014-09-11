@@ -1,8 +1,8 @@
 ---
-title: "Page not found."
+title: "Page not found"
 seo_title: "404 | Bitaculous"
-meta_description: "It's all about the bits, baby!"
-meta_keywords: "bitaculous, it's, all, about, the, bits, baby, 404"
+meta_description: "Page not found"
+meta_keywords: "bitaculous, it's, all, about, the, bits, baby, page, not, found, 404"
 published: true
 listed: false
 searchable: false
@@ -11,10 +11,15 @@ handle: "page_not_found"
 {% extends 'index' %}
 
 {% block 'theatre/stage' %}
+
 %section.content
   {% block 'content' %}
 
-  %h1 {{'page_not_found' | translate}}
+  .shell
+    :markdown
+      # Page not found
+
+      The page you are looking for seems to be missing.
 
   {% endblock %}
   -# Block `content`

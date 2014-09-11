@@ -12,8 +12,10 @@ position: 2
 {% extends 'index' %}
 
 {% block 'theatre/stage' %}
+
 %section.content
   {% block 'content' %}
+
   .shell
     {% assign telephone = bitaculous.telephone_numbers.first %}
     {% assign email = bitaculous.emails.first %}

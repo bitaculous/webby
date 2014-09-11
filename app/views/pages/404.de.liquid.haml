@@ -1,9 +1,27 @@
 ---
-title: "Seite konnte nicht gefunden werden."
+title: "Seite wurde nicht gefunden"
 seo_title: "404 | Bitaculous"
 meta_description: "It's all about the bits, baby!"
-meta_keywords: "bitaculous, it's, all, about, the, bits, baby, 404"
+meta_keywords: "bitaculous, it's, all, about, the, bits, baby, seite, wurde, nicht, gefunden, 404"
 published: true
 listed: false
 searchable: false
 ---
+{% extends 'index' %}
+
+{% block 'theatre/stage' %}
+
+%section.content
+  {% block 'content' %}
+
+  .shell
+    :markdown
+      # Seite wurde nicht gefunden
+
+      Es tut uns Leid, die von Ihnen gesuchte Seite konnte nicht gefunden werden.
+
+  {% endblock %}
+  -# Block `content`
+
+{% endblock %}
+-# Block `theatre/stage`

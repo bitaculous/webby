@@ -1,3 +1,5 @@
+{% capture slug %}{%if page.slug == '404' %}page-not-found{% else %}{{page.slug | downcase | dasherize}}{% endif %}{% endcapture %}
+
 {% assign current_locale = locale %}
 
 {% capture locale_path %}{%if locale == default_locale %}/{% else %}/{{locale}}/{% endif %}{% endcapture %}
