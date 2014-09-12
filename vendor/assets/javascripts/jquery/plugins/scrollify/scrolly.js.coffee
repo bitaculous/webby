@@ -26,7 +26,8 @@ class @Scrolly
     @options = $.extend @defaults, options
 
     @window = $ window
-    @body   = $ 'body'
+
+    @body = $ 'body'
 
     @top = @body.find '> .top'
 

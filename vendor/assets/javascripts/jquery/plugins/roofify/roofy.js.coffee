@@ -18,6 +18,8 @@ class @Roofy
     @roof    = $ roof
     @options = $.extend @defaults, options
 
+    @window = $ window
+
     @body = $ 'body'
 
     @backstage    = @roof.find '> .backstage'
@@ -52,7 +54,7 @@ class @Roofy
     return
 
   setupWindow = ->
-    $(window).on 'resize', @onWindowResize
+    @window.on 'resize', @onWindowResize
 
     return
 

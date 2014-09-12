@@ -10,7 +10,6 @@ class @Shady
   # === Variables ===
 
   defaults:
-    inactive: false
     colors: [
       ['#00477A', '#00707A']
       ['#A22644', '#D24044']
@@ -19,7 +18,11 @@ class @Shady
       ['#AC4E90', '#D91A2D']
       ['#D91A2D', '#E9B713']
     ]
-    randomColor: true
+    offsets:
+      width: 0
+      height: 0
+    randomize: true
+    inactive: false
     debug: false
 
   rendering:
@@ -61,6 +64,8 @@ class @Shady
   constructor: (element, options) ->
     @element = $ element
     @options = $.extend @defaults, options
+
+    @window = $ window
 
     initialize.call @
 
@@ -202,11 +207,11 @@ class @Shady
 
     return
 
-  setRenderer: (index) ->
+  setRenderer: (renderer) ->
     if (@renderer)
       @container.removeChild @renderer.element
 
-    switch index
+    switch renderer
       when Shady.RENDERER.WEBGL
         @renderer = @webglRenderer
       when Shady.RENDERER.CANVAS
@@ -214,21 +219,10 @@ class @Shady
       when Shady.RENDERER.SVG
         @renderer = @svgRenderer
 
-    @renderer.setSize @container.offsetWidth, @container.offsetHeight
+    @renderer.setSize @container.offsetWidth + @options.offsets.width, @container.offsetHeight + @options.offsets.height
 
     # Add the renderer's element to the DOM (`canvas`)
     @container.appendChild @renderer.element
-
-    return
-
-  resize: (width = @container.offsetWidth, height = @container.offsetHeight) ->
-    @renderer.setSize width, height
-
-    @calibrateMeshSegments width
-
-    FSS.Vector3.set @center, @renderer.halfWidth, @renderer.halfHeight
-
-    createMesh.call @
 
     return
 
@@ -246,29 +240,21 @@ class @Shady
 
     return
 
-  calibrateMeshSegments: (offsetWidth) ->
-    @rendering.mesh.segments =
-      if offsetWidth >= 320 and offsetWidth < 480
-        6
-      else if offsetWidth >= 480 and offsetWidth < 768
-        8
-      else if offsetWidth >= 768 and offsetWidth < 1024
-        10
-      else if offsetWidth >= 1024 and offsetWidth < 1280
-        12
-      else if offsetWidth >= 1280 and offsetWidth < 1440
-        14
-      else if offsetWidth > 1440
-        16
-      else
-        6
+  resize: (width = @container.offsetWidth + @options.offsets.width, height = @container.offsetHeight + @options.offsets.height) ->
+    @renderer.setSize width, height
+
+    calibrateMeshSegments.call @, width
+
+    FSS.Vector3.set @center, @renderer.halfWidth, @renderer.halfHeight
+
+    createMesh.call @
 
     return
 
   # === Events ===
 
   onWindowResize: (event) =>
-    @resize @container.offsetWidth, @container.offsetHeight
+    do @resize
 
     do @render
 
@@ -283,47 +269,48 @@ class @Shady
   # === Private ===
 
   initialize = ->
-    if not @options.inactive
-      @rendering.renderer = findRenderer.call @
+    @rendering.renderer = findRenderer.call @
 
-      if @rendering.renderer is Shady.RENDERER.NONE
-        @element.addClass 'no-renderer-found inactive'
+    if @rendering.renderer is Shady.RENDERER.NONE
+      @element.addClass 'no-renderer-found inactive'
+    else
+      @container = @element[0]
+      @now       = do Date.now
+      @start     = do Date.now
+      @center    = do FSS.Vector3.create
+      @attractor = do FSS.Vector3.create
+
+      if @options.randomize
+        color = getRandomColor.call @
       else
-        @container = @element[0]
-        @now       = do Date.now
-        @start     = do Date.now
-        @center    = do FSS.Vector3.create
-        @attractor = do FSS.Vector3.create
-
         color = @options.colors[0]
 
-        color = getRandomColor.call @ if @options.randomColor
+      ambient = color[0]
 
-        ambient = color[0]
+      @rendering.light.ambient = ambient if ambient
 
-        @rendering.light.ambient = ambient if ambient
+      diffuse = color[1]
 
-        diffuse = color[1]
+      @rendering.light.diffuse = diffuse if diffuse
 
-        @rendering.light.diffuse = diffuse if diffuse
+      createRenderer.call @
 
-        createRenderer.call @
+      createScene.call @
 
-        createScene.call @
+      createMesh.call @
 
-        createMesh.call @
+      createLights.call @
 
-        createLights.call @
+      addEventListeners.call @
 
-        addEventListeners.call @
+      do @resize
 
-        @resize @container.offsetWidth, @container.offsetHeight
+      if @options.inactive
+        @element.addClass 'inactive'
+      else
+        @element.addClass 'active'
 
         do @animate
-
-        @element.addClass 'active'
-    else
-      @element.addClass 'inactive'
 
     return
 
@@ -369,7 +356,7 @@ class @Shady
 
     do @renderer.clear
 
-    # Create some geometry (`width`, `height`, `segments`, `slices`) & a material, pass them to mesh constructor, and
+    # Create some geometry (`width`, `height`, `segments`, `slices`) and a material, pass them to mesh constructor, and
     # add the mesh to the scene.
     @geometry = new FSS.Plane(
       @rendering.mesh.width * @renderer.width
@@ -453,11 +440,28 @@ class @Shady
 
     return
 
+  calibrateMeshSegments = (offsetWidth) ->
+    @rendering.mesh.segments =
+      if offsetWidth >= 320 and offsetWidth < 480
+        6
+      else if offsetWidth >= 480 and offsetWidth < 768
+        8
+      else if offsetWidth >= 768 and offsetWidth < 1024
+        10
+      else if offsetWidth >= 1024 and offsetWidth < 1280
+        12
+      else if offsetWidth >= 1280 and offsetWidth < 1440
+        14
+      else if offsetWidth > 1440
+        16
+      else
+        6
+
+    return
+
   addEventListeners = ->
-    _window = $ window
+    @window.on 'resize', @onWindowResize
 
-    _window.on 'resize', @onWindowResize
-
-    _window.on 'mousemove', @onMouseMove
+    @window.on 'mousemove', @onMouseMove
 
     return

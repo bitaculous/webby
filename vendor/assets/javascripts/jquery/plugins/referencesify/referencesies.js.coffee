@@ -34,6 +34,8 @@ class @Referencesies
     @references = $ references
     @options    = $.extend @defaults, options
 
+    @window = $ window
+
     @body = $ 'body'
 
     @browse   = @references.find '> .browse'
@@ -57,7 +59,7 @@ class @Referencesies
 
     tranform.call @
 
-    $(window).on 'resize', @onWindowResize
+    @window.on 'resize', @onWindowResize
 
     return
 
