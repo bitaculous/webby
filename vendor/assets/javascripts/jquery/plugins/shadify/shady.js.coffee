@@ -114,7 +114,11 @@ class @Shady
       FSS.Vector3.setZ light.position, @rendering.light.zOffset
 
       # Calculate the force Luke!
-      d = Math.clamp FSS.Vector3.distanceSquared(light.position, @attractor), @rendering.light.minDistance, @rendering.light.maxDistance
+      d = Math.clamp(
+        FSS.Vector3.distanceSquared light.position, @attractor
+        @rendering.light.minDistance
+        @rendering.light.maxDistance
+      )
 
       f = @rendering.light.gravity * light.mass / d
 
@@ -138,9 +142,9 @@ class @Shady
     while v >= 0
       vertex = @geometry.vertices[v]
 
-      ox = Math.sin(vertex.time + vertex.step[0] * @now * @rendering.mesh.speed)
-      oy = Math.cos(vertex.time + vertex.step[1] * @now * @rendering.mesh.speed)
-      oz = Math.sin(vertex.time + vertex.step[2] * @now * @rendering.mesh.speed)
+      ox = Math.sin vertex.time + vertex.step[0] * @now * @rendering.mesh.speed
+      oy = Math.cos vertex.time + vertex.step[1] * @now * @rendering.mesh.speed
+      oz = Math.sin vertex.time + vertex.step[2] * @now * @rendering.mesh.speed
 
       FSS.Vector3.set(
         vertex.position
@@ -172,7 +176,7 @@ class @Shady
         ly = light.position[1]
 
         switch @rendering.renderer
-          when Shady.CANVAS
+          when Shady.RENDERER.CANVAS
             @renderer.context.lineWidth = 0.5
 
             do @renderer.context.beginPath
@@ -187,7 +191,7 @@ class @Shady
             @renderer.context.fillStyle = light.diffuseHex
 
             do @renderer.context.fill
-          when Shady.SVG
+          when Shady.RENDERER.SVG
             lx += @renderer.halfWidth
             ly = @renderer.halfHeight - ly
 
@@ -330,10 +334,7 @@ class @Shady
 
   getRandomColor = ->
     colors = @options.colors
-    min    = 0
-    max    = colors.length - 1
-
-    random = Math.floor(Math.random() * (max - min + 1)) + min
+    random = Math.floor(do Math.random * colors.length)
 
     colors[random]
 
@@ -365,15 +366,9 @@ class @Shady
       @rendering.mesh.slices
     )
 
-    @material = new FSS.Material(
-      @rendering.mesh.ambient
-      @rendering.mesh.diffuse
-    )
+    @material = new FSS.Material @rendering.mesh.ambient, @rendering.mesh.diffuse
 
-    @mesh = new FSS.Mesh(
-      @geometry
-      @material
-    )
+    @mesh = new FSS.Mesh @geometry, @material
 
     @scene.add @mesh
 
