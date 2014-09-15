@@ -146,8 +146,7 @@ $media: (
       common: (
         theatre: (
           shell: (
-            max-width: 1004px,
-            padding: 0
+            max-width: 1004px
           )
         )
       ),
@@ -176,7 +175,15 @@ $media: (
     ),
 
     x-large: (
-      min-width: 1280px
+      min-width: 1280px,
+
+      common: (
+        theatre: (
+          shell: (
+            max-width: 1260px
+          )
+        )
+      )
     ),
 
     xx-large: (
