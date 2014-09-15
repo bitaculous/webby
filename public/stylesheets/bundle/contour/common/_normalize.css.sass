@@ -37,10 +37,16 @@
     font-family: map-get-deep($defaults, font-families, bold)
     font-weight: map-get-deep($defaults, font-weights, bold)
 
-  ul
-    list-style: none inside none
+  ul,
+  ol
     margin: 0
     padding: 0
+
+  ul
+    list-style: none inside none
+
+  ol
+    list-style: decimal inside none
 
   a
     font-family: map-get-deep($defaults, font-families, links)

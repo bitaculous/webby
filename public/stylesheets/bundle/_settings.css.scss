@@ -60,6 +60,27 @@ $contour: (
         font-size: ms(-2),
         margin: 0 0 rem(22)
       )
+    ),
+
+    theatre: (
+      shell: (
+        padding: 0 rem(10)
+      ),
+
+      stage: (
+        ul: (
+          margin: 0 0 rem(10),
+
+          li: (
+            background-position: left rem(6),
+            padding: 0 0 rem(8) rem(20)
+          )
+        ),
+
+        ol: (
+          margin: 0 0 rem(10)
+        )
+      )
     )
   ),
 
@@ -121,6 +142,15 @@ $media: (
 
     large: (
       min-width: 1024px,
+
+      common: (
+        theatre: (
+          shell: (
+            max-width: 1004px,
+            padding: 0
+          )
+        )
+      ),
 
       index: (
         theatre: (

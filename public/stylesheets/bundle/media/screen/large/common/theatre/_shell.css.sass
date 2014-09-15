@@ -4,5 +4,5 @@
 
 @mixin shell
   .shell
-    max-width: 1004px
-    padding: 0
+    max-width: map-get-deep($media, screen, large, common, theatre, shell, max-width)
+    padding: map-get-deep($media, screen, large, common, theatre, shell, padding)

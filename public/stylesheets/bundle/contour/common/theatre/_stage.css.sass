@@ -6,15 +6,6 @@
 
 @mixin stage
   .stage
-    .shell
-      ul
-        margin: 0 0 rem(10)
-
-        li
-          background-position: left rem(4)
-          background-repeat: no-repeat
-          padding: 0 0 rem(10) rem(20)
-
     section
       position: relative
       z-index: 10
@@ -22,6 +13,17 @@
       p,
       ul
         @include hyphenate
+
+      ul
+        margin: map-get-deep($contour, common, theatre, stage, ul, margin)
+
+        li
+          background-position: map-get-deep($contour, common, theatre, stage, ul, li, background-position)
+          background-repeat: no-repeat
+          padding: map-get-deep($contour, common, theatre, stage, ul, li, padding)
+
+      ol
+        margin: map-get-deep($contour, common, theatre, stage, ol, margin)
 
       a
         @include text-decoration
