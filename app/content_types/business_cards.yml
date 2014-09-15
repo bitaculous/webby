@@ -28,21 +28,13 @@ fields:
     label: "Tax office number"
     type: "string"
     hint: "The optional tax office number of the business card."
-- address:
-    label: "Address"
-    type: "string"
-    required: true
-    hint: "The address of the business card."
-- zip_code:
-    label: "Zip code"
-    type: "string"
-    required: true
-    hint: "The zip code of the business card."
-- city:
-    label: "City"
-    type: "string"
-    required: true
-    hint: "The city of the business card."
+- addresses:
+    label: "Addresses"
+    type: "has_many"
+    class_name: "addresses"
+    inverse_of: "business_card"
+    ui_enabled: true
+    hint: "The addresses of the business card."
 - telephone_numbers:
     label: "Telephone numbers"
     type: "has_many"

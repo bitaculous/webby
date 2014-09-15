@@ -1,0 +1,17 @@
+- "Home":
+    street: "Germaniapromenade 1"
+    postal_code: "12347"
+    city: "Berlin"
+    country:
+      en: "Germany"
+      de: "Deutschland"
+    business_card: "Bitaculous"
+
+- "Home":
+    street: "Bergheimer Straße 147"
+    postal_code: "69115"
+    city: "Heidelberg"
+    country:
+      en: "Germany"
+      de: "Deutschland"
+    business_card: "markenfaktur"

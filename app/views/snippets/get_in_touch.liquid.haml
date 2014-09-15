@@ -1,4 +1,5 @@
 .get-in-touch.partial
+  {% assign address = bitaculous.addresses.first %}
   {% assign telephone = bitaculous.telephone_numbers.first %}
 
   {% if telephone %}
@@ -27,5 +28,5 @@
   %a.location{ href: '{{location.url}}', title: '{{location.label}}', target: '_blank' }
     %i{ class: 'icon-location' }
 
-    %span.label {{bitaculous.address}}, {{bitaculous.zip_code}} {{bitaculous.city}}
+    %span.label {{address.street}}, {{address.postal_code}} {{address.city}}
   {% endif %}

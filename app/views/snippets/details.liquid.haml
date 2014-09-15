@@ -1,4 +1,5 @@
 %aside.details
+  {% assign address = bitaculous.addresses.first %}
   {% assign telephone = bitaculous.telephone_numbers.first %}
   {% assign email = bitaculous.emails.first %}
   {% assign directions = bitaculous.links.first %}
@@ -6,8 +7,8 @@
   :kramdown
     **{{bitaculous.title}}**<br />
     {{bitaculous.contact_person}}<br />
-    {{bitaculous.address}}<br />
-    {{bitaculous.zip_code}} {{bitaculous.city}}
+    {{address.street}}<br />
+    {{address.postal_code}} {{address.city}}
     [<i class="icon-directions"></i>]({{directions.url}} "{{directions.label}}"){: .directions .external target="_blank"}
 
   {% if locale == 'en' %}

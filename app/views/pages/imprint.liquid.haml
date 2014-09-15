@@ -17,6 +17,7 @@ position: 2
   {% block 'content' %}
 
   .shell
+    {% assign address = bitaculous.addresses.first %}
     {% assign telephone = bitaculous.telephone_numbers.first %}
     {% assign email = bitaculous.emails.first %}
 
@@ -27,8 +28,8 @@ position: 2
 
       **{{bitaculous.title}}**<br />
       {{bitaculous.contact_person}}<br />
-      {{bitaculous.address}}<br />
-      {{bitaculous.zip_code}} {{bitaculous.city}}
+      {{address.street}}<br />
+      {{address.postal_code}} {{address.city}}
 
       **Responsible for the content**<br />
       {{bitaculous.contact_person}}
@@ -70,13 +71,14 @@ position: 2
     {% assign markenfaktur = contents.business_cards.first %}
     {% endwith_scope %}
 
+    {% assign address = markenfaktur.addresses.first %}
     {% assign email = markenfaktur.emails.first %}
     {% assign web = markenfaktur.links.first %}
 
     :kramdown
       ## Design:
 
-      {{markenfaktur.title}}, {{markenfaktur.city}}<br />
+      {{markenfaktur.title}}, {{address.city}}<br />
       [{{email.address}}]({{'mailto:' | append: email.encoded_address}} "{{email.label}}"){: .email}<br />
       [{{web.title}}]({{web.url}} "{{web.label}}"){: .external target="_blank"}
 
