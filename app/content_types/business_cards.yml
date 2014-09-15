@@ -17,9 +17,8 @@ fields:
 - claim:
     label: "Claim"
     type: "string"
-    required: true
     localized: true
-    hint: "The claim of the business card."
+    hint: "The optional claim of the business card."
 - contact_person:
     label: "Contact person"
     type: "string"
