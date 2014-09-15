@@ -4,6 +4,6 @@
 
 {% capture locale_path %}{%if locale == default_locale %}/{% else %}/{{locale}}/{% endif %}{% endcapture %}
 
-{% with_scope title: 'Bitaculous' %}
+{% with_scope name: 'Bitaculous' %}
 {% assign bitaculous = contents.business_cards.first %}
 {% endwith_scope %}

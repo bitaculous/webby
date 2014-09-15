@@ -1,9 +1,14 @@
 name: "Business cards"
 slug: "business_cards"
 description: "List of business cards."
-label_field_name: "title"
+label_field_name: "name"
 order_by: "manually"
 fields:
+- name:
+    label: "Name"
+    type: "string"
+    required: true
+    hint: "The name of the business card."
 - title:
     label: "Title"
     type: "string"

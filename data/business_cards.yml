@@ -1,4 +1,5 @@
 - "Bitaculous":
+    title: "Bitaculous"
     claim:
       en: "It's all about the bits, baby!"
       de: "It's all about the bits, baby!"
@@ -9,6 +10,7 @@
     city: "Berlin"
 
 - "markenfaktur":
+    title: "markenfaktur"
     claim:
       en: "Agentur für Corporate Identity, Design und Kommunikation"
       de: "Agency for corporate identity, design and communication"
