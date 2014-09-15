@@ -4,7 +4,7 @@ class @Shady
   @RENDERER:
     WEBGL: 'WebGL'
     CANVAS: 'Canvas'
-    SVG:'SVG'
+    SVG: 'SVG'
     NONE: 'NONE'
 
   # === Variables ===

@@ -15,7 +15,10 @@ fields:
     select_options:
       - "Twitter"
       - "Facebook"
+      - "Google+"
+      - "Xing"
       - "GitHub"
+      - "Bitbucket"
     required: true
     hint: "The type of the channel."
 - description:

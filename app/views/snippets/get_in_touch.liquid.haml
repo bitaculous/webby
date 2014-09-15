@@ -2,23 +2,30 @@
   {% assign telephone = bitaculous.telephone_numbers.first %}
 
   {% if telephone %}
-  %a.telephone{ href: 'tel:{{telephone.number}}', title: '{{telephone.label}}' } {{telephone.formatted_number}}
+  %a.telephone{ href: 'tel:{{telephone.number}}', title: '{{telephone.label}}' }
+    %i{ class: 'icon-telephone' }
 
-  %span.divider.item
-    |
+    %span.label {{telephone.formatted_number}}
+
+  %span.divider.item /
   {% endif %}
 
   {% assign email = bitaculous.emails.first %}
 
   {% if email %}
-  %a.email{ href: 'mailto:{{email.encoded_address}}', title: '{{email.label}}' } {{email.encoded_address}}
+  %a.email{ href: 'mailto:{{email.encoded_address}}', title: '{{email.label}}' }
+    %i{ class: 'icon-email' }
 
-  %span.divider.item
-    |
+    %span.label {{email.encoded_address}}
+
+  %span.divider.item /
   {% endif %}
 
-  {% assign directions = bitaculous.links.first %}
+  {% assign location = bitaculous.links.first %}
 
-  {% if directions %}
-  %a.directions{ href: '{{directions.url}}', title: '{{directions.label}}', target: '_blank' } {{bitaculous.address}}, {{bitaculous.zip_code}} {{bitaculous.city}}
+  {% if location %}
+  %a.location{ href: '{{location.url}}', title: '{{location.label}}', target: '_blank' }
+    %i{ class: 'icon-location' }
+
+    %span.label {{bitaculous.address}}, {{bitaculous.zip_code}} {{bitaculous.city}}
   {% endif %}

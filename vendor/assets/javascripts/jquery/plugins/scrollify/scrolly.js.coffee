@@ -28,8 +28,7 @@ class @Scrolly
     @window = $ window
 
     @body = $ 'body'
-
-    @top = @body.find '> .top'
+    @top  = @body.find '> .top'
 
     @stage    = @theatre.find '> .stage'
     @sections = @stage.find '> section'
