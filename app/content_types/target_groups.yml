@@ -1,9 +1,14 @@
 name: "Target groups"
 slug: "target_groups"
 description: "List of target groups."
-label_field_name: "title"
+label_field_name: "name"
 order_by: "manually"
 fields:
+- name:
+    label: "Name"
+    type: "string"
+    required: true
+    hint: "The name of the target group."
 - identifier:
     label: "Identifier"
     type: "string"

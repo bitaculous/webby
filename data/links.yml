@@ -1,4 +1,4 @@
-- "Directions (Bitaculous)":
+- "Directions":
     title:
       en: "Directions"
       de: "Wegbeschreibung"
@@ -10,7 +10,7 @@
       de: "https://www.google.com/maps/dir//Germaniapromenade+1,+12347+Berlin,+Germany/@52.46068,13.43483,18z"
     business_card: "Bitaculous"
 
-- "Web (Bitaculous)":
+- "Home":
     title:
       en: "bitaculous.com"
       de: "bitaculous.com"
@@ -22,7 +22,7 @@
       de: "http://bitaculous.com"
     business_card: "Bitaculous"
 
-- "Web (markenfaktur)":
+- "Home":
     title:
       en: "www.markenfaktur.de"
       de: "www.markenfaktur.de"

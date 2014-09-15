@@ -1,15 +1,14 @@
 name: "Emails"
 slug: "emails"
 description: "List of emails."
-label_field_name: "title"
+label_field_name: "name"
 order_by: "manually"
 fields:
-- title:
-    label: "Title"
+- name:
+    label: "Name"
     type: "string"
     required: true
-    localized: true
-    hint: "The title of the email."
+    hint: "The name of the email."
 - label:
     label: "Label"
     type: "string"

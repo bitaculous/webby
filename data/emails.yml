@@ -1,7 +1,4 @@
-- "Contact (Bitaculous)":
-    title:
-      en: "Contact"
-      de: "Kontakt"
+- "hello@bitaculous.com":
     label:
       en: "Email us!"
       de: "Kontaktieren Sie uns gerne per E-Mail."
@@ -13,10 +10,7 @@
       de: "&#104;&#097;&#108;&#108;&#111;&#064;&#098;&#105;&#116;&#097;&#099;&#117;&#108;&#111;&#117;&#115;&#046;&#099;&#111;&#109;"
     business_card: "Bitaculous"
 
-- "Contact (markenfaktur)":
-    title:
-      en: "Contact"
-      de: "Kontakt"
+- "info@markenfaktur.de":
     label:
       en: "Contact markenfaktur by email."
       de: "Kontaktieren Sie markenfaktur per E-Mail."

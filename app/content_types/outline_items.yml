@@ -1,9 +1,14 @@
 name: "Outline items"
 slug: "outline_items"
 description: "List of outline items."
-label_field_name: "title"
+label_field_name: "name"
 order_by: "manually"
 fields:
+- name:
+    label: "Name"
+    type: "string"
+    required: true
+    hint: "The name of the outline item."
 - identifier:
     label: "Identifier"
     type: "string"
