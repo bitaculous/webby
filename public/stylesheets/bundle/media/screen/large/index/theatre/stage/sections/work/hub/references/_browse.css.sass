@@ -7,10 +7,22 @@
     width: map-get-deep($media, screen, large, index, theatre, stage, sections, work, hub, references, reference, interior, width)
 
     a
-      bottom: rem(312)
+      bottom: rem(290)
+      height: 60px
+      width: 60px
 
       &.previous
-        left: rem(-114)
+        background-image: image-url('bundle/media/screen/large/index/theatre/stage/sections/work/hub/references/browse/previous/background.png')
+        left: rem(-140)
+
+        @include hidpi
+          background-image: image-url('bundle/media/screen/large/index/theatre/stage/sections/work/hub/references/browse/previous/background_at_2x.png')
+          background-size: 60px 60px
 
       &.next
-        right: rem(-114)
+        background-image: image-url('bundle/media/screen/large/index/theatre/stage/sections/work/hub/references/browse/next/background.png')
+        right: rem(-140)
+
+        @include hidpi
+          background-image: image-url('bundle/media/screen/large/index/theatre/stage/sections/work/hub/references/browse/next/background_at_2x.png')
+          background-size: 60px 60px
