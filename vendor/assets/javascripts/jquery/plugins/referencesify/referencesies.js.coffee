@@ -87,11 +87,11 @@ class @Referencesies
   onWindowResize: (event) =>
     clearTimeout @timeout
 
-    @timeout = setTimeout @onWindowResizeDone, 500
+    @timeout = setTimeout @onWindowResized, 500
 
     return
 
-  onWindowResizeDone: =>
+  onWindowResized: =>
     tranform.call @
 
     return
