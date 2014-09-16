@@ -34,112 +34,13 @@ class @Section
     id = @section.data 'id'
 
     @backstage = @roofy.backstage
-    @pointer   = @roofy.controlPanel.find "> a.control[data-id='#{id}']"
-    @close     = @section.find 'a.close'
+
+    @pointer = @roofy.controlPanel.find "> a.control[data-id='#{id}']"
+    @label   = @pointer.find '> span.label'
+
+    @close = @section.find 'a.close'
 
     initialize.call @
-
-    return
-
-  update: ->
-    states = do @states
-    states = states.join ' '
-
-    @section.removeClass states
-
-    @section.addClass @state
-
-  toogle: ->
-    switch @state
-      when 'active'
-        do @deactivate
-      when 'inactive'
-        do @activate
-
-    return
-
-  activate: ->
-    if do @inactive
-      @section.velocity @options.activate.effect,
-        easing: @options.activate.easing
-        delay: @options.activate.delay
-        duration: @options.activate.duration
-        begin: @beforeActivate
-        complete: @onActivate
-
-    return
-
-  deactivate: ->
-    if do @active
-      @section.velocity @options.deactivate.effect,
-        easing: @options.deactivate.easing
-        delay: @options.deactivate.delay
-        duration: @options.deactivate.duration
-        begin: @beforeDeactivate
-        complete: @onDeactivate
-
-    return
-
-  enableBackstage: ->
-    @backstage.css
-      'overflow': 'scroll'
-
-    return
-
-  disableBackstage: ->
-    @backstage.css
-      'overflow': 'hidden'
-
-    return
-
-  lockControls: ->
-    controls = do @controls
-
-    $.each controls, (index, control) =>
-      @lockControl control
-
-      return
-
-  lockControl: (control) ->
-    if control
-      locked = control.hasClass 'locked'
-
-      if not locked
-        control.addClass 'locked'
-
-    return
-
-  unlockControls: ->
-    controls = do @controls
-
-    $.each controls, (index, control) =>
-      @unlockControl control
-
-      return
-
-  unlockControl: (control) ->
-    if control
-      locked = control.hasClass 'locked'
-
-      if locked
-        control.removeClass 'locked'
-
-    return
-
-  updatePointer: ->
-    if do @active
-      label = @pointer.data 'active-label'
-      title = @pointer.data 'active-title'
-
-      @pointer.addClass 'active'
-    else
-      label = @pointer.data 'label'
-      title = @pointer.data 'title'
-
-      @pointer.removeClass 'active'
-
-    @pointer.html label
-    @pointer.attr 'title', title
 
     return
 
@@ -163,62 +64,72 @@ class @Section
   beforeActivate: (section) =>
     @state = 'locked'
 
-    do @lockControls
+    lockControls.call @
 
-    do @update
+    update.call @
 
     return
 
   onActivate: (section) =>
     @state = 'active'
 
-    do @enableBackstage
+    enableBackstage.call @
 
-    do @updatePointer
+    updatePointer.call @
 
-    do @update
+    update.call @
 
-    do @unlockControls
+    unlockControls.call @
 
     return
 
   beforeDeactivate: (section) =>
     @state = 'locked'
 
-    do @lockControls
+    lockControls.call @
 
-    do @update
+    update.call @
 
     return
 
   onDeactivate: (section) =>
     @state = 'inactive'
 
-    do @disableBackstage
+    disableBackstage.call @
 
-    do @updatePointer
+    updatePointer.call @
 
-    do @update
+    update.call @
 
-    do @unlockControls
+    unlockControls.call @
 
     return
 
   onControlClick: (event) =>
     control = $ event.currentTarget
 
-    do @toogle
+    toogle.call @
 
     false
 
   # === Private ===
 
   initialize = ->
-    do @update
+    update.call @
 
     setupPointer.call @
 
     setupClose.call @
+
+    return
+
+  update = ->
+    states = do @states
+    states = states.join ' '
+
+    @section.removeClass states
+
+    @section.addClass @state
 
     return
 
@@ -229,5 +140,100 @@ class @Section
 
   setupClose = ->
     @close.on 'click', @onControlClick
+
+    return
+
+  toogle = ->
+    switch @state
+      when 'active'
+        deactivate.call @
+      when 'inactive'
+        activate.call @
+
+    return
+
+  activate = ->
+    if do @inactive
+      @section.velocity @options.activate.effect,
+        easing: @options.activate.easing
+        delay: @options.activate.delay
+        duration: @options.activate.duration
+        begin: @beforeActivate
+        complete: @onActivate
+
+    return
+
+  deactivate = ->
+    if do @active
+      @section.velocity @options.deactivate.effect,
+        easing: @options.deactivate.easing
+        delay: @options.deactivate.delay
+        duration: @options.deactivate.duration
+        begin: @beforeDeactivate
+        complete: @onDeactivate
+
+    return
+
+  enableBackstage = ->
+    @backstage.css
+      'overflow': 'scroll'
+
+    return
+
+  disableBackstage = ->
+    @backstage.css
+      'overflow': 'hidden'
+
+    return
+
+  lockControls = ->
+    controls = do @controls
+
+    $.each controls, (index, control) =>
+      lockControl.call @, control
+
+      return
+
+  lockControl = (control) ->
+    if control
+      locked = control.hasClass 'locked'
+
+      if not locked
+        control.addClass 'locked'
+
+    return
+
+  unlockControls = ->
+    controls = do @controls
+
+    $.each controls, (index, control) =>
+      unlockControl.call @, control
+
+      return
+
+  unlockControl = (control) ->
+    if control
+      locked = control.hasClass 'locked'
+
+      if locked
+        control.removeClass 'locked'
+
+    return
+
+  updatePointer = ->
+    if do @active
+      label = @pointer.data 'active-label'
+      title = @pointer.data 'active-title'
+
+      @pointer.addClass 'active'
+    else
+      label = @pointer.data 'label'
+      title = @pointer.data 'title'
+
+      @pointer.removeClass 'active'
+
+    @label.html label
+
+    @pointer.attr 'title', title
 
     return
