@@ -52,34 +52,6 @@ class @Scrolly
 
     true
 
-  scrollByHash: (hash) ->
-    if hash
-      excluded = $.inArray(hash, @options.scrolling.exclude) > -1
-
-      if not excluded
-        data = @roof.outline.getScrollDataByHash hash
-
-        @scrollTo data.target, data.offset
-
-    return
-
-  activateSection: (section) ->
-    section = $ section
-    id      = section.data 'id'
-    alias   = section.data 'alias'
-
-    if alias or id
-      @roof.outline.activateItemById alias or id
-
-      @updateLocationHash alias or id
-
-    return
-
-  updateLocationHash: (id) ->
-    window.location.hash = "/#{id}" if id
-
-    return
-
   index: ->
     if @body.attr 'id' is 'index'
       true
@@ -89,11 +61,14 @@ class @Scrolly
   # === Events ===
 
   onWindowLoad: (event) =>
-    setTimeout =>
-      @scrollByHash window.location.hash
+    clearTimeout @timeout
 
-      do @roof.update
-    , 1
+    @timeout = setTimeout @onWindowLoaded, 500
+
+    return
+
+  onWindowLoaded: =>
+    scrollByHash.call @, window.location.hash
 
     return
 
@@ -108,12 +83,12 @@ class @Scrolly
     return
 
   onSectionEnter: (section, direction) =>
-    @activateSection section
+    activateSection.call @, section
 
     return
 
   onScrollComplete: (section) =>
-    @activateSection section
+    activateSection.call @, section
 
     return
 
@@ -158,5 +133,33 @@ class @Scrolly
         offset: offset or @options.offsets.sections
 
       return
+
+    return
+
+  scrollByHash = (hash) ->
+    if hash
+      excluded = $.inArray(hash, @options.scrolling.exclude) > -1
+
+      if not excluded
+        data = @roof.outline.getScrollDataByHash hash
+
+        @scrollTo data.target, data.offset
+
+    return
+
+  activateSection = (section) ->
+    section = $ section
+    id      = section.data 'id'
+    alias   = section.data 'alias'
+
+    if alias or id
+      @roof.outline.activateItemById alias or id
+
+      updateLocationHash.call @, alias or id
+
+    return
+
+  updateLocationHash = (id) ->
+    window.location.hash = "/#{id}" if id
 
     return
