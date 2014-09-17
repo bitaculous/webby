@@ -1,6 +1,6 @@
 .greetings
-  .shell
-    .heading
+  .heading
+    .shell
       {% if locale == 'en' %}
       :kramdown
         # Good to see you again!
@@ -11,7 +11,8 @@
         # Schön Sie wieder zu sehen!
       {% endif %}
 
-    .target-groups
+  .target-groups
+    .shell
       {% for target_group in contents.target_groups %}
 
       {% capture position %}{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}{% endcapture %}
