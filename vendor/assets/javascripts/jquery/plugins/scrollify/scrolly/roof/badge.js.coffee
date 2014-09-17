@@ -11,12 +11,12 @@ class @Badge
     @scrolly = scrolly
     @options = $.extend @defaults, options
 
-    @icon = @badge.find '> .icon'
+    @logo = @badge.find '> .logo'
 
     return
 
   animate: ->
-    @icon
+    @logo
     .velocity
       rotateZ: '-360deg'
     ,
