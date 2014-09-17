@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/bitaculous/assetify.git
-  revision: f089f6b9e5f69f18aefd9d7b5b25b1126919ec70
+  revision: 0aa5efc55e9387ed12b204f5739017fbff0d9c1c
   specs:
     assetify (1.1.0)
       bourbon (~> 4.0.2)
