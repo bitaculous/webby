@@ -2,7 +2,6 @@
 //
 // @package bundle/contour/common/theatre/roof/backstage/sections
 
-@import contact/bar
 @import contact/greetings
 @import contact/reach_us
 
@@ -34,7 +33,14 @@
           background-image: image-url('bundle/contour/common/theatre/roof/backstage/sections/contact/decorations/qube_at_2x.png')
           background-size: 10px 12px
 
-    @include bar
+    .bar
+      background: #E2F4F8
+
+      a.close
+        background-color: #24D2DB
+
+        &.locked
+          background-color: #DDD
 
     @include greetings
 

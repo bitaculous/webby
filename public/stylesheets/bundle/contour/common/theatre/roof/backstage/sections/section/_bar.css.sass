@@ -1,0 +1,31 @@
+// _bar.css.sass
+//
+// @package bundle/contour/common/theatre/roof/backstage/sections/section
+
+@mixin bar
+  .bar
+    left: 0
+    position: fixed
+    right: 0
+    top: 0
+    z-index: 210
+
+    .shell
+      height: 32px
+
+    a.close
+      background: transparent image-url('bundle/contour/common/theatre/roof/backstage/sections/section/bar/close/background.png') no-repeat center center
+      display: block
+      height: 24px
+      position: absolute
+      right: rem(10)
+      top: rem(4)
+      width: 24px
+
+      @include hidpi
+        background-image: image-url('bundle/contour/common/theatre/roof/backstage/sections/section/bar/close/background_at_2x.png')
+        background-size: 24px 24px
+
+      @include hide-text
+
+      @include lockify($property: background-color)

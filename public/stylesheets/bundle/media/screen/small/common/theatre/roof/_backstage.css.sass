@@ -2,9 +2,12 @@
 //
 // @package bundle/media/screen/small/common/theatre/roof
 
+@import backstage/sections/section/bar
 @import backstage/sections/contact
 
 @mixin backstage
   .backstage
     section
+      @include bar
+
       @include contact

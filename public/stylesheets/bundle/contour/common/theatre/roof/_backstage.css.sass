@@ -2,6 +2,7 @@
 //
 // @package bundle/contour/common/theatre/roof
 
+@import backstage/sections/section/bar
 @import backstage/sections/contact
 
 @mixin backstage
@@ -11,27 +12,6 @@
     text-align: left
 
     section
-      .bar
-        left: 0
-        position: fixed
-        right: 0
-        top: 0
-        z-index: 210
-
-        .shell
-          height: 32px
-
-        a.close
-          display: block
-          font-family: map-get-deep($defaults, font-families, heavy)
-          height: 24px
-          line-height: 26px
-          position: absolute
-          right: rem(10)
-          text-align: center
-          top: rem(4)
-          width: 24px
-
-          @include lockify
+      @include bar
 
       @include contact
