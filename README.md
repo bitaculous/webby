@@ -1,7 +1,7 @@
 [Webby]
 =======
 
-**Sources of the official Bitaculous website.**
+**The sources of the official Bitaculous website.**
 
 [![Gemnasium Status][Gemnasium Status]][Gemnasium]
 
@@ -86,8 +86,8 @@ Credits
 * [Font Awesome]
 * [Nexa]
 
-License
--------
+Licenses
+--------
 
 Webby is released under the [MIT License (MIT)], see [LICENSE].
 
@@ -131,4 +131,4 @@ This font is free for personal use only and copyright protected under [The Fonts
 [Velocity]: http://velocityjs.org "Accelerated JavaScript animation."
 [Vendorify]: http://bitaculous.github.io/vendorify, "Put your vendor assets where they belong."
 [Waypoints]: http://imakewebthings.com/jquery-waypoints "Waypoints is a jQuery plugin that makes it easy to execute a function whenever you scroll to an element."
-[Webby]: https://github.com/bitaculous/webby "Sources of the official Bitaculous website."
+[Webby]: https://github.com/bitaculous/webby "The sources of the official Bitaculous website."
