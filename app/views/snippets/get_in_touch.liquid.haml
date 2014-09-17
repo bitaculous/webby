@@ -8,7 +8,7 @@
 
     %span.label {{telephone.formatted_number}}
 
-  %span.divider.item /
+  %span.separator.item /
   {% endif %}
 
   {% assign email = bitaculous.emails.first %}
@@ -19,7 +19,7 @@
 
     %span.label {{email.encoded_address}}
 
-  %span.divider.item /
+  %span.separator.item /
   {% endif %}
 
   {% assign location = bitaculous.links.first %}
