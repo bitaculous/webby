@@ -12,13 +12,13 @@ group :default do
   end
 end
 
-group :development do
-  group :osx do
-    gem 'rb-fsevent', '~> 0.9.4', require: RUBY_PLATFORM.include?('darwin') && 'rb-fsevent'
-  end
-end
-
 group :misc do
+  gem 'initializify', github: 'bitaculous/initializify'
+
+  gem 'liquids', github: 'bitaculous/liquids'
+
+  gem 'vendorify', github: 'bitaculous/vendorify'
+
   group :assets do
     gem 'assetify', github: 'bitaculous/assetify'
 
@@ -41,12 +41,10 @@ group :misc do
   end
 
   group :templating do
-    gem 'kramdown', '~> 1.4.1'
+    gem 'kramdown', '~> 1.4.2'
   end
 
-  gem 'initializify', github: 'bitaculous/initializify'
-
-  gem 'liquids', github: 'bitaculous/liquids'
-
-  gem 'vendorify', github: 'bitaculous/vendorify'
+  group :osx do
+    gem 'rb-fsevent', '~> 0.9.4', require: RUBY_PLATFORM.include?('darwin') && 'rb-fsevent'
+  end
 end

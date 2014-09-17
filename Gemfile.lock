@@ -138,7 +138,7 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (0.6.11)
     json (1.8.1)
-    kramdown (1.4.1)
+    kramdown (1.4.2)
     less (2.2.2)
       commonjs (~> 0.2.6)
     listen (2.4.1)
@@ -198,7 +198,7 @@ DEPENDENCIES
   compass (~> 1.0.1)
   hogan_assets (~> 1.6.0)
   initializify!
-  kramdown (~> 1.4.1)
+  kramdown (~> 1.4.2)
   liquids!
   locomotivecms_mounter!
   locomotivecms_wagon!
