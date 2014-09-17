@@ -55,7 +55,7 @@ class @Shady
       minDistance: 20
       maxDistance: 400
       autopilot: false
-      draw: true
+      draw: false
       bounds: do FSS.Vector3.create
       step: FSS.Vector3.create Math.randomInRange(0.2, 1.0), Math.randomInRange(0.2, 1.0), Math.randomInRange(0.2, 1.0)
 
@@ -185,6 +185,7 @@ class @Shady
             @renderer.context.strokeStyle = light.ambientHex
 
             do @renderer.context.stroke
+
             do @renderer.context.beginPath
 
             @renderer.context.arc lx, ly, 4, 0, Math.PIM2
@@ -323,7 +324,7 @@ class @Shady
     browser = ua.browser
     family  = browser.family
 
-    if Modernizr.webgl and (family is 'Chrome' or family is 'Safari')
+    if Modernizr.webgl
       Shady.RENDERER.WEBGL
     else if Modernizr.canvas
       Shady.RENDERER.CANVAS
