@@ -6,33 +6,39 @@
   a.control
     display: inline-block
     font-family: map-get-deep($defaults, font-families, navigation)
-    font-size: ms(-1.25)
+    font-size: map-get-deep($contour, common, theatre, roof, dashboard, control-panel, controls, font-size)
+    line-height: map-get-deep($contour, common, theatre, roof, dashboard, control-panel, controls, line-height)
     text-align: center
     text-transform: uppercase
+
+    span
+      &.partial
+        display: inline-block
+        height: map-get-deep($contour, common, theatre, roof, dashboard, control-panel, controls, height)
+
+        &.left,
+        &.right
+          width: 16px
+
+        &.left
+          background: transparent image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/control/partials/left/background.png') no-repeat center center
+
+          @include hidpi
+            background-image: image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/control/partials/left/background_at_2x.png')
+            background-size: 16px 28px
+
+        &.right
+          background: transparent image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/control/partials/right/background.png') no-repeat center center
+
+          @include hidpi
+            background-image: image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/control/partials/right/background_at_2x.png')
+            background-size: 16px 28px
+
+        &.center
+          background: transparent image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/control/partials/center/background.png') repeat center center
+          margin: 0 rem(-4)
 
     &.locked
       color: #555
 
-    &.active
-      font-family: map-get-deep($defaults, font-families, heavy)
-      font-size: ms(0)
-
     @include lockify($transition: false)
-
-    &.contact
-      background-image: image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/contact/background.png')
-      height: 28px
-      line-height: 28px
-      width: 92px
-
-      @include hidpi
-        background-image: image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/contact/background_at_2x.png')
-        background-size: 92px 28px
-
-      &.active
-        background-image: image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/contact/active/background.png')
-        width: 72px
-
-        @include hidpi
-          background-image: image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/contact/active/background_at_2x.png')
-          background-size: 72px 28px

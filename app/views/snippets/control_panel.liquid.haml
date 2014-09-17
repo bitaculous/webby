@@ -1,5 +1,9 @@
 .control-panel
   {% include 'slang' %}
 
-  %a.contact.control{ href: '#', data: { id: 'contact', label: '{{\'contact\' | translate}}', title: '{{\'contact\' | translate}}', active: { label: '{{\'x\' | translate}}', title: '{{\'close\' | translate}}' } }, title: '{{\'contact\' | translate}}' }
-    {{'contact' | translate}}
+  %a.contact.control{ href: '#', data: { id: 'contact', label: '{{\'contact\' | translate}}', title: '{{\'contact\' | translate}}', active: { label: '{{\'close\' | translate}}', title: '{{\'close\' | translate}}' } }, title: '{{\'contact\' | translate}}' }
+    %span.left.partial &nbsp;
+
+    %span.label.center.partial {{'contact' | translate}}
+
+    %span.right.partial &nbsp;

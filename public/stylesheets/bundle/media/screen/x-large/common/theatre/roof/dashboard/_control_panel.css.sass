@@ -6,4 +6,7 @@
 
 @mixin control-panel
   .control-panel
+    nav.slang
+      line-height: map-get-deep($media, screen, x-large, common, theatre, roof, dashboard, control-panel, controls, line-height)
+
     @include controls

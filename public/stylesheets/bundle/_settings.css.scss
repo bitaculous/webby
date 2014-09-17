@@ -67,6 +67,18 @@ $contour: (
         padding: 0 rem(10)
       ),
 
+      roof: (
+        dashboard: (
+          control-panel: (
+            controls: (
+              font-size: ms(-1.25),
+              height: 28px,
+              line-height: 28px
+            )
+          )
+        )
+      ),
+
       stage: (
         ul: (
           margin: 0 0 rem(10),
@@ -144,9 +156,22 @@ $media: (
       min-width: 1024px,
 
       common: (
+        font-size: 105%,
+
         theatre: (
           shell: (
             max-width: 1004px
+          ),
+
+          roof: (
+            dashboard: (
+              control-panel: (
+                controls: (
+                  height: 30px,
+                  line-height: 30px
+                )
+              )
+            )
           )
         )
       ),
@@ -178,16 +203,33 @@ $media: (
       min-width: 1280px,
 
       common: (
+        font-size: 107.5%,
+
         theatre: (
           shell: (
             max-width: 1260px
+          ),
+
+          roof: (
+            dashboard: (
+              control-panel: (
+                controls: (
+                  height: 32px,
+                  line-height: 32px
+                )
+              )
+            )
           )
         )
       )
     ),
 
     xx-large: (
-      min-width: 1680px
+      min-width: 1680px,
+
+      common: (
+        font-size: 112.5%
+      )
     )
   )
 );

@@ -3,3 +3,28 @@
 // @package bundle/media/screen/large/common/theatre/roof/dashboard/control_panel
 
 @mixin controls
+  a.control
+    line-height: map-get-deep($media, screen, large, common, theatre, roof, dashboard, control-panel, controls, line-height)
+
+    span
+      &.partial
+        display: inline-block
+        height: map-get-deep($media, screen, large, common, theatre, roof, dashboard, control-panel, controls, height)
+
+        &.left,
+        &.right
+          width: 18px
+
+        &.left
+          background-image: image-url('bundle/media/screen/large/common/theatre/roof/dashboard/control_panel/controls/control/partials/left/background.png')
+
+          @include hidpi
+            background-image: image-url('bundle/media/screen/large/common/theatre/roof/dashboard/control_panel/controls/control/partials/left/background_at_2x.png')
+            background-size: 18px 30px
+
+        &.right
+          background-image: image-url('bundle/media/screen/large/common/theatre/roof/dashboard/control_panel/controls/control/partials/right/background.png')
+
+          @include hidpi
+            background-image: image-url('bundle/media/screen/large/common/theatre/roof/dashboard/control_panel/controls/control/partials/right/background_at_2x.png')
+            background-size: 18px 30px

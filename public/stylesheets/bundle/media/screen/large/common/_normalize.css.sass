@@ -5,4 +5,4 @@
 @mixin normalize
   html,
   body
-    font-size: 105%
+    font-size: map-get-deep($media, screen, large, common, font-size)
