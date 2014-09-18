@@ -1,7 +1,7 @@
 [Webby]
 =======
 
-**The sources of the official Bitaculous website.**
+**The sources of the official [Bitaculous website].**
 
 [![Gemnasium Status][Gemnasium Status]][Gemnasium]
 
@@ -101,6 +101,7 @@ This font is released under the [SIL Open Font License (OFL)].
 This font is free for personal use only and copyright protected under [The Fontspring Webfont End User License Agreement].
 
 [Assetify]: http://bitaculous.github.io/assetify "“All your assets are belong to us”"
+[Bitaculous website]: http://sneak.bitaculous.com "Sneak Peek of the Bitaculous website"
 [Breakpoint]: https://github.com/Team-Sass/breakpoint, "Really simple media queries in Sass"
 [Compass]: http://compass-style.org "An open-source CSS Authoring Framework."
 [Console]: https://github.com/h5bp/html5-boilerplate/blob/master/js/plugins.js "Avoid `console` errors in browsers that lack a console."
