@@ -8,10 +8,21 @@
 Installation
 ------------
 
+1. Clone the repository:
+
+    ```
     $ git clone git@github.com:bitaculous/webby.git webby
-    $ cd webby
-    $ bundle
-    $ cp ressources/config/deploy.yml config/deploy.yml
+    ```
+
+2. Install all dependencies with [Bundler]:
+
+    ```
+    $ bundle install
+    ```
+
+3. Create the deploy configuration:
+
+    Copy [ressources/config/deploy.yml] to `config/deploy.yml` and adjust properly
 
 Usage
 -----
@@ -103,8 +114,9 @@ This font is free for personal use only and copyright protected under [The Fonts
 [Assetify]: http://bitaculous.github.io/assetify "“All your assets are belong to us”"
 [Bitaculous website]: http://sneak.bitaculous.com "Sneak Peek of the Bitaculous website"
 [Breakpoint]: https://github.com/Team-Sass/breakpoint, "Really simple media queries in Sass"
+[Bundler]: http://bundler.io "The best way to manage a Ruby application's gems"
 [Compass]: http://compass-style.org "An open-source CSS Authoring Framework."
-[Console]: https://github.com/h5bp/html5-boilerplate/blob/master/js/plugins.js "Avoid `console` errors in browsers that lack a console."
+[Console]: https://github.com/h5bp/html5-boilerplate/blob/master/src/js/plugins.js "Avoid `console` errors in browsers that lack a console."
 [FastClick]: https://github.com/ftlabs/fastclick "Polyfill to remove click delays on browsers with touch UIs."
 [Flat Surface Shader (FSS)]: http://matthew.wagerfield.com/flat-surface-shader "Flat Surface Shader for rendering lit triangles to a number of contexts including WebGL, Canvas 2D and SVG."
 [Font Awesome]: http://fortawesome.github.io/Font-Awesome "The iconic font and CSS toolkit"
@@ -124,6 +136,7 @@ This font is free for personal use only and copyright protected under [The Fonts
 [Modular Scale]: https://github.com/Team-Sass/modular-scale "Modular scale calculator built into your Sass"
 [Nexa]: http://www.fontspring.com/fonts/fontfabric/nexa "Nexa"
 [normalize.css]: http://necolas.github.io/normalize.css "normalize.css"
+[ressources/config/deploy.yml]: https://github.com/bitaculous/webby/blob/master/ressources/config/deploy.yml "Deploy configuration (sample)"
 [Sassy Maps]: https://github.com/Team-Sass/Sassy-Maps "Map helper functions for Sass 3.3 and up"
 [SIL Open Font License (OFL)]: http://scripts.sil.org/OFL "SIL Open Font License (OFL)"
 [Slick]: http://kenwheeler.github.io/slick "The last carousel you'll ever need."
