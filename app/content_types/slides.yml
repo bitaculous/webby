@@ -17,6 +17,11 @@ fields:
       - "Quote"
     required: true
     hint: "The type of the slide."
+- locales:
+    label: "Locales"
+    type: "tags"
+    required: true
+    hint: "The available locales of the slide."
 - message:
     label: "Message"
     type: "text"
