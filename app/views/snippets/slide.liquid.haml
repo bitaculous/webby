@@ -1,6 +1,5 @@
 {% assign type = slide.type | downcase | dasherize %}
 
-{% if slide.type != 'Null' %}
 .slide.slick-slide{ class: '{{type}}' }
   .content
     {% if slide.message %}
@@ -14,4 +13,3 @@
 
     %p.author {{slide.quote.author}}
     {% endif %}
-{% endif %}

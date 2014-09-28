@@ -27,6 +27,7 @@ fields:
 - country:
     label: "Country"
     type: "string"
+    required: true
     localized: true
     hint: "The optional country of the address."
 - business_card:
