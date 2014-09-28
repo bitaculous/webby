@@ -11,10 +11,8 @@
 
       %p.name {{member.name}}
 
+      {% if member.profession %}
       %p.profession {{member.profession}}
-
-      {% if member.claim %}
-      %p.claim {{member.claim}}
       {% endif %}
 
       {% if member.details %}

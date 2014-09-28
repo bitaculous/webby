@@ -1,0 +1,15 @@
+// _overview.css.sass
+//
+// @package bundle/media/screen/x-small/index/theatre/stage/sections
+
+@import overview/shady
+@import overview/slider
+@import overview/introduction
+
+@mixin overview
+  &.overview
+    @include shady
+
+    @include slider
+
+    @include introduction

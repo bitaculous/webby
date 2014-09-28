@@ -26,8 +26,8 @@ position: 1
       %main.stage{ role: 'main' }
         {% block 'stage' %}
 
-        %section.abstract.first{ data: { id: 'abstract', alias: 'home', offset: '-1' } }
-          {% block 'abstract' %}
+        %section.overview.first{ data: { id: 'overview', alias: 'home', offset: '-1' } }
+          {% block 'overview' %}
 
           {% include 'shady' %}
 
@@ -40,10 +40,10 @@ position: 1
                 apps for web and mobile.
 
                 We support our customers in close cooperation from the initial idea through to the launch and beyond.
-                We outline. We design. We assemble bits. - All with <i class="icon-love" title="Love"></i> and passion.
+                We outline. We design. We assemble bits, all with <i class="icon-love" title="Love"></i> and passion.
 
           {% endblock %}
-          -# Block `abstract`
+          -# Block `overview`
 
         %section.what-we-do{ data: { id: 'what_we_do', alias: 'about', offset: '112' } }
           {% block 'what_we_do' %}

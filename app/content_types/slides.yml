@@ -22,6 +22,7 @@ fields:
       - "Message"
       - "Quote"
     required: true
+    localized: true
     hint: "The type of the slide."
 - message:
     label: "Message"

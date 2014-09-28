@@ -24,8 +24,8 @@ searchable: true
       %main.stage{ role: 'main' }
         {% block 'stage' %}
 
-        %section.abstract.first{ data: { id: 'abstract', alias: 'home', offset: '-1' } }
-          {% block 'abstract' %}
+        %section.overview.first{ data: { id: 'overview', alias: 'home', offset: '-1' } }
+          {% block 'overview' %}
 
           {% include 'shady' %}
 
@@ -35,14 +35,14 @@ searchable: true
             .shell
               :kramdown
                 Hallo Besucher, wir sind Bitaculous, ein Entwicklungsstudio aus Berlin. Wir entwickeln Websites,
-                Software und Apps für das Web und Mobile.
+                Software und Apps für das Web und mobile Geräte.
 
                 Wir unterstützen unsere Kunden in enger Zusammenarbeit von der ersten Idee bis zum Start und darüber
-                hinaus. Wir skizzieren. Wir entwerfen. Wir fügen Bits zusammen. - Alles mit <i class="icon-love" title="Liebe"></i>
+                hinaus. Wir skizzieren. Wir entwerfen. Wir programmieren , alles mit <i class="icon-love" title="Liebe"></i>
                 und Leidenschaft.
 
           {% endblock %}
-          -# Block `abstract`
+          -# Block `overview`
 
         %section.what-we-do{ data: { id: 'what_we_do', alias: 'about', offset: '112' } }
           {% block 'what_we_do' %}

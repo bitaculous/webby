@@ -1,26 +1,9 @@
-# Ignore sublime workspace configuration
-*.sublime-workspace
-
-# Ignore bundler configuration
-.bundle
-
-# Ignore sass cache
-.sass-cache
-
-# Ignore bundler stubs
-bin
-
-# Ignore deploy configuration
+/.bundle/
+/.sass-cache/
+/bin/
+/log/
+/public/fonts/nexa/
+/ressources/assets/
+/ressources/layouts/
+/webby.sublime-workspace
 config/deploy.yml
-
-# Ignore log files
-log
-
-# Ignore `public/fonts/nexa` folder
-public/fonts/nexa
-
-# Ignore `ressources/assets` folder
-ressources/assets
-
-# Ignore `ressources/layouts` folder
-ressources/layouts

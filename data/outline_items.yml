@@ -7,7 +7,7 @@
       en: "Home"
       de: "Home"
     href: "#/home"
-    target: "section.abstract"
+    target: "section.overview"
     offset: "0"
 
 - "About":

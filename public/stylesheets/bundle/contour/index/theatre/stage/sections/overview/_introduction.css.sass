@@ -1,0 +1,19 @@
+// _introduction.css.sass
+//
+// @package bundle/contour/index/theatre/stage/sections/overview
+
+@mixin introduction
+  .introduction
+    background: transparent image-url('bundle/contour/index/theatre/stage/sections/overview/introduction/background.png') repeat center center
+    padding: rem(20) 0 rem(40)
+    position: relative
+    text-align: center
+    z-index: 20
+
+    @include container
+
+    i.icon-love
+      font-size: ms(0.75)
+
+    &.transparent
+      background: none

@@ -3,13 +3,13 @@
 source 'https://rubygems.org'
 
 group :default do
-  group :locomotivecms do
-    # gem 'locomotivecms_wagon', github: 'locomotivecms/wagon'
-    gem 'locomotivecms_wagon', path: '../../../sandbox/locomotivecms/wagon'
+  # === LocomotiveCMS ===
 
-    # gem 'locomotivecms_mounter', github: 'locomotivecms/mounter'
-    gem 'locomotivecms_mounter', path: '../../../sandbox/locomotivecms/gems/mounter'
-  end
+  gem 'locomotivecms_wagon', github: 'locomotivecms/wagon'
+  # gem 'locomotivecms_wagon', path: '../../../sandbox/locomotivecms/wagon'
+
+  gem 'locomotivecms_mounter', github: 'locomotivecms/mounter'
+  # gem 'locomotivecms_mounter', path: '../../../sandbox/locomotivecms/gems/mounter'
 end
 
 group :misc do
@@ -19,32 +19,23 @@ group :misc do
 
   gem 'vendorify', github: 'bitaculous/vendorify'
 
-  group :assets do
-    gem 'assetify', github: 'bitaculous/assetify'
+  # === Assets ===
 
-    group :stylesheets do
-      gem 'breakpoint', '~> 2.5.0'
+  gem 'assetify', github: 'bitaculous/assetify'
 
-      gem 'compass', '~> 1.0.1'
-      # gem 'compass', github: 'compass/compass', branch: 'stable'
+  # --- Cascading Style Sheets (CSS) ----
 
-      gem 'modular-scale', '~> 2.0.5'
+  gem 'susy', '~> 2.1.3'
 
-      gem 'sassy-maps', '~> 0.4.0'
+  # --- JavaScript ----
 
-      gem 'susy', '~> 2.1.3'
-    end
+  gem 'hogan_assets', '~> 1.6.0'
 
-    group :javascripts do
-      gem 'hogan_assets', '~> 1.6.0'
-    end
-  end
+  # === Templating ===
 
-  group :templating do
-    gem 'kramdown', '~> 1.4.2'
-  end
+  gem 'kramdown', '~> 1.4.2'
 
-  group :osx do
-    gem 'rb-fsevent', '~> 0.9.4', require: RUBY_PLATFORM.include?('darwin') && 'rb-fsevent'
-  end
+  # === OS X ===
+
+  gem 'rb-fsevent', '~> 0.9.4', require: RUBY_PLATFORM.include?('darwin') && 'rb-fsevent'
 end

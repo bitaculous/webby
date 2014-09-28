@@ -1,16 +1,4 @@
 .greetings
-  .heading
-    .shell
-      {% if locale == 'en' %}
-      :kramdown
-        # Good to see you again!
-      {% endif %}
-
-      {% if locale == 'de' %}
-      :kramdown
-        # Schön Sie wieder zu sehen!
-      {% endif %}
-
   .target-groups
     .shell
       {% for target_group in contents.target_groups %}
@@ -20,7 +8,7 @@
       {% assign identifier = target_group.identifier | downcase | dasherize %}
 
       .target-group{ class: '{{identifier}} {{position}}' }
-        %h2.salutation {{target_group.salutation}}
+        %h1 {{target_group.salutation}}
 
         %p {{target_group.text}}
 

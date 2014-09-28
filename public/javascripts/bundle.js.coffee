@@ -52,11 +52,11 @@ $ ->
     stage = theatre.find '> .stage'
 
     if do stage.present
-      abstract = stage.find '> .abstract'
+      overview = stage.find '> .overview'
 
-      if do abstract.present
-        shady  = abstract.find '> .shady'
-        slider = abstract.find '> .slider'
+      if do overview.present
+        shady  = overview.find '> .shady'
+        slider = overview.find '> .slider'
 
         if do slider.present
           slider.slidify
@@ -66,6 +66,7 @@ $ ->
                 width: 0
                 height: 44
               randomize: true
+              inactive: true
 
       work = stage.find '> .work'
 

@@ -1,8 +1,7 @@
 - "Websites which shine inside and outside":
-    title:
-      en: "Websites which shine inside and outside"
-      de: "Websites, die innen und außen glänzen"
-    type: "Message"
+    type:
+      en: "Message"
+      de: "Message"
     message:
       en: |
         “We built websites which shine <a class="external" href="https://github.com/bitaculous/webby" title="Sources of the Bitaculous website" target="_blank">inside</a>
@@ -12,10 +11,9 @@
         und <a class="external" href="http://www.markenfaktur.de" title="markenfaktur Website" target="_blank">außen</a> glänzen.“
 
 - "Open Source":
-    title:
-      en: "Open Source"
-      de: "Open Source"
-    type: "Message"
+    type:
+      en: "Message"
+      de: "Message"
     message:
       en: |
         “We live and breathe <a class="external" href="https://github.com/bitaculous" title="Open Source" target="_blank">Open Source</a>.”
@@ -23,36 +21,31 @@
         “Wir leben und atmen <a class="external" href="https://github.com/bitaculous" title="Open Source" target="_blank">Open Source</a>.”
 
 - "Sic Parvis Magna":
-    title:
-      en: "Sic Parvis Magna"
-      de: "Sic Parvis Magna"
-    type: "Quote"
+    type:
+      en: "Quote"
+      de: "Null"
     quote: "Sic Parvis Magna"
 
 - "Think Big":
-    title:
-      en: "Think Big"
-      de: "Think Big"
-    type: "Quote"
+    type:
+      en: "Quote"
+      de: "Null"
     quote: "Think Big"
 
 - "Unlimited Power":
-    title:
-      en: "Unlimited Power"
-      de: "Unlimited Power"
-    type: "Quote"
+    type:
+      en: "Quote"
+      de: "Null"
     quote: "Unlimited Power"
 
 - "Do What You Love":
-    title:
-      en: "Do What You Love"
-      de: "Do What You Love"
-    type: "Quote"
+    type:
+      en: "Quote"
+      de: "Null"
     quote: "Do What You Love"
 
 # - "Start Small":
-#     title:
-#       en: "Start Small"
-#       de: "Start Small"
-#     type: "Quote"
+#     type:
+#       en: "Quote"
+#       de: "Null"
 #     quote: "Start Small"
