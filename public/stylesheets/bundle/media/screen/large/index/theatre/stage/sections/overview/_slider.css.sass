@@ -3,3 +3,8 @@
 // @package bundle/media/screen/large/index/theatre/stage/sections/overview
 
 @mixin slider
+  .slider
+    .slide
+      .content
+        max-width: map-get-deep($media, screen, large, common, theatre, shell, max-width)
+        padding: 0

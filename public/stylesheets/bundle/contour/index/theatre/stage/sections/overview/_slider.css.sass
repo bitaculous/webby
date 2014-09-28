@@ -8,45 +8,27 @@
     z-index: 20
 
     .slide
-      height: 380px
+      font-size: map-get-deep($contour, index, theatre, stage, sections, overview, slider, slide, font-size)
+      height: 432px
 
       .content
-        margin: 0 rem(10)
+        margin: 0 auto
+        padding: map-get-deep($contour, common, theatre, shell, padding)
         text-align: center
 
         @include vertical-align
 
         p
-          margin: 0 auto
+          margin: 0 auto rem(10)
+
+          &:last-child
+            margin: 0 auto
 
         a
           font-family: map-get-deep($defaults, font-families, bold)
 
-      &.message
-        .content
-          p
-            font-size: ms(5)
-
-
       &.quote
-        .content
-          p.title,
-          p.statement
-            margin: 0 auto rem(10)
-
-          p.title,
-            font-family: map-get-deep($defaults, font-families, bold)
-            font-size: ms(3.5)
-
-          p.statement
-            max-width: 800px
-
-          p.statement,
-          p.author
-            font-size: ms(1.5)
-
-          p.author
-            font-family: map-get-deep($defaults, font-families, bold)
+        font-size: map-get-deep($contour, index, theatre, stage, sections, overview, slider, slide, quote, font-size)
 
     .slick-dots
       bottom: rem(10)
