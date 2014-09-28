@@ -60,14 +60,14 @@ $contour: (
       h6: (
         font-size: ms(-2),
         margin: 0 0 rem(22)
+      ),
+
+      shell: (
+        padding: 0 rem(10)
       )
     ),
 
     theatre: (
-      shell: (
-        padding: 0 rem(10)
-      ),
-
       roof: (
         dashboard: (
           control-panel: (
@@ -169,11 +169,13 @@ $media: (
       common: (
         font-size: 105%,
 
-        theatre: (
+        elements: (
           shell: (
             max-width: 1004px
-          ),
+          )
+        ),
 
+        theatre: (
           roof: (
             dashboard: (
               control-panel: (
@@ -214,11 +216,13 @@ $media: (
       common: (
         font-size: 107.5%,
 
-        theatre: (
+        elements: (
           shell: (
             max-width: 1260px
-          ),
+          )
+        ),
 
+        theatre: (
           roof: (
             dashboard: (
               control-panel: (
