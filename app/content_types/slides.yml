@@ -9,12 +9,6 @@ fields:
     type: "string"
     required: true
     hint: "The name of the slide."
-- title:
-    label: "Title"
-    type: "string"
-    required: true
-    localized: true
-    hint: "The title of the slide."
 - type:
     label: "Type"
     type: "select"
@@ -22,7 +16,6 @@ fields:
       - "Message"
       - "Quote"
     required: true
-    localized: true
     hint: "The type of the slide."
 - message:
     label: "Message"

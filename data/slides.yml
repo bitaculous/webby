@@ -1,7 +1,5 @@
 - "Websites which shine inside and outside":
-    type:
-      en: "Message"
-      de: "Message"
+    type: "Message"
     message:
       en: |
         “We built websites which shine <a class="external" href="https://github.com/bitaculous/webby" title="Sources of the Bitaculous website" target="_blank">inside</a>
@@ -11,9 +9,7 @@
         und <a class="external" href="http://www.markenfaktur.de" title="markenfaktur Website" target="_blank">außen</a> glänzen.“
 
 - "Open Source":
-    type:
-      en: "Message"
-      de: "Message"
+    type: "Message"
     message:
       en: |
         “We live and breathe <a class="external" href="https://github.com/bitaculous" title="Open Source" target="_blank">Open Source</a>.”
@@ -21,31 +17,21 @@
         “Wir leben und atmen <a class="external" href="https://github.com/bitaculous" title="Open Source" target="_blank">Open Source</a>.”
 
 - "Sic Parvis Magna":
-    type:
-      en: "Quote"
-      de: "Null"
+    type: "Quote"
     quote: "Sic Parvis Magna"
 
 - "Think Big":
-    type:
-      en: "Quote"
-      de: "Null"
+    type: "Quote"
     quote: "Think Big"
 
 - "Unlimited Power":
-    type:
-      en: "Quote"
-      de: "Null"
+    type: "Quote"
     quote: "Unlimited Power"
 
 - "Do What You Love":
-    type:
-      en: "Quote"
-      de: "Null"
+    type: "Quote"
     quote: "Do What You Love"
 
 # - "Start Small":
-#     type:
-#       en: "Quote"
-#       de: "Null"
+#     type: "Quote"
 #     quote: "Start Small"
