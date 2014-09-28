@@ -4,12 +4,9 @@
 
 @mixin controls
   a.control
-    line-height: map-get-deep($media, screen, x-large, common, theatre, roof, dashboard, control-panel, controls, line-height)
-
     span
       &.partial
-        display: inline-block
-        height: map-get-deep($media, screen, x-large, common, theatre, roof, dashboard, control-panel, controls, height)
+        height: map-get-deep($media, screen, x-large, common, theatre, roof, dashboard, control-panel, height)
 
         &.left,
         &.right

@@ -6,13 +6,11 @@
 
 @mixin control-panel
   .control-panel
+    font-size: map-get-deep($contour, common, theatre, roof, dashboard, control-panel, font-size)
+    height: map-get-deep($contour, common, theatre, roof, dashboard, control-panel, height)
+    line-height: map-get-deep($contour, common, theatre, roof, dashboard, control-panel, line-height)
     position: absolute
     right: 0
     top: 0
-
-    nav.slang
-      display: inline-block
-      font-size: map-get-deep($contour, common, theatre, roof, dashboard, control-panel, controls, font-size)
-      line-height: map-get-deep($contour, common, theatre, roof, dashboard, control-panel, controls, line-height)
 
     @include controls

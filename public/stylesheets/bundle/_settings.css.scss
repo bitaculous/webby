@@ -71,11 +71,9 @@ $contour: (
       roof: (
         dashboard: (
           control-panel: (
-            controls: (
-              font-size: ms(-1.25),
-              height: 28px,
-              line-height: 28px
-            )
+            font-size: ms(-0.625),
+            height: 28px,
+            line-height: 28px
           )
         )
       ),
@@ -167,10 +165,8 @@ $media: (
           roof: (
             dashboard: (
               control-panel: (
-                controls: (
-                  height: 30px,
-                  line-height: 30px
-                )
+                height: 30px,
+                line-height: 30px
               )
             )
           )
@@ -214,10 +210,8 @@ $media: (
           roof: (
             dashboard: (
               control-panel: (
-                controls: (
-                  height: 32px,
-                  line-height: 32px
-                )
+                height: 32px,
+                line-height: 32px
               )
             )
           )
