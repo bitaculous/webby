@@ -20,26 +20,16 @@
 // License URL: http://www.fontspring.com/fflicense/fontfabric
 
 @mixin nexa
-  @include nexa-thin
-
   @include nexa-light
+
+  @include nexa-thin
 
   @include nexa-bold
 
   @include nexa-heavy
 
-@mixin nexa-thin
-  // @include font-face('Nexa Thin', '/fonts/nexa/thin')
-
-  @font-face
-    font-family: 'Nexa Thin'
-    font-weight: normal
-    font-style: normal
-    src: font-url('nexa/thin.eot')
-    src: font-url('nexa/thin.eot?#iefix') format('embedded-opentype'), font-url('nexa/thin.woff2') format('woff2'), font-url('nexa/thin.woff') format('woff'), font-url('nexa/thin.ttf') format('truetype'), font-url('nexa/thin.svg#nexa_thin') format('svg')
-
 @mixin nexa-light
-  // @include font-face('Nexa Light', '/nexa/light')
+  // @include font-face('Nexa Light', font-path('nexa/light'))
 
   @font-face
     font-family: 'Nexa Light'
@@ -48,8 +38,18 @@
     src: font-url('nexa/light.eot')
     src: font-url('nexa/light.eot?#iefix') format('embedded-opentype'), font-url('nexa/light.woff2') format('woff2'), font-url('nexa/light.woff') format('woff'), font-url('nexa/light.ttf') format('truetype'), font-url('nexa/light.svg#nexa_light') format('svg')
 
+@mixin nexa-thin
+  // @include font-face('Nexa Thin', font-path('nexa/thin'))
+
+  @font-face
+    font-family: 'Nexa Thin'
+    font-weight: normal
+    font-style: normal
+    src: font-url('nexa/thin.eot')
+    src: font-url('nexa/thin.eot?#iefix') format('embedded-opentype'), font-url('nexa/thin.woff2') format('woff2'), font-url('nexa/thin.woff') format('woff'), font-url('nexa/thin.ttf') format('truetype'), font-url('nexa/thin.svg#nexa_thin') format('svg')
+
 @mixin nexa-bold
-  // @include font-face('Nexa Bold', '/nexa/bold')
+  // @include font-face('Nexa Bold', font-path('nexa/bold'))
 
   @font-face
     font-family: 'Nexa Bold'
@@ -59,7 +59,7 @@
     src: font-url('nexa/bold.eot?#iefix') format('embedded-opentype'), font-url('nexa/bold.woff2') format('woff2'), font-url('nexa/bold.woff') format('woff'), font-url('nexa/bold.ttf') format('truetype'), font-url('nexa/bold.svg#nexa_bold') format('svg')
 
 @mixin nexa-heavy
-  // @include font-face('Nexa Heavy', '/nexa/heavy')
+  // @include font-face('Nexa Heavy', font-path('nexa/heavy'))
 
   @font-face
     font-family: 'Nexa Heavy'
