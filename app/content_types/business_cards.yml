@@ -35,13 +35,13 @@ fields:
     inverse_of: "business_card"
     ui_enabled: true
     hint: "The addresses of the business card."
-- telephone_numbers:
-    label: "Telephone numbers"
+- phone_numbers:
+    label: "Phone numbers"
     type: "has_many"
-    class_name: "telephone_numbers"
+    class_name: "phone_numbers"
     inverse_of: "business_card"
     ui_enabled: true
-    hint: "The telephone numbers of the business card."
+    hint: "The phone numbers of the business card."
 - emails:
     label: "Emails"
     type: "has_many"

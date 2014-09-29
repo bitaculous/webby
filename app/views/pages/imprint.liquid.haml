@@ -18,7 +18,7 @@ position: 2
 
   .shell
     {% assign address = bitaculous.addresses.first %}
-    {% assign telephone = bitaculous.telephone_numbers.first %}
+    {% assign phone = bitaculous.phone_numbers.first %}
     {% assign email = bitaculous.emails.first %}
 
     :kramdown
@@ -39,7 +39,7 @@ position: 2
 
       ## Contact
 
-      **Telephone:** [{{telephone.formatted_number}}](tel:{{telephone.number}} "{{telephone.label}}"){: .telephone}<br />
+      **Phone:** [{{phone.formatted_number}}](tel:{{phone.number}} "{{phone.label}}"){: .phone}<br />
       **Email:** [{{email.address}}]({{'mailto:' | append: email.encoded_address}} "{{email.label}}"){: .email}
 
       # Disclaimer

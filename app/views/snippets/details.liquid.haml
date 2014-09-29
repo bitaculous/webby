@@ -1,6 +1,6 @@
 %aside.details
   {% assign address = bitaculous.addresses.first %}
-  {% assign telephone = bitaculous.telephone_numbers.first %}
+  {% assign phone = bitaculous.phone_numbers.first %}
   {% assign email = bitaculous.emails.first %}
   {% assign directions = bitaculous.links.first %}
 
@@ -15,7 +15,7 @@
   :kramdown
     *Please give us a shout any time:*
 
-    **Telephone:** [{{telephone.formatted_number}}](tel:{{telephone.number}} "{{telephone.label}}"){: .telephone}<br />
+    **Phone:** [{{phone.formatted_number}}](tel:{{phone.number}} "{{phone.label}}"){: .phone}<br />
     **Email:** [{{email.address}}]({{'mailto:' | append: email.encoded_address}} "{{email.label}}"){: .email}
   {% endif %}
 
@@ -23,8 +23,8 @@
   :kramdown
     *Sie können uns gerne jederzeit kontaktieren:*
 
-    **Telephone:** [{{telephone.formatted_number}}](tel:{{telephone.number}} "{{telephone.label}}"){: .telephone}<br />
-    **Email:** [{{email.address}}]({{'mailto:' | append: email.encoded_address}} "{{email.label}}"){: .email}
+    **Telefon:** [{{phone.formatted_number}}](tel:{{phone.number}} "{{phone.label}}"){: .phone}<br />
+    **E-Mail:** [{{email.address}}]({{'mailto:' | append: email.encoded_address}} "{{email.label}}"){: .email}
   {% endif %}
 
   {% include 'channels' %}

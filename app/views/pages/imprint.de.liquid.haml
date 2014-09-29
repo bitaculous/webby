@@ -17,7 +17,7 @@ slug: "impressum"
 
   .shell
     {% assign address = bitaculous.addresses.first %}
-    {% assign telephone = bitaculous.telephone_numbers.first %}
+    {% assign phone = bitaculous.phone_numbers.first %}
     {% assign email = bitaculous.emails.first %}
 
     :kramdown
@@ -38,7 +38,7 @@ slug: "impressum"
 
       ## Kontakt
 
-      **Telefon:** [{{telephone.formatted_number}}](tel:{{telephone.number}} "{{telephone.label}}"){: .telephone}<br />
+      **Telefon:** [{{phone.formatted_number}}](tel:{{phone.number}} "{{phone.label}}"){: .phone}<br />
       **E-Mail:** [{{email.address}}]({{'mailto:' | append: email.encoded_address}} "{{email.label}}"){: .email}
 
       # Haftungsausschluss (Disclaimer)

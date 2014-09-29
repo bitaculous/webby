@@ -1,6 +1,6 @@
-name: "Telephone numbers"
-slug: "telephone_numbers"
-description: "List of telephone numbers."
+name: "Phone numbers"
+slug: "phone_numbers"
+description: "List of phone numbers."
 label_field_name: "name"
 order_by: "manually"
 fields:
@@ -8,33 +8,33 @@ fields:
     label: "Name"
     type: "string"
     required: true
-    hint: "The name of the telephone number."
+    hint: "The name of the phone number."
 - title:
     label: "Title"
     type: "string"
     required: true
     localized: true
-    hint: "The title of the telephone number."
+    hint: "The title of the phone number."
 - label:
     label: "Label"
     type: "string"
     required: true
     localized: true
-    hint: "The label of the telephone number."
+    hint: "The label of the phone number."
 - number:
     label: "Number"
     type: "string"
     required: true
     localized: true
-    hint: "The number of the telephone number."
+    hint: "The number of the phone number."
 - formatted_number:
     label: "Formatted number"
     type: "string"
     required: true
     localized: true
-    hint: "The formatted number of the telephone number."
+    hint: "The formatted number of the phone number."
 - business_card:
     label: "Business card"
     type: "belongs_to"
     class_name: "business_cards"
-    hint: "The business card which the telephone number belongs to."
+    hint: "The business card which the phone number belongs to."

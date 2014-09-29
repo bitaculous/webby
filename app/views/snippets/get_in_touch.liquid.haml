@@ -1,12 +1,12 @@
 .get-in-touch.partial
   {% assign address = bitaculous.addresses.first %}
-  {% assign telephone = bitaculous.telephone_numbers.first %}
+  {% assign phone = bitaculous.phone_numbers.first %}
 
-  {% if telephone %}
-  %a.telephone{ href: 'tel:{{telephone.number}}', title: '{{telephone.label}}' }
-    %i{ class: 'icon-telephone' }
+  {% if phone %}
+  %a.phone{ href: 'tel:{{phone.number}}', title: '{{phone.label}}' }
+    %i{ class: 'icon-phone' }
 
-    %span.label {{telephone.formatted_number}}
+    %span.label {{phone.formatted_number}}
 
   %span.separator.item /
   {% endif %}
