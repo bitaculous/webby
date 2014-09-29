@@ -8,32 +8,32 @@
 Installation
 ------------
 
-1. Clone the repository:
+1. Clone the repository
 
     ```
     $ git clone git@github.com:bitaculous/webby.git webby
     ```
 
-2. Install all dependencies with [Bundler]:
+2. Install all dependencies with [Bundler]
 
     ```
     $ bundle install
     ```
 
-3. Create the deploy configuration:
+3. Create the deploy configuration
 
     Copy [ressources/config/deploy.yml] to `config/deploy.yml` and adjust properly
 
 Usage
 -----
 
-Serve Webby from local file system:
+### Serve Webby from local file system
 
 ```shell
 $ wagon serve
 ```
 
-Push Webby to remote LocomotiveCMS engine:
+### Push Webby to remote LocomotiveCMS engine
 
 ```shell
 $ wagon push <ENV>
@@ -43,7 +43,7 @@ $ wagon push <ENV> --resources=content_entries, content_types, pages, snippets, 
 $ wagon push <ENV> --force
 ```
 
-Pull data from remote LocomotiveCMS engine:
+### Pull data from remote LocomotiveCMS engine
 
 ```shell
 $ wagon pull <ENV>
