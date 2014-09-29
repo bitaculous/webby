@@ -23,7 +23,7 @@ group :misc do
 
   gem 'assetify', github: 'bitaculous/assetify'
 
-  # --- Cascading Style Sheets (CSS) ----
+  # --- Cascading Style Sheets ----
 
   gem 'susy', '~> 2.1.3'
 
