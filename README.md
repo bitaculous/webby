@@ -33,7 +33,7 @@ Usage
 $ wagon serve
 ```
 
-### Push Webby to remote LocomotiveCMS engine
+### Push Webby to a remote LocomotiveCMS engine
 
 ```shell
 $ wagon push <ENV>
@@ -43,7 +43,7 @@ $ wagon push <ENV> --resources=content_entries, content_types, pages, snippets, 
 $ wagon push <ENV> --force
 ```
 
-### Pull data from remote LocomotiveCMS engine
+### Pull data from a remote LocomotiveCMS engine
 
 ```shell
 $ wagon pull <ENV>
