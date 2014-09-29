@@ -1,6 +1,8 @@
 .get-in-touch.partial
-  {% assign address = bitaculous.addresses.first %}
   {% assign phone = bitaculous.phone_numbers.first %}
+  {% assign email = bitaculous.emails.first %}
+  {% assign location = bitaculous.links.first %}
+  {% assign address = bitaculous.addresses.first %}
 
   {% if phone %}
   %a.phone{ href: 'tel:{{phone.number}}', title: '{{phone.label}}' }
@@ -11,8 +13,6 @@
   %span.separator.item /
   {% endif %}
 
-  {% assign email = bitaculous.emails.first %}
-
   {% if email %}
   %a.email{ href: 'mailto:{{email.encoded_address}}', title: '{{email.label}}' }
     %i{ class: 'icon-email' }
@@ -21,8 +21,6 @@
 
   %span.separator.item /
   {% endif %}
-
-  {% assign location = bitaculous.links.first %}
 
   {% if location %}
   %a.location{ href: '{{location.url}}', title: '{{location.label}}', target: '_blank' }
