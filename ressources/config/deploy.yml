@@ -1,14 +1,17 @@
 development:
-  host: "dev.example.com"
-  password: "password"
+  host: "<HOST>"
+  email: "<EMAIL>"
   api_key: "<API_KEY>"
+  ssl: false
 
 staging:
-  host: "staging.example.com"
-  email: "john@doe.net"
+  host: "<HOST>"
+  email: "<EMAIL>"
   api_key: "<API_KEY>"
+  ssl: false
 
 production:
-  host: "www.example.com"
-  email: "john@doe.net"
+  host: "<HOST>"
+  email: "<EMAIL>"
   api_key: "<API_KEY>"
+  ssl: false
