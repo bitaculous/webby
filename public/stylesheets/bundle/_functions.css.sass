@@ -2,11 +2,14 @@
 //
 // @package bundle
 
-@function font-path($font)
-  @return '/fonts/' + $font
+@function font-path($path)
+  @return asset-path($path, 'fonts')
 
-@function image-path($image)
-  @return '/images/' + $image
+@function image-path($path)
+  @return asset-path($path, 'images')
 
-@function sample-path($sample)
-  @return '/samples/' + $sample
+@function sample-path($path)
+  @return asset-path($path, 'samples')
+
+@function asset-path($path, $group)
+  @return "/#{$group}/#{$path}"
