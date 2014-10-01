@@ -66,7 +66,6 @@ $ ->
                 width: 0
                 height: 44
               randomize: true
-              inactive: true
 
       work = stage.find '> .work'
 
