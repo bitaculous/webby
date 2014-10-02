@@ -112,7 +112,7 @@ This font is released under the [SIL Open Font License (OFL)].
 This font is free for personal use only and copyright protected under [The Fontspring Webfont End User License Agreement].
 
 [Assetify]: http://bitaculous.github.io/assetify "“All your assets are belong to us”"
-[Bitaculous website]: http://sneak.bitaculous.com "Sneak Peek of the Bitaculous website"
+[Bitaculous website]: https://bitaculous.com "The official Bitaculous website"
 [Breakpoint]: https://github.com/Team-Sass/breakpoint, "Really simple media queries in Sass"
 [Bundler]: http://bundler.io "The best way to manage a Ruby application's gems"
 [Compass]: http://compass-style.org "An open-source CSS Authoring Framework."
