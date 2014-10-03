@@ -5,11 +5,18 @@
       - "de"
     message:
       en: |
-        We build websites which shine <a class="external" href="https://github.com/bitaculous/webby" title="Sources of the Bitaculous website" target="_blank">inside</a>
+        We develop websites which shine <a class="external" href="https://github.com/bitaculous/webby" title="Sources of the Bitaculous website" target="_blank">inside</a>
         and <a class="external" href="http://www.markenfaktur.de" title="markenfaktur website" target="_blank">outside</a>.
       de: |
         Wir entwickeln Websites, die <a class="external" href="https://github.com/bitaculous/webby" title="Quellcode der Bitaculous Website" target="_blank">innen</a>
         und <a class="external" href="http://www.markenfaktur.de" title="markenfaktur Website" target="_blank">außen</a> glänzen.
+
+- "It's all about the bits, baby!":
+    type: "Quote"
+    locales:
+      - "en"
+      - "de"
+    quote: "It's all about the bits, baby!"
 
 - "Open Source":
     type: "Message"
@@ -28,23 +35,23 @@
       - "en"
     quote: "Sic Parvis Magna"
 
+- "Do What You Love":
+    type: "Quote"
+    locales:
+      - "en"
+    quote: "Do What You Love"
+
 - "Think Big":
     type: "Quote"
     locales:
       - "en"
     quote: "Think Big"
 
-- "Unlimited Power":
-    type: "Quote"
-    locales:
-      - "en"
-    quote: "Unlimited Power"
-
-- "Do What You Love":
-    type: "Quote"
-    locales:
-      - "en"
-    quote: "Do What You Love"
+# - "Unlimited Power":
+#     type: "Quote"
+#     locales:
+#       - "en"
+#     quote: "Unlimited Power"
 
 # - "Start Small":
 #     type: "Quote"

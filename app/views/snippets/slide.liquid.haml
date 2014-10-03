@@ -1,4 +1,5 @@
 {% assign type = slide.type | downcase | dasherize %}
+{% assign quote = slide.quote %}
 
 {% if slide.locales contains current_locale %}
 .slide.slick-slide{ class: '{{type}}' }
@@ -7,11 +8,13 @@
     %p {{slide.message}}
     {% endif %}
 
-    {% if slide.quote %}
-    %h1.title {{slide.quote.title}}
+    {% if quote %}
+    %h1.title {{quote.title}}
 
-    %p.statement {{slide.quote.statement}}
+    %p.statement {{quote.statement}}
 
-    %h3.author {{slide.quote.author}}
+    {% if quote.author %}
+    %h3.author {{quote.author}}
+    {% endif %}
     {% endif %}
 {% endif %}

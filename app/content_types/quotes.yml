@@ -25,6 +25,5 @@ fields:
     label: "Author"
     type: "text"
     text_formatting: "html"
-    required: true
     localized: true
     hint: "The author of the quote."
