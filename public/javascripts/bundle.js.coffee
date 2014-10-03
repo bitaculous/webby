@@ -34,6 +34,8 @@ $ ->
   if do theatre.present
     do theatre.scrollify
 
+    # --- Roof ---
+
     roof = theatre.find '> .roof'
 
     if do roof.present
@@ -48,6 +50,8 @@ $ ->
           request = contact.find '.request'
 
           do request.formify if do request.present
+
+    # --- Stage ---
 
     stage = theatre.find '> .stage'
 
