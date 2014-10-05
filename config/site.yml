@@ -24,5 +24,9 @@ timezone: "Berlin"
 # can set values for these variables here. They can be accessed in templates through the `site.seo_title`, `site.meta_description`
 # and `site.meta_keywords` variables.
 seo_title: "Bitaculous"
-meta_description: "It's all about the bits, baby!"
-meta_keywords: "bitaculous, it's, all, about, the, bits, baby, web, mobile, application, development, berlin"
+meta_description:
+  en: "Bitaculous builds websites, software and apps for web and mobile with passion and love."
+  de: "Bitaculous entwickelt Websites, Software und Apps für Web und Mobile mit Leidenschaft und Liebe."
+meta_keywords:
+  en: "Apps, Berlin, Bitaculous, Coding, Development, Love, Mobile, Passion, Programming, Software, Web, Websites"
+  de: "Apps, Bitaculous, Entwicklung, Leidenschaft, Liebe, Mobile, Programmierung, Software, Web, Websites"

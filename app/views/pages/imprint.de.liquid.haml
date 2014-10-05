@@ -25,7 +25,7 @@ slug: "impressum"
 
       *Angaben gemäß § 5 TMG.*
 
-      **{{bitaculous.title}}**<br />
+      **{{bitaculous.name}}**<br />
       {{bitaculous.contact_person}}<br />
       {{address.street}}<br />
       {{address.postal_code}} {{address.city}}
@@ -85,7 +85,7 @@ slug: "impressum"
     :kramdown
       ## Design:
 
-      {{markenfaktur.title}}, {{address.city}}<br />
+      {{markenfaktur.name}}, {{address.city}}<br />
       [{{email.address}}]({{'mailto:' | append: email.encoded_address}} "{{email.label}}"){: .email}<br />
       [{{web.title}}]({{web.url}} "{{web.label}}"){: .external target="_blank"}
 

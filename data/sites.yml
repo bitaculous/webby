@@ -1,0 +1,21 @@
+- "Bitaculous":
+    title: "Bitaculous"
+    type: "Website"
+    description:
+      en: "Bitaculous builds websites, software and apps for web and mobile with passion and love."
+      de: "Bitaculous entwickelt Websites, Software und Apps für Web und Mobile mit Leidenschaft und Liebe."
+    author: "Bitaculous"
+    publisher: "Bitaculous"
+    image: "/favicon.png"
+    url:
+      en: "https://bitaculous.com"
+      de: "https://bitaculous.com/de"
+    viewport: "width=device-width, initial-scale=1"
+    generator: "LocomotiveCMS (http://locomotivecms.com)"
+    robots: "index, follow"
+    meta_description:
+      en: "Bitaculous builds websites, software and apps for web and mobile with passion and love."
+      de: "Bitaculous entwickelt Websites, Software und Apps für Web und Mobile mit Leidenschaft und Liebe."
+    meta_keywords:
+      en: "Apps, Berlin, Bitaculous, Coding, Development, Love, Mobile, Passion, Programming, Software, Web, Websites"
+      de: "Apps, Bitaculous, Entwicklung, Leidenschaft, Liebe, Mobile, Programmierung, Software, Web, Websites"

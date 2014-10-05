@@ -1,0 +1,65 @@
+name: "Sites"
+slug: "sites"
+description: "List of sites."
+label_field_name: "name"
+order_by: "manually"
+fields:
+- name:
+    label: "Name"
+    type: "string"
+    required: true
+    hint: "The name of the site."
+- title:
+    label: "Title"
+    type: "string"
+    required: true
+    hint: "The title of the site."
+- type:
+    label: "Type"
+    type: "select"
+    select_options:
+      - "Website"
+    required: true
+    hint: "The type of the site."
+- description:
+    label: "Description"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The description of the site."
+- author:
+    label: "Author"
+    type: "string"
+    required: true
+    hint: "The author of the site."
+- publisher:
+    label: "Publisher"
+    type: "string"
+    required: true
+    hint: "The publisher of the site."
+- image:
+    label: "Image"
+    type: "string"
+    required: true
+    hint: "The image of the site."
+- url:
+    label: "URL"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The URL of the site."
+- viewport:
+    label: "Viewport"
+    type: "string"
+    required: true
+    hint: "The viewport of the site."
+- generator:
+    label: "Generator"
+    type: "string"
+    required: true
+    hint: "The generator of the site."
+- robots:
+    label: "Robots"
+    type: "string"
+    required: true
+    hint: "The robots settings for the site."
