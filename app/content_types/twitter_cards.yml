@@ -30,9 +30,9 @@ fields:
     type: "string"
     required: true
     hint: "The image of the Twitter Card."
-- site:
-    label: "Site"
+- url:
+    label: "URL"
     type: "string"
     required: true
     localized: true
-    hint: "The site of the Twitter Card."
+    hint: "The URL of the Twitter Card."
