@@ -70,7 +70,7 @@
       .message.field
         %label{ for: 'message', title: '{{\'request_message_title\' | translate}}' } {{'request_message_label' | translate}}
 
-        %textarea#message.element{ name: 'content[message]', rows: '5', cols: '10', placeholder: '{{\'request_message_placeholder\' | translate}}', required: true } {{request.message}}
+        %textarea#message.element{ name: 'content[message]', rows: '6', cols: '10', placeholder: '{{\'request_message_placeholder\' | translate}}', required: true } {{request.message}}
 
     .row.last.one.column
       .submit.field
