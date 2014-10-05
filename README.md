@@ -43,6 +43,12 @@ $ wagon push <ENV> --resources=content_entries, content_types, pages, snippets, 
 $ wagon push <ENV> --force
 ```
 
+#### Initial push
+
+```shell
+$ wagon push <ENV> --data --translations --force
+```shell
+
 ### Pull data from a remote LocomotiveCMS engine
 
 ```shell
