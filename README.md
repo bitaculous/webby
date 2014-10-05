@@ -47,7 +47,7 @@ $ wagon push <ENV> --force
 
 ```shell
 $ wagon push <ENV> --data --translations --force
-```shell
+```
 
 ### Pull data from a remote LocomotiveCMS engine
 
