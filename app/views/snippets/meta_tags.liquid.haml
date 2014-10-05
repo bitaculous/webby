@@ -1,7 +1,5 @@
 %meta{ charset: 'utf-8' }/
 
-{% csrf_meta %}
-
 %meta{ 'http-equiv' => 'x-ua-compatible', content: 'IE=edge' }/
 
 %meta{ name: 'abstract', content: '{{page.meta_description | default: site.meta_description | truncatewords: 10}}' }/
@@ -14,19 +12,10 @@
 %meta{ name: 'robots', content: '{{site.robots}}' }/
 %meta{ name: 'viewport', content: '{{site.viewport}}' }/
 
-%meta{ property: 'og:description', content: '{{site.description}}' }/
-%meta{ property: 'og:image', content: '{{site.image}}' }/
-%meta{ property: 'og:title', content: '{{site.title}}' }/
-%meta{ property: 'og:type', content: '{{site.type | downcase | dasherize}}' }/
-%meta{ property: 'og:url', content: '{{site.url}}' }/
+{% csrf_meta %}
 
-%meta{ itemprop: 'description', content: '{{site.description}}' }/
-%meta{ itemprop: 'image', content: '{{site.image}}' }/
-%meta{ itemprop: 'name', content: '{{site.name}}' }/
+{% include 'open_graph_metadata' %}
 
-%meta{ name: 'twitter:card', content: 'Bitaculous' }/
-%meta{ name: 'twitter:creator', content: '@bitaculous' }/
-%meta{ name: 'twitter:description', content: '{{site.description}}' }/
-%meta{ name: 'twitter:image', content: 'https://bitaculous.com/favicon.png' }/
-%meta{ name: 'twitter:site', content: 'https://bitaculous.com' }/
-%meta{ name: 'twitter:title', content: 'Bitaculous' }/
+{% include 'microdata' %}
+
+{% include 'twitter_card' %}
