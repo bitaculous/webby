@@ -10,9 +10,10 @@
     url:
       en: "https://bitaculous.com"
       de: "https://bitaculous.com/de"
-    viewport: "width=device-width, initial-scale=1"
+    twitter_card: "Bitaculous"
     generator: "LocomotiveCMS (http://locomotivecms.com)"
     robots: "index, follow"
+    viewport: "width=device-width, initial-scale=1"
     meta_description:
       en: "Bitaculous builds websites, software and apps for web and mobile with passion and love."
       de: "Bitaculous entwickelt Websites, Software und Apps für Web und Mobile mit Leidenschaft und Liebe."

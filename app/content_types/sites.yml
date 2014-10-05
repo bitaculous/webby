@@ -48,11 +48,12 @@ fields:
     required: true
     localized: true
     hint: "The URL of the site."
-- viewport:
-    label: "Viewport"
-    type: "string"
-    required: true
-    hint: "The viewport of the site."
+- twitter_card:
+    label: Twitter Card
+    type: "belongs_to"
+    class_name: "twitter_cards"
+    ui_enabled: true
+    hint: "The Twitter Card of the site."
 - generator:
     label: "Generator"
     type: "string"
@@ -63,3 +64,8 @@ fields:
     type: "string"
     required: true
     hint: "The robots settings for the site."
+- viewport:
+    label: "Viewport"
+    type: "string"
+    required: true
+    hint: "The viewport of the site."

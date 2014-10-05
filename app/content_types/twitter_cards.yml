@@ -1,0 +1,38 @@
+name: "Twitter Cards"
+slug: "twitter_cards"
+description: "List of Twitter Cards."
+label_field_name: "name"
+order_by: "manually"
+fields:
+- name:
+    label: "Name"
+    type: "string"
+    required: true
+    hint: "The name of the Twitter Card."
+- title:
+    label: "Title"
+    type: "string"
+    required: true
+    hint: "The title of the Twitter Card."
+- description:
+    label: "Description"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The description of the Twitter Card."
+- creator:
+    label: "Creator"
+    type: "string"
+    required: true
+    hint: "The creator of the Twitter Card."
+- image:
+    label: "Image"
+    type: "string"
+    required: true
+    hint: "The image of the Twitter Card."
+- site:
+    label: "Site"
+    type: "string"
+    required: true
+    localized: true
+    hint: "The site of the Twitter Card."
