@@ -2,9 +2,9 @@
   %ul.items
     {% for channel in bitaculous.channels %}
 
-    {% capture position %}{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}{% endcapture %}
+    {% assign type = channel.type | handleize %}
 
-    {% assign type = channel.type | downcase | dasherize %}
+    {% capture position %}{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}{% endcapture %}
 
     %li.item{ class: '{{type}} {{position}}' }
       %a.external{ href: '{{channel.url}}', title: '{{channel.description}}', target: '_blank' }

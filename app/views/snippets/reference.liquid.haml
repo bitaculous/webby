@@ -1,4 +1,4 @@
-{% assign identifier = reference.identifier | downcase | dasherize %}
+{% assign identifier = reference.identifier | handleize %}
 
 {% capture responsive %}{% if reference.responsive %}responsive{% endif %}{% endcapture %}
 

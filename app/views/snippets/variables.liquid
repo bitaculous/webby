@@ -1,0 +1,6 @@
+{% assign site = contents.sites.first %}
+{% assign identifier = page.handle | handleize %}
+
+{% capture locale_path %}{%if locale == default_locale %}/{% else %}/{{locale}}/{% endif %}{% endcapture %}
+
+{% assign bitaculous = contents.business_cards.first %}

@@ -3,9 +3,9 @@
     .shell
       {% for target_group in contents.target_groups %}
 
-      {% capture position %}{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}{% endcapture %}
+      {% assign identifier = target_group.identifier | handleize %}
 
-      {% assign identifier = target_group.identifier | downcase | dasherize %}
+      {% capture position %}{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}{% endcapture %}
 
       .target-group{ class: '{{identifier}} {{position}}' }
         %h1 {{target_group.salutation}}

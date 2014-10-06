@@ -2,9 +2,9 @@
   .shell
     {% for member in contents.team_members %}
 
-    {% capture position %}{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}{% endcapture %}
+    {% assign identifier = member.identifier | handleize %}
 
-    {% assign identifier = member.identifier | downcase | dasherize %}
+    {% capture position %}{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}{% endcapture %}
 
     .member{ class: '{{identifier}} {{position}}' }
       .photo{ title: '{{member.name}}' }

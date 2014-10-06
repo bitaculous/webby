@@ -1,5 +1,5 @@
 %head{ prefix: 'og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#' }
-  %title {{page.seo_title | default: page.title}}
+  {% include 'title' %}
 
   {% include 'meta_tags' %}
 

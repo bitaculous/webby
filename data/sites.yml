@@ -11,6 +11,9 @@
     generator: "LocomotiveCMS (http://locomotivecms.com)"
     robots: "index, follow"
     viewport: "width=device-width, initial-scale=1"
+    seo_title:
+      en: "A development studio, located in Berlin, builds websites, software and apps for the Web and Mobile."
+      de: "Entwicklungsstudio aus Berlin, entwickelt Websites, Software und Apps für Web und Mobile."
     meta_description:
       en: "Bitaculous builds websites, software and apps for the Web and Mobile with passion and love."
       de: "Bitaculous entwickelt Websites, Software und Apps für Web und Mobile mit Leidenschaft und Liebe."

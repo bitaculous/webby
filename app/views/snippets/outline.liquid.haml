@@ -2,12 +2,10 @@
   %ul.items
     {% for item in contents.outline_items %}
 
-    {% assign identifier = item.identifier | downcase | dasherize %}
-
+    {% assign identifier = item.identifier | handleize %}
     {% assign href = locale_path | append: item.href %}
 
     {% capture active %}{% if forloop.first %}active{% endif %}{% endcapture %}
-
     {% capture position %}{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}{% endcapture %}
 
     %li.item{ class: '{{identifier}} {{active}} {{position}}' }
