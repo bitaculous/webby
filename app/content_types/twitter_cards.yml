@@ -14,12 +14,6 @@ fields:
     type: "string"
     required: true
     hint: "The title of the Twitter Card."
-- description:
-    label: "Description"
-    type: "string"
-    required: true
-    localized: true
-    hint: "The description of the Twitter Card."
 - creator:
     label: "Creator"
     type: "string"

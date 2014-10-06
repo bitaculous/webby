@@ -25,7 +25,7 @@ timezone: "Berlin"
 # and `site.meta_keywords` variables.
 seo_title: "Bitaculous"
 meta_description:
-  en: "Bitaculous builds websites, software and apps for web and mobile with passion and love."
+  en: "Bitaculous builds websites, software and apps for the Web and Mobile with passion and love."
   de: "Bitaculous entwickelt Websites, Software und Apps für Web und Mobile mit Leidenschaft und Liebe."
 meta_keywords:
   en: "Apps, Berlin, Bitaculous, Coding, Development, Love, Mobile, Passion, Programming, Software, Web, Websites"

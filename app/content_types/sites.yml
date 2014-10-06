@@ -21,12 +21,6 @@ fields:
       - "Website"
     required: true
     hint: "The type of the site."
-- description:
-    label: "Description"
-    type: "string"
-    required: true
-    localized: true
-    hint: "The description of the site."
 - author:
     label: "Author"
     type: "string"

@@ -1,7 +1,7 @@
 {% if twitter_card %}
 %meta{ name: 'twitter:card', content: '{{twitter_card.name}}' }/
 %meta{ name: 'twitter:creator', content: '{{twitter_card.creator}}' }/
-%meta{ name: 'twitter:description', content: '{{twitter_card.description}}' }/
+%meta{ name: 'twitter:description', content: '{{page.meta_description | default: twitter_card.meta_description}}' }/
 %meta{ name: 'twitter:image', content: '{{twitter_card.image}}' }/
 %meta{ name: 'twitter:site', content: '{{twitter_card.url}}' }/
 %meta{ name: 'twitter:title', content: '{{twitter_card.title}}' }/

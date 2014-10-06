@@ -12,7 +12,7 @@
 %meta{ name: 'robots', content: '{{site.robots}}' }/
 %meta{ name: 'viewport', content: '{{site.viewport}}' }/
 
-{% csrf_meta %}
+{% include 'csrf_metadata' %}
 
 {% include 'open_graph_metadata' %}
 
