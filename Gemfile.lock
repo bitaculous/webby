@@ -17,7 +17,7 @@ GIT
 
 GIT
   remote: git://github.com/bitaculous/liquids.git
-  revision: 2efa7b52b74b40658d93a54b09f6eeb0d4aed502
+  revision: 7d83568c9a41f925a959e976cb03402719df7c2c
   specs:
     liquids (1.2.0)
       locomotivecms-solid (~> 0.2.2.1)
@@ -59,9 +59,9 @@ GIT
 
 GIT
   remote: git://github.com/locomotivecms/wagon.git
-  revision: ea294a8c2e15106e2b872d7950e2998e7395314d
+  revision: 04eaac4b9c85327f22fd9851423b5a889c3a477b
   specs:
-    locomotivecms_wagon (1.5.0)
+    locomotivecms_wagon (1.5.0.rc1)
       RedCloth (~> 4.2.8)
       activesupport (~> 3.2.18)
       better_errors (~> 1.0.1)
@@ -70,7 +70,7 @@ GIT
       httmultiparty (= 0.3.10)
       listen (~> 2.7.5)
       locomotivecms-solid (~> 0.2.2.1)
-      locomotivecms_mounter (~> 1.4.3)
+      locomotivecms_mounter (~> 1.4.4)
       netrc (~> 0.7.7)
       rack-cache (~> 1.1)
       rack-livereload (~> 0.3.15)
@@ -128,7 +128,7 @@ GEM
     execjs (2.2.1)
     faker (0.9.5)
       i18n (~> 0.4)
-    ffi (1.9.5)
+    ffi (1.9.6)
     haml (4.0.5)
       tilt
     hike (1.2.3)
