@@ -38,7 +38,7 @@
     responsive: false
 
 - "Intercultural map":
-    identifier: "intercultural_map"
+    identifier: "intercultural-map"
     title:
       en: "IZIG Intercultural map"
       de: "IZIG Interkultureller Stadtplan"
