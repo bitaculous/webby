@@ -320,11 +320,10 @@ class @Shady
     return
 
   findRenderer = ->
-    ua      = detect.parse navigator.userAgent
-    browser = ua.browser
-    family  = browser.family
+    ua     = detect.parse navigator.userAgent
+    device = ua.device
 
-    if Modernizr.webgl
+    if Modernizr.webgl and device.family isnt 'iPhone'
       Shady.RENDERER.WEBGL
     else if Modernizr.canvas
       Shady.RENDERER.CANVAS
