@@ -124,7 +124,7 @@ This font is free for personal use only and copyright protected under [The Fonts
 [Compass]: http://compass-style.org "An open-source CSS Authoring Framework."
 [Console]: https://github.com/h5bp/html5-boilerplate/blob/master/src/js/plugins.js "Avoid `console` errors in browsers that lack a console."
 [FastClick]: https://github.com/ftlabs/fastclick "Polyfill to remove click delays on browsers with touch UIs."
-[Flat Surface Shader (FSS)]: http://matthew.wagerfield.com/flat-surface-shader "Flat Surface Shader for rendering lit triangles to a number of contexts including WebGL, Canvas 2D and SVG."
+[Flat Surface Shader (FSS)]: https://github.com/wagerfield/flat-surface-shader "Flat Surface Shader for rendering lit triangles to a number of contexts including WebGL, Canvas 2D and SVG."
 [Font Awesome]: http://fortawesome.github.io/Font-Awesome "The iconic font and CSS toolkit"
 [Gemnasium]: https://gemnasium.com/bitaculous/webby "Webby at Gemnasium"
 [Gemnasium Status]: http://img.shields.io/gemnasium/bitaculous/webby.svg?style=flat "Gemnasium Status"
