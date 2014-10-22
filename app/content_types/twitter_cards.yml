@@ -9,6 +9,16 @@ fields:
     type: "string"
     required: true
     hint: "The name of the Twitter Card."
+- user_id:
+    label: "User ID"
+    type: "string"
+    required: true
+    hint: "The user ID of the Twitter Card."
+- username:
+    label: "Username"
+    type: "string"
+    required: true
+    hint: "The @username of the Twitter Card, used as the content creator / author and the website in the Card footer."
 - type:
     label: "Type"
     type: "select"
@@ -22,16 +32,6 @@ fields:
       - "Product"
     required: true
     hint: "The type of the Twitter Card."
-- creator:
-    label: "Creator"
-    type: "string"
-    required: true
-    hint: "The creator of the Twitter Card."
-- site:
-    label: "Site"
-    type: "string"
-    required: true
-    hint: "The site of the Twitter Card."
 - image:
     label: "Image"
     type: "string"
