@@ -19,8 +19,14 @@
     a
       display: block
 
-    @include get-in-touch
+    .partial
+      margin: 0 0 rem(10)
 
-    @include manual
+      &:last-child
+        margin: 0
 
-    @include copyright
+      @include get-in-touch
+
+      @include manual
+
+      @include copyright

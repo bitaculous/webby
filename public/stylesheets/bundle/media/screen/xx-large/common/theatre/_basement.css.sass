@@ -8,10 +8,9 @@
 
 @mixin basement
   .basement
-    height: 48px
+    .partial
+      @include get-in-touch
 
-    @include get-in-touch
+      @include manual
 
-    @include manual
-
-    @include copyright
+      @include copyright

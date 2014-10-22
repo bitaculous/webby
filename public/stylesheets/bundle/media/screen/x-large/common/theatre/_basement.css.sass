@@ -8,15 +8,19 @@
 
 @mixin basement
   .basement
-    height: 45px
     padding: 0
     text-align: left
 
+    .shell
+      height: 42px
+
     .partial
+      margin: 0
       position: absolute
+      top: rem(10)
 
-    @include get-in-touch
+      @include get-in-touch
 
-    @include manual
+      @include manual
 
-    @include copyright
+      @include copyright
