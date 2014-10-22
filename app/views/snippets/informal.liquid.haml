@@ -16,7 +16,7 @@
 
     {% capture position %}{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}{% endcapture %}
 
-    .target-group{ class: '{{identifier}} {{position}}' }
+    .target-group{ class: "{{identifier}} {{position}}" }
       %h2.salutation {{target_group.salutation}}
 
       %p {{target_group.text}}

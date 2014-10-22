@@ -2,7 +2,7 @@
 {% assign quote = slide.quote %}
 
 {% if slide.locales contains locale %}
-.slide.slick-slide{ class: '{{type}}' }
+.slide.slick-slide{ class: "{{type}}" }
   .content
     {% if slide.message %}
     %p {{slide.message}}

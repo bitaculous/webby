@@ -1,9 +1,9 @@
-%form.request{ action: '#', data: { public_submission_url: '{{contents.requests.public_submission_url | append: \'.json\'}}' }, method: 'post' }
+%form.request{ action: '#', data: { public_submission_url: "{{contents.requests.public_submission_url | append: '.json'}}" }, method: 'post' }
   {% csrf_param %}
 
-  %input#success-callback.hidden{ name: 'success_callback', type: 'hidden', value: '{{locale_path}}' }
+  %input#success-callback.hidden{ name: 'success_callback', type: 'hidden', value: "{{locale_path}}" }
 
-  %input#error-callback.hidden{ name: 'error_callback', type: 'hidden', value: '{{locale_path}}' }
+  %input#error-callback.hidden{ name: 'error_callback', type: 'hidden', value: "{{locale_path}}" }
 
   .heading
     {% if locale == 'en' %}
@@ -57,23 +57,23 @@
   %fieldset
     .row.first.two.columns
       .name.field
-        %label{ for: 'name', title: '{{\'request_name_title\' | translate}}' } {{'request_name_label' | translate}}
+        %label{ for: 'name', title: "{{'request_name_title' | translate}}" } {{'request_name_label' | translate}}
 
-        %input#name.text.element{ name: 'content[name]', type: 'text', placeholder: '{{\'request_name_placeholder\' | translate}}', value: '{{request.name}}', required: true }
+        %input#name.text.element{ name: 'content[name]', type: 'text', placeholder: "{{'request_name_placeholder' | translate}}", value: "{{request.name}}", required: true }
 
       .email.field
-        %label{ for: 'email', title: '{{\'request_email_title\' | translate}}' } {{'request_email_label' | translate}}
+        %label{ for: 'email', title: "{{'request_email_title' | translate}}" } {{'request_email_label' | translate}}
 
-        %input#email.email.element{ name: 'content[email]', type: 'email', placeholder: '{{\'request_email_placeholder\' | translate}}', value: '{{request.email}}', required: true }
+        %input#email.email.element{ name: 'content[email]', type: 'email', placeholder: "{{'request_email_placeholder' | translate}}", value: "{{request.email}}", required: true }
 
     .row.one.column
       .message.field
-        %label{ for: 'message', title: '{{\'request_message_title\' | translate}}' } {{'request_message_label' | translate}}
+        %label{ for: 'message', title: "{{'request_message_title' | translate}}" } {{'request_message_label' | translate}}
 
-        %textarea#message.element{ name: 'content[message]', rows: '6', cols: '10', placeholder: '{{\'request_message_placeholder\' | translate}}', required: true } {{request.message}}
+        %textarea#message.element{ name: 'content[message]', rows: '6', cols: '10', placeholder: "{{'request_message_placeholder' | translate}}", required: true } {{request.message}}
 
     .row.last.one.column
       .submit.field
-        %input.submit.element{ type: 'submit', value: '{{\'request_submit\' | translate}}', title: '{{\'request_submit_title\' | translate}}' }
+        %input.submit.element{ type: 'submit', value: "{{'request_submit' | translate}}", title: "{{'request_submit_title' | translate}}" }
 
-        %a.submit{ href: '#', title: '{{\'request_submit_title\' | translate}}' } {{'request_submit' | translate}}
+        %a.submit{ href: '#', title: "{{'request_submit_title' | translate}}" } {{'request_submit' | translate}}

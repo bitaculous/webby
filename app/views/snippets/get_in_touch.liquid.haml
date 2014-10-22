@@ -5,7 +5,7 @@
   {% assign address = bitaculous.addresses.first %}
 
   {% if phone %}
-  %a.phone{ href: 'tel:{{phone.number}}', title: '{{phone.label}}' }
+  %a.phone{ href: "tel:{{phone.number}}", title: "{{phone.label}}" }
     %i{ class: 'icon-phone' }
 
     %span.label {{phone.formatted_number}}
@@ -14,7 +14,7 @@
   {% endif %}
 
   {% if email %}
-  %a.email{ href: 'mailto:{{email.encoded_address}}', title: '{{email.label}}' }
+  %a.email{ href: "mailto:{{email.encoded_address}}", title: "{{email.label}}" }
     %i{ class: 'icon-email' }
 
     %span.label {{email.encoded_address}}
@@ -23,7 +23,7 @@
   {% endif %}
 
   {% if location %}
-  %a.location{ href: '{{location.url}}', title: '{{location.label}}', target: '_blank' }
+  %a.location{ href: "{{location.url}}", title: "{{location.label}}", target: '_blank' }
     %i{ class: 'icon-location' }
 
     %span.label {{address.street}}, {{address.postal_code}} {{address.city}}

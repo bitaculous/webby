@@ -6,8 +6,8 @@
 
     {% capture position %}{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}{% endcapture %}
 
-    .member{ class: '{{identifier}} {{position}}' }
-      .photo{ title: '{{member.name}}' }
+    .member{ class: "{{identifier}} {{position}}" }
+      .photo{ title: "{{member.name}}" }
 
       %p.name {{member.name}}
 
