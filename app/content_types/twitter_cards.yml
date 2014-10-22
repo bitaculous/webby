@@ -9,16 +9,29 @@ fields:
     type: "string"
     required: true
     hint: "The name of the Twitter Card."
-- title:
-    label: "Title"
-    type: "string"
+- type:
+    label: "Type"
+    type: "select"
+    select_options:
+      - "Summary"
+      - "Summary Large Image"
+      - "Photo"
+      - "Gallery"
+      - "App"
+      - "Player"
+      - "Product"
     required: true
-    hint: "The title of the Twitter Card."
+    hint: "The type of the Twitter Card."
 - creator:
     label: "Creator"
     type: "string"
     required: true
     hint: "The creator of the Twitter Card."
+- site:
+    label: "Site"
+    type: "string"
+    required: true
+    hint: "The site of the Twitter Card."
 - image:
     label: "Image"
     type: "string"

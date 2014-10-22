@@ -1,10 +1,8 @@
 - "Bitaculous":
-    title: "Bitaculous"
+    type: "Summary"
     creator: "@bitaculous"
+    site: "@bitaculous"
     image: "https://bitaculous.com/favicon.png"
     url:
       en: "https://bitaculous.com"
       de: "https://bitaculous.com/de"
-    meta_description:
-      en: "Bitaculous builds websites, software and apps for the Web and Mobile with passion and love."
-      de: "Bitaculous entwickelt Websites, Software und Apps für Web und Mobile mit Leidenschaft und Liebe."

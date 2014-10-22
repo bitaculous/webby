@@ -1,8 +1,9 @@
 {% if twitter_card %}
-%meta{ name: 'twitter:card', content: '{{twitter_card.name}}' }/
+%meta{ name: 'twitter:card', content: '{{twitter_card.type | handleize: \'_\'}}' }/
 %meta{ name: 'twitter:creator', content: '{{twitter_card.creator}}' }/
-%meta{ name: 'twitter:description', content: '{{page.meta_description | default: twitter_card.meta_description}}' }/
+%meta{ name: 'twitter:description', content: '{{page.meta_description | default: site.meta_description}}' }/
 %meta{ name: 'twitter:image', content: '{{twitter_card.image}}' }/
-%meta{ name: 'twitter:site', content: '{{twitter_card.url}}' }/
-%meta{ name: 'twitter:title', content: '{{twitter_card.title}}' }/
+%meta{ name: 'twitter:site', content: '{{twitter_card.site}}' }/
+%meta{ name: 'twitter:title', content: '{{page.seo_title | default: site.seo_title}}' }/
+%meta{ name: 'twitter:url', content: '{{url | default: twitter_card.url}}' }/
 {% endif %}
