@@ -7,5 +7,5 @@
 %meta{ name: 'twitter:site', content: "{{twitter_card.username}}" }/
 %meta{ name: 'twitter:site:id', content: "{{twitter_card.user_id}}" }/
 %meta{ name: 'twitter:title', content: "{{page.seo_title | default: site.seo_title}}" }/
-%meta{ name: 'twitter:url', content: "{{url | default: twitter_card.url}}" }/
+%meta{ name: 'twitter:url', content: "{{url | default: twitter_card.url | url_for}}" }/
 {% endif %}
