@@ -33,7 +33,7 @@ group :misc do
 
   # === Templating ===
 
-  gem 'kramdown', '~> 1.4.2'
+  gem 'kramdown', '~> 1.5.0'
 
   # === OS X ===
 
