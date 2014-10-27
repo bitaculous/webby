@@ -15,6 +15,8 @@
 #= require jquery/plugins/slick
 #= require jquery/plugins/slidify
 
+#= require iframe_resizer
+
 #= require velocity
 #= require velocity/ui
 
@@ -34,8 +36,6 @@ $ ->
   if do theatre.present
     do theatre.scrollify
 
-    # --- Roof ---
-
     roof = theatre.find '> .roof'
 
     if do roof.present
@@ -50,8 +50,6 @@ $ ->
           request = contact.find '.request'
 
           do request.formify if do request.present
-
-    # --- Stage ---
 
     stage = theatre.find '> .stage'
 
@@ -77,5 +75,16 @@ $ ->
         references = work.find '.references'
 
         do references.referencesify if do references.present
+
+      content = stage.find '> .content'
+
+      if do content.present
+        piwik = content.find 'iframe.piwik'
+
+        piwik.iFrameResize {
+          autoResize: true
+          bodyMargin: '0 1em 2em'
+          checkOrigin: true
+        } if do piwik.present
 
   return

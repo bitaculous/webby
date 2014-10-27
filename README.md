@@ -83,6 +83,7 @@ Credits
 #### JavaScript
 
 * [Flat Surface Shader (FSS)]
+* [iFrame Resizer]
 * [jQuery]
 * [Modernizr]
 * [Velocity]
@@ -130,6 +131,7 @@ This font is free for personal use only and copyright protected under [The Fonts
 [Gemnasium Status]: http://img.shields.io/gemnasium/bitaculous/webby.svg?style=flat "Gemnasium Status"
 [HoganAssets]: https://github.com/leshill/hogan_assets "Compiles your mustache templates with hogan.js on sprockets and the Rails asset pipeline."
 [i18n]: https://github.com/recurser/jquery-i18n "A jQuery plugin for doing client-side translations in javascript."
+[iFrame Resizer]: https://github.com/davidjbradshaw/iframe-resizer "Keep same and cross domain iFrames sized to their content with support for window/content resizing, nesting and multiple iFrames."
 [Initializify]: http://bitaculous.github.io/initializify "Put in the condition appropriate to the start of an operation."
 [jQuery]: http://jquery.com "The Write Less, Do More, JavaScript Library."
 [kramdown]: http://kramdown.gettalong.org "fast, pure-Ruby Markdown-superset converter"
