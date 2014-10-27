@@ -84,7 +84,6 @@ $ ->
         piwik.iFrameResize {
           autoResize: true
           bodyMargin: '0 1em 2em'
-          checkOrigin: true
         } if do piwik.present
 
   return
