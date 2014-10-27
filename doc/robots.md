@@ -2,6 +2,7 @@ Allow
 =====
 
 User-agent: *
+Disallow:
 
 Disallow
 ========
