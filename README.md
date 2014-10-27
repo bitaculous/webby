@@ -3,8 +3,6 @@
 
 **The sources of the official [Bitaculous website].**
 
-[![Gemnasium Status][Gemnasium Status]][Gemnasium]
-
 Installation
 ------------
 
