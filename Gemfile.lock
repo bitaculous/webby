@@ -59,7 +59,7 @@ GIT
 
 GIT
   remote: git://github.com/locomotivecms/wagon.git
-  revision: 7e4db085a889e2ef5f7c4a86549d787c3909a908
+  revision: 171d9047f002de2e1b45f022c08b1ca954984c02
   specs:
     locomotivecms_wagon (1.5.0)
       RedCloth (~> 4.2.8)
@@ -173,7 +173,7 @@ GEM
       ffi (>= 0.5.0)
     redcarpet (3.0.0)
     rubyzip (1.1.6)
-    sass (3.4.6)
+    sass (3.4.7)
     sassy-maps (0.4.0)
       sass (~> 3.3)
     sprockets (2.12.3)
