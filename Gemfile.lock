@@ -32,7 +32,7 @@ GIT
 
 GIT
   remote: git://github.com/locomotivecms/mounter.git
-  revision: 786548e2de78defcdd9b36dac40c3bf59b233b43
+  revision: 90e58ba984203683bec1518bb4222824a8864a52
   specs:
     locomotivecms_mounter (1.4.4)
       RedCloth (~> 4.2.3)
@@ -59,7 +59,7 @@ GIT
 
 GIT
   remote: git://github.com/locomotivecms/wagon.git
-  revision: beaeea3a744e5670f304bd36743c9bbd3ae46ff1
+  revision: 7e4db085a889e2ef5f7c4a86549d787c3909a908
   specs:
     locomotivecms_wagon (1.5.0)
       RedCloth (~> 4.2.8)
@@ -84,7 +84,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     RedCloth (4.2.9)
-    activesupport (3.2.19)
+    activesupport (3.2.20)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     better_errors (1.0.1)
@@ -176,7 +176,7 @@ GEM
     sass (3.4.6)
     sassy-maps (0.4.0)
       sass (~> 3.3)
-    sprockets (2.12.2)
+    sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
