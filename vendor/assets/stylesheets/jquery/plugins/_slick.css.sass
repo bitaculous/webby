@@ -37,7 +37,7 @@ $slick-loading-image-url: image-url('vendor/jquery/plugins/slick/loading.gif') !
 
     @include user-select(none)
 
-    @include prefixer(touch-action, none, ms)
+    @include prefixer(touch-action, pan-y, ms)
 
     -webkit-tap-highlight-color: transparent
 
@@ -60,10 +60,7 @@ $slick-loading-image-url: image-url('vendor/jquery/plugins/slick/loading.gif') !
       cursor: pointer
       cursor: hand
 
-  .slick-slider .slick-list,
-  .slick-track,
-  .slick-slide,
-  .slick-slide img
+  .slick-slider .slick-track
     @include transform(translate3d(0, 0, 0))
 
   .slick-track
@@ -71,7 +68,6 @@ $slick-loading-image-url: image-url('vendor/jquery/plugins/slick/loading.gif') !
     left: 0
     position: relative
     top: 0
-    zoom: 1
 
     &:before,
     &:after

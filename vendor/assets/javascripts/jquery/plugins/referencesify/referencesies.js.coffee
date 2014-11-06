@@ -118,13 +118,13 @@ class @Referencesies
       autoplaySpeed: @options.autoplay.speed
       centerMode: true
       centerPadding: '0px'
-      dots: false
       nextArrow: '.browse a.next'
       prevArrow: '.browse a.previous'
       slide: '.slick-slide'
       slidesToScroll: 1
       slidesToShow: 3
       speed: @options.speed
+
       onInit: @onInitialize
       onBeforeChange: @onBeforeChange
       onAfterChange: @onAfterChange

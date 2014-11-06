@@ -59,7 +59,7 @@ GIT
 
 GIT
   remote: git://github.com/locomotivecms/wagon.git
-  revision: 346c1a78c18505b681c45fba906b5848dcbd801c
+  revision: 9e190e0aef9095023eb27bf81630a5aafbd1c51b
   specs:
     locomotivecms_wagon (1.5.1)
       RedCloth (~> 4.2.8)
@@ -140,7 +140,7 @@ GEM
     httmultiparty (0.3.10)
       httparty (>= 0.7.3)
       multipart-post
-    httparty (0.13.2)
+    httparty (0.13.3)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.6.11)

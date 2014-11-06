@@ -40,13 +40,12 @@ class @Slidy
       arrows: false
       autoplay: @options.autoplay.enabled
       autoplaySpeed: @options.autoplay.speed
-      centerMode: true
-      centerPadding: '0px'
       dots: true
       slide: '.slick-slide'
       slidesToScroll: 1
       slidesToShow: 1
       speed: @options.speed
+
       onInit: @onInitialize
 
     return
