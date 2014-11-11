@@ -41,7 +41,7 @@ class @Slidy
       autoplay: @options.autoplay.enabled
       autoplaySpeed: @options.autoplay.speed
       dots: true
-      slide: '.slick-slide'
+      slide: '.slide'
       slidesToScroll: 1
       slidesToShow: 1
       speed: @options.speed

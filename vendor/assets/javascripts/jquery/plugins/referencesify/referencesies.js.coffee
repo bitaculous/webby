@@ -120,7 +120,7 @@ class @Referencesies
       centerPadding: '0px'
       nextArrow: '.browse a.next'
       prevArrow: '.browse a.previous'
-      slide: '.slick-slide'
+      slide: '.reference'
       slidesToScroll: 1
       slidesToShow: 3
       speed: @options.speed
