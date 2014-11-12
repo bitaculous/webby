@@ -7,9 +7,11 @@
     {% capture position %}{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}{% endcapture %}
 
     .member{ class: "{{identifier}} {{position}}" }
+      {% if member.name %}
       .photo{ title: "{{member.name}}" }
 
       %p.name {{member.name}}
+      {% endif %}
 
       {% if member.profession %}
       %p.profession {{member.profession}}
