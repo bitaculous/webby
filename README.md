@@ -118,7 +118,7 @@ This font is free for personal use only and copyright protected under [The Fonts
 
 [Assetify]: http://bitaculous.github.io/assetify "“All your assets are belong to us”"
 [Bitaculous website]: https://bitaculous.com "The official Bitaculous website"
-[Breakpoint]: https://github.com/Team-Sass/breakpoint, "Really simple media queries in Sass"
+[Breakpoint]: https://github.com/Team-Sass/breakpoint "Really simple media queries in Sass"
 [Bundler]: http://bundler.io "The best way to manage a Ruby application's gems"
 [Compass]: http://compass-style.org "An open-source CSS Authoring Framework."
 [Console]: https://github.com/h5bp/html5-boilerplate/blob/master/src/js/plugins.js "Avoid `console` errors in browsers that lack a console."
@@ -150,6 +150,6 @@ This font is free for personal use only and copyright protected under [The Fonts
 [The Fontspring Webfont End User License Agreement]: http://www.fontspring.com/lic/lv4e5lv2k2 "The Fontspring Webfont End User License Agreement"
 [Validation Plugin]: http://jqueryvalidation.org "Form validation made easy."
 [Velocity]: http://velocityjs.org "Accelerated JavaScript animation."
-[Vendorify]: http://bitaculous.github.io/vendorify, "Put your vendor assets where they belong."
+[Vendorify]: http://bitaculous.github.io/vendorify "Put your vendor assets where they belong."
 [Waypoints]: http://imakewebthings.com/jquery-waypoints "Waypoints is a jQuery plugin that makes it easy to execute a function whenever you scroll to an element."
 [Webby]: https://github.com/bitaculous/webby "The sources of the official Bitaculous website."
