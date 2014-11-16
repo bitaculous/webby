@@ -1,10 +1,10 @@
 /.bundle/
 /.sass-cache/
 /bin/
+/config/deploy.yml
 /log/
 /public/fonts/nexa/
 /ressources/assets/
 /ressources/layouts/
 /ressources/misc/
 /webby.sublime-workspace
-config/deploy.yml
