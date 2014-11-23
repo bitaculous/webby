@@ -14,7 +14,8 @@
       height: 32px
 
     a.close
-      background: transparent image-url('bundle/contour/common/theatre/roof/backstage/sections/section/bar/close/background.png') no-repeat center center
+      background-position: center center
+      background-repeat: no-repeat
       display: block
       height: 24px
       line-height: 100%
@@ -23,10 +24,10 @@
       top: rem(4)
       width: 24px
 
-      @include hidpi
-        background-image: image-url('bundle/contour/common/theatre/roof/backstage/sections/section/bar/close/background_at_2x.png')
-        background-size: 24px 24px
-
       @include hide-text
+
+      @include no-text-decoration
+
+      @include retina-image('bundle/contour/common/theatre/roof/backstage/sections/section/bar/close/background', 24px 24px)
 
       @include lockify($property: background-color)

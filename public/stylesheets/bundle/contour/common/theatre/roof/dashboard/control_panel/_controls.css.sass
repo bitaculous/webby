@@ -16,21 +16,15 @@
 
         &.left,
         &.right
+          background-position: center center
+          background-repeat: no-repeat
           width: 16px
 
         &.left
-          background: transparent image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/control/partials/left/background.png') no-repeat center center
-
-          @include hidpi
-            background-image: image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/control/partials/left/background_at_2x.png')
-            background-size: 16px 28px
+          @include retina-image('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/control/partials/left/background', 16px 28px)
 
         &.right
-          background: transparent image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/control/partials/right/background.png') no-repeat center center
-
-          @include hidpi
-            background-image: image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/control/partials/right/background_at_2x.png')
-            background-size: 16px 28px
+          @include retina-image('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/control/partials/right/background', 16px 28px)
 
         &.center
           background: transparent image-url('bundle/contour/common/theatre/roof/dashboard/control_panel/controls/control/partials/center/background.png') repeat center center

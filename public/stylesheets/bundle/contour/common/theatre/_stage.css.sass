@@ -11,19 +11,20 @@
       z-index: 10
 
       p,
-      ul
+      ul,
+      ol
         @include hyphenate
 
       ul
-        margin: map-get-deep($contour, common, theatre, stage, ul, margin)
+        margin: map-get-deep($contour, common, theatre, stage, section, ul, margin)
 
         li
-          background-position: map-get-deep($contour, common, theatre, stage, ul, li, background-position)
+          background-position: map-get-deep($contour, common, theatre, stage, section, ul, li, background-position)
           background-repeat: no-repeat
-          padding: map-get-deep($contour, common, theatre, stage, ul, li, padding)
+          padding: map-get-deep($contour, common, theatre, stage, section, ul, li, padding)
 
       ol
-        margin: map-get-deep($contour, common, theatre, stage, ol, margin)
+        margin: map-get-deep($contour, common, theatre, stage, section, ol, margin)
 
       a
         @include text-decoration

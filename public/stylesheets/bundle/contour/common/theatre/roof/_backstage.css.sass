@@ -12,6 +12,28 @@
     text-align: left
 
     section
+      display: none
+      padding: rem(32) 0 0 0
+
+      p,
+      ul,
+      ol
+        @include hyphenate
+
+      ul
+        margin: map-get-deep($contour, common, theatre, roof, backstage, section, ul, margin)
+
+        li
+          background-position: map-get-deep($contour, common, theatre, roof, backstage, section, ul, li, background-position)
+          background-repeat: no-repeat
+          padding: map-get-deep($contour, common, theatre, roof, backstage, section, ul, li, padding)
+
+      ol
+        margin: map-get-deep($contour, common, theatre, roof, backstage, section, ol, margin)
+
+      a
+        @include text-decoration
+
       @include bar
 
       @include contact

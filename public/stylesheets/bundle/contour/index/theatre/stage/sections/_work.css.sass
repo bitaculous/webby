@@ -21,25 +21,13 @@
 
     ul
       li
-        background-image: image-url('bundle/contour/index/theatre/stage/sections/work/decorations/qube.png')
-
-        @include hidpi
-          background-image: image-url('bundle/contour/index/theatre/stage/sections/work/decorations/qube_at_2x.png')
-          background-size: 10px 12px
+        @include retina-image('bundle/contour/index/theatre/stage/sections/work/decorations/qube', 10px 12px)
 
     .flap
-      background: transparent image-url('bundle/contour/index/theatre/stage/sections/work/flap/background.png') no-repeat center center
-
-      @include hidpi
-        background-image: image-url('bundle/contour/index/theatre/stage/sections/work/flap/background_at_2x.png')
-        background-size: 2560px 14px
+      @include retina-image('bundle/contour/index/theatre/stage/sections/work/flap/background', 2560px 14px)
 
     .hub
       .heading
-        background: transparent image-url('bundle/contour/index/theatre/stage/sections/work/hub/heading/background.png') no-repeat center rem(12)
-
-        @include hidpi
-          background-image: image-url('bundle/contour/index/theatre/stage/sections/work/hub/heading/background_at_2x.png')
-          background-size: 64px 64px
+        @include retina-image('bundle/contour/index/theatre/stage/sections/work/hub/heading/background', 64px 64px)
 
       @include references

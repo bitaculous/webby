@@ -14,15 +14,12 @@
       display: block
 
       &.logo
-        background: transparent image-url('bundle/contour/common/theatre/roof/dashboard/badge/logo/background.png') no-repeat center center
         height: 64px
         width: 64px
 
         @include hide-text
 
-        @include hidpi
-          background-image: image-url('bundle/contour/common/theatre/roof/dashboard/badge/logo/background_at_2x.png')
-          background-size: 64px 64px
+        @include retina-image('bundle/contour/common/theatre/roof/dashboard/badge/logo/background', 64px 64px)
 
       &.title,
       &.claim

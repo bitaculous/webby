@@ -70,6 +70,23 @@ $contour: (
 
     theatre: (
       roof: (
+        backstage: (
+          section: (
+            ul: (
+              margin: 0 0 rem(10),
+
+              li: (
+                background-position: 0 rem(5),
+                padding: 0 0 rem(8) rem(20)
+              )
+            ),
+
+            ol: (
+              margin: 0 0 rem(10)
+            )
+          )
+        ),
+
         dashboard: (
           control-panel: (
             font-size: ms(-0.625),
@@ -80,17 +97,19 @@ $contour: (
       ),
 
       stage: (
-        ul: (
-          margin: 0 0 rem(10),
+        section: (
+          ul: (
+            margin: 0 0 rem(10),
 
-          li: (
-            background-position: left rem(6),
-            padding: 0 0 rem(8) rem(20)
+            li: (
+              background-position: 0 rem(5),
+              padding: 0 0 rem(8) rem(20)
+            )
+          ),
+
+          ol: (
+            margin: 0 0 rem(10)
           )
-        ),
-
-        ol: (
-          margin: 0 0 rem(10)
         )
       ),
 

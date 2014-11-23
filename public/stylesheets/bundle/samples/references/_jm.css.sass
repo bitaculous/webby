@@ -7,19 +7,11 @@
     .view
       &.browser
         .viewport
-          background: transparent image-url('bundle/samples/contour/references/jm/views/browser/viewport.jpg') no-repeat center center
-
-          @include hidpi
-            background-image: image-url('bundle/samples/contour/references/jm/views/browser/viewport_at_2x.jpg')
-            background-size: 294px 190px
+          @include retina-image('bundle/samples/contour/references/jm/views/browser/viewport', 294px 190px, 'jpg')
 
   @media (min-width: map-get-deep($media, screen, large, min-width))
     .jm
       .view
         &.browser
           .viewport
-            background-image: image-url('bundle/samples/media/screen/large/references/jm/views/browser/viewport.jpg')
-
-            @include hidpi
-              background-image: image-url('bundle/samples/media/screen/large/references/jm/views/browser/viewport_at_2x.jpg')
-              background-size: 470px 302px
+            @include retina-image('bundle/samples/media/screen/large/references/jm/views/browser/viewport', 470px 302px, 'jpg')

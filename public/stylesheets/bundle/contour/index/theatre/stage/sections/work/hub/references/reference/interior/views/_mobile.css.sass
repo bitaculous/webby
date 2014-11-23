@@ -18,8 +18,4 @@
       top: 30px
 
     .overlay
-      background: transparent image-url('bundle/contour/index/theatre/stage/sections/work/hub/references/reference/interior/views/mobile/overlay/background.png') no-repeat 0 0
-
-      @include hidpi
-        background-image: image-url('bundle/contour/index/theatre/stage/sections/work/hub/references/reference/interior/views/mobile/overlay/background_at_2x.png')
-        background-size: 100px 242px
+      @include retina-image('bundle/contour/index/theatre/stage/sections/work/hub/references/reference/interior/views/mobile/overlay/background', 100px 242px)

@@ -8,8 +8,6 @@
 @mixin contact
   &.contact
     color: #006897
-    display: none
-    padding: rem(32) 0 0 0
 
     h1,
     h2,
@@ -23,15 +21,8 @@
       color: #006897
 
     ul
-      margin: 0 0 rem(10)
-
       li
-        background: transparent image-url('bundle/contour/common/theatre/roof/backstage/sections/contact/decorations/qube.png') no-repeat left rem(4)
-        padding: 0 0 rem(10) rem(20)
-
-        @include hidpi
-          background-image: image-url('bundle/contour/common/theatre/roof/backstage/sections/contact/decorations/qube_at_2x.png')
-          background-size: 10px 12px
+        @include retina-image('bundle/contour/common/theatre/roof/backstage/sections/contact/decorations/qube', 10px 12px)
 
     .bar
       background: #E2F4F8

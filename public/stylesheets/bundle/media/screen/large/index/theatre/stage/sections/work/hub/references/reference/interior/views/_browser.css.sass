@@ -14,11 +14,7 @@
       top: 24px
 
     .overlay
-      background: transparent image-url('bundle/media/screen/large/index/theatre/stage/sections/work/hub/references/reference/interior/views/browser/overlay/background.png') no-repeat 0 0
-
-      @include hidpi
-        background-image: image-url('bundle/media/screen/large/index/theatre/stage/sections/work/hub/references/reference/interior/views/browser/overlay/background_at_2x.png')
-        background-size: 480px 388px
+      @include retina-image('bundle/media/screen/large/index/theatre/stage/sections/work/hub/references/reference/interior/views/browser/overlay/background', 480px 388px)
 
     .title
       font-size: ms(-1)

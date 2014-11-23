@@ -9,6 +9,8 @@
     width: map-get-deep($contour, index, theatre, stage, sections, work, hub, references, reference, interior, width)
 
     a
+      background-position: center center
+      background-repeat: no-repeat
       bottom: rem(22)
       display: block
       height: 40px
@@ -20,17 +22,11 @@
       @include no-text-decoration
 
       &.previous
-        background: transparent image-url('bundle/contour/index/theatre/stage/sections/work/hub/references/browse/previous/background.png') no-repeat 0 0
         left: rem(-14)
 
-        @include hidpi
-          background-image: image-url('bundle/contour/index/theatre/stage/sections/work/hub/references/browse/previous/background_at_2x.png')
-          background-size: 40px 40px
+        @include retina-image('bundle/contour/index/theatre/stage/sections/work/hub/references/browse/previous/background', 40px 40px)
 
       &.next
-        background: transparent image-url('bundle/contour/index/theatre/stage/sections/work/hub/references/browse/next/background.png') no-repeat 0 0
         right: rem(-14)
 
-        @include hidpi
-          background-image: image-url('bundle/contour/index/theatre/stage/sections/work/hub/references/browse/next/background_at_2x.png')
-          background-size: 40px 40px
+        @include retina-image('bundle/contour/index/theatre/stage/sections/work/hub/references/browse/next/background', 40px 40px)
