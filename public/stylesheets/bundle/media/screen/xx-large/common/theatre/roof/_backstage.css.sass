@@ -8,6 +8,10 @@
 @mixin backstage
   .backstage
     section
+      ul
+        li
+          background-position: map-get-deep($media, screen, xx-large, common, theatre, roof, backstage, section, ul, li, background-position)
+
       @include bar
 
       @include contact

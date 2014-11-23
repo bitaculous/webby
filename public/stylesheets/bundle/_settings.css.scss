@@ -248,10 +248,30 @@ $media: (
 
         theatre: (
           roof: (
+            backstage: (
+              section: (
+                ul: (
+                  li: (
+                    background-position: 0 rem(6)
+                  )
+                )
+              )
+            ),
+
             dashboard: (
               control-panel: (
                 height: 32px,
                 line-height: 32px
+              )
+            )
+          ),
+
+          stage: (
+            section: (
+              ul: (
+                li: (
+                  background-position: 0 rem(6)
+                )
               )
             )
           )
@@ -263,7 +283,31 @@ $media: (
       min-width: 1680px,
 
       common: (
-        font-size: 112.5%
+        font-size: 112.5%,
+
+        theatre: (
+          roof: (
+            backstage: (
+              section: (
+                ul: (
+                  li: (
+                    background-position: 0 rem(7)
+                  )
+                )
+              )
+            )
+          ),
+
+          stage: (
+            section: (
+              ul: (
+                li: (
+                  background-position: 0 rem(7)
+                )
+              )
+            )
+          )
+        )
       )
     )
   )

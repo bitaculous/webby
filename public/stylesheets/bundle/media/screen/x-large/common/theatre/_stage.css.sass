@@ -7,4 +7,8 @@
 @mixin stage
   .stage
     section
+      ul
+        li
+          background-position: map-get-deep($media, screen, x-large, common, theatre, stage, section, ul, li, background-position)
+
       @include content
