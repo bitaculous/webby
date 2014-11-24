@@ -82,6 +82,7 @@ class @Formy
         beforeSend: @beforeRequestSend
 
       request.done @onRequestDone
+
       request.fail @onRequestFail
 
     false
