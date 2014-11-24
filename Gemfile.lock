@@ -32,11 +32,11 @@ GIT
 
 GIT
   remote: git://github.com/locomotivecms/mounter.git
-  revision: 8a4203c9bca9b78a6e980d1be38ed44a4febf3a8
+  revision: 800c5218951110182daa1f613ae3b85cb323944d
   specs:
-    locomotivecms_mounter (1.4.5)
+    locomotivecms_mounter (1.5.0)
       RedCloth (~> 4.2.3)
-      activesupport (~> 3.2.18)
+      activesupport (~> 3.2.21)
       chronic (~> 0.10.2)
       coffee-script (~> 2.2.0)
       colorize (~> 0.5.8)
@@ -59,7 +59,7 @@ GIT
 
 GIT
   remote: git://github.com/locomotivecms/wagon.git
-  revision: e1b011861781d18391c7c4b1f7e6feca93b12a73
+  revision: dedcdd4bcdca158b2dd8eb495a0ab6ce16458465
   specs:
     locomotivecms_wagon (1.5.1)
       RedCloth (~> 4.2.8)
@@ -70,7 +70,7 @@ GIT
       httmultiparty (= 0.3.10)
       listen (~> 2.7.5)
       locomotivecms-solid (~> 0.2.2.1)
-      locomotivecms_mounter (~> 1.4.4)
+      locomotivecms_mounter (~> 1.5.0)
       netrc (~> 0.7.7)
       rack-cache (~> 1.1)
       rack-livereload (~> 0.3.15)
