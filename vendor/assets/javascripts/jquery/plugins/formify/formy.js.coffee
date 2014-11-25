@@ -88,8 +88,6 @@ class @Formy
     false
 
   onSubmitClick: (event) =>
-    submit = $ event.currentTarget
-
     do @form.submit if not do @isLocked
 
     false
@@ -97,13 +95,6 @@ class @Formy
   # === Private ===
 
   initialize = ->
-    setupForm.call @
-
-    setupSubmit.call @
-
-    return
-
-  setupForm = ->
     @form.validate
       submitHandler: @onFormSubmit
       errorClass: 'error'
@@ -115,9 +106,6 @@ class @Formy
 
         return
 
-    return
-
-  setupSubmit = ->
     @submit.on 'click', @onSubmitClick
 
     return
