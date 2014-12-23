@@ -84,6 +84,9 @@
 				settings.resizedCallback(messageData);
 			}
 
+			ensureInRange('Height');
+			ensureInRange('Width');
+			
 			syncResize(resize,messageData,'resetPage');
 		}
 
@@ -178,7 +181,7 @@
 			log(' MessageCallback passed: {iframe: '+ messageData.iframe.id + ', message: ' + msgBody + '}');
 			settings.messageCallback({
 				iframe: messageData.iframe,
-				message: msgBody
+				message: JSON.parse(msgBody)
 			});
 			log(' --');
 		}
@@ -190,11 +193,24 @@
 			return true;
 		}
 
-		function scrollRequestFromChild(){
-			log(' Reposition requested from iFrame');
+		function getIFramePosition(){
+			var iFramePosition = messageData.iframe.getBoundingClientRect();
+
+			getPagePosition();
+
+			return {
+				x: Number(iFramePosition.left) + Number(pagePosition.x),
+				y: Number(iFramePosition.top)  + Number(pagePosition.y)
+			};
+		}
+
+		function scrollRequestFromChild(addOffset){
+			var offset = addOffset ? getIFramePosition() : {x:0,y:0};
+
+			log(' Reposition requested from iFrame (offset x:'+offset.x+' y:'+offset.y+')');
 			pagePosition = {
-				x: messageData.width,
-				y: messageData.height
+				x: Number(messageData.width) + offset.x,
+				y: Number(messageData.height) + offset.y
 			};
 			setPagePosition();
 		}
@@ -209,7 +225,10 @@
 					forwardMsgFromIFrame();
 					break;
 				case 'scrollTo':
-					scrollRequestFromChild();
+					scrollRequestFromChild(false);
+					break;
+				case 'scrollToOffset':
+					scrollRequestFromChild(true);
 					break;
 				case 'reset':
 					resetIFrame(messageData);
@@ -230,8 +249,6 @@
 		if (isMessageForUs()){
 			log(' Received: '+msg);
 			messageData = processMsg();
-			ensureInRange('Height');
-			ensureInRange('Width');
 
 			if ( !isMessageFromMetaParent() && checkIFrameExists() && isMessageFromIFrame() ){
 				actionMsg();
@@ -403,7 +420,6 @@
 
 		function processOptions(options){
 			options = options || {};
-
 			checkOptions(options);
 
 			for (var option in defaults) {
@@ -434,7 +450,9 @@
 	if (window.jQuery) { createJQueryPublicMethod(jQuery); }
 
 	if (typeof define === 'function' && define.amd) {
-		define(function (){ return createNativePublicFunction(); });
+		define([],createNativePublicFunction);
+	} else if (typeof exports === 'object') { //Node for browserfy
+		module.exports = createNativePublicFunction();
 	} else {
 		window.iFrameResize = createNativePublicFunction();
 	}

@@ -15,7 +15,7 @@
 #= require jquery/plugins/slick
 #= require jquery/plugins/slidify
 
-#= require iframe_resizer
+#= require iframe-resizer
 
 #= require velocity
 #= require velocity/ui
