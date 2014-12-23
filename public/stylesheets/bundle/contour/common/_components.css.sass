@@ -1,0 +1,15 @@
+// _components.css.sass
+//
+// @package bundle/contour/common
+
+@mixin components
+  .shell
+    margin: 0 auto
+    overflow: hidden
+    padding: map-get-deep($contour, common, components, shell, padding)
+    position: relative
+
+    @include clearfix
+
+  .top
+    display: none

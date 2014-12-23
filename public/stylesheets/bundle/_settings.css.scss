@@ -32,6 +32,12 @@ $contour: (
   min-width: 320px,
 
   common: (
+    components: (
+      shell: (
+        padding: 0 rem(10)
+      )
+    ),
+
     elements: (
       h1: (
         font-size: ms(3),
@@ -61,10 +67,6 @@ $contour: (
       h6: (
         font-size: ms(-2),
         margin: 0 0 rem(22)
-      ),
-
-      shell: (
-        padding: 0 rem(10)
       )
     ),
 
@@ -193,7 +195,7 @@ $media: (
       common: (
         font-size: 105%,
 
-        elements: (
+        components: (
           shell: (
             max-width: 1004px
           )
@@ -240,7 +242,7 @@ $media: (
       common: (
         font-size: 107.5%,
 
-        elements: (
+        components: (
           shell: (
             max-width: 1260px
           )
