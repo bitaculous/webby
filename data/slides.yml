@@ -1,3 +1,10 @@
+- "Merry Christmas":
+    type: "Quote"
+    locales:
+      - "en"
+      - "de"
+    quote: "Merry Christmas"
+
 - "It's all about the bits, baby!":
     type: "Quote"
     locales:

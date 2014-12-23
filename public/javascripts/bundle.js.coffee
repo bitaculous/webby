@@ -64,6 +64,9 @@ $ ->
           slider.slidify
             shady: shady
             shadify:
+              colors: [
+                ['#4D1515', '#F22440']
+              ]
               offsets:
                 width: 0
                 height: 44
