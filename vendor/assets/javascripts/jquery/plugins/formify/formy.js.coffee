@@ -10,6 +10,9 @@ class @Formy
       show:
         effect: 'fadeIn'
         duration: 150
+    templates:
+      error:
+        messages: window.HoganTemplates['jquery/plugins/formify/templates/error/messages']
     debug: false
 
   # === Public ===
@@ -26,8 +29,6 @@ class @Formy
     @elements      = @form.find '.element'
     @submit        = @form.find 'a.submit'
 
-    @errorMessagesTemplate = window.HoganTemplates['jquery/plugins/formify/templates/error/messages']
-
     initialize.call @
 
     return
@@ -37,38 +38,10 @@ class @Formy
 
   # === Events ===
 
-  onSuccess: =>
-    hideFieldsets.call @
+  onSubmitClick: (event) =>
+    do @form.submit if not do @isLocked
 
-    return
-
-  beforeRequestSend: (xhr, settings) =>
-    cleanup.call @
-
-    lock.call @
-
-    return
-
-  onRequestDone: (data, status, xhr) =>
-    do @onSuccess if status == 'success'
-
-    return
-
-  onRequestFail: (xhr, status, error) =>
-    status = xhr.status
-
-    switch status
-      when 422
-        response = xhr.responseJSON
-        errors   = response.errors
-
-        showErrors.call @, errors
-      else
-        showFailure.call @
-
-    unlock.call @
-
-    return
+    false
 
   onFormSubmit: (event) =>
     url = @form.data 'public-submission-url'
@@ -87,10 +60,38 @@ class @Formy
 
     false
 
-  onSubmitClick: (event) =>
-    do @form.submit if not do @isLocked
+  beforeRequestSend: (xhr, settings) =>
+    cleanup.call @
 
-    false
+    lock.call @
+
+    return
+
+  onRequestDone: (data, status, xhr) =>
+    do @onSuccess if status == 'success'
+
+    return
+
+  onSuccess: =>
+    hideFieldsets.call @
+
+    return
+
+  onRequestFail: (xhr, status, error) =>
+    status = xhr.status
+
+    switch status
+      when 422
+        response = xhr.responseJSON
+        errors   = response.errors
+
+        showErrors.call @, errors
+      else
+        showFailure.call @
+
+    unlock.call @
+
+    return
 
   # === Private ===
 
@@ -126,8 +127,7 @@ class @Formy
   showErrors = (errors) ->
     if errors
       messages = translateErrors.call @, errors
-
-      output = @errorMessagesTemplate.render messages
+      output   = @options.templates.error.messages.render messages
 
       @errorMessages.append output
 
