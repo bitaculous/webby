@@ -1,4 +1,4 @@
-// _fontello.css.sass
+// fontello.css.sass
 //
 // @package vendor/fonts
 
@@ -18,7 +18,7 @@
   @include fontello-codes
 
 @mixin fontello-font-face
-  @include font-face('Fontello Regular', font-path('fontello/regular'))
+  @include font-face($font-family: 'Fontello Regular', $file-path: font-path('fontello/regular'), $file-formats: eot woff ttf svg)
 
 @mixin fontello-styles
   [class^="icon-"]:before,

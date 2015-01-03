@@ -1,0 +1,41 @@
+// nexa.css.sass
+//
+// @package vendor/fonts
+
+// Web Fonts from fontspring.com
+//
+// All OpenType features and all extended glyphs have been removed.
+// Fully installable fonts can be purchased at http://www.fontspring.com
+//
+// The fonts included in this stylesheet are subject to the End User License you purchased
+// from Fontspring. The fonts are protected under domestic and international trademark and
+// copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+// distributing this font software.
+//
+// Copyright (c) 2010-2014 Fontspring
+//
+// The fonts included are copyrighted by the vendor listed below.
+//
+// Vendor:      Fontfabric
+// License URL: http://www.fontspring.com/fflicense/fontfabric
+
+@mixin nexa
+  @include nexa-light
+
+  @include nexa-thin
+
+  @include nexa-bold
+
+  @include nexa-heavy
+
+@mixin nexa-light
+  @include font-face('Nexa Light', font-path('nexa/light'))
+
+@mixin nexa-thin
+  @include font-face('Nexa Thin', font-path('nexa/thin'))
+
+@mixin nexa-bold
+  @include font-face('Nexa Bold', font-path('nexa/bold'))
+
+@mixin nexa-heavy
+  @include font-face('Nexa Heavy', font-path('nexa/heavy'))
