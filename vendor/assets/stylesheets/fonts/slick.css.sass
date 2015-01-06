@@ -14,4 +14,11 @@
   @include slick-regular
 
 @mixin slick-regular
-  @include font-face($font-family: 'Slick Regular', $file-path: font-path('slick/regular'), $file-formats: eot woff ttf svg)
+  // @include font-face($font-family: 'Slick Regular', $file-path: font-path('slick/regular'), $file-formats: eot woff ttf svg)
+
+  @font-face
+    font-family: 'Slick Regular'
+    font-weight: normal
+    font-style: normal
+    src: font-url('slick/regular.eot')
+    src: font-url('slick/regular.eot?#iefix') format('embedded-opentype'), font-url('slick/regular.woff') format('woff'), font-url('slick/regular.ttf') format('truetype'), font-url('slick/regular.svg#slick_regular') format('svg')

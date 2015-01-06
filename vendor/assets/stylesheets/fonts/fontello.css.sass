@@ -18,7 +18,14 @@
   @include fontello-codes
 
 @mixin fontello-font-face
-  @include font-face($font-family: 'Fontello Regular', $file-path: font-path('fontello/regular'), $file-formats: eot woff ttf svg)
+  // @include font-face($font-family: 'Fontello Regular', $file-path: font-path('fontello/regular'), $file-formats: eot woff ttf svg)
+
+  @font-face
+    font-family: 'Fontello Regular'
+    font-weight: normal
+    font-style: normal
+    src: font-url('fontello/regular.eot')
+    src: font-url('fontello/regular.eot?#iefix') format('embedded-opentype'), font-url('fontello/regular.woff') format('woff'), font-url('fontello/regular.ttf') format('truetype'), font-url('fontello/regular.svg#fontello_regular') format('svg')
 
 @mixin fontello-styles
   [class^="icon-"]:before,
