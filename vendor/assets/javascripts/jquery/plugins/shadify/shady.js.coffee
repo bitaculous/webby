@@ -274,48 +274,48 @@ class @Shady
   # === Private ===
 
   initialize = ->
-    @rendering.renderer = findRenderer.call @
+    if not @options.inactive
+      @rendering.renderer = findRenderer.call @
 
-    if @rendering.renderer is Shady.RENDERER.NONE
-      @element.addClass 'no-renderer-found inactive'
-    else
-      @container = @element[0]
-      @now       = do Date.now
-      @start     = do Date.now
-      @center    = do FSS.Vector3.create
-      @attractor = do FSS.Vector3.create
-
-      if @options.randomize
-        color = getRandomColor.call @
+      if @rendering.renderer is Shady.RENDERER.NONE
+        @element.addClass 'no-renderer-found'
       else
-        color = @options.colors[0]
+        @container = @element[0]
+        @now       = do Date.now
+        @start     = do Date.now
+        @center    = do FSS.Vector3.create
+        @attractor = do FSS.Vector3.create
 
-      ambient = color[0]
+        if @options.randomize
+          color = getRandomColor.call @
+        else
+          color = @options.colors[0]
 
-      @rendering.light.ambient = ambient if ambient
+        ambient = color[0]
 
-      diffuse = color[1]
+        @rendering.light.ambient = ambient if ambient
 
-      @rendering.light.diffuse = diffuse if diffuse
+        diffuse = color[1]
 
-      createRenderer.call @
+        @rendering.light.diffuse = diffuse if diffuse
 
-      createScene.call @
+        createRenderer.call @
 
-      createMesh.call @
+        createScene.call @
 
-      createLights.call @
+        createMesh.call @
 
-      addEventListeners.call @
+        createLights.call @
 
-      do @resize
+        addEventListeners.call @
 
-      if @options.inactive
-        @element.addClass 'inactive'
-      else
-        @element.addClass 'active'
+        do @resize
 
         do @animate
+
+        @element.addClass 'active'
+    else
+      @element.addClass 'inactive'
 
     return
 
