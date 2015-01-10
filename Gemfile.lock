@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/bitaculous/assetify.git
-  revision: 6bf62311c270e84448158cad8c439055a76f3f0b
+  revision: 942022c03f2a737a20503125ac7509afa58efd1d
   specs:
-    assetify (1.4.0)
+    assetify (1.4.2)
       bourbon (~> 4.1.0)
       breakpoint (~> 2.5.0)
       modular-scale (~> 2.0.5)
@@ -32,7 +32,7 @@ GIT
 
 GIT
   remote: git://github.com/locomotivecms/mounter.git
-  revision: 53050714623735cb16243a3a45b6656c09381463
+  revision: a03c743e3be16e0bc7158ed2abc51ef80a7eab0a
   specs:
     locomotivecms_mounter (1.5.0)
       RedCloth (~> 4.2.3)
@@ -59,7 +59,7 @@ GIT
 
 GIT
   remote: git://github.com/locomotivecms/wagon.git
-  revision: dedcdd4bcdca158b2dd8eb495a0ab6ce16458465
+  revision: 8f6e054e167048e31bf687545334bf2530071f9c
   specs:
     locomotivecms_wagon (1.5.1)
       RedCloth (~> 4.2.8)
@@ -144,7 +144,7 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.6.11)
-    json (1.8.1)
+    json (1.8.2)
     kramdown (1.5.0)
     less (2.2.2)
       commonjs (~> 0.2.6)
