@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/bitaculous/assetify.git
-  revision: 942022c03f2a737a20503125ac7509afa58efd1d
+  revision: f73263cbbcffc57a3f015ce86468da40e45c054a
   specs:
-    assetify (1.4.2)
-      bourbon (~> 4.1.0)
+    assetify (1.5.0)
+      bourbon (~> 4.1.1)
       breakpoint (~> 2.5.0)
       modular-scale (~> 2.0.5)
       sassy-maps (~> 0.4.0)
@@ -11,22 +11,22 @@ GIT
 
 GIT
   remote: git://github.com/bitaculous/initializify.git
-  revision: 0ccbfcf145cc7e3ce10c56536ed6a4f22b57e68e
+  revision: 1d48a73a7586a2463fdfdac2311b0d6600827253
   specs:
-    initializify (1.2.0)
+    initializify (1.2.1)
 
 GIT
   remote: git://github.com/bitaculous/liquids.git
-  revision: f738345fd60ccd6bf17c720fefc48ec41c179942
+  revision: 9130589b66e2bfc2f30beca4c3dae254466fea15
   specs:
-    liquids (1.5.0)
+    liquids (1.5.1)
       locomotivecms-solid (~> 0.2.2.1)
 
 GIT
   remote: git://github.com/bitaculous/vendorify.git
-  revision: c41be61def84f12e16992c8b4f5180c28f5db692
+  revision: dae12a11c117dceda42885cd71fc27c07bf5e936
   specs:
-    vendorify (1.2.0)
+    vendorify (1.2.1)
       sass (>= 3.2)
       sprockets (~> 2.12.3)
 
@@ -59,7 +59,7 @@ GIT
 
 GIT
   remote: git://github.com/locomotivecms/wagon.git
-  revision: 8f6e054e167048e31bf687545334bf2530071f9c
+  revision: 078f3d8b8c506ab1df02e06423f7eaacf4d5c3d5
   specs:
     locomotivecms_wagon (1.5.1)
       RedCloth (~> 4.2.8)
@@ -90,7 +90,7 @@ GEM
     better_errors (1.0.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
-    bourbon (4.1.0)
+    bourbon (4.1.1)
       sass (~> 3.3)
       thor
     breakpoint (2.5.0)
@@ -107,14 +107,14 @@ GEM
     coffee-script-source (1.8.0)
     colorize (0.5.8)
     commonjs (0.2.7)
-    compass (1.0.1)
+    compass (1.0.3)
       chunky_png (~> 1.2)
-      compass-core (~> 1.0.1)
+      compass-core (~> 1.0.2)
       compass-import-once (~> 1.0.5)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       sass (>= 3.3.13, < 3.5)
-    compass-core (1.0.1)
+    compass-core (1.0.3)
       multi_json (~> 1.0)
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.5)
@@ -173,7 +173,7 @@ GEM
       ffi (>= 0.5.0)
     redcarpet (3.0.0)
     rubyzip (1.1.6)
-    sass (3.4.9)
+    sass (3.4.10)
     sassy-maps (0.4.0)
       sass (~> 3.3)
     sprockets (2.12.3)
